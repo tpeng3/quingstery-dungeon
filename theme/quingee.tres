@@ -1,0 +1,5 @@
+[gd_resource type="StreamTexture" format=2]
+
+[resource]
+flags = 4
+load_path = "res://.import/quingee_default.png-68f57a7056457e5d893256b4eb4fd194.stex"
