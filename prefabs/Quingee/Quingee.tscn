@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://cpm2xughmnrd3"]
+
+[ext_resource type="Script" path="res://prefabs/Quingee/Quingee.gd" id="1_lwsfa"]
+[ext_resource type="Texture2D" uid="uid://d0n5c236dewt1" path="res://assets/quingee_default.png" id="2_02hs5"]
+[ext_resource type="Script" path="res://prefabs/Quingee/TileDetector.gd" id="3_1u5st"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4dpne"]
+size = Vector2(64, 64)
+
+[sub_resource type="CircleShape2D" id="1"]
+radius = 16.0
+
+[node name="Quingee" type="CharacterBody2D"]
+script = ExtResource("1_lwsfa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
+texture = ExtResource("2_02hs5")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="TileDetector" type="Area2D" parent="."]
+script = ExtResource("3_1u5st")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TileDetector"]
+shape = SubResource("RectangleShape2D_4dpne")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("1")
+
+[connection signal="body_entered" from="TileDetector" to="TileDetector" method="_on_TileDetector_body_entered"]

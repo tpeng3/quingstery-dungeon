@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0n5c236dewt1"
-path="res://.godot/imported/quingee_default.png-286fd4d77e7fee9f090b074800b1836a.ctex"
+uid="uid://b3c3om38am737"
+path="res://.godot/imported/map.png-2afd7660ae91cea85a65f61de89972ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/quingee_default.png"
-dest_files=["res://.godot/imported/quingee_default.png-286fd4d77e7fee9f090b074800b1836a.ctex"]
+source_file="res://assets/background/map.png"
+dest_files=["res://.godot/imported/map.png-2afd7660ae91cea85a65f61de89972ca.ctex"]
 
 [params]
 

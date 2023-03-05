@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0n5c236dewt1"
-path="res://.godot/imported/quingee_default.png-286fd4d77e7fee9f090b074800b1836a.ctex"
+uid="uid://en78afb13d38"
+path="res://.godot/imported/splashed_dirt.png-4f2f3115ccfbe31e3a02d7afe74bb787.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/quingee_default.png"
-dest_files=["res://.godot/imported/quingee_default.png-286fd4d77e7fee9f090b074800b1836a.ctex"]
+source_file="res://addons/scene_manager/shader_patterns/splashed_dirt.png"
+dest_files=["res://.godot/imported/splashed_dirt.png-4f2f3115ccfbe31e3a02d7afe74bb787.ctex"]
 
 [params]
 

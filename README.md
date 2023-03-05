@@ -1,26 +1,17 @@
-# Isometric Game
+# CAE AND CHELL PLEASE READ THIS BEFORE CONTRIBUTING TO CODE
 
-This demo shows a traditional isometric view with depth sorting.
+Add notes here as well so the info doesn't get lost!
 
-A character can move around the level and will also slide around objects,
-as well as be occluded when standing in front or behind them.
+We're using Godot 4.0 and the game resolution is 960x540 (UI is at 1x scale but pixels are at 2x)
 
-Language: GDScript
+Keep to the folder structure and ask Froggo questions if you need clarifications! Froggo is really anal about code structure, so they will cry if they can't find something in code
 
-Renderer: GLES 2
+- assets: all image and sound files
+- addons: for plugins (don't mess with any files in here!)
+- prefabs: for reuseable nodes not tied to a specific scene
+- scenes: for setting up "screens" that the player will see, reference UI nodes here
+- theme: for styled components like fonts and buttons and/or .tres files
 
-Check out this demo on the asset library: https://godotengine.org/asset-library/asset/112
+If you download any plugins, please list the documentation below:
 
-## How does it work?
-
-The level uses a [`TileMap`](https://docs.godotengine.org/en/latest/classes/class_tilemap.html#class-tilemap)
-in which the tiles have different vertical offsets.
-The walls, doors, and pillars each have
-[`StaticBody2D`](https://docs.godotengine.org/en/latest/classes/class_staticbody2d.html)
-and [`CollisionPolygon2D`](https://docs.godotengine.org/en/latest/classes/class_collisionpolygon2d.html)
-at their base. The player also has a collider at its base,
-which makes the player collide with the level.
-
-## Screenshots
-
-![Screenshot](screenshots/isometric.png)
+- [Scene Manager](https://github.com/maktoobgar/scene_manager)
