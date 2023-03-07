@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dx0kws7hwpumu"]
 
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
-[ext_resource type="Texture2D" uid="uid://b3c3om38am737" path="res://assets/background/map.png" id="2_g1eyc"]
+[ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
 [ext_resource type="PackedScene" uid="uid://dxr1xgd3ibyct" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
 
 [node name="Map" type="Node2D"]

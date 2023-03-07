@@ -1,3 +1,169 @@
-[gd_scene format=3 uid="uid://ciom5grkifthb"]
+[gd_scene load_steps=4 format=3 uid="uid://ciom5grkifthb"]
+
+[ext_resource type="Theme" uid="uid://otnt21yg5v4f" path="res://theme/button.tres" id="1_6wlgb"]
+[ext_resource type="Texture2D" uid="uid://b6rvreegdvghl" path="res://assets/background/UI-Menu-DefaultBG.png" id="1_cgvfq"]
+[ext_resource type="Theme" uid="uid://6rbvdpm5m2dt" path="res://theme/UI_Menu.tres" id="2_wi7r2"]
 
 [node name="DialogueBox" type="Node2D"]
+
+[node name="GUI" type="MarginContainer" parent="."]
+offset_right = 960.0
+offset_bottom = 540.0
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="VSplitContainer" type="SplitContainer" parent="GUI"]
+layout_mode = 2
+vertical = true
+
+[node name="UpperArea" type="MarginContainer" parent="GUI/VSplitContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_bottom = 16
+
+[node name="UpperAreaDivider" type="SplitContainer" parent="GUI/VSplitContainer/UpperArea"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Sidebar" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_constants/margin_right = 32
+
+[node name="SidebarContent" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar"]
+layout_mode = 2
+vertical = true
+
+[node name="Button" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar/SidebarContent"]
+layout_mode = 2
+theme = ExtResource("1_6wlgb")
+text = "example text"
+
+[node name="Button2" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar/SidebarContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_6wlgb")
+text = "example"
+
+[node name="Button3" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar/SidebarContent"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_6wlgb")
+text = "example"
+metadata/onHoverText = "We are "
+
+[node name="DisplayArea" type="SplitContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
+layout_mode = 2
+vertical = true
+
+[node name="UpperInfo" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea"]
+layout_mode = 2
+size_flags_vertical = 0
+theme = ExtResource("2_wi7r2")
+theme_override_constants/margin_top = -32
+
+[node name="HSplitContainer" type="HSplitContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/UpperInfo"]
+layout_mode = 2
+
+[node name="GaldCounter" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/UpperInfo/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_right = 16
+
+[node name="BG" type="NinePatchRect" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/UpperInfo/HSplitContainer/GaldCounter"]
+layout_mode = 2
+texture = ExtResource("1_cgvfq")
+region_rect = Rect2(0, 0, 12, 12)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/UpperInfo/HSplitContainer/GaldCounter"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="GaldLabel" type="Label" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/UpperInfo/HSplitContainer/GaldCounter/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_wi7r2")
+text = "000 Gald"
+
+[node name="InventoryAmt" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/UpperInfo/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_constants/margin_right = 24
+
+[node name="BG" type="NinePatchRect" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/UpperInfo/HSplitContainer/InventoryAmt"]
+layout_mode = 2
+texture = ExtResource("1_cgvfq")
+region_rect = Rect2(0, 0, 12, 12)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/UpperInfo/HSplitContainer/InventoryAmt"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="InventoryLabel" type="Label" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/UpperInfo/HSplitContainer/InventoryAmt/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("2_wi7r2")
+text = "10/20"
+
+[node name="DialogueSelect" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_6wlgb")
+text = "Yes"
+
+[node name="DialogueNo" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
+layout_mode = 2
+theme = ExtResource("1_6wlgb")
+text = "     No     "
+
+[node name="DialogueBox" type="MarginContainer" parent="GUI/VSplitContainer"]
+layout_mode = 2
+
+[node name="BG" type="NinePatchRect" parent="GUI/VSplitContainer/DialogueBox"]
+layout_mode = 2
+texture = ExtResource("1_cgvfq")
+region_rect = Rect2(0, 0, 12, 12)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="GUI/VSplitContainer/DialogueBox"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="DialogueText" type="RichTextLabel" parent="GUI/VSplitContainer/DialogueBox/MarginContainer"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+theme = ExtResource("2_wi7r2")
+text = "testing testing one to three testing..."
+fit_content = true
