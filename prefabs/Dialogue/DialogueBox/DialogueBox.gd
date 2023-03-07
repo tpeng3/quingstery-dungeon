@@ -5,6 +5,11 @@ var dialogue_node = null
 signal yes_selected
 signal no_selected
 
+@onready var DialogueBox = $GUI/VSplitContainer/DialogueBox
+@onready var DialogueName = $GUI/VSplitContainer/DialogueBox/MarginContainer/Name
+@onready var DialogueText = $GUI/VSplitContainer/DialogueBox/MarginContainer/DialogueText
+@onready var DialogueSelect = $GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect
+
 func _ready():
 	hide()
 
@@ -20,33 +25,31 @@ func show_dialogue(_player, dialogue):
 
 func _input(event):
 	# on enter/space or mouse click
-	if self.visible and not $Control/Textbox/Choices.visible and dialogue_node != null:\
+	if self.visible and not DialogueSelect.visible and dialogue_node != null:\
 		if event.is_action_pressed("ui_accept"):
-			$Sounds/ButtonHover.play()
+#			DialogueSelect.ButtonHover.play()
 			dialogue_node.next_dialogue()
 			_update_textbox()
 
 func _update_textbox():
 	if dialogue_node.dialogue_name and dialogue_node.dialogue_name != "":
-		$Control/Textbox/Name.text = dialogue_node.dialogue_name
-		$Control/Textbox/Name.show()
-		if dialogue_node.dialogue_expression:
-			# TODO: make this more generic later, this is just old code
-			match dialogue_node.dialogue_name:
-				"???":
-					$Talksprites/Sprite2D.show()
-					$Talksprites/Sprite2D.change(dialogue_node.dialogue_expression)
-				"Bullfrog":
-					$Talksprites/Sprite2D.show()
-					$Talksprites/Sprite2D.change(dialogue_node.dialogue_expression)
+		DialogueName.text = dialogue_node.dialogue_name
+		DialogueName.show()
+#		if dialogue_node.dialogue_expression:
+#			# TODO: make this more generic later, this is just old code
+#			match dialogue_node.dialogue_name:
+#				"???":
+#					$Talksprites/Sprite2D.show()
+#					$Talksprites/Sprite2D.change(dialogue_node.dialogue_expression)
+#				"Bullfrog":
+#					$Talksprites/Sprite2D.show()
+#					$Talksprites/Sprite2D.change(dialogue_node.dialogue_expression)
 	else:
-		$Control/Textbox/Name.hide()
-		$Talksprites/Sprite2D.hide()
-	print(dialogue_node.dialogue_text)
-	$Control/Textbox/Text.text = dialogue_node.dialogue_text
+		DialogueName.hide()
+#		$Talksprites/Sprite2D.hide()
+	DialogueText.text = dialogue_node.dialogue_text
 
 func _on_dialogue_action(action_type, asset):
-	print("act here?")
 	match action_type:
 		dialogue_node.ActionType.BG:
 			change_bg(asset)
@@ -55,7 +58,7 @@ func _on_dialogue_action(action_type, asset):
 		dialogue_node.ActionType.HIDE:
 			hide_image()
 		dialogue_node.ActionType.CHOICES:
-			$Control/Textbox/Choices.show()
+			DialogueSelect.show()
 		dialogue_node.ActionType.ANIMATION:
 			play_animation(asset)
 		dialogue_node.ActionType.SOUND:
@@ -63,8 +66,8 @@ func _on_dialogue_action(action_type, asset):
 
 func _on_dialogue_finished(action_type = 0, asset = null):
 	self.hide_image()
-	$Talksprites/Sprite2D.hide()
-	$Control/Textbox/Choices.hide()
+#	$Talksprites/Sprite2D.hide()
+	DialogueSelect.hide()
 	$AnimationPlayer.play_backwards("textbox_fade")
 	await $AnimationPlayer.animation_finished
 	self.hide()
@@ -86,7 +89,8 @@ func _on_dialogue_finished(action_type = 0, asset = null):
 # TODO: sound check later
 func _on_Button_mouse_entered():
 #	Input.set_custom_mouse_cursor(Utilities.CURSOR_HOVER)
-	$Sounds/ButtonHover.play()
+#	$Sounds/ButtonHover.play()
+	pass
 
 func _on_Button_mouse_exited():
 #	Input.set_custom_mouse_cursor(Utilities.CURSOR_DEFAULT)
@@ -94,7 +98,7 @@ func _on_Button_mouse_exited():
 	
 func _on_YesButton_button_up():
 #	$ButtonClick.play()
-	$Control/Textbox/Choices.hide()
+	DialogueSelect.hide()
 	emit_signal("yes_selected")
 
 func show_image(image):
