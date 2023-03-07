@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
 [ext_resource type="Theme" uid="uid://otnt21yg5v4f" path="res://theme/button.tres" id="1_6wlgb"]
 [ext_resource type="Texture2D" uid="uid://b6rvreegdvghl" path="res://assets/background/UI-Menu-DefaultBG.png" id="1_cgvfq"]
-[ext_resource type="Theme" path="res://theme/UI_Menu.tres" id="2_wi7r2"]
+[ext_resource type="Theme" uid="uid://bjejjjg78f6bh" path="res://theme/UI_Menu.tres" id="2_wi7r2"]
 
 [sub_resource type="Animation" id="Animation_q44kr"]
 resource_name = "textbox_fade"
@@ -13,9 +13,7 @@ _data = {
 "textbox_fade": SubResource("Animation_q44kr")
 }
 
-[node name="DialogueBox" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="DialogueBox" type="CanvasLayer"]
 script = ExtResource("1_4xtrd")
 
 [node name="GUI" type="MarginContainer" parent="."]

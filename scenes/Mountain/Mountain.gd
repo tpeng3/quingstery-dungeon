@@ -23,18 +23,17 @@ extends Node2D
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$DialogueBox.yes_selected.connect(_on_stairs)
-	$DialogueBox.no_selected.connect(_on_test)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	var interact = $Walls/Quingee.get_slide_collision_count()
+	var interact = $Map/Walls/Quingee.get_slide_collision_count()
 	
 	if interact > 0:
 		$PlaceholderText.visible = true
 		if (Input.is_action_just_released("ui_accept")):
-			var rid = $Walls/Quingee.get_last_slide_collision().get_collider_rid()
-			var coord = $Floor.get_coords_for_body_rid(rid)
-			var tile_id = $Floor.get_cell_source_id(1, coord)
+			var rid = $Map/Walls/Quingee.get_last_slide_collision().get_collider_rid()
+			var coord = $Map/Floor.get_coords_for_body_rid(rid)
+			var tile_id = $Map/Floor.get_cell_source_id(1, coord)
 			# TODO: I think we can map the tile ID to something more readable
 			if tile_id == 7:
 				$DialogueBox.show_dialogue(self, $DialoguePlayer)
@@ -42,10 +41,5 @@ func _process(delta):
 		$PlaceholderText.visible = false
 	pass 
 
-func _on_test():
-	print("no")
-	$DialogueBox.hide()
-
 func _on_stairs():
-	print("yes")
 	SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)

@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 var dialogue_node = null
 
@@ -65,7 +65,7 @@ func _on_dialogue_action(action_type, asset):
 			play_sound(asset)
 
 func _on_dialogue_finished(action_type = 0, asset = null):
-	self.hide_image()
+#	self.hide_image()
 #	$Talksprites/Sprite2D.hide()
 	DialogueSelect.hide()
 	$AnimationPlayer.play_backwards("textbox_fade")

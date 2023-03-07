@@ -10,7 +10,11 @@
 script = ExtResource("1_ybsvq")
 scene = "Map"
 
-[node name="Floor" type="TileMap" parent="."]
+[node name="Map" type="Node2D" parent="."]
+position = Vector2(-198, -354)
+scale = Vector2(2, 2)
+
+[node name="Floor" type="TileMap" parent="Map"]
 y_sort_enabled = true
 tile_set = ExtResource("2_ja4ub")
 cell_quadrant_size = 32
@@ -26,14 +30,14 @@ layer_1/y_sort_origin = 0
 layer_1/z_index = 1
 layer_1/tile_data = PackedInt32Array(1703943, 7, 0)
 
-[node name="Walls" type="TileMap" parent="."]
+[node name="Walls" type="TileMap" parent="Map"]
 y_sort_enabled = true
 tile_set = ExtResource("2_ja4ub")
 format = 2
 layer_0/y_sort_enabled = true
 layer_0/tile_data = PackedInt32Array(1048582, 6, 0, 1114118, 6, 0, 1245191, 6, 0, 1179655, 6, 0, 983045, 6, 0, 983044, 6, 196608, 1048580, 6, 196608, 1179651, 6, 196608, 1114115, 6, 196608, 1245186, 6, 196608, 1310728, 6, 196608, 1376263, 6, 196608, 1441799, 6, 196608, 1572871, 6, 0, 1638407, 6, 0, 1703944, 6, 0, 1835014, 6, 0, 1769477, 6, 0, 1703941, 6, 0, 1638404, 6, 0, 1572868, 6, 0, 1507331, 6, 0, 1441795, 6, 0, 1376258, 6, 0, 917509, 6, 0)
 
-[node name="Quingee" parent="Walls" instance=ExtResource("3_beijm")]
+[node name="Quingee" parent="Map/Walls" instance=ExtResource("3_beijm")]
 position = Vector2(339, 314)
 
 [node name="PlaceholderText" type="RichTextLabel" parent="."]
