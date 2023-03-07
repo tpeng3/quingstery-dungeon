@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ck17xbn21yrd0"]
+[gd_scene load_steps=3 format=3 uid="uid://ck17xbn21yrd0"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.gd" id="1_fwymn"]
+[ext_resource type="JSON" path="res://dialogue/Mountain/stairs.json" id="2_r82gv"]
 
 [node name="DialoguePlayer" type="Node2D"]
 script = ExtResource("1_fwymn")
+dialogue_file = ExtResource("2_r82gv")

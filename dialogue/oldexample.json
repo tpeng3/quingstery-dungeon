@@ -1,0 +1,86 @@
+{
+  "lines": [
+    {
+      "text": "A simple, sturdy fishing rod. It looks like it’s lived quite a life, with scratches all over. Or maybe its owner just didn’t take very good care of it.",
+      "action": [
+        "SHOW_FOCUS",
+        "res://.import/old_rod.png-002b73c079ff83cca11ee4774580bdea.stex"
+      ]
+    },
+    {
+      "text": "... That owner being me?"
+    },
+    {
+      "name": "p???",
+      "expression": "confused",
+      "text": "..."
+    },
+    {
+      "name": "p???",
+      "expression": "neutral",
+      "text": "Come to think of it, there’s water all around here, isn’t there? I wonder if this can be used here..."
+    },
+    {
+      "text": "Right as I glance out the window to confirm that thought, a small wave crashes against it, scattering droplets of water into the room. Instinctively, I jump back to avoid it.",
+      "action": [
+        "ANIMATION",
+        "loudWave"
+      ]
+    },
+    {
+      "name": "p???",
+      "expression": "frowning",
+      "text": "Eep, it still got on me..."
+    },
+    {
+      "name": "p???",
+      "expression": "relieved",
+      "text": "Okay, yes, water is very much present. Point taken."
+    },
+    {
+      "text": "I tiptoe around the glass on the ground and make my way to the window."
+    },
+    {
+      "text": "Looking down, I watch the golden waves lap rhythmically against white walls."
+    },
+    {
+      "text": "Sea foam blooms with every step of its dance, bursting into the air before streaming away."
+    },
+    {
+      "text": "It’s mesmerizing, and I follow its rise and fall for a while before finally noticing movement in the water’s depths."
+    },
+    {
+      "name": "p???",
+      "expression": "glad",
+      "text": "!! Fish!"
+    },
+    {
+      "name": "p???",
+      "expression": "frowning",
+      "text": "But I don’t recognize what type they are..."
+    },
+    {
+      "name": "p???",
+      "expression": "thinking",
+      "text": "Not sure why I expect to, though."
+    },
+    {
+      "name": "p???",
+      "expression": "thinking",
+      "text": "I mean, this fishing rod is probably mine. What if I’m actually an expert fisherman?"
+    },
+    {
+      "name": "p???",
+      "expression": "frowning",
+      "text": "Or maybe I’m one of those kinds of people who just have the props but don’t follow through with the lifestyle?"
+    },
+    {
+      "name": "p???",
+      "expression": "neutral",
+      "text": "Well, in any case, let’s take this along. Looks like I’ll be able to use it outside."
+    }
+  ],
+  "post_action": [
+    "DELETE"
+  ]
+}

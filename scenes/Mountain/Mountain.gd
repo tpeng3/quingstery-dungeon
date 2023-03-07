@@ -22,8 +22,8 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	$DialogueBox.yes_selected.connect(_on_stairs)
+	$DialogueBox.no_selected.connect(_on_test)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -37,7 +37,15 @@ func _process(delta):
 			var tile_id = $Floor.get_cell_source_id(1, coord)
 			# TODO: I think we can map the tile ID to something more readable
 			if tile_id == 7:
-				SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)
+				$DialogueBox.show_dialogue(self, $DialoguePlayer)
 	else:
 		$PlaceholderText.visible = false
-	pass
+	pass 
+
+func _on_test():
+	print("no")
+	$DialogueBox.hide()
+
+func _on_stairs():
+	print("yes")
+	SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)

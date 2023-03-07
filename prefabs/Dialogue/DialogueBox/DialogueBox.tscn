@@ -1,3 +1,101 @@
-[gd_scene format=3 uid="uid://ciom5grkifthb"]
+[gd_scene load_steps=7 format=3 uid="uid://ciom5grkifthb"]
 
-[node name="DialogueBox" type="Node2D"]
+[ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_pueu5"]
+[ext_resource type="Theme" uid="uid://otnt21yg5v4f" path="res://theme/button.tres" id="1_xx3ou"]
+[ext_resource type="AudioStream" uid="uid://p1685c41fqo8" path="res://assets/sfx/bubble.mp3" id="2_jymin"]
+[ext_resource type="AudioStream" uid="uid://c0hhjc8ulg14g" path="res://assets/sfx/bubbleselect.mp3" id="3_r5bxa"]
+
+[sub_resource type="Animation" id="Animation_558on"]
+resource_name = "textbox_fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/path = NodePath("Control/Textbox:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q12c0"]
+_data = {
+"textbox_fade": SubResource("Animation_558on")
+}
+
+[node name="DialogueBox" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+theme = ExtResource("1_xx3ou")
+script = ExtResource("1_pueu5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q12c0")
+}
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="ButtonHover" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("2_jymin")
+
+[node name="ButtonClick" type="AudioStreamPlayer" parent="Sounds"]
+stream = ExtResource("3_r5bxa")
+
+[node name="CustomSound" type="AudioStreamPlayer" parent="Sounds"]
+
+[node name="Talksprites" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Sprite2D" type="Sprite2D" parent="Talksprites"]
+
+[node name="Popup" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Frame" type="Sprite2D" parent="Popup"]
+
+[node name="Itemsprite" type="Sprite2D" parent="Popup"]
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Textbox" type="Panel" parent="Control"]
+layout_mode = 0
+offset_right = 363.0
+offset_bottom = 206.0
+
+[node name="Name" type="RichTextLabel" parent="Control/Textbox"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Text" type="RichTextLabel" parent="Control/Textbox"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Choices" type="HBoxContainer" parent="Control/Textbox"]
+layout_mode = 0
+offset_left = 697.0
+offset_top = 447.0
+offset_right = 737.0
+offset_bottom = 487.0
+
+[node name="YesButton" type="Button" parent="Control/Textbox/Choices"]
+layout_mode = 2
+text = "Yes"
+
+[node name="NoButton" type="Button" parent="Control/Textbox/Choices"]
+layout_mode = 2
+text = "No"
+
+[connection signal="button_up" from="Control/Textbox/Choices/YesButton" to="." method="_on_YesButton_button_up"]
+[connection signal="button_up" from="Control/Textbox/Choices/NoButton" to="." method="_on_dialogue_finished"]
