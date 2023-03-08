@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://b63bk0dynt8t6"]
+
+[ext_resource type="Texture2D" uid="uid://b82tkwhul4b53" path="res://assets/tile/placeholderstairs.png" id="1_4vems"]
+[ext_resource type="Script" path="res://prefabs/TileScenes/Stairs/Stairs.gd" id="1_ohp3d"]
+[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_n28ug"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
+size = Vector2(47, 40)
+
+[node name="Stairs" type="Area2D"]
+script = ExtResource("1_ohp3d")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("2_n28ug")]
+position = Vector2(-76, -53)
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_4vems")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_msile")
+
+[node name="PlaceholderText" type="RichTextLabel" parent="."]
+visible = false
+offset_left = -76.0
+offset_top = -53.0
+offset_right = 96.0
+offset_bottom = 6.0
+text = "Press space for stairs"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

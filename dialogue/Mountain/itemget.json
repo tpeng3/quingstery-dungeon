@@ -1,0 +1,11 @@
+{
+	"lines": [
+		{
+			"text": "You find x1 [[placeholder item]]!",
+			"action": [
+				"SHOW_FOCUS",
+				"res://assets/item/i_glowbuglantern.png"
+			]
+		}
+	]
+}

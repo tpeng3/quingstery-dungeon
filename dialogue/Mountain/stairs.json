@@ -1,10 +1,10 @@
 {
-  "lines": [
-    {
-      "text": "Climb to the next floor? (TEMP: Returns to map for now)",
-      "action": [
-        "CHOICES"
-      ]
-    }
-  ]
+	"lines": [
+		{
+			"text": "Climb to the next floor? (TEMP: Returns to map for now)",
+			"action": [
+				"CHOICES"
+			]
+		}
+	]
 }

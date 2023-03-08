@@ -1,0 +1,144 @@
+[gd_scene load_steps=13 format=3 uid="uid://b0fl85bd8g0dw"]
+
+[ext_resource type="Script" path="res://prefabs/TileScenes/FishingSpot/FishingSpot.gd" id="1_ho5yr"]
+[ext_resource type="Texture2D" uid="uid://cbqxeasda0jh6" path="res://assets/tile/placeholdertile2.png" id="2_vlglr"]
+[ext_resource type="Texture2D" uid="uid://cdr2t6d2xld3o" path="res://assets/ui/cursor_hover.png" id="3_v6jse"]
+[ext_resource type="Texture2D" uid="uid://c0c8ofly610r4" path="res://assets/ui/m_mining.png" id="4_583kt"]
+[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="5_l2bfp"]
+[ext_resource type="JSON" path="res://dialogue/Mountain/itemget.json" id="6_os244"]
+
+[sub_resource type="Animation" id="Animation_jkf5a"]
+resource_name = "fade"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 0.210224),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 10)]
+}
+
+[sub_resource type="Animation" id="Animation_icl5u"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 0.707107, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -8), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ccjp3"]
+_data = {
+"fade": SubResource("Animation_jkf5a"),
+"float": SubResource("Animation_icl5u")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
+
+[sub_resource type="Animation" id="Animation_cpnr8"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 0.707107, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -8), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_70sju"]
+_data = {
+"float": SubResource("Animation_cpnr8")
+}
+
+[node name="MiningSpot" type="Area2D"]
+script = ExtResource("1_ho5yr")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("5_l2bfp")]
+dialogue_file = ExtResource("6_os244")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ccjp3")
+}
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_vlglr")
+
+[node name="Sparkle" type="Sprite2D" parent="Sprite"]
+texture = ExtResource("3_v6jse")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_msile")
+
+[node name="Control" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+size_flags_vertical = 0
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -74.5
+offset_right = 74.5
+offset_bottom = 27.0
+grow_horizontal = 2
+max_value = 20.0
+step = 1.0
+rounded = true
+show_percentage = false
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -25)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_583kt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Icon"]
+root_node = NodePath("../..")
+autoplay = "float"
+libraries = {
+"": SubResource("AnimationLibrary_70sju")
+}
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
