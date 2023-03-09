@@ -2,8 +2,8 @@
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
 [ext_resource type="Theme" uid="uid://otnt21yg5v4f" path="res://theme/button.tres" id="1_6wlgb"]
-[ext_resource type="Texture2D" uid="uid://b6rvreegdvghl" path="res://assets/background/UI-Menu-DefaultBG.png" id="1_cgvfq"]
-[ext_resource type="Theme" uid="uid://bjejjjg78f6bh" path="res://theme/UI_Menu.tres" id="2_wi7r2"]
+[ext_resource type="Texture2D" uid="uid://b6rvreegdvghl" path="res://assets/ui/UI-Menu-DefaultBG.png" id="1_cgvfq"]
+[ext_resource type="Theme" uid="uid://6rbvdpm5m2dt" path="res://theme/UI_Menu.tres" id="2_wi7r2"]
 [ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="5_27re5"]
 
 [sub_resource type="Animation" id="Animation_q44kr"]
@@ -15,13 +15,14 @@ _data = {
 }
 
 [node name="DialogueBox" type="Control"]
-script = ExtResource("1_4xtrd")
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_4xtrd")
 metadata/Navi_Enabled = true
 metadata/YesNo_Enabled = true
 
 [node name="GUI" type="MarginContainer" parent="."]
+layout_mode = 0
 offset_right = 960.0
 offset_bottom = 540.0
 theme_override_constants/margin_left = 48
@@ -39,16 +40,13 @@ size_flags_vertical = 3
 theme_override_constants/margin_bottom = 16
 
 [node name="UpperAreaDivider" type="SplitContainer" parent="GUI/VSplitContainer/UpperArea"]
+custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Sidebar" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
-
-visible = false
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
-theme_override_constants/margin_left = -38
-theme_override_constants/margin_right = 10
 
 [node name="SidebarContent" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar"]
 layout_mode = 2
@@ -56,29 +54,26 @@ vertical = true
 
 [node name="Button" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar/SidebarContent"]
 layout_mode = 2
-theme = ExtResource("1_i606y")
+theme = ExtResource("1_6wlgb")
 text = "example text"
 
 [node name="Button2" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar/SidebarContent"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_i606y")
+theme = ExtResource("1_6wlgb")
 text = "example"
 
 [node name="Button3" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar/SidebarContent"]
 layout_mode = 2
 size_flags_horizontal = 3
-theme = ExtResource("1_i606y")
+theme = ExtResource("1_6wlgb")
 text = "example"
 metadata/onHoverText = "We are "
 
-[node name="DisplayArea" type="SplitContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
-visible = false
+[node name="DisplayArea" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
 layout_mode = 2
-vertical = true
 
 [node name="DialogueSelect" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -86,14 +81,12 @@ size_flags_vertical = 8
 [node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
 layout_mode = 2
 size_flags_horizontal = 3
-
-theme = ExtResource("2_m5vs8")
-
+theme = ExtResource("1_6wlgb")
 text = "Yes"
 
 [node name="DialogueNo" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
 layout_mode = 2
-theme = ExtResource("2_m5vs8")
+theme = ExtResource("1_6wlgb")
 text = "     No     "
 
 [node name="DialogueBox" type="MarginContainer" parent="GUI/VSplitContainer"]
@@ -101,7 +94,7 @@ layout_mode = 2
 
 [node name="BG" type="NinePatchRect" parent="GUI/VSplitContainer/DialogueBox"]
 layout_mode = 2
-texture = ExtResource("3_qb0j7")
+texture = ExtResource("1_cgvfq")
 region_rect = Rect2(0, 0, 12, 12)
 patch_margin_left = 4
 patch_margin_top = 4
@@ -130,7 +123,7 @@ fit_content = true
 
 [node name="Popup" type="MarginContainer" parent="."]
 visible = false
-anchors_preset = 8
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
