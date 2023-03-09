@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://cg7kh7584x7xg"]
+
+[ext_resource type="Theme" uid="uid://6rbvdpm5m2dt" path="res://theme/UI_Menu.tres" id="1_fxp2a"]
+[ext_resource type="Texture2D" path="res://assets/background/UI-Menu-DefaultBG.png" id="2_63w2b"]
+
+[node name="TopBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="UpperInfo" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 8.0
+offset_bottom = 50.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme = ExtResource("1_fxp2a")
+
+[node name="HSplitContainer" type="HSplitContainer" parent="UpperInfo"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="GaldCounter" type="MarginContainer" parent="UpperInfo/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="BG" type="NinePatchRect" parent="UpperInfo/HSplitContainer/GaldCounter"]
+layout_mode = 2
+texture = ExtResource("2_63w2b")
+region_rect = Rect2(0, 0, 12, 12)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UpperInfo/HSplitContainer/GaldCounter"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="GaldLabel" type="Label" parent="UpperInfo/HSplitContainer/GaldCounter/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_fxp2a")
+text = "000 Gald"
+
+[node name="InventoryAmt" type="MarginContainer" parent="UpperInfo/HSplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="BG" type="NinePatchRect" parent="UpperInfo/HSplitContainer/InventoryAmt"]
+layout_mode = 2
+texture = ExtResource("2_63w2b")
+region_rect = Rect2(0, 0, 12, 12)
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="UpperInfo/HSplitContainer/InventoryAmt"]
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 8
+
+[node name="InventoryLabel" type="Label" parent="UpperInfo/HSplitContainer/InventoryAmt/MarginContainer"]
+layout_mode = 2
+theme = ExtResource("1_fxp2a")
+text = "10/20"
