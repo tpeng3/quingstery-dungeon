@@ -13,7 +13,7 @@ signal no_selected
 func _ready():
 	hide()
 
-func show_dialogue(_player, dialogue):
+func show_dialogue(dialogue):
 	dialogue_node = dialogue
 	show()
 	if !dialogue_node.skipFade:
@@ -72,6 +72,7 @@ func _on_dialogue_finished(action_type = 0, asset = null):
 	await $AnimationPlayer.animation_finished
 	self.hide()
 #	Input.set_custom_mouse_cursor(Utilities.CURSOR_DEFAULT)
+	dialogue_node.dialogue_action.disconnect(_on_dialogue_action)
 	dialogue_node.dialogue_finished.disconnect(_on_dialogue_finished)
 	match action_type:
 		dialogue_node.PostActionType.MORE_TEXT:
@@ -102,7 +103,7 @@ func _on_YesButton_button_up():
 	emit_signal("yes_selected")
 
 func show_image(image):
-	$Popup/Itemsprite.texture = image
+#	$Popup/Itemsprite.texture = image
 	$Popup.show()
 
 func hide_image():

@@ -83,7 +83,6 @@ use_pixel_snap=true
 
 [rendering]
 
-environment/defaults/default_clear_color=Color(0.0784314, 0.105882, 0.145098, 1)
 textures/canvas_textures/default_texture_filter=0
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true

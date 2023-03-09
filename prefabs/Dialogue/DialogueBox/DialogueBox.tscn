@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://ciom5grkifthb"]
+[gd_scene load_steps=8 format=3 uid="uid://ciom5grkifthb"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
 [ext_resource type="Theme" uid="uid://otnt21yg5v4f" path="res://theme/button.tres" id="1_6wlgb"]
 [ext_resource type="Texture2D" uid="uid://b6rvreegdvghl" path="res://assets/background/UI-Menu-DefaultBG.png" id="1_cgvfq"]
 [ext_resource type="Theme" uid="uid://bjejjjg78f6bh" path="res://theme/UI_Menu.tres" id="2_wi7r2"]
+[ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="5_27re5"]
 
 [sub_resource type="Animation" id="Animation_q44kr"]
 resource_name = "textbox_fade"
@@ -38,6 +39,7 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Sidebar" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
+visible = false
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_constants/margin_right = 32
@@ -65,6 +67,7 @@ text = "example"
 metadata/onHoverText = "We are "
 
 [node name="DisplayArea" type="SplitContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
+visible = false
 layout_mode = 2
 vertical = true
 
@@ -134,6 +137,7 @@ theme = ExtResource("2_wi7r2")
 text = "10/20"
 
 [node name="DialogueSelect" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -181,10 +185,27 @@ theme = ExtResource("2_wi7r2")
 text = "testing testing one to three testing..."
 fit_content = true
 
-[node name="Popup" type="MarginContainer" parent="GUI/VSplitContainer"]
-layout_mode = 2
+[node name="Popup" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -90.0
+offset_right = 25.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
 
-[node name="Itemsprite" type="Sprite2D" parent="GUI/VSplitContainer/Popup"]
+[node name="Itemsprite" type="TextureRect" parent="Popup"]
+layout_mode = 2
+texture = ExtResource("5_27re5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
