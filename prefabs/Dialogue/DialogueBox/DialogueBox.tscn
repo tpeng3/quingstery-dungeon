@@ -1,11 +1,22 @@
-[gd_scene load_steps=5 format=3 uid="uid://ciom5grkifthb"]
+
+[gd_scene load_steps=8 format=3 uid="uid://ciom5grkifthb"]
 
 [ext_resource type="Theme" uid="uid://01prfygmbeik" path="res://theme/menusign.tres" id="1_i606y"]
 [ext_resource type="Theme" uid="uid://otnt21yg5v4f" path="res://theme/button.tres" id="2_m5vs8"]
 [ext_resource type="Theme" uid="uid://6rbvdpm5m2dt" path="res://theme/UI_Menu.tres" id="2_wi7r2"]
 [ext_resource type="Texture2D" uid="uid://b6rvreegdvghl" path="res://assets/UI/UI-Menu-DefaultBG.png" id="3_qb0j7"]
+[ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="5_27re5"]
+
+[sub_resource type="Animation" id="Animation_q44kr"]
+resource_name = "textbox_fade"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xuf1v"]
+_data = {
+"textbox_fade": SubResource("Animation_q44kr")
+}
 
 [node name="DialogueBox" type="Control"]
+script = ExtResource("1_4xtrd")
 layout_mode = 3
 anchors_preset = 0
 metadata/Navi_Enabled = true
@@ -33,6 +44,8 @@ layout_mode = 2
 size_flags_vertical = 3
 
 [node name="Sidebar" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
+
+visible = false
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_constants/margin_left = -38
@@ -65,6 +78,7 @@ layout_mode = 2
 vertical = true
 
 [node name="DialogueSelect" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea"]
+
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
@@ -72,7 +86,9 @@ size_flags_vertical = 8
 [node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
 layout_mode = 2
 size_flags_horizontal = 3
+
 theme = ExtResource("2_m5vs8")
+
 text = "Yes"
 
 [node name="DialogueNo" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
@@ -102,9 +118,46 @@ theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 16
 theme_override_constants/margin_bottom = 16
 
+[node name="Name" type="RichTextLabel" parent="GUI/VSplitContainer/DialogueBox/MarginContainer"]
+layout_mode = 2
+
 [node name="DialogueText" type="RichTextLabel" parent="GUI/VSplitContainer/DialogueBox/MarginContainer"]
 custom_minimum_size = Vector2(0, 120)
 layout_mode = 2
 theme = ExtResource("2_wi7r2")
 text = "testing testing one to three testing..."
 fit_content = true
+
+[node name="Popup" type="MarginContainer" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -90.0
+offset_right = 25.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Itemsprite" type="TextureRect" parent="Popup"]
+layout_mode = 2
+texture = ExtResource("5_27re5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_xuf1v")
+}
+
+[node name="Sounds" type="Node" parent="."]
+
+[node name="CustomSound" type="AudioStreamPlayer" parent="Sounds"]
+
+[connection signal="button_up" from="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect/DialogueYes" to="." method="_on_YesButton_button_up"]
+[connection signal="button_up" from="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect/DialogueNo" to="." method="_on_dialogue_finished"]

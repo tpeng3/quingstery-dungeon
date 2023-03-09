@@ -1,6 +1,8 @@
 [gd_resource type="Theme" load_steps=5 format=3 uid="uid://otnt21yg5v4f"]
 
+
 [ext_resource type="Texture2D" uid="uid://b6rvreegdvghl" path="res://assets/UI/UI-Menu-DefaultBG.png" id="1_6j4oq"]
+
 
 [sub_resource type="FontFile" id="FontFile_oecr6"]
 face_index = null
