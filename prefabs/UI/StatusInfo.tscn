@@ -1,14 +1,14 @@
 [gd_scene load_steps=7 format=3 uid="uid://bpl6bdr85kuru"]
 
-[ext_resource type="Texture2D" uid="uid://ctnlt56o85vap" path="res://assets/UI/hungermeter_border.png" id="1_248ct"]
-[ext_resource type="Texture2D" uid="uid://gh1dfie87q7k" path="res://assets/UI/hungermeter_back.png" id="1_oablq"]
+[ext_resource type="Texture2D" uid="uid://ctnlt56o85vap" path="res://assets/ui/hungermeter_border.png" id="1_248ct"]
+[ext_resource type="Texture2D" uid="uid://gh1dfie87q7k" path="res://assets/ui/hungermeter_back.png" id="1_oablq"]
 [ext_resource type="Script" path="res://prefabs/UI/HungerBarFill.gd" id="3_ejcwb"]
-[ext_resource type="Texture2D" uid="uid://daxrircgupg6m" path="res://assets/UI/backpack.png" id="4_4c7kh"]
+[ext_resource type="Texture2D" path="res://assets/ui/i_backpack.png" id="4_plssq"]
 
 [sub_resource type="Gradient" id="Gradient_gcyuc"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.490323, 1)
-colors = PackedColorArray(1, 0.305882, 0.305882, 1, 0.935484, 0.935484, 0.935484, 1, 1, 1, 1, 1)
+offsets = PackedFloat32Array(0, 0.793548)
+colors = PackedColorArray(1, 0.305882, 0.305882, 1, 0.935484, 0.935484, 0.935484, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_6upft"]
 gradient = SubResource("Gradient_gcyuc")
@@ -69,4 +69,4 @@ layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer"]
 position = Vector2(32, 32)
-texture = ExtResource("4_4c7kh")
+texture = ExtResource("4_plssq")

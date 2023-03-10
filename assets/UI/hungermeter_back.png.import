@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://gh1dfie87q7k"
-path="res://.godot/imported/hungermeter_back.png-bbf5c5a9b6958c0c65c8367118da0fec.ctex"
+path="res://.godot/imported/hungermeter_back.png-48e3cf5094486788ff769ce435a2b1d5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/hungermeter_back.png"
-dest_files=["res://.godot/imported/hungermeter_back.png-bbf5c5a9b6958c0c65c8367118da0fec.ctex"]
+source_file="res://assets/UI/hungermeter_back.png"
+dest_files=["res://.godot/imported/hungermeter_back.png-48e3cf5094486788ff769ce435a2b1d5.ctex"]
 
 [params]
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b3ijga2rkiaya"]
+[gd_scene load_steps=4 format=3 uid="uid://b3ijga2rkiaya"]
 
-[ext_resource type="Texture2D" uid="uid://df5axwpv7sltj" path="res://assets/background/placeholder.png" id="1_2htcq"]
+[ext_resource type="Texture2D" uid="uid://70fi0w4tqs34" path="res://assets/background/placeholder.png" id="1_2htcq"]
 [ext_resource type="PackedScene" uid="uid://dxr1xgd3ibyct" path="res://prefabs/SceneButton/SceneButton.tscn" id="2_78o1k"]
+[ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="3_0fjqn"]
 
 [node name="Game" type="Node2D"]
 
@@ -11,4 +12,5 @@ scale = Vector2(0.239286, 0.239286)
 texture = ExtResource("1_2htcq")
 
 [node name="Button" parent="." instance=ExtResource("2_78o1k")]
+theme = ExtResource("3_0fjqn")
 scene = "Map"

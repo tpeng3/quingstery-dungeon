@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxr1xgd3ibyct"]
 
-[ext_resource type="Theme" uid="uid://otnt21yg5v4f" path="res://theme/button.tres" id="1_alfh7"]
+[ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="1_8kx7b"]
 [ext_resource type="Script" path="res://prefabs/SceneButton/SceneButton.gd" id="2_pga8w"]
 
 [node name="Button" type="Button"]
@@ -8,7 +8,7 @@ offset_left = 431.0
 offset_top = 367.0
 offset_right = 527.0
 offset_bottom = 398.0
-theme = ExtResource("1_alfh7")
+theme = ExtResource("1_8kx7b")
 text = "Start Game"
 script = ExtResource("2_pga8w")
 

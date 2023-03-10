@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh14222gfxrx3"
-path="res://.godot/imported/m_fishing.png-6283d6348a0a79adfcdc849ef919f9af.ctex"
+uid="uid://6g8j8fo67mq8"
+path="res://.godot/imported/menu_sign_L.png-aa3a73da7b1268fb213f89535faf578f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/m_fishing.png"
-dest_files=["res://.godot/imported/m_fishing.png-6283d6348a0a79adfcdc849ef919f9af.ctex"]
+source_file="res://assets/UI/menu_sign_L.png"
+dest_files=["res://.godot/imported/menu_sign_L.png-aa3a73da7b1268fb213f89535faf578f.ctex"]
 
 [params]
 

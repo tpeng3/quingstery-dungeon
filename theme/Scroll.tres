@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://duxql3scmd2jj"]
+
+[ext_resource type="StyleBox" path="res://theme/tex_menu_scroll.tres" id="1_ble0g"]
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/UI/Timetwist-Bold.ttf" id="1_yxwk1"]
+
+[resource]
+Label/colors/font_color = Color(0.215686, 0.00784314, 0.396078, 1)
+Label/fonts/font = ExtResource("1_yxwk1")
+Label/styles/normal = ExtResource("1_ble0g")

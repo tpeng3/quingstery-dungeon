@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://xg5j6821b38y"]
+
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/UI/Timetwist-Bold.ttf" id="1_raoix"]
+[ext_resource type="StyleBox" path="res://theme/tex_yesno.tres" id="2_ro1xd"]
+
+[resource]
+Button/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
+Button/colors/font_disabled_color = Color(0.211765, 0.00784314, 0.396078, 0.25098)
+Button/colors/font_focus_color = Color(1, 0, 0, 1)
+Button/colors/font_hover_color = Color(1, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/colors/font_pressed_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/fonts/font = ExtResource("1_raoix")
+Button/styles/disabled = ExtResource("2_ro1xd")
+Button/styles/focus = ExtResource("2_ro1xd")
+Button/styles/hover = ExtResource("2_ro1xd")
+Button/styles/normal = ExtResource("2_ro1xd")
+Button/styles/pressed = ExtResource("2_ro1xd")
