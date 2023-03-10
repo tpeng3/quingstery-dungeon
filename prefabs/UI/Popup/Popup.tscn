@@ -1,0 +1,145 @@
+[gd_scene load_steps=11 format=3 uid="uid://o88oi5kw6pye"]
+
+[ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="1_byiml"]
+[ext_resource type="Texture2D" uid="uid://cvj0ycmpctjq7" path="res://assets/item/i_bamboo.png" id="1_l0gmk"]
+[ext_resource type="Texture2D" uid="uid://b46bgyy4iumxs" path="res://assets/vfx/rays.png" id="1_mj5at"]
+[ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="2_k5r62"]
+[ext_resource type="SpriteFrames" uid="uid://cqbc547uw0sqf" path="res://assets/vfx/sparkle.tres" id="3_vhueh"]
+
+[sub_resource type="Gradient" id="Gradient_iimng"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.101961, 0.0745098, 0.133333, 0.498039)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fmsmn"]
+gradient = SubResource("Gradient_iimng")
+
+[sub_resource type="Animation" id="Animation_wsv1t"]
+resource_name = "Rotate"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rays:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="Animation" id="Animation_sg04e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Rays:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_vvoll"]
+_data = {
+"RESET": SubResource("Animation_sg04e"),
+"Rotate": SubResource("Animation_wsv1t")
+}
+
+[node name="Popup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGOverlay" type="NinePatchRect" parent="."]
+layout_mode = 2
+offset_right = 960.0
+offset_bottom = 540.0
+texture = SubResource("GradientTexture1D_fmsmn")
+
+[node name="SplitContainer" type="SplitContainer" parent="."]
+layout_mode = 2
+offset_right = 960.0
+offset_bottom = 540.0
+vertical = true
+
+[node name="ItemMargin" type="MarginContainer" parent="SplitContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+size_flags_vertical = 0
+
+[node name="Rays" type="Sprite2D" parent="SplitContainer/ItemMargin"]
+position = Vector2(480, 200)
+texture = ExtResource("1_mj5at")
+
+[node name="RayAnimation" type="AnimationPlayer" parent="SplitContainer/ItemMargin/Rays"]
+root_node = NodePath("../..")
+autoplay = "Rotate"
+speed_scale = 0.3
+libraries = {
+"": SubResource("AnimationLibrary_vvoll")
+}
+
+[node name="ItemSprite" type="Sprite2D" parent="SplitContainer/ItemMargin"]
+position = Vector2(480, 200)
+scale = Vector2(3, 3)
+texture = ExtResource("1_l0gmk")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="SplitContainer/ItemMargin/ItemSprite"]
+position = Vector2(0, 2)
+sprite_frames = ExtResource("3_vhueh")
+frame_progress = 0.22905
+
+[node name="PopupText" type="RichTextLabel" parent="SplitContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(340, 140)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("1_byiml")
+bbcode_enabled = true
+text = "
+[center]Insert some sort of text here wahooo
+[/center]"
+
+[node name="FooterMargin" type="MarginContainer" parent="SplitContainer/PopupText"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="ButtonLeft" type="Button" parent="SplitContainer/PopupText/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_k5r62")
+theme_type_variation = &"Button_Alt"
+text = " No "
+
+[node name="ButtonMid" type="Button" parent="SplitContainer/PopupText/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("2_k5r62")
+theme_type_variation = &"Button_Alt2"
+text = "confirm"
+
+[node name="ButtonRight" type="Button" parent="SplitContainer/PopupText/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("2_k5r62")
+text = "Yes"

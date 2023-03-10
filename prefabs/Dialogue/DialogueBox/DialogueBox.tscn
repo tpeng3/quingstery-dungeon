@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://xg5j6821b38y" path="res://theme/YesNo.tres" id="3_otv6d"]
 [ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="5_27re5"]
 [ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="5_hwskm"]
-[ext_resource type="SpriteFrames" uid="uid://w87bbqewb36r" path="res://theme/Arrows.tres" id="6_ef0cp"]
+[ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="6_ef0cp"]
 
 [sub_resource type="Animation" id="Animation_q44kr"]
 resource_name = "textbox_fade"

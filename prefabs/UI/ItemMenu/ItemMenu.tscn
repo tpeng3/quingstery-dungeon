@@ -1,21 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://cukp7x3818jo3"]
+[gd_scene load_steps=10 format=3 uid="uid://bpg4gj3cwghb7"]
 
-[ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar.tscn" id="1_3vg67"]
 [ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="1_6b7a8"]
+[ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
 [ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="2_p56pw"]
 [ext_resource type="Texture2D" uid="uid://c5n00l1repm0b" path="res://assets/item/i_alcohol.png" id="4_nayp1"]
 [ext_resource type="Texture2D" uid="uid://bejwkpwlhqgwk" path="res://assets/item/i_wildfruit.png" id="5_twyrq"]
 [ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="6_avbl7"]
 [ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="7_1nhbr"]
-[ext_resource type="SpriteFrames" path="res://theme/Arrows.tres" id="7_hwq4l"]
-
-[sub_resource type="Gradient" id="Gradient_iimng"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.101961, 0.0745098, 0.133333, 0.498039)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_swap5"]
-gradient = SubResource("Gradient_iimng")
+[ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="7_hwq4l"]
+[ext_resource type="PackedScene" uid="uid://o88oi5kw6pye" path="res://prefabs/UI/Popup/Popup.tscn" id="9_j02wv"]
 
 [node name="ItemMenu" type="Control"]
 texture_filter = 1
@@ -26,7 +19,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="TopBar" parent="." instance=ExtResource("1_3vg67")]
+[node name="TopBar" parent="." instance=ExtResource("1_31h2c")]
 layout_mode = 1
 
 [node name="OuterPadding" type="MarginContainer" parent="."]
@@ -172,54 +165,5 @@ grow_horizontal = 2
 theme = ExtResource("7_1nhbr")
 text = "ITEM NAME"
 
-[node name="PopupContainer" type="MarginContainer" parent="."]
+[node name="Popup" parent="." instance=ExtResource("9_j02wv")]
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="BGOverlay" type="NinePatchRect" parent="PopupContainer"]
-layout_mode = 2
-texture = SubResource("GradientTexture1D_swap5")
-
-[node name="PopupText" type="RichTextLabel" parent="PopupContainer"]
-clip_contents = false
-custom_minimum_size = Vector2(300, 140)
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-theme = ExtResource("7_1nhbr")
-bbcode_enabled = true
-text = "[center]Are you sure you'd like to eat this item?
-
-hunger: 30->[color=red]80[/color]"
-
-[node name="FooterMargin" type="MarginContainer" parent="PopupContainer/PopupText"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -29.0
-grow_horizontal = 2
-grow_vertical = 0
-size_flags_vertical = 8
-theme_override_constants/margin_left = -20
-theme_override_constants/margin_right = -20
-theme_override_constants/margin_bottom = -20
-
-[node name="ButtonNo" type="Button" parent="PopupContainer/PopupText/FooterMargin"]
-layout_mode = 2
-size_flags_horizontal = 0
-theme = ExtResource("1_6b7a8")
-theme_type_variation = &"Button_Alt"
-text = "No
-"
-
-[node name="ButtonYes" type="Button" parent="PopupContainer/PopupText/FooterMargin"]
-layout_mode = 2
-size_flags_horizontal = 8
-theme = ExtResource("1_6b7a8")
-text = "Yes"
