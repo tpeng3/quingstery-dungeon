@@ -6,7 +6,7 @@
 [ext_resource type="Theme" uid="uid://xg5j6821b38y" path="res://theme/YesNo.tres" id="3_otv6d"]
 [ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="5_27re5"]
 [ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="5_hwskm"]
-[ext_resource type="SpriteFrames" uid="uid://dynjlnnrnebyv" path="res://assets/ui/dialogue_proceed.tres" id="6_g4ykx"]
+[ext_resource type="SpriteFrames" uid="uid://w87bbqewb36r" path="res://theme/Arrows.tres" id="6_ef0cp"]
 
 [sub_resource type="Animation" id="Animation_q44kr"]
 resource_name = "textbox_fade"
@@ -130,8 +130,9 @@ theme = ExtResource("5_hwskm")
 text = "Name Here"
 
 [node name="ClickToContinue" type="AnimatedSprite2D" parent="GUI/VSplitContainer/DialogueBox"]
-sprite_frames = ExtResource("6_g4ykx")
-frame_progress = 0.359052
+sprite_frames = ExtResource("6_ef0cp")
+animation = &"Flash_R"
+frame_progress = 0.914684
 offset = Vector2(816, 100)
 
 [node name="Popup" type="MarginContainer" parent="."]

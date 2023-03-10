@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cukp7x3818jo3"]
+[gd_scene load_steps=11 format=3 uid="uid://cukp7x3818jo3"]
 
 [ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar.tscn" id="1_3vg67"]
 [ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="1_6b7a8"]
@@ -7,8 +7,18 @@
 [ext_resource type="Texture2D" uid="uid://bejwkpwlhqgwk" path="res://assets/item/i_wildfruit.png" id="5_twyrq"]
 [ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="6_avbl7"]
 [ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="7_1nhbr"]
+[ext_resource type="SpriteFrames" path="res://theme/Arrows.tres" id="7_hwq4l"]
+
+[sub_resource type="Gradient" id="Gradient_iimng"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.101961, 0.0745098, 0.133333, 0.498039)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_swap5"]
+gradient = SubResource("Gradient_iimng")
 
 [node name="ItemMenu" type="Control"]
+texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -60,6 +70,44 @@ item_6/text = "Glowbug Lantern"
 item_6/icon = ExtResource("6_avbl7")
 item_7/text = " x 1"
 
+[node name="Pagination" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_right = 70
+
+[node name="PaginationLabel" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("1_6b7a8")
+text = "Page 01/04"
+
+[node name="ArrowBack" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+position = Vector2(144, 12)
+sprite_frames = ExtResource("7_hwq4l")
+animation = &"Dark_L"
+
+[node name="ArrowNext" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+position = Vector2(168, 12)
+sprite_frames = ExtResource("7_hwq4l")
+animation = &"Dark_R"
+
+[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="NaviBack" type="Button" parent="OuterPadding/SplitContainer/LeftPanel/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_6b7a8")
+theme_type_variation = &"Button_Alt"
+text = "close "
+
 [node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
 layout_mode = 2
 theme_override_constants/margin_left = -20
@@ -94,6 +142,26 @@ size_flags_vertical = 8
 theme = ExtResource("1_6b7a8")
 text = "adfasfhskdfsdfsld aas oflsdjf dsklfas jdlkad fjdslkfasd fklasdjkfds dskfdlj dskalf jldkak  "
 
+[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="Select" type="Button" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_6b7a8")
+text = "select"
+
 [node name="ItemName" type="Label" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc"]
 layout_mode = 2
 offset_left = 108.0
@@ -103,3 +171,55 @@ offset_bottom = 24.0
 grow_horizontal = 2
 theme = ExtResource("7_1nhbr")
 text = "ITEM NAME"
+
+[node name="PopupContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BGOverlay" type="NinePatchRect" parent="PopupContainer"]
+layout_mode = 2
+texture = SubResource("GradientTexture1D_swap5")
+
+[node name="PopupText" type="RichTextLabel" parent="PopupContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 140)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("7_1nhbr")
+bbcode_enabled = true
+text = "[center]Are you sure you'd like to eat this item?
+
+hunger: 30->[color=red]80[/color]"
+
+[node name="FooterMargin" type="MarginContainer" parent="PopupContainer/PopupText"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -29.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="ButtonNo" type="Button" parent="PopupContainer/PopupText/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_6b7a8")
+theme_type_variation = &"Button_Alt"
+text = "No
+"
+
+[node name="ButtonYes" type="Button" parent="PopupContainer/PopupText/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("1_6b7a8")
+text = "Yes"
