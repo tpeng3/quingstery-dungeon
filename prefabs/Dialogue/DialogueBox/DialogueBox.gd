@@ -8,7 +8,7 @@ signal no_selected
 @onready var DialogueBox = $GUI/VSplitContainer/DialogueBox
 @onready var DialogueName = $GUI/VSplitContainer/DialogueBox/NameContainer/Name
 @onready var DialogueText = $GUI/VSplitContainer/DialogueBox/DialogueText
-@onready var DialogueSelect = $GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect
+@onready var DialogueSelect = $GUI/VSplitContainer/DialogueBox/YesNo
 
 func _ready():
 	hide()

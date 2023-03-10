@@ -29,9 +29,6 @@ theme_override_constants/margin_left = 48
 theme_override_constants/margin_top = 48
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 48
-metadata/Navi_Enabled = false
-metadata/YesNo_Enabled = false
-metadata/Dialogue_Enabled = false
 
 [node name="VSplitContainer" type="SplitContainer" parent="GUI"]
 layout_mode = 2
@@ -42,32 +39,27 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_bottom = 16
 
-[node name="UpperAreaDivider" type="SplitContainer" parent="GUI/VSplitContainer/UpperArea"]
-custom_minimum_size = Vector2(150, 0)
-layout_mode = 2
-size_flags_vertical = 3
-
-[node name="Sidebar" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
+[node name="NaviMenu" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea"]
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 
-[node name="SidebarContent" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar"]
+[node name="NaviItems" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/NaviMenu"]
 layout_mode = 2
 vertical = true
 
-[node name="Button" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar/SidebarContent"]
+[node name="Button" type="Button" parent="GUI/VSplitContainer/UpperArea/NaviMenu/NaviItems"]
 layout_mode = 2
 theme = ExtResource("2_dpae3")
 text = "example text"
 
-[node name="Button2" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar/SidebarContent"]
+[node name="Button2" type="Button" parent="GUI/VSplitContainer/UpperArea/NaviMenu/NaviItems"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_dpae3")
 theme_type_variation = &"Button_Alt"
 text = "alt button"
 
-[node name="Button3" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/Sidebar/SidebarContent"]
+[node name="Button3" type="Button" parent="GUI/VSplitContainer/UpperArea/NaviMenu/NaviItems"]
 layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("2_dpae3")
@@ -75,38 +67,39 @@ disabled = true
 text = "disabled"
 metadata/onHoverText = "We are "
 
-[node name="DisplayArea" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
+[node name="DialogueBox" type="MarginContainer" parent="GUI/VSplitContainer"]
 layout_mode = 2
 
-[node name="DialogueSelect" type="Control" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea"]
+[node name="YesNo" type="MarginContainer" parent="GUI/VSplitContainer/DialogueBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="DialogueSelect" type="Control" parent="GUI/VSplitContainer/DialogueBox/YesNo"]
 layout_mode = 2
 
-[node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
+[node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/DialogueBox/YesNo/DialogueSelect"]
 layout_mode = 0
-offset_left = 547.0
-offset_top = 212.0
-offset_right = 619.0
-offset_bottom = 253.0
+offset_left = -92.0
+offset_top = -106.0
+offset_right = -20.0
+offset_bottom = -65.0
 size_flags_horizontal = 7
 theme = ExtResource("3_otv6d")
 text = " Yes "
 
-[node name="DialogueNo" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
+[node name="DialogueNo" type="Button" parent="GUI/VSplitContainer/DialogueBox/YesNo/DialogueSelect"]
 layout_mode = 0
-offset_left = 473.0
-offset_top = 273.0
-offset_right = 535.0
-offset_bottom = 314.0
+offset_left = -174.0
+offset_top = -43.0
+offset_right = -112.0
+offset_bottom = -2.0
 size_flags_horizontal = 7
 theme = ExtResource("3_otv6d")
 text = " No "
 
-[node name="Sprite2D" type="Sprite2D" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea"]
-position = Vector2(582, 301)
+[node name="Sprite2D" type="Sprite2D" parent="GUI/VSplitContainer/DialogueBox/YesNo"]
+position = Vector2(-56, -14)
 texture = ExtResource("3_56qxl")
-
-[node name="DialogueBox" type="MarginContainer" parent="GUI/VSplitContainer"]
-layout_mode = 2
 
 [node name="DialogueText" type="RichTextLabel" parent="GUI/VSplitContainer/DialogueBox"]
 custom_minimum_size = Vector2(0, 128)
@@ -163,5 +156,5 @@ libraries = {
 
 [node name="CustomSound" type="AudioStreamPlayer" parent="Sounds"]
 
-[connection signal="button_up" from="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect/DialogueYes" to="." method="_on_YesButton_button_up"]
-[connection signal="button_up" from="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect/DialogueNo" to="." method="_on_dialogue_finished"]
+[connection signal="button_up" from="GUI/VSplitContainer/DialogueBox/YesNo/DialogueSelect/DialogueYes" to="." method="_on_YesButton_button_up"]
+[connection signal="button_up" from="GUI/VSplitContainer/DialogueBox/YesNo/DialogueSelect/DialogueNo" to="." method="_on_dialogue_finished"]
