@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://d2sw2fysbdc2x"]
 
 [ext_resource type="Script" path="res://scenes/Mountain/Mountain.gd" id="1_ybsvq"]
-[ext_resource type="TileSet" uid="uid://x78mpjlfyeaf" path="res://theme/tileset.tres" id="2_ja4ub"]
+[ext_resource type="TileSet" path="res://theme/tileset.tres" id="2_ja4ub"]
 [ext_resource type="PackedScene" uid="uid://cpm2xughmnrd3" path="res://prefabs/Quingee/Quingee.tscn" id="3_beijm"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_qklru"]
 [ext_resource type="PackedScene" uid="uid://ciom5grkifthb" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="5_yuxs7"]
@@ -21,14 +21,13 @@ cell_quadrant_size = 32
 format = 2
 layer_0/name = "Floor"
 layer_0/y_sort_enabled = true
-layer_0/tile_data = PackedInt32Array(1572867, 196612, 1, 1507331, 196612, 1, 1572868, 4, 0, 1638403, 4, 0, 1507332, 4, 0, 1441796, 4, 0, 1376261, 65540, 2, 1441797, 65540, 2, 1376260, 65540, 2, 1310724, 327684, 0, 1376259, 458756, 2, 1441795, 65540, 2, 1507330, 65540, 2, 1441799, 65540, 1, 1507334, 4, 0, 1376263, 4, 2, 1310728, 4, 2, 1376262, 4, 2, 1310726, 4, 2, 1179654, 4, 2, 1048583, 4, 2, 1245191, 4, 2, 1245190, 4, 2, 1179655, 4, 2, 1048582, 4, 2, 1048581, 4, 2, 1048580, 4, 2, 1114115, 4, 2, 1245187, 458756, 1, 983050, 8, 0, 1048586, 65544, 0, 1048587, 131080, 0, 1114122, 196616, 0, 1114123, 262152, 0, 1048588, 458760, 0, 1179659, 458760, 0, 1245194, 393224, 0, 1310731, 8, 0, 1179660, 196616, 1, 1245196, 196616, 1, 1114124, 327688, 0, 1179661, 327688, 0, 1245197, 131080, 1, 1310733, 8, 1, 1376266, 65544, 1, 1310730, 393224, 0, 1376267, 8, 1, 1310732, 131080, 1, 1245195, 327688, 0, 1376265, 262152, 0, 1441802, 196616, 1, 1507338, 196616, 1, 1441803, 458760, 0, 1507339, 131080, 1, 1572875, 8, 1, 1441804, 262152, 1, 1376268, 262152, 1, 1179658, 262152, 1, 1114121, 262152, 1, 983051, 262152, 1, 917515, 262152, 1, 1441798, 5, 131072)
 layer_1/name = "Item"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
 layer_1/y_sort_enabled = true
 layer_1/y_sort_origin = 0
 layer_1/z_index = 1
-layer_1/tile_data = PackedInt32Array(1703943, 7, 0, 1638404, 5, 65536)
+layer_1/tile_data = PackedInt32Array(1703943, 5, 131072, 1638404, 5, 65536)
 
 [node name="Quingee" parent="Map" instance=ExtResource("3_beijm")]
 position = Vector2(339, 314)
@@ -46,7 +45,7 @@ text = "Press space to continue!"
 [node name="DialogueBox" parent="." instance=ExtResource("5_yuxs7")]
 visible = false
 
-[connection signal="body_entered" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_exited" flags=18]
 [connection signal="body_entered" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_entered" flags=18]
 [connection signal="body_exited" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_exited" flags=18]
