@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://c3gkecmjawpq1"
-path="res://.godot/imported/Timetwist-Regular.ttf-dc160924db425bbbe690f2eff5f4a707.fontdata"
+path="res://.godot/imported/Timetwist-Regular.ttf-e8614a669a511ce25d246dc09527f511.fontdata"
 
 [deps]
 
-source_file="res://assets/UI/Timetwist-Regular.ttf"
-dest_files=["res://.godot/imported/Timetwist-Regular.ttf-dc160924db425bbbe690f2eff5f4a707.fontdata"]
+source_file="res://assets/ui/Timetwist-Regular.ttf"
+dest_files=["res://.godot/imported/Timetwist-Regular.ttf-e8614a669a511ce25d246dc09527f511.fontdata"]
 
 [params]
 

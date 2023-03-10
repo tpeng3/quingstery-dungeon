@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://dki7ch4y6dnr0"
-path="res://.godot/imported/press-start.regular.ttf-3bb06cefc52517b9f7d06237a7672a1f.fontdata"
+path="res://.godot/imported/press-start.regular.ttf-b71be1960cd489a67d6ca4027d64de52.fontdata"
 
 [deps]
 
-source_file="res://assets/UI/press-start.regular.ttf"
-dest_files=["res://.godot/imported/press-start.regular.ttf-3bb06cefc52517b9f7d06237a7672a1f.fontdata"]
+source_file="res://assets/ui/press-start.regular.ttf"
+dest_files=["res://.godot/imported/press-start.regular.ttf-b71be1960cd489a67d6ca4027d64de52.fontdata"]
 
 [params]
 

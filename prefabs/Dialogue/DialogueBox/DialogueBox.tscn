@@ -15,15 +15,12 @@ _data = {
 "textbox_fade": SubResource("Animation_q44kr")
 }
 
-[node name="DialogueBox" type="Control"]
-layout_mode = 3
-anchors_preset = 0
+[node name="DialogueBox" type="Node2D"]
 script = ExtResource("1_4xtrd")
 metadata/Navi_Enabled = true
 metadata/YesNo_Enabled = true
 
 [node name="GUI" type="MarginContainer" parent="."]
-layout_mode = 0
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 964.0
@@ -137,7 +134,7 @@ text = "Name Here"
 
 [node name="Popup" type="MarginContainer" parent="."]
 visible = false
-layout_mode = 0
+anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
