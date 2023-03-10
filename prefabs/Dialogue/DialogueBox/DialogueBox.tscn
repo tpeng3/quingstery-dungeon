@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://ycmbk3iu30o1"]
+[gd_scene load_steps=9 format=3 uid="uid://djvaqy0scb2xl"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
 [ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="2_dpae3"]
-[ext_resource type="Texture2D" path="res://assets/ui/compass.png" id="3_56qxl"]
+[ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/UI/compass.png" id="3_56qxl"]
 [ext_resource type="Theme" uid="uid://xg5j6821b38y" path="res://theme/YesNo.tres" id="3_otv6d"]
 [ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="5_27re5"]
 [ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="5_hwskm"]
@@ -85,6 +85,7 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/Control"]
+layout_mode = 0
 offset_left = 547.0
 offset_top = 212.0
 offset_right = 619.0
@@ -94,6 +95,7 @@ theme = ExtResource("3_otv6d")
 text = " Yes "
 
 [node name="DialogueNo" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/Control"]
+layout_mode = 0
 offset_left = 473.0
 offset_top = 273.0
 offset_right = 535.0

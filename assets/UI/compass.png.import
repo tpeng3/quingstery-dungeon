@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wwhtkijdvq7t"
-path="res://.godot/imported/cursor_default.png-da5b5443c6682b80c0bc4c8e0932a01d.ctex"
+uid="uid://bdlm2k5inqmwb"
+path="res://.godot/imported/compass.png-cf7eb4d71034a5cc0717c08b1c751815.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/cursor_default.png"
-dest_files=["res://.godot/imported/cursor_default.png-da5b5443c6682b80c0bc4c8e0932a01d.ctex"]
+source_file="res://assets/UI/compass.png"
+dest_files=["res://.godot/imported/compass.png-cf7eb4d71034a5cc0717c08b1c751815.ctex"]
 
 [params]
 
