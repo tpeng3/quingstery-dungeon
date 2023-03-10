@@ -28,4 +28,18 @@ shape = SubResource("RectangleShape2D_4dpne")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("1")
 
+[node name="PlaceholderText" type="RichTextLabel" parent="."]
+visible = false
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -40.0
+offset_right = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Press space!"
+
 [connection signal="body_entered" from="TileDetector" to="TileDetector" method="_on_TileDetector_body_entered"]

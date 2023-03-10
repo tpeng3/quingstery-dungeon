@@ -2,7 +2,6 @@ extends Area2D
 
 enum ActionState { 
 	IDLE,
-	ACTIVE,
 	COMPLETE
 }
 var state = ActionState.IDLE
@@ -14,7 +13,7 @@ func _ready():
 
 func _input(event):
 	# on enter/space or mouse click
-	if event.is_action_pressed("ui_accept") and has_overlapping_bodies:
+	if event.is_action_pressed("ui_accept") and has_overlapping_bodies():
 		$Icon.visible = false
 		$Icon/AnimationPlayer.pause()
 		$Control.visible = true
@@ -35,18 +34,9 @@ func _on_mining_complete():
 
 func _on_body_entered(body):
 	if state != ActionState.COMPLETE:
-		state = ActionState.ACTIVE
 		$Icon.visible = true
-		$Timer.stop()
 
 func _on_body_exited(body):
 	if state != ActionState.COMPLETE:
-		state = ActionState.IDLE
 		$Icon.visible = false
-		$Timer.start()
-		await $Timer.timeout
-		if state != ActionState.COMPLETE:
-			state = ActionState.IDLE
-			$AnimationPlayer.play("fade")
-			await $AnimationPlayer.animation_finished
-			$Control/ProgressBar.value = 0
+		$Control.visible = false

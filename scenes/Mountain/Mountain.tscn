@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://d2sw2fysbdc2x"]
 
 [ext_resource type="Script" path="res://scenes/Mountain/Mountain.gd" id="1_ybsvq"]
-[ext_resource type="TileSet" path="res://theme/tileset.tres" id="2_ja4ub"]
+[ext_resource type="TileSet" uid="uid://docrlcvs1ophx" path="res://theme/tileset.tres" id="2_ja4ub"]
 [ext_resource type="PackedScene" uid="uid://cpm2xughmnrd3" path="res://prefabs/Quingee/Quingee.tscn" id="3_beijm"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_qklru"]
-[ext_resource type="PackedScene" uid="uid://ciom5grkifthb" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="5_yuxs7"]
+[ext_resource type="PackedScene" uid="uid://djvaqy0scb2xl" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="5_yuxs7"]
 
 [node name="Mountain" type="Node2D"]
 script = ExtResource("1_ybsvq")
@@ -21,6 +21,7 @@ cell_quadrant_size = 32
 format = 2
 layer_0/name = "Floor"
 layer_0/y_sort_enabled = true
+layer_0/tile_data = PackedInt32Array(1376262, 5, 196608, 1310723, 5, 262144)
 layer_1/name = "Item"
 layer_1/enabled = true
 layer_1/modulate = Color(1, 1, 1, 1)
@@ -44,8 +45,3 @@ text = "Press space to continue!"
 
 [node name="DialogueBox" parent="." instance=ExtResource("5_yuxs7")]
 visible = false
-
-[connection signal="body_entered" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_exited" flags=18]

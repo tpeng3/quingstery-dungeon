@@ -1,9 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dd6f288trj1su"]
+[gd_scene load_steps=11 format=3 uid="uid://dd6f288trj1su"]
 
-[ext_resource type="Script" path="res://prefabs/TileScenes/FishingSpot/FishingSpot.gd" id="1_wjdeh"]
+[ext_resource type="Script" path="res://prefabs/TileScenes/GatherSpot/GatherSpot.gd" id="1_uvuq8"]
+[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_dt4m8"]
 [ext_resource type="Texture2D" uid="uid://cbqxeasda0jh6" path="res://assets/tile/placeholdertile2.png" id="2_lmt3a"]
-[ext_resource type="Texture2D" uid="uid://cdr2t6d2xld3o" path="res://assets/ui/cursor_hover.png" id="3_ybmaa"]
-[ext_resource type="Texture2D" uid="uid://c0c8ofly610r4" path="res://assets/ui/m_mining.png" id="4_662k4"]
+[ext_resource type="JSON" path="res://dialogue/Mountain/itemget.json" id="3_1i5ge"]
+[ext_resource type="Texture2D" uid="uid://bb43hfropg5lr" path="res://assets/item/i_acorn.png" id="3_gq1v2"]
+[ext_resource type="Texture2D" uid="uid://b13sg44rrgni3" path="res://assets/ui/m_gathering.png" id="4_24kyl"]
 
 [sub_resource type="Animation" id="Animation_icl5u"]
 resource_name = "float"
@@ -21,15 +23,46 @@ tracks/0/keys = {
 "values": [Vector2(0, 0), Vector2(0, -8), Vector2(0, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_fvkui"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Control:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Control:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 0.210224),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 10)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ccjp3"]
 _data = {
+"fade": SubResource("Animation_fvkui"),
 "float": SubResource("Animation_icl5u")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
 
-[node name="FishingSpot" type="Area2D"]
-script = ExtResource("1_wjdeh")
+[node name="GatherSpot" type="Area2D"]
+script = ExtResource("1_uvuq8")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("2_dt4m8")]
+dialogue_file = ExtResource("3_1i5ge")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -40,12 +73,13 @@ libraries = {
 texture = ExtResource("2_lmt3a")
 
 [node name="Sparkle" type="Sprite2D" parent="Sprite"]
-texture = ExtResource("3_ybmaa")
+texture = ExtResource("3_gq1v2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_msile")
 
 [node name="Control" type="Control" parent="."]
+visible = false
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -62,9 +96,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -74.5
-offset_right = 74.5
-offset_bottom = 27.0
+offset_left = -75.0
+offset_top = -15.0
+offset_right = 74.0
+offset_bottom = 12.0
 grow_horizontal = 2
 max_value = 20.0
 step = 1.0
@@ -72,17 +107,20 @@ rounded = true
 show_percentage = false
 
 [node name="Icon" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(0, -25)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_662k4")
+texture = ExtResource("4_24kyl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Icon"]
 root_node = NodePath("../..")
+autoplay = "float"
 libraries = {
 "": SubResource("AnimationLibrary_ccjp3")
 }
 
 [node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
