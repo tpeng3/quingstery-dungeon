@@ -6,8 +6,8 @@ signal yes_selected
 signal no_selected
 
 @onready var DialogueBox = $GUI/VSplitContainer/DialogueBox
-@onready var DialogueName = $GUI/VSplitContainer/DialogueBox/MarginContainer/Name
-@onready var DialogueText = $GUI/VSplitContainer/DialogueBox/MarginContainer/DialogueText
+@onready var DialogueName = $GUI/VSplitContainer/DialogueBox/NameContainer/Name
+@onready var DialogueText = $GUI/VSplitContainer/DialogueBox/DialogueText
 @onready var DialogueSelect = $GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect
 
 func _ready():

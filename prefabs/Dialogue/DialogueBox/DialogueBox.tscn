@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
 [ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="2_dpae3"]
-[ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/UI/compass.png" id="3_56qxl"]
+[ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/ui/compass.png" id="3_56qxl"]
 [ext_resource type="Theme" uid="uid://xg5j6821b38y" path="res://theme/YesNo.tres" id="3_otv6d"]
 [ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="5_27re5"]
 [ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="5_hwskm"]
@@ -15,7 +15,7 @@ _data = {
 "textbox_fade": SubResource("Animation_q44kr")
 }
 
-[node name="DialogueBox" type="Node2D"]
+[node name="DialogueBox" type="CanvasLayer"]
 script = ExtResource("1_4xtrd")
 metadata/Navi_Enabled = true
 metadata/YesNo_Enabled = true
@@ -78,10 +78,10 @@ metadata/onHoverText = "We are "
 [node name="DisplayArea" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider"]
 layout_mode = 2
 
-[node name="Control" type="Control" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea"]
+[node name="DialogueSelect" type="Control" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea"]
 layout_mode = 2
 
-[node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/Control"]
+[node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
 layout_mode = 0
 offset_left = 547.0
 offset_top = 212.0
@@ -91,7 +91,7 @@ size_flags_horizontal = 7
 theme = ExtResource("3_otv6d")
 text = " Yes "
 
-[node name="DialogueNo" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/Control"]
+[node name="DialogueNo" type="Button" parent="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect"]
 layout_mode = 0
 offset_left = 473.0
 offset_top = 273.0
@@ -163,5 +163,5 @@ libraries = {
 
 [node name="CustomSound" type="AudioStreamPlayer" parent="Sounds"]
 
-[connection signal="button_up" from="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/Control/DialogueYes" to="." method="_on_YesButton_button_up"]
-[connection signal="button_up" from="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/Control/DialogueNo" to="." method="_on_dialogue_finished"]
+[connection signal="button_up" from="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect/DialogueYes" to="." method="_on_YesButton_button_up"]
+[connection signal="button_up" from="GUI/VSplitContainer/UpperArea/UpperAreaDivider/DisplayArea/DialogueSelect/DialogueNo" to="." method="_on_dialogue_finished"]
