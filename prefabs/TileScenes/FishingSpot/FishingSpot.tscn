@@ -1,11 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://cotrhfwrd8gh3"]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/FishingSpot/FishingSpot.gd" id="1_7epku"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_f1cuf"]
 [ext_resource type="Texture2D" uid="uid://cbqxeasda0jh6" path="res://assets/tile/placeholdertile2.png" id="2_m5j5d"]
 [ext_resource type="JSON" path="res://dialogue/Mountain/itemget.json" id="3_do35e"]
-[ext_resource type="Texture2D" uid="uid://uo52ytrt03mm" path="res://assets/item/i_fish.png" id="5_fqpr8"]
-[ext_resource type="Texture2D" uid="uid://b7b67bptm1klj" path="res://assets/ui/m_fishing.png" id="6_htg17"]
+[ext_resource type="Texture2D" uid="uid://dvhgmtjuf80fm" path="res://assets/item/i_fish.png" id="5_fqpr8"]
+[ext_resource type="Texture2D" uid="uid://bh14222gfxrx3" path="res://assets/ui/m_fishing.png" id="6_htg17"]
 
 [sub_resource type="Animation" id="Animation_jkf5a"]
 resource_name = "fade"

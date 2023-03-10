@@ -1,10 +1,16 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://dygbods846xmt"]
+[gd_resource type="Theme" load_steps=8 format=3 uid="uid://dygbods846xmt"]
 
-[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/UI/Timetwist-Bold.ttf" id="1_c2y0s"]
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist-Bold.ttf" id="1_c2y0s"]
 [ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_menu_sign.tres" id="2_ttkyf"]
-[ext_resource type="StyleBox" path="res://theme/tex_menu_sign_L.tres" id="3_cwo08"]
-[ext_resource type="FontFile" uid="uid://dki7ch4y6dnr0" path="res://assets/UI/press-start.regular.ttf" id="4_3adbk"]
-[ext_resource type="StyleBox" path="res://theme/tex_menu_board.tres" id="5_h24u7"]
+[ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_menu_sign_L.tres" id="3_cwo08"]
+[ext_resource type="FontFile" uid="uid://dki7ch4y6dnr0" path="res://assets/ui/press-start.regular.ttf" id="4_3adbk"]
+[ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="5_h24u7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs7tf"]
+bg_color = Color(0.729412, 0.384314, 0.294118, 0.501961)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_akddw"]
+bg_color = Color(0.729412, 0.384314, 0.294118, 1)
 
 [resource]
 Button/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
@@ -26,6 +32,13 @@ Button_Alt/styles/focus = ExtResource("3_cwo08")
 Button_Alt/styles/hover = ExtResource("3_cwo08")
 Button_Alt/styles/normal = ExtResource("3_cwo08")
 Button_Alt/styles/pressed = ExtResource("3_cwo08")
+ItemList/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
+ItemList/colors/font_selected_color = Color(0.211765, 0.00784314, 0.396078, 1)
+ItemList/constants/icon_margin = 10
+ItemList/fonts/font = ExtResource("4_3adbk")
+ItemList/styles/panel = ExtResource("5_h24u7")
+ItemList/styles/selected = SubResource("StyleBoxFlat_fs7tf")
+ItemList/styles/selected_focus = SubResource("StyleBoxFlat_akddw")
 RichTextLabel/colors/default_color = Color(0.215686, 0.00784314, 0.396078, 1)
 RichTextLabel/font_sizes/normal_font_size = 16
 RichTextLabel/fonts/normal_font = ExtResource("4_3adbk")

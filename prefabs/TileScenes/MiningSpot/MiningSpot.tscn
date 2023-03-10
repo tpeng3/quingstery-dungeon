@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://b0fl85bd8g0dw"]
+[gd_scene load_steps=13 format=3]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.gd" id="1_m33fi"]
 [ext_resource type="Texture2D" uid="uid://cbqxeasda0jh6" path="res://assets/tile/placeholdertile2.png" id="2_vlglr"]
-[ext_resource type="Texture2D" uid="uid://c0c8ofly610r4" path="res://assets/ui/m_mining.png" id="4_583kt"]
-[ext_resource type="Texture2D" uid="uid://butjym58moea7" path="res://assets/item/i_iron.png" id="5_ie68a"]
+[ext_resource type="Texture2D" uid="uid://d3ibobo7kr5p3" path="res://assets/ui/m_mining.png" id="4_583kt"]
+[ext_resource type="Texture2D" uid="uid://dwlphakbkwqxm" path="res://assets/item/i_iron.png" id="5_ie68a"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="5_l2bfp"]
 [ext_resource type="JSON" path="res://dialogue/Mountain/itemget.json" id="6_os244"]
 

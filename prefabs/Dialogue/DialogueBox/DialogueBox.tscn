@@ -1,11 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://djvaqy0scb2xl"]
+[gd_scene load_steps=10 format=3 uid="uid://djvaqy0scb2xl"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
-[ext_resource type="Theme" path="res://theme/Signpost.tres" id="2_dpae3"]
+[ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="2_dpae3"]
 [ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/ui/compass.png" id="3_56qxl"]
-[ext_resource type="Theme" path="res://theme/YesNo.tres" id="3_otv6d"]
+[ext_resource type="Theme" uid="uid://xg5j6821b38y" path="res://theme/YesNo.tres" id="3_otv6d"]
 [ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="5_27re5"]
-[ext_resource type="Theme" path="res://theme/Scroll.tres" id="5_hwskm"]
+[ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="5_hwskm"]
+[ext_resource type="SpriteFrames" uid="uid://dynjlnnrnebyv" path="res://assets/ui/dialogue_proceed.tres" id="6_g4ykx"]
 
 [sub_resource type="Animation" id="Animation_q44kr"]
 resource_name = "textbox_fade"
@@ -40,8 +41,11 @@ size_flags_vertical = 3
 theme_override_constants/margin_bottom = 16
 
 [node name="NaviMenu" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea"]
+visible = false
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
+theme_override_constants/margin_left = -16
+theme_override_constants/margin_top = -16
 
 [node name="NaviItems" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/NaviMenu"]
 layout_mode = 2
@@ -124,6 +128,11 @@ layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("5_hwskm")
 text = "Name Here"
+
+[node name="ClickToContinue" type="AnimatedSprite2D" parent="GUI/VSplitContainer/DialogueBox"]
+sprite_frames = ExtResource("6_g4ykx")
+frame_progress = 0.359052
+offset = Vector2(816, 100)
 
 [node name="Popup" type="MarginContainer" parent="."]
 visible = false

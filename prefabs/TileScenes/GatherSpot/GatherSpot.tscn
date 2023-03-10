@@ -1,10 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://dd6f288trj1su"]
+[gd_scene load_steps=11 format=3]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/GatherSpot/GatherSpot.gd" id="1_uvuq8"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_dt4m8"]
 [ext_resource type="Texture2D" uid="uid://cbqxeasda0jh6" path="res://assets/tile/placeholdertile2.png" id="2_lmt3a"]
 [ext_resource type="JSON" path="res://dialogue/Mountain/itemget.json" id="3_1i5ge"]
-[ext_resource type="Texture2D" uid="uid://bb43hfropg5lr" path="res://assets/item/i_acorn.png" id="3_gq1v2"]
+[ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="3_gq1v2"]
 [ext_resource type="Texture2D" uid="uid://b13sg44rrgni3" path="res://assets/ui/m_gathering.png" id="4_24kyl"]
 
 [sub_resource type="Animation" id="Animation_icl5u"]

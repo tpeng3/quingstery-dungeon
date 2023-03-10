@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://b3ijga2rkiaya"]
 
-[ext_resource type="Texture2D" uid="uid://df5axwpv7sltj" path="res://assets/background/placeholder.png" id="1_2htcq"]
+[ext_resource type="Texture2D" uid="uid://70fi0w4tqs34" path="res://assets/background/placeholder.png" id="1_2htcq"]
 [ext_resource type="PackedScene" uid="uid://dxr1xgd3ibyct" path="res://prefabs/SceneButton/SceneButton.tscn" id="2_78o1k"]
 
 [node name="Game" type="Node2D"]

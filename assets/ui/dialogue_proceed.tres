@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://dynjlnnrnebyv"]
+
+[ext_resource type="Texture2D" uid="uid://6mns62chynf5" path="res://assets/ui/dialogueu_proceed-Sheet.png" id="1_a3580"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbirg"]
+atlas = ExtResource("1_a3580")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jcxqv"]
+atlas = ExtResource("1_a3580")
+region = Rect2(18, 0, 18, 18)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_dbirg")
+}, {
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_jcxqv")
+}],
+"loop": true,
+"name": &"default",
+"speed": 4.0
+}]

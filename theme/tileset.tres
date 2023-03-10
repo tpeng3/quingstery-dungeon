@@ -1,12 +1,12 @@
-[gd_resource type="TileSet" load_steps=12 format=3 uid="uid://docrlcvs1ophx"]
+[gd_resource type="TileSet" load_steps=12 format=3]
 
-[ext_resource type="Texture2D" uid="uid://cl1t2s0fhr5pg" path="res://assets/tile/tiles_throat_path.png" id="1_4skpw"]
+[ext_resource type="Texture2D" uid="uid://lag0kphrrwrf" path="res://assets/tile/tiles_throat_path.png" id="1_4skpw"]
 [ext_resource type="Texture2D" uid="uid://bxlqsip3glmhj" path="res://assets/tile/tiles_throat.png" id="1_ktam2"]
-[ext_resource type="PackedScene" uid="uid://b0fl85bd8g0dw" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.tscn" id="2_lnme1"]
-[ext_resource type="PackedScene" uid="uid://b63bk0dynt8t6" path="res://prefabs/TileScenes/Stairs/Stairs.tscn" id="3_6lvtm"]
+[ext_resource type="PackedScene" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.tscn" id="2_lnme1"]
+[ext_resource type="PackedScene" path="res://prefabs/TileScenes/Stairs/Stairs.tscn" id="3_6lvtm"]
 [ext_resource type="Texture2D" uid="uid://c0jumchtph5y1" path="res://assets/tile/iso_tile_template.png" id="3_akqxb"]
-[ext_resource type="PackedScene" uid="uid://dd6f288trj1su" path="res://prefabs/TileScenes/GatherSpot/GatherSpot.tscn" id="5_tpmtv"]
-[ext_resource type="PackedScene" uid="uid://cotrhfwrd8gh3" path="res://prefabs/TileScenes/FishingSpot/FishingSpot.tscn" id="6_w6kp2"]
+[ext_resource type="PackedScene" path="res://prefabs/TileScenes/GatherSpot/GatherSpot.tscn" id="5_tpmtv"]
+[ext_resource type="PackedScene" path="res://prefabs/TileScenes/FishingSpot/FishingSpot.tscn" id="6_w6kp2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vuntw"]
 texture = ExtResource("1_4skpw")
