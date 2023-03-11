@@ -1,0 +1,26 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c5dlmh0jw71mx"]
+
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist-Bold.ttf" id="1_ybghr"]
+[ext_resource type="StyleBox" uid="uid://cunlgsmtedaqv" path="res://theme/tex_smallround.tres" id="2_vdui0"]
+[ext_resource type="StyleBox" uid="uid://dn74o5xyoypcb" path="res://theme/tex_smallround_alt.tres" id="3_e1w1t"]
+
+[resource]
+Button/colors/font_color = Color(1, 1, 1, 1)
+Button/colors/font_disabled_color = Color(0.211765, 0.00784314, 0.396078, 0.25098)
+Button/colors/font_focus_color = Color(1, 0, 0, 1)
+Button/colors/font_hover_color = Color(1, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/colors/font_pressed_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/font_sizes/font_size = 8
+Button/fonts/font = ExtResource("1_ybghr")
+Button/styles/disabled = ExtResource("2_vdui0")
+Button/styles/focus = ExtResource("2_vdui0")
+Button/styles/hover = ExtResource("2_vdui0")
+Button/styles/normal = ExtResource("2_vdui0")
+Button/styles/pressed = ExtResource("2_vdui0")
+Button_Alt/base_type = &"Button"
+Button_Alt/styles/disabled = ExtResource("2_vdui0")
+Button_Alt/styles/focus = ExtResource("3_e1w1t")
+Button_Alt/styles/hover = ExtResource("3_e1w1t")
+Button_Alt/styles/normal = ExtResource("3_e1w1t")
+Button_Alt/styles/pressed = ExtResource("3_e1w1t")

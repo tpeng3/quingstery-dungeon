@@ -1,18 +1,17 @@
-[gd_scene load_steps=7 format=3]
+[gd_scene load_steps=6 format=3 uid="uid://dvvlc51g8by8k"]
 
-[ext_resource type="Texture2D" uid="uid://ctnlt56o85vap" path="res://assets/ui/hungermeter_border.png" id="1_248ct"]
-[ext_resource type="Texture2D" uid="uid://gh1dfie87q7k" path="res://assets/ui/hungermeter_back.png" id="1_oablq"]
+[ext_resource type="Theme" uid="uid://c5dlmh0jw71mx" path="res://theme/smallround.tres" id="2_h23as"]
+[ext_resource type="Texture2D" uid="uid://ch2x4vcvgd7is" path="res://assets/ui/Icon_Menu.png" id="2_v0lnq"]
 [ext_resource type="Script" path="res://prefabs/UI/StatusInfo/HungerBarFill.gd" id="3_ejcwb"]
-[ext_resource type="Texture2D" uid="uid://cwbhj7heyk8b6" path="res://assets/ui/i_backpack.png" id="4_plssq"]
 
 [sub_resource type="Gradient" id="Gradient_gcyuc"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.793548)
+offsets = PackedFloat32Array(0, 0.574194)
 colors = PackedColorArray(1, 0.305882, 0.305882, 1, 0.935484, 0.935484, 0.935484, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_6upft"]
 gradient = SubResource("Gradient_gcyuc")
-width = 52
+width = 36
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -30,31 +29,40 @@ anchor_right = 1.0
 offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 16
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
 layout_mode = 2
 theme_override_constants/separation = 8
 
+[node name="BtnMenu" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_h23as")
+theme_type_variation = &"Button_Alt"
+text = "Menu"
+
 [node name="HungerMeter" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(48, 48)
 layout_mode = 2
 
 [node name="HungerFrame" type="Sprite2D" parent="MarginContainer/VBoxContainer/HungerMeter"]
-position = Vector2(32, 32)
-texture = ExtResource("1_248ct")
+position = Vector2(24, 24)
+texture = ExtResource("2_v0lnq")
+region_enabled = true
+region_rect = Rect2(0, 0, 48, 48)
 
-[node name="HungerBar" type="Sprite2D" parent="MarginContainer/VBoxContainer/HungerMeter"]
+[node name="HungerBar" type="Sprite2D" parent="MarginContainer/VBoxContainer/HungerMeter/HungerFrame"]
 clip_children = 1
-position = Vector2(32, 32)
-texture = ExtResource("1_oablq")
+texture = ExtResource("2_v0lnq")
+region_enabled = true
+region_rect = Rect2(48, 0, 48, 48)
 
-[node name="HungerBarFill" type="TextureRect" parent="MarginContainer/VBoxContainer/HungerMeter/HungerBar"]
-offset_left = -26.0
-offset_top = -38.0
-offset_right = 26.0
-offset_bottom = 14.0
+[node name="HungerBarFill" type="TextureRect" parent="MarginContainer/VBoxContainer/HungerMeter/HungerFrame/HungerBar"]
+offset_left = -18.0
+offset_top = -46.0
+offset_right = 18.0
+offset_bottom = -10.0
 rotation = -1.5708
 pivot_offset = Vector2(32, 32)
 size_flags_vertical = 3
@@ -63,10 +71,32 @@ script = ExtResource("3_ejcwb")
 metadata/Hunger_Curr = 64
 metadata/Hunger_Max = 100
 
-[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
-custom_minimum_size = Vector2(0, 64)
+[node name="InventoryBtn" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/MarginContainer"]
-position = Vector2(32, 32)
-texture = ExtResource("4_plssq")
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/InventoryBtn"]
+position = Vector2(24, 24)
+texture = ExtResource("2_v0lnq")
+region_enabled = true
+region_rect = Rect2(0, 48, 48, 48)
+
+[node name="QuestBtn" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/QuestBtn"]
+position = Vector2(24, 24)
+texture = ExtResource("2_v0lnq")
+region_enabled = true
+region_rect = Rect2(0, 96, 48, 48)
+
+[node name="SettingsBtn" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="MarginContainer/VBoxContainer/SettingsBtn"]
+position = Vector2(24, 24)
+texture = ExtResource("2_v0lnq")
+region_enabled = true
+region_rect = Rect2(0, 144, 48, 48)

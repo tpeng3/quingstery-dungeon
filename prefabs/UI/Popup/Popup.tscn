@@ -14,8 +14,7 @@ colors = PackedColorArray(0.101961, 0.0745098, 0.133333, 0.498039)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_fmsmn"]
 gradient = SubResource("Gradient_iimng")
 
-[sub_resource type="Animation" id="Animation_wsv1t"]
-resource_name = "Rotate"
+[sub_resource type="Animation" id="Animation_sg04e"]
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -30,8 +29,9 @@ tracks/0/keys = {
 "values": [0.0, 6.28319]
 }
 
-[sub_resource type="Animation" id="Animation_sg04e"]
-length = 0.001
+[sub_resource type="Animation" id="Animation_wsv1t"]
+resource_name = "Rotate"
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -39,10 +39,10 @@ tracks/0/path = NodePath("Rays:rotation")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.0]
+"values": [0.0, 6.28319]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_vvoll"]
