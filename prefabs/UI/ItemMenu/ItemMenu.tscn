@@ -2,9 +2,9 @@
 
 [ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="1_6b7a8"]
 [ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
-[ext_resource type="Texture2D" uid="uid://bb43hfropg5lr" path="res://assets/item/i_acorn.png" id="2_p56pw"]
-[ext_resource type="Texture2D" uid="uid://b8a3utecq4v37" path="res://assets/item/i_alcohol.png" id="4_nayp1"]
-[ext_resource type="Texture2D" uid="uid://05lw1d7pi3hp" path="res://assets/item/i_wildfruit.png" id="5_twyrq"]
+[ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="2_p56pw"]
+[ext_resource type="Texture2D" uid="uid://c5n00l1repm0b" path="res://assets/item/i_alcohol.png" id="4_nayp1"]
+[ext_resource type="Texture2D" uid="uid://bejwkpwlhqgwk" path="res://assets/item/i_wildfruit.png" id="5_twyrq"]
 [ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="6_avbl7"]
 [ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="7_1nhbr"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="7_hwq4l"]
@@ -79,11 +79,13 @@ text = "Page 01/04"
 
 [node name="ArrowBack" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
 position = Vector2(144, 12)
+scale = Vector2(2, 2)
 sprite_frames = ExtResource("7_hwq4l")
 animation = &"Dark_L"
 
 [node name="ArrowNext" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
 position = Vector2(168, 12)
+scale = Vector2(2, 2)
 sprite_frames = ExtResource("7_hwq4l")
 animation = &"Dark_R"
 
@@ -94,7 +96,7 @@ theme_override_constants/margin_left = -20
 theme_override_constants/margin_right = -20
 theme_override_constants/margin_bottom = -20
 
-[node name="NaviBack" type="Button" parent="OuterPadding/SplitContainer/LeftPanel/FooterMargin"]
+[node name="NaviClose" type="Button" parent="OuterPadding/SplitContainer/LeftPanel/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("1_6b7a8")
@@ -149,11 +151,18 @@ theme_override_constants/margin_left = -20
 theme_override_constants/margin_right = -20
 theme_override_constants/margin_bottom = -20
 
-[node name="Select" type="Button" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc/FooterMargin"]
+[node name="ButtonMid" type="Button" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("1_6b7a8")
+theme_type_variation = &"Button_Alt2"
+text = "toss"
+
+[node name="ButtonRight" type="Button" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme = ExtResource("1_6b7a8")
-text = "select"
+text = "use"
 
 [node name="ItemName" type="Label" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc"]
 layout_mode = 2
@@ -166,4 +175,5 @@ theme = ExtResource("7_1nhbr")
 text = "ITEM NAME"
 
 [node name="Popup" parent="." instance=ExtResource("9_j02wv")]
+visible = false
 layout_mode = 1

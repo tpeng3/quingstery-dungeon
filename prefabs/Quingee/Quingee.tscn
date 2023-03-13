@@ -1,7 +1,7 @@
-[gd_scene load_steps=31 format=3 uid="uid://cpm2xughmnrd3"]
+[gd_scene load_steps=31 format=3]
 
 [ext_resource type="Script" path="res://prefabs/Quingee/Quingee.gd" id="1_lwsfa"]
-[ext_resource type="Texture2D" uid="uid://bnev4bfkuhyow" path="res://assets/character/QuingeeWalk.png" id="2_gmpq8"]
+[ext_resource type="Texture2D" uid="uid://bsuoshc75cw8j" path="res://assets/character/QuingeeWalk.png" id="2_gmpq8"]
 [ext_resource type="Script" path="res://prefabs/Quingee/TileDetector.gd" id="3_1u5st"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xn5tp"]

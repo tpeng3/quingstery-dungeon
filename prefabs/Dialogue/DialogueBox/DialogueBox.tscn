@@ -23,10 +23,10 @@ metadata/Navi_Enabled = true
 metadata/YesNo_Enabled = true
 
 [node name="GUI" type="MarginContainer" parent="."]
-offset_left = 4.0
-offset_top = 4.0
-offset_right = 964.0
-offset_bottom = 544.0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 968.0
+offset_bottom = 580.0
 theme_override_constants/margin_left = 48
 theme_override_constants/margin_top = 48
 theme_override_constants/margin_right = 48
@@ -92,33 +92,30 @@ layout_mode = 2
 [node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/DialogueBox/YesNo/DialogueSelect"]
 layout_mode = 0
 offset_left = -72.0
-offset_top = -63.0
+offset_top = -67.0
 offset_right = -40.0
-offset_bottom = -38.0
+offset_bottom = -42.0
 size_flags_horizontal = 7
 theme = ExtResource("4_jvqjy")
+theme_type_variation = &"Button_Alt"
 text = "Yes"
 
 [node name="DialogueNo" type="Button" parent="GUI/VSplitContainer/DialogueBox/YesNo/DialogueSelect"]
 layout_mode = 0
-offset_left = -109.0
-offset_top = -26.0
-offset_right = -82.0
-offset_bottom = -1.0
+offset_left = -114.0
+offset_top = -27.0
+offset_right = -87.0
+offset_bottom = -2.0
 size_flags_horizontal = 7
 theme = ExtResource("4_jvqjy")
+theme_type_variation = &"Button_Alt"
 text = "No"
-alignment = 0
 
 [node name="DialogueText" type="RichTextLabel" parent="GUI/VSplitContainer/DialogueBox"]
 custom_minimum_size = Vector2(0, 128)
 layout_mode = 2
 theme = ExtResource("2_dpae3")
-text = "Testing testing one to three testing...
-sesdfs
-s
-x
-x"
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum, lacus et auctor facilisis, nibh lorem fermentum lorem, a cursus diam magna in nisi. Donec luctus ullamcorper congue. "
 fit_content = true
 
 [node name="NameContainer" type="MarginContainer" parent="GUI/VSplitContainer/DialogueBox"]
@@ -135,10 +132,11 @@ theme = ExtResource("5_hwskm")
 text = "Name Here"
 
 [node name="ClickToContinue" type="AnimatedSprite2D" parent="GUI/VSplitContainer/DialogueBox"]
+position = Vector2(821, 100)
+scale = Vector2(2, 2)
 sprite_frames = ExtResource("6_ef0cp")
 animation = &"Flash_R"
 frame_progress = 0.914684
-offset = Vector2(816, 100)
 
 [node name="Popup" type="MarginContainer" parent="."]
 visible = false

@@ -1,10 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://o88oi5kw6pye"]
+[gd_scene load_steps=15 format=3 uid="uid://o88oi5kw6pye"]
 
 [ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="1_byiml"]
 [ext_resource type="Texture2D" uid="uid://cvj0ycmpctjq7" path="res://assets/item/i_bamboo.png" id="1_l0gmk"]
 [ext_resource type="Texture2D" uid="uid://b46bgyy4iumxs" path="res://assets/vfx/rays.png" id="1_mj5at"]
 [ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="2_k5r62"]
 [ext_resource type="SpriteFrames" uid="uid://cqbc547uw0sqf" path="res://assets/vfx/sparkle.tres" id="3_vhueh"]
+[ext_resource type="Texture2D" uid="uid://bwpq0b2vhdsje" path="res://assets/ui/menu_nametag.png" id="5_e04lh"]
+[ext_resource type="PackedScene" uid="uid://d0kb2p4gwj6fi" path="res://prefabs/UI/AmountSelect/AmountSelect.tscn" id="6_2o8r7"]
 
 [sub_resource type="Gradient" id="Gradient_iimng"]
 interpolation_mode = 1
@@ -51,6 +53,10 @@ _data = {
 "Rotate": SubResource("Animation_wsv1t")
 }
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gxfh0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8hp8"]
+
 [node name="Popup" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -89,7 +95,7 @@ libraries = {
 }
 
 [node name="ItemSprite" type="Sprite2D" parent="SplitContainer/ItemMargin"]
-position = Vector2(480, 200)
+position = Vector2(480, 179)
 scale = Vector2(3, 3)
 texture = ExtResource("1_l0gmk")
 
@@ -98,47 +104,71 @@ position = Vector2(0, 2)
 sprite_frames = ExtResource("3_vhueh")
 frame_progress = 0.22905
 
-[node name="PopupText" type="RichTextLabel" parent="SplitContainer"]
-clip_contents = false
+[node name="PopupBox" type="MarginContainer" parent="SplitContainer"]
 custom_minimum_size = Vector2(340, 140)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("1_byiml")
-bbcode_enabled = true
-text = "
-[center]Insert some sort of text here wahooo
-[/center]"
 
-[node name="FooterMargin" type="MarginContainer" parent="SplitContainer/PopupText"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -29.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="NinePatchRect" type="NinePatchRect" parent="SplitContainer/PopupBox"]
+layout_mode = 2
+texture = ExtResource("5_e04lh")
+patch_margin_left = 22
+patch_margin_top = 22
+patch_margin_right = 22
+patch_margin_bottom = 22
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="SplitContainer" type="SplitContainer" parent="SplitContainer/PopupBox"]
+layout_mode = 2
+vertical = true
+
+[node name="TextPadding" type="MarginContainer" parent="SplitContainer/PopupBox/SplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 22
+
+[node name="PopupText" type="RichTextLabel" parent="SplitContainer/PopupBox/SplitContainer/TextPadding"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gxfh0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a8hp8")
+bbcode_enabled = true
+text = "[center]Insert some sort of text here wahooo
+[/center]"
+fit_content = true
+
+[node name="AmountSelect" parent="SplitContainer/PopupBox/SplitContainer" instance=ExtResource("6_2o8r7")]
+z_index = 5
+layout_mode = 2
+theme_override_constants/margin_left = 86
+theme_override_constants/margin_top = -19
+
+[node name="FooterMargin" type="MarginContainer" parent="SplitContainer/PopupBox"]
+layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/margin_left = -20
 theme_override_constants/margin_right = -20
 theme_override_constants/margin_bottom = -20
 
-[node name="ButtonLeft" type="Button" parent="SplitContainer/PopupText/FooterMargin"]
+[node name="ButtonLeft" type="Button" parent="SplitContainer/PopupBox/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("2_k5r62")
 theme_type_variation = &"Button_Alt"
 text = " No "
 
-[node name="ButtonMid" type="Button" parent="SplitContainer/PopupText/FooterMargin"]
+[node name="ButtonMid" type="Button" parent="SplitContainer/PopupBox/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("2_k5r62")
 theme_type_variation = &"Button_Alt2"
 text = "confirm"
 
-[node name="ButtonRight" type="Button" parent="SplitContainer/PopupText/FooterMargin"]
+[node name="ButtonRight" type="Button" parent="SplitContainer/PopupBox/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme = ExtResource("2_k5r62")
