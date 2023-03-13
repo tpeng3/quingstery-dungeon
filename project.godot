@@ -21,6 +21,7 @@ config/icon="res://assets/quingee_default.png"
 Global="*res://Global.gd"
 SceneManager="*res://addons/scene_manager/scene_manager.tscn"
 Scenes="*res://addons/scene_manager/scenes.gd"
+Inventory="*res://prefabs/Inventory/Inventory.tscn"
 
 [display]
 

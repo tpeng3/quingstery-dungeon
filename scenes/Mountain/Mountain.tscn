@@ -54,7 +54,6 @@ text = "Press space to continue!"
 [node name="DialoguePlayer" parent="." instance=ExtResource("4_qklru")]
 
 [node name="DialogueBox" parent="." instance=ExtResource("5_yuxs7")]
-visible = false
 
 [connection signal="body_entered" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_entered" flags=18]
 [connection signal="body_exited" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_exited" flags=18]
@@ -64,5 +63,5 @@ visible = false
 [connection signal="body_exited" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_exited" flags=18]
 [connection signal="body_entered" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_entered" flags=18]
 [connection signal="body_exited" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/@MiningSpot@226597" to="Map/Floor/@MiningSpot@226597" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/@MiningSpot@226597" to="Map/Floor/@MiningSpot@226597" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@MiningSpot@329728" to="Map/Floor/@MiningSpot@329728" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@MiningSpot@329728" to="Map/Floor/@MiningSpot@329728" method="_on_body_exited" flags=18]

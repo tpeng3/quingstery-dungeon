@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvvlc51g8by8k"]
 
 [ext_resource type="Theme" uid="uid://c5dlmh0jw71mx" path="res://theme/smallround.tres" id="2_h23as"]
-[ext_resource type="Texture2D" uid="uid://ch2x4vcvgd7is" path="res://assets/ui/Icon_Menu.png" id="2_v0lnq"]
+[ext_resource type="Texture2D" uid="uid://c83mv6a2ehiy2" path="res://assets/ui/Icon_Menu.png" id="2_v0lnq"]
 [ext_resource type="Script" path="res://prefabs/UI/StatusInfo/HungerBarFill.gd" id="3_ejcwb"]
 
 [sub_resource type="Gradient" id="Gradient_gcyuc"]

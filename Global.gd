@@ -2,6 +2,7 @@
 # This is a singleton so script is preloaded before game starts
 extends Node
 
+
 var player = "Quingee"
 var gald = 0
 var inventory = []

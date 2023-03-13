@@ -16,9 +16,10 @@ func _input(event):
 			DialogueBox.no_selected.connect(_on_no_selected)
 
 func _on_body_entered(body):
-	$PlaceholderText.visible = true
-	entered_stairs = true
-	$Sprite.texture = Highlight
+	if body.name == "Stairs":
+		$PlaceholderText.visible = true
+		entered_stairs = true
+		$Sprite.texture = Highlight
 
 func _on_body_exited(body):
 	$PlaceholderText.visible = false

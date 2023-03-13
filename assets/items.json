@@ -1,0 +1,381 @@
+[
+	{
+		"name": "Egg",
+		"sell": 10,
+		"buy": 35,
+		"hunger": 10,
+		"category": "Animal",
+		"source": "Quingee",
+		"maxcount": 6,
+		"path": "assets/item/i_egg.png"
+	},
+	{
+		"name": "Milk",
+		"sell": 10,
+		"buy": 35,
+		"hunger": 10,
+		"category": "Animal",
+		"source": "Cyao",
+		"maxcount": 6,
+		"path": "assets/item/i_milk.png"
+	},
+	{
+		"name": "Silk",
+		"sell": 10,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Animal",
+		"source": "Pipod",
+		"maxcount": 1,
+		"path": "assets/item/i_silk.png"
+	},
+	{
+		"name": "Venom",
+		"sell": 10,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Animal",
+		"source": "Sneether",
+		"maxcount": 1,
+		"path": "assets/item/i_venom.png"
+	},
+	{
+		"name": "Fish",
+		"sell": 5,
+		"buy": 25,
+		"hunger": 30,
+		"category": "Fishing",
+		"source": "River",
+		"maxcount": 1,
+		"path": "assets/item/i_fish.png"
+	},
+	{
+		"name": "Guppy",
+		"sell": 2,
+		"buy": -1,
+		"hunger": 5,
+		"category": "Fishing",
+		"source": "Mountain (global)",
+		"maxcount": 1,
+		"path": "res://assets/item/i_guppy.png"
+	},
+	{
+		"name": "Koikoi",
+		"sell": 15,
+		"buy": -1,
+		"hunger": 80,
+		"category": "Fishing",
+		"source": "River",
+		"maxcount": 1,
+		"path": "assets/item/i_koikoi.png"
+	},
+	{
+		"name": "Marimo",
+		"sell": 10,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Fishing",
+		"source": "Mountain (global)",
+		"maxcount": 1,
+		"path": "res://assets/item/i_marimo.png"
+	},
+	{
+		"name": "Shell",
+		"sell": 3,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Fishing",
+		"source": "Mountain (global)",
+		"maxcount": 1,
+		"path": "res://assets/item/i_shell.png"
+	},
+	{
+		"name": "Trash",
+		"sell": 1,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Fishing",
+		"source": "Throat",
+		"maxcount": 1,
+		"path": "res://assets/item/i_trash.png"
+	},
+	{
+		"name": "Worm",
+		"sell": 3,
+		"buy": 25,
+		"hunger": 5,
+		"category": "Fishing",
+		"source": "Mountain (global)",
+		"maxcount": 1,
+		"path": "res://assets/item/i_worm.png"
+	},
+	{
+		"name": "Acorn",
+		"sell": 3,
+		"buy": -1,
+		"hunger": 10,
+		"category": "Gathering",
+		"source": "Throat\nPeak",
+		"maxcount": 1,
+		"path": "res://assets/item/i_acorn.png"
+	},
+	{
+		"name": "Ceramic",
+		"sell": 10,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Gathering",
+		"source": "Mountain (global)",
+		"maxcount": 1,
+		"path": "res://assets/item/i_ceramic.png"
+	},
+	{
+		"name": "Flower",
+		"sell": 2,
+		"buy": 25,
+		"hunger": 1,
+		"category": "Gathering",
+		"source": "Throat",
+		"maxcount": 20,
+		"path": "res://assets/item/i_flower.png"
+	},
+	{
+		"name": "Herb Bundle",
+		"sell": 5,
+		"buy": -1,
+		"hunger": 5,
+		"category": "Gathering",
+		"source": "Throat",
+		"maxcount": 1,
+		"path": "res://assets/item/i_herbbundle.png"
+	},
+	{
+		"name": "Mushroom",
+		"sell": 3,
+		"buy": 15,
+		"hunger": 10,
+		"category": "Gathering",
+		"source": "Mountain (global)",
+		"maxcount": 1,
+		"path": "res://assets/item/i_mushroom.png"
+	},
+	{
+		"name": "Rare Wood",
+		"sell": 30,
+		"buy": 100,
+		"hunger": -1,
+		"category": "Gathering",
+		"source": "Peak",
+		"maxcount": 1,
+		"path": "assets/item/i_rare wood.png"
+	},
+	{
+		"name": "Seed Packet",
+		"sell": 30,
+		"buy": -1,
+		"hunger": 30,
+		"category": "Gathering",
+		"source": "Throat",
+		"maxcount": 1,
+		"path": "res://assets/item/i_seedpacket.png"
+	},
+	{
+		"name": "Soil",
+		"sell": 2,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Gathering",
+		"source": "Mountain (global)",
+		"maxcount": 20,
+		"path": "res://assets/item/i_soil.png"
+	},
+	{
+		"name": "Tree Sap",
+		"sell": 50,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Gathering",
+		"source": "Peak",
+		"maxcount": 1,
+		"path": "assets/item/i_tree sap.png"
+	},
+	{
+		"name": "Wood",
+		"sell": 5,
+		"buy": 35,
+		"hunger": -1,
+		"category": "Gathering",
+		"source": "River\nPeak",
+		"maxcount": 20,
+		"path": "assets/item/i_wood.png"
+	},
+	{
+		"name": "Bronze",
+		"sell": 3,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Mining",
+		"source": "Throat",
+		"maxcount": 1,
+		"path": "res://assets/item/i_bronze.png"
+	},
+	{
+		"name": "Clay",
+		"sell": 2,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Mining",
+		"source": "Mountain (global)",
+		"maxcount": 1,
+		"path": "res://assets/item/i_clay.png"
+	},
+	{
+		"name": "Glowbug",
+		"sell": 10,
+		"buy": -1,
+		"hunger": 5,
+		"category": "Mining",
+		"source": "Mountain (global)",
+		"maxcount": 1,
+		"path": "res://assets/item/i_glowbug.png"
+	},
+	{
+		"name": "Goddess Tear",
+		"sell": 50,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Mining",
+		"source": "Peak",
+		"maxcount": 1,
+		"path": "assets/item/i_goddess tear.png"
+	},
+	{
+		"name": "Gold",
+		"sell": 15,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Mining",
+		"source": "Steps",
+		"maxcount": 1,
+		"path": "assets/item/i_gold.png"
+	},
+	{
+		"name": "Iron",
+		"sell": 5,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Mining",
+		"source": "River",
+		"maxcount": 1,
+		"path": "assets/item/i_iron.png"
+	},
+	{
+		"name": "Jewel",
+		"sell": 30,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Mining",
+		"source": "Steps",
+		"maxcount": 1,
+		"path": "assets/item/i_jewel.png"
+	},
+	{
+		"name": "Stone",
+		"sell": 3,
+		"buy": 10,
+		"hunger": -1,
+		"category": "Mining",
+		"source": "Mountain (global)",
+		"maxcount": 1,
+		"path": "res://assets/item/i_stone.png"
+	},
+	{
+		"name": "Glass",
+		"sell": 10,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Shop",
+		"source": "Shop",
+		"maxcount": 1,
+		"path": "assets/item/i_glass.png"
+	},
+	{
+		"name": "Nectar",
+		"sell": 10,
+		"buy": -1,
+		"hunger": 15,
+		"category": "Shop",
+		"source": "Tian's Corner",
+		"maxcount": 1,
+		"path": "assets/item/i_nectar.png"
+	},
+	{
+		"name": "Glowbug Lantern",
+		"sell": 50,
+		"buy": -1,
+		"hunger": -1,
+		"category": "Special",
+		"source": "Do we still craf tthis",
+		"maxcount": 1,
+		"path": "assets/item/i_glowbug lantern.png"
+	},
+	{
+		"name": "Fruit",
+		"sell": 10,
+		"buy": 35,
+		"hunger": 50,
+		"category": "Trading",
+		"source": "Tian's Corner",
+		"maxcount": 1,
+		"path": "assets/item/i_fruit.png"
+	},
+	{
+		"name": "Produce",
+		"sell": 10,
+		"buy": 35,
+		"hunger": 25,
+		"category": "Trading",
+		"source": "Tian's Corner",
+		"maxcount": 1,
+		"path": "assets/item/i_produce.png"
+	},
+	{
+		"name": "Crop",
+		"sell": 10,
+		"buy": 35,
+		"hunger": 5,
+		"category": "Trading",
+		"source": "Tian's Corner",
+		"maxcount": 6,
+		"path": "assets/item/i_crop.png"
+	},
+	{
+		"name": "Baked Good",
+		"sell": 170,
+		"buy": 10,
+		"hunger": -1,
+		"category": "Shop",
+		"source": "Shop",
+		"maxcount": 1,
+		"path": "res://assets/item/i_bakedgood.png"
+	},
+	{
+		"name": "Jewelry",
+		"sell": 270,
+		"buy": 10,
+		"hunger": -1,
+		"category": "Shop",
+		"source": "Shop",
+		"maxcount": 1,
+		"path": "res://assets/item/i_jewelry.png"
+	},
+	{
+		"name": "Artisan Good",
+		"buy": 10,
+		"hunger": -1,
+		"category": "Shop",
+		"source": "Shop",
+		"maxcount": 1,
+		"path": "res://assets/item/i_artisangood.png"
+	}
+]

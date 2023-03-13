@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cd76d3yf21u4c"]
+
+[ext_resource type="Script" path="res://prefabs/Inventory/Inventory.gd" id="1_jp0el"]
+[ext_resource type="JSON" path="res://assets/items.json" id="2_1irua"]
+
+[node name="Inventory" type="Node"]
+script = ExtResource("1_jp0el")
+items_json = ExtResource("2_1irua")

@@ -29,13 +29,6 @@ signal dialogue_finished(postaction_type, asset)
 func load_dialogue(file_path):
 	print(file_path.data)
 	return file_path.data
-#	var file = FileAccess.open(file_path, FileAccess.READ)
-#	var json = JSON.new()
-#	var error = json.parse(file.get_as_text())
-#	if error == OK:
-#		return json.data
-#	else:
-#		print("JSON Parse Error: ", json.get_error_message(), " in ", file_path, " at line ", json.get_error_line())
 
 # set dialogue lines to the dialogue keys
 func index_dialogue():
