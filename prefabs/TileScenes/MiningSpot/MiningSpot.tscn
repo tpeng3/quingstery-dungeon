@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=13 format=3 uid="uid://daaxp1o7huxb"]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.gd" id="1_m33fi"]
-[ext_resource type="Texture2D" uid="uid://cbqxeasda0jh6" path="res://assets/tile/placeholdertile2.png" id="2_vlglr"]
 [ext_resource type="Texture2D" uid="uid://d3ibobo7kr5p3" path="res://assets/ui/m_mining.png" id="4_583kt"]
-[ext_resource type="Texture2D" uid="uid://dwlphakbkwqxm" path="res://assets/item/i_iron.png" id="5_ie68a"]
+[ext_resource type="Texture2D" uid="uid://dbwgh2xkcvqiq" path="res://assets/tile/Forage_Rock_Sprite2.png" id="4_x80l5"]
+[ext_resource type="SpriteFrames" uid="uid://cqbc547uw0sqf" path="res://assets/vfx/sparkle.tres" id="5_gs6xe"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="5_l2bfp"]
 [ext_resource type="JSON" path="res://dialogue/Mountain/itemget.json" id="6_os244"]
 
@@ -81,6 +81,8 @@ _data = {
 }
 
 [node name="MiningSpot" type="Area2D"]
+z_index = 2
+y_sort_enabled = true
 script = ExtResource("1_m33fi")
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("5_l2bfp")]
@@ -92,10 +94,14 @@ libraries = {
 }
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("2_vlglr")
+texture = ExtResource("4_x80l5")
 
-[node name="Sparkle" type="Sprite2D" parent="Sprite"]
-texture = ExtResource("5_ie68a")
+[node name="Sparkle" type="AnimatedSprite2D" parent="Sprite"]
+position = Vector2(0, -6)
+sprite_frames = ExtResource("5_gs6xe")
+autoplay = "default"
+frame = 5
+frame_progress = 0.929379
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_msile")

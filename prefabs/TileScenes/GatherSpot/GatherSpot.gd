@@ -6,6 +6,8 @@ enum ActionState {
 }
 var state = ActionState.IDLE
 signal item_get
+@onready var Idle = preload("res://assets/tile/Forage_Gather_Field_Sprite2.png")
+@onready var Highlight = preload("res://assets/tile/Forage_Gather_Field_Sprite1.png")
 @onready var DialogueBox = get_parent().get_parent().get_parent().get_node("DialogueBox")
 
 func _ready():
@@ -32,6 +34,7 @@ func _on_gathering_complete():
 	state = ActionState.COMPLETE
 	$Sprite/Sparkle.visible = false
 	$Control.visible = false
+	$Sprite.texture = Idle
 	if DialogueBox:
 		DialogueBox.show_dialogue($DialoguePlayer)
 		var item = "Foraging item"
@@ -41,8 +44,10 @@ func _on_body_entered(body):
 	if state != ActionState.COMPLETE:
 		$Icon.visible = true
 		$Timer.stop()
+		$Sprite.texture = Highlight
 
 func _on_body_exited(body):
+	$Sprite.texture = Idle
 	if state != ActionState.COMPLETE:
 		$Timer.stop()
 		state = ActionState.IDLE

@@ -49,6 +49,7 @@ func _on_fish_bait():
 func _on_fishing_complete():
 	state = ActionState.COMPLETE
 	$Sprite/Sparkle.visible = false
+	$Sprite.play("idle")
 	chara.get_node("PlaceholderText").visible = false
 	if DialogueBox:
 		DialogueBox.show_dialogue($DialoguePlayer)
@@ -59,9 +60,11 @@ func _on_body_entered(body):
 	if body.name == "Quingee":
 		chara = body
 		if state == ActionState.IDLE:
+			$Sprite.play("highlight")
 			$Icon.visible = true
 
 func _on_body_exited(body):
+	$Sprite.play("idle")
 	if body.name == "Quingee":
 		$Icon.visible = false
 		chara.get_node("PlaceholderText").visible = false

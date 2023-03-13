@@ -1,20 +1,21 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://gvg8xyodjxn6"]
 
-[ext_resource type="Texture2D" uid="uid://dvqlnr6tlevey" path="res://assets/tile/placeholderstairs.png" id="1_4vems"]
 [ext_resource type="Script" path="res://prefabs/TileScenes/Stairs/Stairs.gd" id="1_ohp3d"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_n28ug"]
+[ext_resource type="Texture2D" uid="uid://bx6l8vo384aif" path="res://assets/tile/Stair_Tile_2.png" id="3_ji7v5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
 size = Vector2(47, 40)
 
 [node name="Stairs" type="Area2D"]
+z_index = 1
 script = ExtResource("1_ohp3d")
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("2_n28ug")]
 position = Vector2(-76, -53)
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_4vems")
+texture = ExtResource("3_ji7v5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_msile")

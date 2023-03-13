@@ -5,3 +5,4 @@ extends Node
 var player = "Quingee"
 var gald = 0
 var inventory = []
+
