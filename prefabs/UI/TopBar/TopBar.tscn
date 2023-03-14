@@ -30,13 +30,21 @@ theme_override_constants/separation = 24
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="GaldLabel" type="Label" parent="UpperInfo/HSplitContainer/GaldCounter"]
+[node name="FlowContainer" type="FlowContainer" parent="UpperInfo/HSplitContainer/GaldCounter"]
+layout_mode = 2
+vertical = true
+
+[node name="GaldLabel" type="Label" parent="UpperInfo/HSplitContainer/GaldCounter/FlowContainer"]
 layout_mode = 2
 theme = ExtResource("2_xveov")
-text = "000  "
+text = "100  "
 
-[node name="Sprite2D" type="Sprite2D" parent="UpperInfo/HSplitContainer/GaldCounter/GaldLabel"]
-position = Vector2(81, 30)
+[node name="GaldSymbol" type="MarginContainer" parent="UpperInfo/HSplitContainer/GaldCounter/FlowContainer"]
+custom_minimum_size = Vector2(14, 25)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UpperInfo/HSplitContainer/GaldCounter/FlowContainer/GaldSymbol"]
+position = Vector2(-30, 31)
 scale = Vector2(2, 2)
 texture = ExtResource("3_thkc1")
 

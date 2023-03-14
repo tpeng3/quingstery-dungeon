@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0kb2p4gwj6fi"]
 
-[ext_resource type="Theme" uid="uid://d2vpvul8vy1ig" path="res://theme/Meter.tres" id="1_4psd5"]
+[ext_resource type="Theme" path="res://theme/Meter.tres" id="1_4psd5"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="1_vxv13"]
 
 [node name="AmountSelect" type="MarginContainer"]
@@ -57,8 +57,6 @@ offset_bottom = 54.0
 pivot_offset = Vector2(80, 8)
 theme = ExtResource("1_4psd5")
 text = "0 0 0 0 0"
-visible_characters = 10
-visible_ratio = 1.11111
 
 [node name="Left" type="AnimatedSprite2D" parent="SplitContainer/MiddleRow"]
 position = Vector2(11, 30)

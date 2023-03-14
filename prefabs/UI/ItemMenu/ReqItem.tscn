@@ -12,11 +12,11 @@ alignment = 1
 vertical = true
 
 [node name="MarginContainer" type="MarginContainer" parent="SplitContainer"]
-custom_minimum_size = Vector2(24, 20)
+custom_minimum_size = Vector2(24, 25)
 layout_mode = 2
 
 [node name="Sprite2D" type="Sprite2D" parent="SplitContainer/MarginContainer"]
-position = Vector2(1, 0)
+position = Vector2(1, 2)
 scale = Vector2(2, 2)
 texture = ExtResource("1_02l0h")
 centered = false
@@ -26,15 +26,17 @@ region_rect = Rect2(0, 0, 10, 10)
 [node name="Name" type="Label" parent="SplitContainer"]
 layout_mode = 2
 theme = ExtResource("1_sfnuu")
-theme_type_variation = &"Label_Bold"
+theme_type_variation = &"Label_Light_Bold"
 text = "Item Name "
 
 [node name="Amount" type="Label" parent="SplitContainer"]
 layout_mode = 2
 theme = ExtResource("1_sfnuu")
+theme_type_variation = &"Label_Light"
 text = "x100"
 
 [node name="GaldSymbol" type="MarginContainer" parent="SplitContainer"]
+visible = false
 custom_minimum_size = Vector2(14, 25)
 layout_mode = 2
 

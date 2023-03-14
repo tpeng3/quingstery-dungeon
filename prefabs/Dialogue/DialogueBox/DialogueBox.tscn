@@ -1,13 +1,13 @@
 [gd_scene load_steps=11 format=3 uid="uid://8u6c5x2aksb6"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
-[ext_resource type="Theme" path="res://theme/Signpost.tres" id="2_dpae3"]
+[ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="2_dpae3"]
 [ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar/TopBar.tscn" id="2_wdke3"]
 [ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/ui/compass.png" id="3_56qxl"]
 [ext_resource type="Theme" path="res://theme/smallround.tres" id="4_jvqjy"]
-[ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="5_27re5"]
 [ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="5_hwskm"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="6_ef0cp"]
+[ext_resource type="PackedScene" uid="uid://o88oi5kw6pye" path="res://prefabs/UI/Popup/Popup.tscn" id="8_1iosi"]
 
 [sub_resource type="Animation" id="Animation_q44kr"]
 resource_name = "textbox_fade"
@@ -23,16 +23,14 @@ metadata/Navi_Enabled = true
 metadata/YesNo_Enabled = true
 
 [node name="GUI" type="MarginContainer" parent="."]
-offset_left = 8.0
-offset_top = 40.0
-offset_right = 968.0
-offset_bottom = 580.0
-theme_override_constants/margin_left = 48
-theme_override_constants/margin_top = 48
-theme_override_constants/margin_right = 48
-theme_override_constants/margin_bottom = 48
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="TopBar" parent="GUI" instance=ExtResource("2_wdke3")]
+visible = false
 layout_mode = 2
 
 [node name="VSplitContainer" type="SplitContainer" parent="GUI"]
@@ -42,16 +40,19 @@ vertical = true
 [node name="UpperArea" type="MarginContainer" parent="GUI/VSplitContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 16
 
 [node name="NaviMenu" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea"]
-visible = false
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_constants/margin_left = -16
 theme_override_constants/margin_top = -16
 
 [node name="NaviItems" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/NaviMenu"]
+visible = false
 layout_mode = 2
 vertical = true
 
@@ -77,9 +78,12 @@ metadata/onHoverText = "We are "
 
 [node name="DialogueBox" type="MarginContainer" parent="GUI/VSplitContainer"]
 layout_mode = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
 
 [node name="Sprite2D" type="Sprite2D" parent="GUI/VSplitContainer/DialogueBox"]
-position = Vector2(808, -14)
+position = Vector2(855, -14)
 texture = ExtResource("3_56qxl")
 
 [node name="YesNo" type="MarginContainer" parent="GUI/VSplitContainer/DialogueBox"]
@@ -91,9 +95,9 @@ layout_mode = 2
 
 [node name="DialogueYes" type="Button" parent="GUI/VSplitContainer/DialogueBox/YesNo/DialogueSelect"]
 layout_mode = 0
-offset_left = -72.0
+offset_left = -73.0
 offset_top = -67.0
-offset_right = -40.0
+offset_right = -41.0
 offset_bottom = -42.0
 size_flags_horizontal = 7
 theme = ExtResource("4_jvqjy")
@@ -139,27 +143,8 @@ sprite_frames = ExtResource("6_ef0cp")
 animation = &"Flash_R"
 frame_progress = 0.914684
 
-[node name="Popup" type="MarginContainer" parent="."]
+[node name="Popup" parent="." instance=ExtResource("8_1iosi")]
 visible = false
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -25.0
-offset_top = -90.0
-offset_right = 25.0
-offset_bottom = -40.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(2, 2)
-size_flags_horizontal = 4
-size_flags_vertical = 4
-metadata/_edit_use_anchors_ = true
-
-[node name="Itemsprite" type="TextureRect" parent="Popup"]
-layout_mode = 2
-texture = ExtResource("5_27re5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
