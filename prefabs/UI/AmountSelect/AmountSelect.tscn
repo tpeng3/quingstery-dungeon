@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d0kb2p4gwj6fi"]
 
-[ext_resource type="Theme" path="res://theme/Meter.tres" id="1_4psd5"]
+[ext_resource type="Theme" uid="uid://d2vpvul8vy1ig" path="res://theme/Meter.tres" id="1_4psd5"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="1_vxv13"]
 
 [node name="AmountSelect" type="MarginContainer"]

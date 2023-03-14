@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cg7kh7584x7xg"]
+[gd_scene load_steps=4 format=3 uid="uid://cg7kh7584x7xg"]
 
 [ext_resource type="Script" path="res://prefabs/UI/TopBar/TopBar.gd" id="1_122t8"]
-[ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="2_xveov"]
+[ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="2_xveov"]
+[ext_resource type="Texture2D" uid="uid://bdqemmusx4053" path="res://assets/ui/Gald_Symbol.png" id="3_thkc1"]
 
 [node name="TopBar" type="Control"]
 layout_mode = 3
@@ -32,7 +33,12 @@ size_flags_horizontal = 0
 [node name="GaldLabel" type="Label" parent="UpperInfo/HSplitContainer/GaldCounter"]
 layout_mode = 2
 theme = ExtResource("2_xveov")
-text = "000 Gald"
+text = "000  "
+
+[node name="Sprite2D" type="Sprite2D" parent="UpperInfo/HSplitContainer/GaldCounter/GaldLabel"]
+position = Vector2(81, 30)
+scale = Vector2(2, 2)
+texture = ExtResource("3_thkc1")
 
 [node name="InventoryAmt" type="MarginContainer" parent="UpperInfo/HSplitContainer"]
 layout_mode = 2

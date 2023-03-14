@@ -1,14 +1,16 @@
-[gd_scene load_steps=10 format=3 uid="uid://bpg4gj3cwghb7"]
+[gd_scene load_steps=11 format=3 uid="uid://bpg4gj3cwghb7"]
 
-[ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="1_6b7a8"]
+[ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="1_6b7a8"]
 [ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="2_1s1md"]
 [ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="2_p56pw"]
-[ext_resource type="Texture2D" uid="uid://c5n00l1repm0b" path="res://assets/item/i_alcohol.png" id="4_nayp1"]
-[ext_resource type="Texture2D" uid="uid://bejwkpwlhqgwk" path="res://assets/item/i_wildfruit.png" id="5_twyrq"]
-[ext_resource type="Texture2D" uid="uid://ckbg0jlu6yvtq" path="res://assets/item/i_glowbuglantern.png" id="6_avbl7"]
-[ext_resource type="Theme" uid="uid://duxql3scmd2jj" path="res://theme/Scroll.tres" id="7_1nhbr"]
+[ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="3_h24dk"]
+[ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="7_1nhbr"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="7_hwq4l"]
+[ext_resource type="PackedScene" uid="uid://u7jf2y80hsiw" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
 [ext_resource type="PackedScene" uid="uid://o88oi5kw6pye" path="res://prefabs/UI/Popup/Popup.tscn" id="9_j02wv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rqao"]
 
 [node name="ItemMenu" type="Control"]
 texture_filter = 1
@@ -43,51 +45,71 @@ custom_minimum_size = Vector2(448, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="ItemList" type="ItemList" parent="OuterPadding/SplitContainer/LeftPanel"]
+[node name="ItemListBG" type="NinePatchRect" parent="OuterPadding/SplitContainer/LeftPanel"]
 layout_mode = 2
-theme = ExtResource("1_6b7a8")
-item_count = 8
-max_columns = 2
-same_column_width = true
-fixed_icon_size = Vector2i(32, 32)
-item_0/text = "Acorn "
-item_0/icon = ExtResource("2_p56pw")
-item_1/text = " x 2"
-item_2/text = "Alcohol"
-item_2/icon = ExtResource("4_nayp1")
-item_3/text = " x 1"
-item_4/text = "Wild Fruit"
-item_4/icon = ExtResource("5_twyrq")
-item_5/text = " x 1"
-item_6/text = "Glowbug Lantern"
-item_6/icon = ExtResource("6_avbl7")
-item_7/text = " x 1"
+texture = ExtResource("2_1s1md")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
 
-[node name="Pagination" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+[node name="PanelPadding" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme_override_constants/margin_right = 70
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
 
-[node name="PaginationLabel" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
-custom_minimum_size = Vector2(0, 32)
+[node name="FlowContainer" type="FlowContainer" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding"]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme = ExtResource("1_6b7a8")
-text = "Page 01/04"
+vertical = true
 
-[node name="ArrowBack" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
-position = Vector2(144, 12)
-scale = Vector2(2, 2)
-sprite_frames = ExtResource("7_hwq4l")
-animation = &"Dark_L"
+[node name="ListItem1" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
+layout_mode = 2
+size_flags_horizontal = 0
 
-[node name="ArrowNext" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
-position = Vector2(168, 12)
-scale = Vector2(2, 2)
-sprite_frames = ExtResource("7_hwq4l")
-animation = &"Dark_R"
+[node name="ListItem2" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ListItem3" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ListItem4" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ListItem5" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ListItem6" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ListItem7" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ListItem8" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_top = -44
+
+[node name="LeftTitle" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("7_1nhbr")
+text = "Inventory"
 
 [node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
 layout_mode = 2
@@ -103,21 +125,37 @@ theme = ExtResource("1_6b7a8")
 theme_type_variation = &"Button_Alt"
 text = "close "
 
-[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+[node name="Pagination" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
 layout_mode = 2
-theme_override_constants/margin_left = -20
-theme_override_constants/margin_top = -44
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_right = 70
 
-[node name="LeftTitle" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/TitleMargin"]
+[node name="PaginationLabel" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme = ExtResource("7_1nhbr")
-text = "Inventory"
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("1_6b7a8")
+theme_type_variation = &"Label_Fancy"
+text = "Page 01/04"
+
+[node name="ArrowBack" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+position = Vector2(144, 12)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("7_hwq4l")
+animation = &"Dark_L"
+
+[node name="ArrowNext" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+position = Vector2(168, 12)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("7_hwq4l")
+animation = &"Dark_R"
 
 [node name="RightPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
+theme = ExtResource("1_6b7a8")
 
 [node name="SpriteCentering" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel"]
 layout_mode = 2
@@ -129,50 +167,82 @@ position = Vector2(0, -75)
 scale = Vector2(3, 3)
 texture = ExtResource("2_p56pw")
 
-[node name="ItemDesc" type="RichTextLabel" parent="OuterPadding/SplitContainer/RightPanel"]
-clip_contents = false
-custom_minimum_size = Vector2(0, 170)
+[node name="MarginContainer" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel"]
+custom_minimum_size = Vector2(0, 160)
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("1_6b7a8")
-text = "adfasfhskdfsdfsld aas oflsdjf dsklfas jdlkad fjdslkfasd fklasdjkfds dskfdlj dskalf jldkak  "
 
-[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc"]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -29.0
-grow_horizontal = 2
-grow_vertical = 0
+[node name="ItemDescBG" type="NinePatchRect" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_1s1md")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="DescPadding" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 35
+
+[node name="FlowContainer" type="FlowContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding"]
+layout_mode = 2
+
+[node name="ItemDesc" type="RichTextLabel" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7rqao")
+text = "adfasfhskdfsdfsld aas oflsdjf dsklfas jdlkad fjdslkfasd fklasdjkfds dskfdlj dskalf jldkak  "
+fit_content = true
+
+[node name="RequirementsList" type="FlowContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer"]
+layout_mode = 2
+
+[node name="ReqItem1" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("8_k8j6h")]
+layout_mode = 2
+
+[node name="ReqItem2" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("8_k8j6h")]
+layout_mode = 2
+
+[node name="ReqItem3" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("8_k8j6h")]
+layout_mode = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = -43
+
+[node name="ItemName" type="Label" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("7_1nhbr")
+text = "ITEM NAME"
+
+[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
 size_flags_vertical = 8
 theme_override_constants/margin_left = -20
 theme_override_constants/margin_right = -20
 theme_override_constants/margin_bottom = -20
 
-[node name="ButtonMid" type="Button" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc/FooterMargin"]
+[node name="ButtonMid" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("1_6b7a8")
 theme_type_variation = &"Button_Alt2"
 text = "toss"
 
-[node name="ButtonRight" type="Button" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc/FooterMargin"]
+[node name="ButtonRight" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme = ExtResource("1_6b7a8")
 text = "use"
-
-[node name="ItemName" type="Label" parent="OuterPadding/SplitContainer/RightPanel/ItemDesc"]
-layout_mode = 2
-offset_left = 108.0
-offset_top = -40.0
-offset_right = 282.0
-offset_bottom = 24.0
-grow_horizontal = 2
-theme = ExtResource("7_1nhbr")
-text = "ITEM NAME"
 
 [node name="Popup" parent="." instance=ExtResource("9_j02wv")]
 visible = false
