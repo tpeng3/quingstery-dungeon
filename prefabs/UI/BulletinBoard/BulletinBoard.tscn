@@ -1,0 +1,278 @@
+[gd_scene load_steps=15 format=3 uid="uid://d3b21n0iaddhr"]
+
+[ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_h87br"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="2_tva3j"]
+[ext_resource type="PackedScene" uid="uid://cuj4hjtjp6xfa" path="res://prefabs/UI/BulletinBoard/BulletinItem.tscn" id="3_60mq0"]
+[ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="4_ooxoh"]
+[ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="5_pvtak"]
+[ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="6_iqos6"]
+[ext_resource type="Texture2D" uid="uid://c0ctf6w5y22en" path="res://assets/character/beans/Zane.png" id="7_abit6"]
+[ext_resource type="PackedScene" uid="uid://ccbofkch7yrul" path="res://prefabs/UI/BulletinBoard/TaskItem.tscn" id="8_tcfwu"]
+[ext_resource type="PackedScene" uid="uid://o88oi5kw6pye" path="res://prefabs/UI/Popup/Popup.tscn" id="9_iv5wf"]
+[ext_resource type="PackedScene" uid="uid://bu7rkwekd13va" path="res://prefabs/UI/BulletinBoard/RewardItem.tscn" id="9_x6we6"]
+
+[sub_resource type="Animation" id="Animation_welty"]
+resource_name = "BeanHop"
+step = 0.05
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 2, 2, 3, 2, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.05, -105.933, -100, -0.2, -41.9333, 0.0477553, 10.0127, -100, -0.0644251, 7.00087, 0.05, -5.43333, -100, -0.0295222, 3, 0.0295222, -3, -100, -0.0166667, 0, 0.05, 0, -99.9333, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.35, 0.55, 0.650024, 0.7, 0.85)
+}
+
+[sub_resource type="Animation" id="Animation_nqbdl"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(-90, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_e52p6"]
+_data = {
+"BeanHop": SubResource("Animation_welty"),
+"RESET": SubResource("Animation_nqbdl")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rqao"]
+
+[node name="ItemMenu" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopBar" parent="." instance=ExtResource("1_h87br")]
+layout_mode = 1
+
+[node name="OuterPadding" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 52
+theme_override_constants/margin_top = 92
+theme_override_constants/margin_right = 52
+theme_override_constants/margin_bottom = 52
+
+[node name="SplitContainer" type="SplitContainer" parent="OuterPadding"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="LeftPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]
+custom_minimum_size = Vector2(448, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemListBG" type="NinePatchRect" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+texture = ExtResource("2_tva3j")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="PanelPadding" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
+
+[node name="FlowContainer" type="FlowContainer" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding"]
+layout_mode = 2
+theme_override_constants/v_separation = 20
+vertical = true
+
+[node name="BulletinItem1" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_60mq0")]
+layout_mode = 2
+
+[node name="BulletinItem2" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_60mq0")]
+layout_mode = 2
+
+[node name="BulletinItem3" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_60mq0")]
+layout_mode = 2
+
+[node name="BulletinItem4" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_60mq0")]
+layout_mode = 2
+
+[node name="BulletinItem5" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_60mq0")]
+layout_mode = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_top = -44
+
+[node name="LeftTitle" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("4_ooxoh")
+text = "Inventory"
+
+[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="NaviClose" type="Button" parent="OuterPadding/SplitContainer/LeftPanel/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("5_pvtak")
+theme_type_variation = &"Button_Alt"
+text = "close "
+
+[node name="Pagination" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_right = 70
+
+[node name="PaginationLabel" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("5_pvtak")
+theme_type_variation = &"Label_Fancy"
+text = "Page 01/04"
+
+[node name="ArrowBack" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+position = Vector2(144, 12)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("6_iqos6")
+animation = &"Dark_L"
+
+[node name="ArrowNext" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+visible = false
+position = Vector2(168, 12)
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("6_iqos6")
+animation = &"Dark_R"
+
+[node name="RightPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("5_pvtak")
+
+[node name="SpriteCentering" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Requester" type="Sprite2D" parent="OuterPadding/SplitContainer/RightPanel/SpriteCentering"]
+position = Vector2(0, -90)
+scale = Vector2(3, 3)
+texture = ExtResource("7_abit6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="OuterPadding/SplitContainer/RightPanel/SpriteCentering/Requester"]
+libraries = {
+"": SubResource("AnimationLibrary_e52p6")
+}
+
+[node name="MarginContainer" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="ItemDescBG" type="NinePatchRect" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_tva3j")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="DescPadding" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 35
+
+[node name="FlowContainer" type="FlowContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding"]
+layout_mode = 2
+
+[node name="ItemDesc" type="RichTextLabel" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7rqao")
+text = "adfasfhskdfsdfsld aas oflsdjf dsklfas jdlkad fjdslkfasd fklasdjkfds dskfdlj dskalf jldkak  "
+fit_content = true
+
+[node name="RequirementsList" type="FlowContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer"]
+layout_mode = 2
+
+[node name="TaskItem1" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("8_tcfwu")]
+layout_mode = 2
+
+[node name="TaskItem2" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("8_tcfwu")]
+layout_mode = 2
+
+[node name="TaskItem3" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("8_tcfwu")]
+layout_mode = 2
+
+[node name="TaskItem" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("9_x6we6")]
+layout_mode = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = -43
+
+[node name="ItemName" type="Label" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("4_ooxoh")
+text = "girl help me"
+
+[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="ButtonMid" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("5_pvtak")
+theme_type_variation = &"Button_Alt2"
+text = "cancel"
+
+[node name="ButtonRight" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("5_pvtak")
+text = "accept"
+
+[node name="Popup" parent="." instance=ExtResource("9_iv5wf")]
+visible = false
+layout_mode = 1

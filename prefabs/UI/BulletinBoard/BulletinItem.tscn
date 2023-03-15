@@ -1,0 +1,58 @@
+[gd_scene load_steps=3 format=3 uid="uid://cuj4hjtjp6xfa"]
+
+[ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="1_qpwni"]
+[ext_resource type="Texture2D" uid="uid://c0ctf6w5y22en" path="res://assets/character/beans/Zane.png" id="2_0xsua"]
+
+[node name="BulletinItem" type="MarginContainer"]
+offset_right = 384.0
+offset_bottom = 29.0
+theme = ExtResource("1_qpwni")
+
+[node name="Background" type="Panel" parent="."]
+layout_mode = 2
+theme = ExtResource("1_qpwni")
+
+[node name="FlowContainer" type="FlowContainer" parent="."]
+custom_minimum_size = Vector2(384, 0)
+layout_mode = 2
+
+[node name="SpriteBox" type="MarginContainer" parent="FlowContainer"]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 2
+
+[node name="Requester" type="Sprite2D" parent="FlowContainer/SpriteBox"]
+texture = ExtResource("2_0xsua")
+centered = false
+
+[node name="FlowContainer" type="FlowContainer" parent="FlowContainer"]
+layout_mode = 2
+alignment = 1
+vertical = true
+
+[node name="ReqType" type="Label" parent="FlowContainer/FlowContainer"]
+layout_mode = 2
+theme = ExtResource("1_qpwni")
+theme_type_variation = &"Label_Light"
+text = "find item"
+
+[node name="ReqTitle" type="Label" parent="FlowContainer/FlowContainer"]
+layout_mode = 2
+theme = ExtResource("1_qpwni")
+theme_type_variation = &"Label_Bold"
+text = "girl help me"
+
+[node name="RightAlign" type="FlowContainer" parent="FlowContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+alignment = 1
+vertical = true
+
+[node name="Location" type="Label" parent="FlowContainer/RightAlign"]
+layout_mode = 2
+text = "THROAT"
+horizontal_alignment = 2
+
+[node name="JobStatus" type="Label" parent="FlowContainer/RightAlign"]
+layout_mode = 2
+theme_type_variation = &"Label_Red"
+text = "EN ROUTE"
