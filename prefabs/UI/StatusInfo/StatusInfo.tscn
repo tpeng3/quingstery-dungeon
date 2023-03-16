@@ -1,28 +1,21 @@
 [gd_scene load_steps=6 format=3 uid="uid://dvvlc51g8by8k"]
 
-[ext_resource type="Theme" uid="uid://c5dlmh0jw71mx" path="res://theme/smallround.tres" id="2_h23as"]
+[ext_resource type="Theme" path="res://theme/smallround.tres" id="2_h23as"]
 [ext_resource type="Texture2D" uid="uid://c83mv6a2ehiy2" path="res://assets/ui/Icon_Menu.png" id="2_v0lnq"]
 [ext_resource type="Script" path="res://prefabs/UI/StatusInfo/HungerBarFill.gd" id="3_ejcwb"]
 
 [sub_resource type="Gradient" id="Gradient_gcyuc"]
 interpolation_mode = 1
-offsets = PackedFloat32Array(0, 0.574194)
+offsets = PackedFloat32Array(0, 0.727586)
 colors = PackedColorArray(1, 0.305882, 0.305882, 1, 0.935484, 0.935484, 0.935484, 1)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_6upft"]
 gradient = SubResource("Gradient_gcyuc")
 width = 36
 
-[node name="Control" type="Control"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+[node name="StatusInfo" type="CanvasLayer"]
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0

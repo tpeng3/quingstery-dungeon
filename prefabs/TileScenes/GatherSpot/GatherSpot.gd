@@ -24,6 +24,10 @@ func _ready():
 	$Timer.timeout.connect(_on_gathering)
 
 func _input(event):
+	# ignore input when quingee is frozen
+	if $"/root/Global".freezeQuingee or state == ActionState.COMPLETE:
+		return
+
 	# on enter/space or mouse click
 	if Input.is_action_just_pressed("ui_accept") and has_overlapping_bodies() \
 		and state != ActionState.COMPLETE:
@@ -36,6 +40,7 @@ func _input(event):
 func _on_gathering():
 	if Input.is_action_pressed("ui_accept") and has_overlapping_bodies():
 		$Control/ProgressBar.value += 1
+		$"/root/Global".currentHunger -= 0.5
 		if $Control/ProgressBar.value >= $Control/ProgressBar.max_value:
 			_on_gathering_complete()
 		$Timer.start()
@@ -50,11 +55,7 @@ func _on_gathering_complete():
 		rng.randomize()
 		var key = rng.randi_range(0, rewards.size() - 1)
 		var count = 1
-#		$DialoguePlayer.data.lines.text.replace("[[amount]]", str(count))
-#		$DialoguePlayer.data.lines.text.replace("[[item]]", str(rewards[key].name))
-#		$DialoguePlayer.data.lines.action[1] = rewards[key].path
-		DialogueBox.show_dialogue($DialoguePlayer)
-		Inventory.add_item(rewards[key].name, count)
+		DialogueBox.show_new_item(rewards[key].name, count)
 		# TODO: generate random item, with a count range and dependent on location
 
 func _on_body_entered(body):

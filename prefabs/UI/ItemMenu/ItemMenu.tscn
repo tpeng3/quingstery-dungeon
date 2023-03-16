@@ -3,7 +3,7 @@
 [ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="1_6b7a8"]
 [ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="2_1s1md"]
-[ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="2_p56pw"]
+[ext_resource type="Texture2D" uid="uid://bb43hfropg5lr" path="res://assets/item/i_acorn.png" id="2_p56pw"]
 [ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="3_h24dk"]
 [ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="7_1nhbr"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="7_hwq4l"]

@@ -36,18 +36,9 @@ func _process(delta):
 func _connect_tiles():
 	for tile in $Map/Floor.get_children():
 		match tile.name:
-			"FishingSpot":
-				tile.item_get.connect(_on_item_get)
-			"GatheringSpot":
-				tile.item_get.connect(_on_item_get)
-			"MiningSpot":
-				tile.item_get.connect(_on_item_get)
 			"Stairs":
 				tile.on_stairs.connect(_next_floor)
 
-func _on_item_get(item):
-	print(item)
-	
 func _next_floor():
 	$DialogueBox.visible = false
 	SceneManager.change_scene(scene, fade_out_options, fade_in_options, general_options)

@@ -4,6 +4,7 @@ extends Node
 enum ActionType { 
 	NONE,
 	BG,
+	GET_ITEM,
 	SHOW_FOCUS,
 	HIDE,
 	CHOICES,
@@ -15,6 +16,7 @@ enum PostActionType { NONE, MORE_TEXT, DELETE, UNLOCK }
 @export var dialogue_file: JSON
 @export var skipFade:bool = false
 var dialogue_keys = []
+var reward = null
 var postaction = null
 var current = 0
 var dialogue_name = ""

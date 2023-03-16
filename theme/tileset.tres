@@ -1,10 +1,10 @@
-[gd_resource type="TileSet" load_steps=9 format=3]
+[gd_resource type="TileSet" load_steps=9 format=3 uid="uid://cwx7nq0li1fi1"]
 
 [ext_resource type="Texture2D" uid="uid://2vphdrcvfcj3" path="res://assets/tile/ThroatTiles.png" id="2_c4taq"]
 [ext_resource type="PackedScene" uid="uid://daaxp1o7huxb" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.tscn" id="2_lnme1"]
 [ext_resource type="PackedScene" uid="uid://gvg8xyodjxn6" path="res://prefabs/TileScenes/Stairs/Stairs.tscn" id="3_6lvtm"]
 [ext_resource type="PackedScene" uid="uid://c1omvl0dm8vl5" path="res://prefabs/TileScenes/GatherSpot/GatherSpot.tscn" id="5_tpmtv"]
-[ext_resource type="PackedScene" path="res://prefabs/Quingee/Quingee.tscn" id="6_ac1st"]
+[ext_resource type="PackedScene" uid="uid://mfxb1gjncvlk" path="res://prefabs/Quingee/Quingee.tscn" id="6_ac1st"]
 [ext_resource type="PackedScene" uid="uid://bc8xgeqkh2j60" path="res://prefabs/TileScenes/FishingSpot/FishingSpot.tscn" id="6_w6kp2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2dseg"]

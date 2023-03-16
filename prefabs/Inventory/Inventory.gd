@@ -19,7 +19,7 @@ func remove_gald(amount):
 
 # TODO: add an error when inventory is maxed, and prompt user to toss items
 func add_item(key, count=1):
-	var item = _find_item(key)
+	var item = find_item(key)
 	assert(item, "Key Error: This item does not exist: " + key)
 	if key in inventory:
 		inventory[key].count += count
@@ -31,7 +31,7 @@ func add_item(key, count=1):
 		}
 		
 func remove_item(key, count=1):
-	var item = _find_item(key)
+	var item = find_item(key)
 	assert(item, "Key Error: This item does not exist: " + key)
 	if key in inventory:
 		inventory[key].count -= count
@@ -42,7 +42,7 @@ func remove_item(key, count=1):
 func print_items():
 	var inv = []
 	for key in inventory:
-		var item = _find_item(key)
+		var item = find_item(key)
 		var remainder = inventory[key].count
 		for n in ceil(item.count / item.maxcount):
 			if remainder >= item.maxcount:
@@ -64,10 +64,12 @@ func print_items():
 func get_inv_count():
 	var count = 0
 	for key in inventory:
-		var item = _find_item(key)
+		var item = find_item(key)
 		count += ceil(inventory[key].count / item.maxcount)
 	return count
 
-func _find_item(key):
-	var i = items_json.data.find(func(i): i.name == key)
-	return items_json.data[i]
+func find_item(key):
+	for i in items_json.data:
+		if i.name == key:
+			return i
+	return null

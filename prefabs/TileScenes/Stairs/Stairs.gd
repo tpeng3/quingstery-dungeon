@@ -8,8 +8,11 @@ var entered_stairs = false
 @onready var DialogueBox = get_parent().get_parent().get_parent().get_node("DialogueBox")
 
 func _input(event):
+	# ignore input when quingee is frozen
+	if $"/root/Global".freezeQuingee:
+		return
+
 	if (event.is_action_pressed("ui_accept")) and entered_stairs:
-		print(DialogueBox)
 		if DialogueBox:
 			DialogueBox.show_dialogue($DialoguePlayer)
 			DialogueBox.yes_selected.connect(_on_yes_selected)

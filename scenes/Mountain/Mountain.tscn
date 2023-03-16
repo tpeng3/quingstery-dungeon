@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2sw2fysbdc2x"]
+[gd_scene load_steps=6 format=3 uid="uid://d2sw2fysbdc2x"]
 
 [ext_resource type="Script" path="res://scenes/Mountain/Mountain.gd" id="1_ybsvq"]
-[ext_resource type="TileSet" uid="uid://li5pwg8jkrh4" path="res://theme/tileset.tres" id="2_ja4ub"]
+[ext_resource type="TileSet" uid="uid://cwx7nq0li1fi1" path="res://theme/tileset.tres" id="2_ja4ub"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_qklru"]
+[ext_resource type="PackedScene" uid="uid://dvvlc51g8by8k" path="res://prefabs/UI/StatusInfo/StatusInfo.tscn" id="5_7r71l"]
 [ext_resource type="PackedScene" uid="uid://8u6c5x2aksb6" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="5_yuxs7"]
 
 [node name="Mountain" type="Node2D"]
@@ -55,13 +56,4 @@ text = "Press space to continue!"
 
 [node name="DialogueBox" parent="." instance=ExtResource("5_yuxs7")]
 
-[connection signal="body_entered" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/@MiningSpot@329728" to="Map/Floor/@MiningSpot@329728" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/@MiningSpot@329728" to="Map/Floor/@MiningSpot@329728" method="_on_body_exited" flags=18]
+[node name="StatusInfo" parent="." instance=ExtResource("5_7r71l")]

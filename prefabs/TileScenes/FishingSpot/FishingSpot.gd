@@ -10,32 +10,45 @@ enum ActionState {
 var state = ActionState.IDLE
 var chara
 var rng = RandomNumberGenerator.new()
-signal item_get
+var rewards = []
+
 @onready var DialogueBox = get_parent().get_parent().get_parent().get_node("DialogueBox")
+@onready var Inventory = get_node("/root/Inventory")
+
+signal item_get
 
 func _ready():
+	var location = "Throat" # TODO: make enum or typecheck
+	rewards = Inventory.get_items_json().filter(
+		func(i): return i.source == location and i.category == "Fishing"
+	)
+	
 	$Timer.timeout.connect(_on_fish_bait)
-	pass # Replace with function body.
 
 func _input(event):
+	# ignore input when quingee is frozen
+	if $"/root/Global".freezeQuingee:
+		return
+
 	# on enter/space or mouse click
 	if Input.is_action_just_pressed("ui_accept") and chara and state == ActionState.IDLE:
 		state = ActionState.FISHING
 		$Icon.visible = false
-		chara.get_node("PlaceholderText").text = "Waiting..."
-		chara.get_node("PlaceholderText").visible = true
+		chara.get_node("Bubble").play("Waiting")
+		chara.get_node("Bubble").visible = true
 		# TODO: add mining values and difficulty
 		# TODO: reduce hunger when mining
 		rng.randomize()
 		var wait = rng.randf_range(3, 5)
 		$Timer.wait_time = wait
 		$Timer.start()
+		$"/root/Global".currentHunger -= 0.5
 	elif Input.is_action_just_pressed("ui_accept") and chara and state == ActionState.CAUGHT:
 		_on_fishing_complete()
 		
 func _on_fish_bait():
 	if chara:
-		chara.get_node("PlaceholderText").text = "Press space to reel"
+		chara.get_node("Bubble").play("Catch")
 		state = ActionState.CAUGHT
 		var wait = rng.randf_range(0, 1)
 		$ReelTimer.start()
@@ -44,17 +57,24 @@ func _on_fish_bait():
 			state = ActionState.FAIL
 			$Sprite/Sparkle.visible = false
 			if chara:
-				chara.get_node("PlaceholderText").visible = false
+				chara.get_node("Bubble").play("Failure")
+				await chara.get_node("Bubble").animation_finished
+				chara.get_node("Bubble").visible = false
 
 func _on_fishing_complete():
 	state = ActionState.COMPLETE
 	$Sprite/Sparkle.visible = false
 	$Sprite.play("idle")
-	chara.get_node("PlaceholderText").visible = false
+	chara.get_node("Bubble").play("Success")
+	await chara.get_node("Bubble").animation_finished
+	chara.get_node("Bubble").visible = false
+	$"/root/Global".currentHunger -= 2
 	if DialogueBox:
-		DialogueBox.show_dialogue($DialoguePlayer)
-		var item = "Glowbug Lantern"
-		# TODO: generate random item
+		rng.randomize()
+		var key = rng.randi_range(0, rewards.size() - 1)
+		var count = 1
+		DialogueBox.show_new_item(rewards[key].name, count)
+		# TODO: generate random item, with a count range and dependent on location
 
 func _on_body_entered(body):
 	if body.name == "Quingee":
@@ -67,7 +87,7 @@ func _on_body_exited(body):
 	$Sprite.play("idle")
 	if body.name == "Quingee":
 		$Icon.visible = false
-		chara.get_node("PlaceholderText").visible = false
+		chara.get_node("Bubble").visible = false
 		chara = null
 		if state == ActionState.FISHING:
 			state = ActionState.IDLE

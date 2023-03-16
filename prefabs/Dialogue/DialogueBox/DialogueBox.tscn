@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://8u6c5x2aksb6"]
+[gd_scene load_steps=12 format=3 uid="uid://8u6c5x2aksb6"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
 [ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="2_dpae3"]
@@ -8,6 +8,7 @@
 [ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="5_hwskm"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="6_ef0cp"]
 [ext_resource type="PackedScene" uid="uid://o88oi5kw6pye" path="res://prefabs/UI/Popup/Popup.tscn" id="8_1iosi"]
+[ext_resource type="PackedScene" uid="uid://7kb3pvj7jya3" path="res://prefabs/UI/Popup/NewItemPopup.tscn" id="8_elakg"]
 
 [sub_resource type="Animation" id="Animation_q44kr"]
 resource_name = "textbox_fade"
@@ -52,7 +53,6 @@ theme_override_constants/margin_left = -16
 theme_override_constants/margin_top = -16
 
 [node name="NaviItems" type="FlowContainer" parent="GUI/VSplitContainer/UpperArea/NaviMenu"]
-visible = false
 layout_mode = 2
 vertical = true
 
@@ -82,13 +82,14 @@ theme_override_constants/margin_left = 48
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 48
 
-[node name="Sprite2D" type="Sprite2D" parent="GUI/VSplitContainer/DialogueBox"]
-position = Vector2(855, -14)
-texture = ExtResource("3_56qxl")
-
 [node name="YesNo" type="MarginContainer" parent="GUI/VSplitContainer/DialogueBox"]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 8
+
+[node name="Sprite2D" type="Sprite2D" parent="GUI/VSplitContainer/DialogueBox/YesNo"]
+position = Vector2(-57, -14)
+texture = ExtResource("3_56qxl")
 
 [node name="DialogueSelect" type="Control" parent="GUI/VSplitContainer/DialogueBox/YesNo"]
 layout_mode = 2
@@ -141,7 +142,9 @@ position = Vector2(821, 100)
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("6_ef0cp")
 animation = &"Flash_R"
-frame_progress = 0.914684
+
+[node name="NewItemPopup" parent="." instance=ExtResource("8_elakg")]
+visible = false
 
 [node name="Popup" parent="." instance=ExtResource("8_1iosi")]
 visible = false

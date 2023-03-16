@@ -2,8 +2,11 @@
 # This is a singleton so script is preloaded before game starts
 extends Node
 
-
 var player = "Quingee"
-var gald = 0
-var inventory = []
 
+# true when a screen pops up and player should focus on the dialogue box
+var freezeQuingee = false
+
+# global player stats
+var currentHunger = 20
+var maxHunger = 20

@@ -12,9 +12,28 @@ signal no_selected
 
 func _ready():
 	hide()
+	
+	$NewItemPopup.connect("on_confirm", _on_continue)
+	
+func _reset_ui():
+	show()
+	for ui in get_children():
+		if ui.has_method("hide"):
+			ui.hide()
+	
+func show_new_item(item, amount):
+	# freeze character while there is dialogue
+	$"/root/Global".freezeQuingee = true
+	
+	_reset_ui()
+	$NewItemPopup.show_item(item, amount)
 
 func show_dialogue(dialogue):
+	# freeze character while there is dialogue
+	$"/root/Global".freezeQuingee = true
+	
 	dialogue_node = dialogue
+	_reset_ui()
 	show()
 	if !dialogue_node.skipFade:
 		$AnimationPlayer.play("textbox_fade")
@@ -26,10 +45,14 @@ func show_dialogue(dialogue):
 func _input(event):
 	# on enter/space or mouse click
 	if self.visible and not DialogueSelect.visible and dialogue_node != null:\
-		if event.is_action_pressed("ui_accept"):
+		if Input.is_action_pressed("ui_accept"):
 #			DialogueSelect.ButtonHover.play()
 			dialogue_node.next_dialogue()
 			_update_textbox()
+
+func _on_continue():
+	# TODO: clean this up later
+	_on_dialogue_finished()
 
 func _update_textbox():
 	if dialogue_node.dialogue_name and dialogue_node.dialogue_name != "":
@@ -53,6 +76,8 @@ func _on_dialogue_action(action_type, asset):
 	match action_type:
 		dialogue_node.ActionType.BG:
 			change_bg(asset)
+		dialogue_node.ActionType.GET_ITEM:
+			show_image(asset)
 		dialogue_node.ActionType.SHOW_FOCUS:
 			show_image(asset)
 		dialogue_node.ActionType.HIDE:
@@ -68,24 +93,29 @@ func _on_dialogue_finished(action_type = 0, asset = null):
 #	self.hide_image()
 #	$Talksprites/Sprite2D.hide()
 	DialogueSelect.hide()
-	$AnimationPlayer.play_backwards("textbox_fade")
-	await $AnimationPlayer.animation_finished
+#	$AnimationPlayer.play_backwards("textbox_fade")
+#	await $AnimationPlayer.animation_finished
 	self.hide()
 #	Input.set_custom_mouse_cursor(Utilities.CURSOR_DEFAULT)
-	dialogue_node.dialogue_action.disconnect(_on_dialogue_action)
-	dialogue_node.dialogue_finished.disconnect(_on_dialogue_finished)
-	match action_type:
-		dialogue_node.PostActionType.MORE_TEXT:
-			dialogue_node.dialogue_file = asset
-#		dialogue_node.PostActionType.UNLOCK:
-#			pass
-#			# TODO: change this for quingstery later
-		dialogue_node.PostActionType.DELETE:
-			var to_delete = dialogue_node
-			dialogue_node = null
-			to_delete.get_parent().queue_free()
+	if dialogue_node:
+		dialogue_node.dialogue_action.disconnect(_on_dialogue_action)
+		dialogue_node.dialogue_finished.disconnect(_on_dialogue_finished)
+		match action_type:
+			dialogue_node.PostActionType.MORE_TEXT:
+				dialogue_node.dialogue_file = asset
+	#		dialogue_node.PostActionType.UNLOCK:
+	#			pass
+	#			# TODO: change this for quingstery later
+			dialogue_node.PostActionType.DELETE:
+				var to_delete = dialogue_node
+				to_delete.get_parent().queue_free()
+		dialogue_node = null
+				
 	emit_signal("no_selected")
 	# OLD TODO: dunno if we want the above or to rework the logic hmmmmm
+	
+	# quingee can move again
+	$"/root/Global".freezeQuingee = false
 
 # TODO: sound check later
 func _on_Button_mouse_entered():
