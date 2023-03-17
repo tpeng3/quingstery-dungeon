@@ -1,12 +1,15 @@
-[gd_resource type="Theme" load_steps=10 format=3 uid="uid://bfqypb3lfrfpt"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://bdigthwnc4wdi"]
 
 [ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_ua05e"]
-[ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_menu_sign.tres" id="2_ttkyf"]
-[ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_menu_sign_L.tres" id="3_cwo08"]
-[ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_menu_sign_mid.tres" id="4_6lxen"]
+[ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_menuSignR.tres" id="2_o5bjb"]
+[ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_menuSignRH.tres" id="3_m83mw"]
+[ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_menuSignL.tres" id="4_5e8pr"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="5_h24u7"]
+[ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_menuSignLH.tres" id="5_hgslk"]
 [ext_resource type="FontFile" uid="uid://oghqafn812mw" path="res://assets/ui/Dogica/dogicapixel.ttf" id="5_ipy2b"]
+[ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_menuSignM.tres" id="6_gc68c"]
 [ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="7_g4pud"]
+[ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_menuSignMH.tres" id="7_wbjn2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ql0t"]
 
@@ -22,23 +25,23 @@ Button/colors/font_hover_pressed_color = Color(0.729412, 0.384314, 0.294118, 1)
 Button/colors/font_pressed_color = Color(0.729412, 0.384314, 0.294118, 1)
 Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_ua05e")
-Button/styles/disabled = ExtResource("2_ttkyf")
-Button/styles/focus = ExtResource("2_ttkyf")
-Button/styles/hover = ExtResource("2_ttkyf")
-Button/styles/normal = ExtResource("2_ttkyf")
-Button/styles/pressed = ExtResource("2_ttkyf")
+Button/styles/disabled = ExtResource("2_o5bjb")
+Button/styles/focus = ExtResource("3_m83mw")
+Button/styles/hover = ExtResource("3_m83mw")
+Button/styles/normal = ExtResource("2_o5bjb")
+Button/styles/pressed = ExtResource("3_m83mw")
 Button_Alt/base_type = &"Button"
-Button_Alt/styles/disabled = ExtResource("3_cwo08")
-Button_Alt/styles/focus = ExtResource("3_cwo08")
-Button_Alt/styles/hover = ExtResource("3_cwo08")
-Button_Alt/styles/normal = ExtResource("3_cwo08")
-Button_Alt/styles/pressed = ExtResource("3_cwo08")
+Button_Alt/styles/disabled = ExtResource("4_5e8pr")
+Button_Alt/styles/focus = ExtResource("5_hgslk")
+Button_Alt/styles/hover = ExtResource("5_hgslk")
+Button_Alt/styles/normal = ExtResource("4_5e8pr")
+Button_Alt/styles/pressed = ExtResource("5_hgslk")
 Button_Alt2/base_type = &"Button"
-Button_Alt2/styles/disabled = ExtResource("4_6lxen")
-Button_Alt2/styles/focus = ExtResource("4_6lxen")
-Button_Alt2/styles/hover = ExtResource("4_6lxen")
-Button_Alt2/styles/normal = ExtResource("4_6lxen")
-Button_Alt2/styles/pressed = ExtResource("4_6lxen")
+Button_Alt2/styles/disabled = ExtResource("6_gc68c")
+Button_Alt2/styles/focus = ExtResource("7_wbjn2")
+Button_Alt2/styles/hover = ExtResource("7_wbjn2")
+Button_Alt2/styles/normal = ExtResource("6_gc68c")
+Button_Alt2/styles/pressed = ExtResource("7_wbjn2")
 Label/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
 Label/fonts/font = ExtResource("5_ipy2b")
 Label_Bold/base_type = &"Label"
