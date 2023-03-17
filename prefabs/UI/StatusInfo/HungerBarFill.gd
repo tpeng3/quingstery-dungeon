@@ -5,7 +5,7 @@ var meter_gradient = Gradient.new();
 func _ready():
 	# sets up gradient w/ desired interpolation + default points
 	meter_gradient.interpolation_mode = 0
-	meter_gradient.add_point(0, Color.INDIAN_RED)
+	meter_gradient.add_point(0, Color.BLACK)
 	meter_gradient.add_point(0.5, Color.WHITE)
 	pass # Replace with function body.
 

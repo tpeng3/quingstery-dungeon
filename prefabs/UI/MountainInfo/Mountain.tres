@@ -1,0 +1,42 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://dqa8ky6nrewoa"]
+
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_0kjtc"]
+[ext_resource type="StyleBox" uid="uid://cd03howywgoqh" path="res://prefabs/UI/MountainInfo/Peak.tres" id="1_g62r2"]
+[ext_resource type="StyleBox" uid="uid://c1jaqxotsj07p" path="res://prefabs/UI/MountainInfo/River.tres" id="2_ixyp8"]
+[ext_resource type="StyleBox" uid="uid://c27e54npbxy0g" path="res://prefabs/UI/MountainInfo/PeakSelect.tres" id="2_jfo0h"]
+[ext_resource type="StyleBox" uid="uid://dugo1e7nx1je3" path="res://prefabs/UI/MountainInfo/Steps.tres" id="3_iuo46"]
+[ext_resource type="StyleBox" uid="uid://cgj173841e5x0" path="res://prefabs/UI/MountainInfo/Throat.tres" id="4_2c5vq"]
+[ext_resource type="StyleBox" uid="uid://djvf5225buj0q" path="res://prefabs/UI/MountainInfo/RiverSelect.tres" id="4_ito4y"]
+[ext_resource type="StyleBox" uid="uid://dcbv0agbf8gso" path="res://prefabs/UI/MountainInfo/ThroatSelect.tres" id="4_vi11b"]
+[ext_resource type="StyleBox" uid="uid://doh6sm746xhqq" path="res://prefabs/UI/MountainInfo/StepsSelect.tres" id="6_eyhhu"]
+
+[resource]
+Button/colors/font_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/colors/font_focus_color = Color(0.211765, 0.00784314, 0.396078, 1)
+Button/colors/font_hover_color = Color(0.211765, 0.00784314, 0.396078, 1)
+Button/colors/font_hover_pressed_color = Color(0.211765, 0.00784314, 0.396078, 1)
+Button/colors/font_outline_color = Color(0.760784, 0.603922, 0.427451, 1)
+Button/colors/font_pressed_color = Color(0.211765, 0.00784314, 0.396078, 1)
+Button/constants/outline_size = 8
+Button/fonts/font = ExtResource("1_0kjtc")
+Peak/base_type = &"Button"
+Peak/styles/focus = ExtResource("2_jfo0h")
+Peak/styles/hover = ExtResource("2_jfo0h")
+Peak/styles/normal = ExtResource("1_g62r2")
+Peak/styles/pressed = ExtResource("2_jfo0h")
+River/base_type = &"Button"
+River/styles/focus = ExtResource("4_ito4y")
+River/styles/hover = ExtResource("4_ito4y")
+River/styles/normal = ExtResource("2_ixyp8")
+River/styles/pressed = ExtResource("4_ito4y")
+Steps/base_type = &"Button"
+Steps/styles/disabled = null
+Steps/styles/focus = ExtResource("6_eyhhu")
+Steps/styles/hover = ExtResource("6_eyhhu")
+Steps/styles/normal = ExtResource("3_iuo46")
+Steps/styles/pressed = ExtResource("6_eyhhu")
+Throat/base_type = &"Button"
+Throat/styles/focus = ExtResource("4_vi11b")
+Throat/styles/hover = ExtResource("4_vi11b")
+Throat/styles/normal = ExtResource("4_2c5vq")
+Throat/styles/pressed = ExtResource("4_vi11b")

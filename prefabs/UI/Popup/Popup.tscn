@@ -8,13 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://bwpq0b2vhdsje" path="res://assets/ui/menu_nametag.png" id="5_e04lh"]
 [ext_resource type="PackedScene" uid="uid://d0kb2p4gwj6fi" path="res://prefabs/UI/AmountSelect/AmountSelect.tscn" id="6_2o8r7"]
 
-[sub_resource type="Gradient" id="Gradient_iimng"]
+[sub_resource type="Gradient" id="Gradient_wpb06"]
 interpolation_mode = 1
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0.101961, 0.0745098, 0.133333, 0.498039)
 
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_fmsmn"]
-gradient = SubResource("Gradient_iimng")
+gradient = SubResource("Gradient_wpb06")
 
 [sub_resource type="Animation" id="Animation_sg04e"]
 loop_mode = 1

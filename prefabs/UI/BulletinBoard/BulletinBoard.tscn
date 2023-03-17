@@ -48,7 +48,7 @@ _data = {
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rqao"]
 
-[node name="ItemMenu" type="Control"]
+[node name="BulletinBoard" type="Control"]
 texture_filter = 1
 layout_mode = 3
 anchors_preset = 15
@@ -129,7 +129,7 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 theme = ExtResource("4_ooxoh")
-text = "Inventory"
+text = "Bulletin Board"
 
 [node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
 layout_mode = 2

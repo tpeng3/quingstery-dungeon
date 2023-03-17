@@ -16,11 +16,11 @@ layout_mode = 2
 theme = ExtResource("2_3jwr2")
 text = "Reward:"
 
-[node name="Action2" type="Label" parent="SplitContainer"]
+[node name="Item" type="Label" parent="SplitContainer"]
 layout_mode = 2
 theme = ExtResource("2_3jwr2")
 theme_type_variation = &"Label_Bold"
-text = "Item Name Here"
+text = "Item Name"
 
 [node name="Amount" type="Label" parent="SplitContainer"]
 layout_mode = 2

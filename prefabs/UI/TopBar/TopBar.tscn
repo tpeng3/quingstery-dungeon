@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://cg7kh7584x7xg"]
+[gd_scene load_steps=5 format=3 uid="uid://cg7kh7584x7xg"]
 
 [ext_resource type="Script" path="res://prefabs/UI/TopBar/TopBar.gd" id="1_122t8"]
 [ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="2_xveov"]
-[ext_resource type="Texture2D" uid="uid://br0ne6j6aqo0s" path="res://assets/ui/Gald_Symbol.png" id="3_thkc1"]
+[ext_resource type="Texture2D" uid="uid://bdqemmusx4053" path="res://assets/ui/Gald_Symbol.png" id="3_thkc1"]
+[ext_resource type="Texture2D" uid="uid://bh8tiiyb5xqjr" path="res://assets/ui/backpack_symbol.png" id="4_0255c"]
 
 [node name="TopBar" type="Control"]
 layout_mode = 3
@@ -52,7 +53,19 @@ texture = ExtResource("3_thkc1")
 layout_mode = 2
 size_flags_horizontal = 0
 
-[node name="InventoryLabel" type="Label" parent="UpperInfo/HSplitContainer/InventoryAmt"]
+[node name="FlowContainer" type="FlowContainer" parent="UpperInfo/HSplitContainer/InventoryAmt"]
+layout_mode = 2
+vertical = true
+
+[node name="InventoryLabel" type="Label" parent="UpperInfo/HSplitContainer/InventoryAmt/FlowContainer"]
 layout_mode = 2
 theme = ExtResource("2_xveov")
-text = "10/20"
+text = "10/20   "
+
+[node name="GaldSymbol" type="MarginContainer" parent="UpperInfo/HSplitContainer/InventoryAmt/FlowContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="UpperInfo/HSplitContainer/InventoryAmt/FlowContainer/GaldSymbol"]
+position = Vector2(-30, 31)
+scale = Vector2(2, 2)
+texture = ExtResource("4_0255c")

@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://qehathayhhdl"]
+
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="1_f2lqs"]
+[ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="2_b412g"]
+
+[node name="StatusMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OuterPadding" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 52
+theme_override_constants/margin_top = 52
+theme_override_constants/margin_right = 52
+theme_override_constants/margin_bottom = 52
+
+[node name="MenuBG" type="NinePatchRect" parent="OuterPadding"]
+layout_mode = 2
+texture = ExtResource("1_f2lqs")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_top = -44
+
+[node name="LeftTitle" type="Label" parent="OuterPadding/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("2_b412g")
+text = "Status"
