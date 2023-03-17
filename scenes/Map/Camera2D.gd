@@ -5,6 +5,7 @@ var focused_location
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if focused_location:
-		position_smoothing_enabled = false
-		position = Vector2(200, 100)
-		position_smoothing_enabled = true
+		position = Vector2(
+			min(focused_location.position.x - (960/2), 1225 - (960/2) - 80),
+			focused_location.position.y - (540/2) + 80
+		)

@@ -57,3 +57,14 @@ text = "Press space to continue!"
 [node name="DialogueBox" parent="." instance=ExtResource("5_yuxs7")]
 
 [node name="StatusInfo" parent="." instance=ExtResource("5_7r71l")]
+
+[connection signal="body_entered" from="Map/Floor/@GatherSpot@20594" to="Map/Floor/@GatherSpot@20594" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@GatherSpot@20594" to="Map/Floor/@GatherSpot@20594" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@FishingSpot@20595" to="Map/Floor/@FishingSpot@20595" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@FishingSpot@20595" to="Map/Floor/@FishingSpot@20595" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@Stairs@20597" to="Map/Floor/@Stairs@20597" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@Stairs@20597" to="Map/Floor/@Stairs@20597" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@MiningSpot@20598" to="Map/Floor/@MiningSpot@20598" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@MiningSpot@20598" to="Map/Floor/@MiningSpot@20598" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@MiningSpot@20599" to="Map/Floor/@MiningSpot@20599" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@MiningSpot@20599" to="Map/Floor/@MiningSpot@20599" method="_on_body_exited" flags=18]

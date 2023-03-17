@@ -1,33 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://dx0kws7hwpumu"]
+[gd_scene load_steps=16 format=3 uid="uid://dx0kws7hwpumu"]
 
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
 [ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
 [ext_resource type="Script" path="res://scenes/Map/Camera2D.gd" id="2_vecvs"]
 [ext_resource type="PackedScene" uid="uid://dxr1xgd3ibyct" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
-[ext_resource type="Texture2D" uid="uid://6s65w0koae6m" path="res://assets/ui/mapbip.png" id="3_pbefw"]
-[ext_resource type="Texture2D" uid="uid://duspp4bnqhdmh" path="res://assets/ui/locations/locations_lakegalinn_pip.png" id="4_fwmu8"]
-[ext_resource type="Script" path="res://prefabs/MapButton/MapButton.gd" id="5_yelan"]
+[ext_resource type="PackedScene" uid="uid://c04ryc3grkkv7" path="res://prefabs/MapButton/MapButton.tscn" id="4_618ha"]
+[ext_resource type="Texture2D" uid="uid://cqbp0f3r6orbp" path="res://assets/ui/locations/locations_townhall_pip.png" id="5_s1d2c"]
+[ext_resource type="Texture2D" uid="uid://bo1dw28nxmqj3" path="res://assets/ui/locations/locations_pecanhome_pip.png" id="6_62i57"]
+[ext_resource type="Texture2D" uid="uid://dkbboiaqvecbo" path="res://assets/ui/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
+[ext_resource type="Texture2D" uid="uid://dqnpxqjlgxml" path="res://assets/ui/locations/locations_acornhome_pip.png" id="8_y6cwr"]
+[ext_resource type="Texture2D" uid="uid://ct35jr0561r0v" path="res://assets/ui/locations/locations_marketplace_pip.png" id="9_ba8tq"]
+[ext_resource type="Texture2D" uid="uid://cxubk7ug2y8kn" path="res://assets/ui/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
+[ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="12_j3ysv"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="13_dboj1"]
+[ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="14_ruq6n"]
 
-[sub_resource type="Animation" id="Animation_hebl4"]
-resource_name = "scale"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2),
-"transitions": PackedFloat32Array(1, 0.148651),
-"update": 0,
-"values": [Vector2(1, 1), Vector2(5, 5)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_4qjhq"]
-_data = {
-"scale": SubResource("Animation_hebl4")
-}
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d36gl"]
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_3k0c8")
@@ -41,56 +29,175 @@ handle_input_locally = false
 size = Vector2i(960, 540)
 render_target_update_mode = 4
 
-[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport"]
-anchor_mode = 0
-rotation_smoothing_enabled = true
-script = ExtResource("2_vecvs")
-
-[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport/Camera2D"]
-scale = Vector2(0.3, 0.3)
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport"]
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_g1eyc")
 centered = false
 
-[node name="Control" type="Control" parent="SubViewportContainer/SubViewport/Camera2D/Sprite2D"]
+[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport"]
+anchor_mode = 0
+position_smoothing_enabled = true
+script = ExtResource("2_vecvs")
+
+[node name="MapButtons" type="Control" parent="SubViewportContainer/SubViewport"]
 layout_mode = 3
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -1425.0
-offset_top = -1175.0
-offset_right = -1425.0
-offset_bottom = -1175.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-script = ExtResource("5_yelan")
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_vertical = 8
+metadata/_edit_use_anchors_ = true
 
-[node name="TextureButton" type="TextureButton" parent="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-texture_normal = ExtResource("3_pbefw")
-texture_pressed = ExtResource("4_fwmu8")
-texture_hover = ExtResource("4_fwmu8")
-texture_focused = ExtResource("4_fwmu8")
-stretch_mode = 0
+[node name="Town Hall" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1178.0
+offset_top = 529.0
+offset_right = 1218.0
+offset_bottom = 529.0
+scale = Vector2(1, 1)
+focus_next = NodePath("../Bulletin Board")
+preview = ExtResource("5_s1d2c")
+mapDesc = "This is the Town Hall."
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control"]
-libraries = {
-"": SubResource("AnimationLibrary_4qjhq")
-}
+[node name="Bulletin Board" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1238.0
+offset_top = 524.0
+offset_right = 1278.0
+offset_bottom = 524.0
+scale = Vector2(1, 1)
+focus_next = NodePath("../Trading Post")
+focus_previous = NodePath("../Town Hall")
+preview = ExtResource("5_s1d2c")
+mapDesc = "whee bulletin board"
+
+[node name="Trading Post" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1086.0
+offset_top = 576.0
+offset_right = 1126.0
+offset_bottom = 576.0
+scale = Vector2(1, 1)
+focus_next = NodePath("../Tian\'s Corner")
+focus_previous = NodePath("../Bulletin Board")
+preview = ExtResource("6_62i57")
+mapDesc = "(frogchamp)"
+
+[node name="Tian\'s Corner" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 908.0
+offset_top = 626.0
+offset_right = 948.0
+offset_bottom = 626.0
+scale = Vector2(1, 1)
+focus_next = NodePath("../Textile Services")
+focus_previous = NodePath("../Trading Post")
+preview = ExtResource("7_0i0u8")
+mapDesc = "someone add flavor text for me"
+
+[node name="Bake n\' Roast" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1298.0
+offset_top = 712.0
+offset_right = 1338.0
+offset_bottom = 712.0
+scale = Vector2(1, 1)
+preview = ExtResource("8_y6cwr")
+mapDesc = "aaaaaaaa"
+
+[node name="Textile Services" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1330.0
+offset_top = 736.0
+offset_right = 1370.0
+offset_bottom = 736.0
+scale = Vector2(1, 1)
+focus_next = NodePath("../Fire Station")
+focus_previous = NodePath("../Tian\'s Corner")
+preview = ExtResource("8_y6cwr")
+mapDesc = "hi noah"
+
+[node name="Fire Station" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1250.0
+offset_top = 466.0
+offset_right = 1290.0
+offset_bottom = 466.0
+scale = Vector2(1, 1)
+preview = ExtResource("9_ba8tq")
+mapDesc = "hi zane"
+
+[node name="Meteor Institute" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 584.0
+offset_top = 438.0
+offset_right = 624.0
+offset_bottom = 438.0
+scale = Vector2(1, 1)
+preview = ExtResource("10_satxt")
+mapDesc = "hi piper"
+
+[node name="The Mines" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+visible = false
+layout_mode = 2
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 32.0
+scale = Vector2(1, 1)
+skipPreview = true
+
+[node name="Peanut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+visible = false
+layout_mode = 2
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 32.0
+scale = Vector2(1, 1)
+skipPreview = true
+
+[node name="Walnut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+visible = false
+layout_mode = 2
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 32.0
+scale = Vector2(1, 1)
+skipPreview = true
+
+[node name="Pecan Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+visible = false
+layout_mode = 2
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 32.0
+scale = Vector2(1, 1)
+skipPreview = true
+
+[node name="Butternut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+visible = false
+layout_mode = 2
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 32.0
+scale = Vector2(1, 1)
+skipPreview = true
+
+[node name="The Mines6" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+visible = false
+layout_mode = 2
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 32.0
+scale = Vector2(1, 1)
+skipPreview = true
+
+[node name="The Mines7" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+visible = false
+layout_mode = 2
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 32.0
+scale = Vector2(1, 1)
+skipPreview = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -130,7 +237,63 @@ layout_mode = 2
 text = "Climb Peak"
 scene = "Mountain"
 
-[connection signal="focus_entered" from="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control/TextureButton" to="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control" method="_on_focus_entered"]
-[connection signal="focus_exited" from="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control/TextureButton" to="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control" method="_on_focus_exited"]
-[connection signal="mouse_entered" from="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control/TextureButton" to="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control" method="_on_focus_entered"]
-[connection signal="mouse_exited" from="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control/TextureButton" to="SubViewportContainer/SubViewport/Camera2D/Sprite2D/Control" method="_on_focus_exited"]
+[node name="RightPanel" type="MarginContainer" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 540.0
+offset_top = 350.0
+offset_right = 924.0
+offset_bottom = 510.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 8
+theme = ExtResource("12_j3ysv")
+
+[node name="MarginContainer" type="MarginContainer" parent="RightPanel"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="MapDescBG" type="NinePatchRect" parent="RightPanel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("13_dboj1")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="DescPadding" type="MarginContainer" parent="RightPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 35
+
+[node name="FlowContainer" type="FlowContainer" parent="RightPanel/MarginContainer/DescPadding"]
+layout_mode = 2
+
+[node name="MapDesc" type="RichTextLabel" parent="RightPanel/MarginContainer/DescPadding/FlowContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxEmpty_d36gl")
+text = "This is the Town Hall."
+fit_content = true
+
+[node name="TitleMargin" type="MarginContainer" parent="RightPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = -43
+
+[node name="MapName" type="Label" parent="RightPanel/MarginContainer/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("14_ruq6n")
+text = "Town Hall"
