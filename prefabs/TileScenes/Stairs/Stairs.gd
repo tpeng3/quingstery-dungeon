@@ -9,7 +9,7 @@ var entered_stairs = false
 
 func _input(event):
 	# ignore input when quingee is frozen
-	if $"/root/Global".freezeQuingee:
+	if Global.freezeQuingee:
 		return
 
 	if (event.is_action_pressed("ui_accept")) and entered_stairs:

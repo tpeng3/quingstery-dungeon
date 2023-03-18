@@ -10,8 +10,8 @@ func _ready():
 	pass # Replace with function body.
 
 func _process(_delta):
-	var hunger_curr = $"/root/Global".currentHunger;
-	var hunger_max = $"/root/Global".maxHunger;
+	var hunger_curr = Global.currentHunger;
+	var hunger_max = Global.maxHunger;
 	
 	# Changes position of gradient to hunger %
 	self.texture.gradient.offsets[1] = float(hunger_curr)/hunger_max

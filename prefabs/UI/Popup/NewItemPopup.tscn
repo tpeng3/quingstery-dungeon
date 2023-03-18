@@ -7,8 +7,7 @@
 script = ExtResource("1_mdyvp")
 
 [node name="PopupText" parent="SplitContainer/PopupBox/SplitContainer/TextPadding" index="0"]
-text = "[center]You received [b]x[amount] [item][/b]! It's been tucked into your inventory.
-[/center]"
+text = "[center]You received [b]x[amount] [item][/b]! It's been tucked into your inventory.[/center]"
 
 [node name="AmountSelect" parent="SplitContainer/PopupBox/SplitContainer" index="1"]
 visible = false

@@ -23,6 +23,23 @@ var _recorded_scene: String = ""
 signal load_finished
 signal load_percent_changed(value: int)
 
+# default options
+var fade_out_speed: float = 0.5
+var fade_in_speed: float = 0.5
+var fade_out_pattern: String = "fade"
+var fade_in_pattern: String = "fade"
+var fade_out_smoothness = 0.1 # (float, 0, 1)
+var fade_in_smoothness = 0.1 # (float, 0, 1)
+var fade_out_inverted: bool = false
+var fade_in_inverted: bool = false
+var color: Color = Color(0, 0, 0)
+var timeout: float = 0.0
+var clickable: bool = false
+var add_to_back: bool = true
+@onready var default_fade_out_options = create_options(fade_out_speed, fade_out_pattern, fade_out_smoothness, fade_out_inverted)
+@onready var default_fade_in_options = create_options(fade_in_speed, fade_in_pattern, fade_in_smoothness, fade_in_inverted)
+@onready var default_general_options = create_general_options(color, timeout, clickable, add_to_back)
+
 class Options:
 	# based checked seconds
 	var fade_speed: float = 1
@@ -263,7 +280,7 @@ func create_general_options(color: Color = Color(0, 0, 0), timeout: float = 0.0,
 	var options: GeneralOptions = GeneralOptions.new()
 	options.color = color
 	options.timeout = timeout
-	options.clickable = clickable
+	options.clickable = clickable or false
 	options.add_to_back = add_to_back
 	return options
 
@@ -294,7 +311,7 @@ func safe_validate_pattern(key: String) -> bool:
 	return key in _patterns || key == "fade" || key == ""
 
 # makes a fade_in transition for the first loaded scene in the game
-func show_first_scene(fade_in_options: Options, general_options: GeneralOptions) -> void:
+func show_first_scene(fade_in_options: Options = default_fade_in_options, general_options: GeneralOptions = default_general_options) -> void:
 	if _first_time:
 		_first_time = false
 		_set_in_transition()
@@ -319,7 +336,7 @@ func get_scene(key: String) -> PackedScene:
 	return ResourceLoader.load_threaded_get(address)
 
 # changes current scene to the next scene
-func change_scene(scene, fade_out_options: Options, fade_in_options: Options, general_options: GeneralOptions) -> void:
+func change_scene(scene, fade_out_options: Options = default_fade_out_options, fade_in_options: Options = default_fade_in_options, general_options: GeneralOptions = default_general_options) -> void:
 	if (scene is PackedScene || scene is Node || (typeof(scene) == TYPE_STRING && safe_validate_scene(scene) && !_in_transition)):
 		_first_time = false
 		_set_in_transition()

@@ -4,7 +4,7 @@
 [ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="2_dpae3"]
 [ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar/TopBar.tscn" id="2_wdke3"]
 [ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/ui/compass.png" id="3_56qxl"]
-[ext_resource type="Theme" path="res://theme/smallround.tres" id="4_jvqjy"]
+[ext_resource type="Theme" uid="uid://bnb6osg7rfj47" path="res://theme/smallround.tres" id="4_jvqjy"]
 [ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="5_hwskm"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="6_ef0cp"]
 [ext_resource type="PackedScene" uid="uid://o88oi5kw6pye" path="res://prefabs/UI/Popup/Popup.tscn" id="8_1iosi"]
@@ -47,6 +47,7 @@ theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 16
 
 [node name="NaviMenu" type="MarginContainer" parent="GUI/VSplitContainer/UpperArea"]
+visible = false
 custom_minimum_size = Vector2(150, 0)
 layout_mode = 2
 theme_override_constants/margin_left = -16

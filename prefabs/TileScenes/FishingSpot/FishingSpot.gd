@@ -27,7 +27,7 @@ func _ready():
 
 func _input(event):
 	# ignore input when quingee is frozen
-	if $"/root/Global".freezeQuingee:
+	if Global.freezeQuingee:
 		return
 
 	# on enter/space or mouse click
@@ -42,7 +42,7 @@ func _input(event):
 		var wait = rng.randf_range(3, 5)
 		$Timer.wait_time = wait
 		$Timer.start()
-		$"/root/Global".currentHunger -= 0.5
+		Global.currentHunger -= 0.5
 	elif Input.is_action_just_pressed("ui_accept") and chara and state == ActionState.CAUGHT:
 		_on_fishing_complete()
 		
@@ -68,7 +68,7 @@ func _on_fishing_complete():
 	chara.get_node("Bubble").play("Success")
 	await chara.get_node("Bubble").animation_finished
 	chara.get_node("Bubble").visible = false
-	$"/root/Global".currentHunger -= 2
+	Global.currentHunger -= 2
 	if DialogueBox:
 		rng.randomize()
 		var key = rng.randi_range(0, rewards.size() - 1)

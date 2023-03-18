@@ -1,0 +1,82 @@
+[gd_scene load_steps=13 format=3 uid="uid://c2fgb83ww33do"]
+
+[ext_resource type="Script" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.gd" id="1_khxrd"]
+[ext_resource type="Texture2D" uid="uid://dax31brrcc0jj" path="res://assets/character/animals/cheep.png" id="2_iaowe"]
+[ext_resource type="SpriteFrames" uid="uid://dbeco0nr52nk0" path="res://assets/ui/speechbubble.tres" id="3_l6a0b"]
+[ext_resource type="Texture2D" uid="uid://b06m1cb66bs4h" path="res://assets/character/animals/cheep_hover.png" id="3_v3txj"]
+[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_j65q7"]
+[ext_resource type="Texture2D" uid="uid://bjsjf3lpuo774" path="res://assets/ui/speechbubble.png" id="4_whbv0"]
+[ext_resource type="JSON" path="res://dialogue/Animals/Cheep.json" id="5_cxih8"]
+
+[sub_resource type="Animation" id="Animation_jkf5a"]
+resource_name = "fade"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_icl5u"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ccjp3"]
+_data = {
+"fade": SubResource("Animation_jkf5a"),
+"float": SubResource("Animation_icl5u")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
+size = Vector2(17, 29)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7qe2"]
+atlas = ExtResource("4_whbv0")
+region = Rect2(90, 0, 18, 18)
+
+[node name="Animal" type="Area2D"]
+z_index = 2
+y_sort_enabled = true
+script = ExtResource("1_khxrd")
+Idle = ExtResource("2_iaowe")
+Highlight = ExtResource("3_v3txj")
+request = "Acorn"
+reward = "Jewel"
+popup_text = "[center]You traded [b]x1 [request][/b] for [b]x[amount] [item][/b]! It's been tucked into your inventory.[/center]"
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("4_j65q7")]
+dialogue_file = ExtResource("5_cxih8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "float"
+libraries = {
+"": SubResource("AnimationLibrary_ccjp3")
+}
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_iaowe")
+
+[node name="Bubble" type="AnimatedSprite2D" parent="Sprite"]
+visible = false
+position = Vector2(0, -25)
+sprite_frames = ExtResource("3_l6a0b")
+animation = &"Talk"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -5.5)
+shape = SubResource("RectangleShape2D_msile")
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -25)
+texture = SubResource("AtlasTexture_c7qe2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

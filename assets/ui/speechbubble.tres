@@ -46,6 +46,10 @@ region = Rect2(18, 38, 18, 19)
 atlas = ExtResource("1_pjpgn")
 region = Rect2(36, 38, 18, 19)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ju3bg"]
+atlas = ExtResource("1_pjpgn")
+region = Rect2(90, 0, 18, 19)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_g8ekl"]
 atlas = ExtResource("1_pjpgn")
 region = Rect2(0, 0, 18, 19)
@@ -65,10 +69,6 @@ region = Rect2(54, 0, 18, 19)
 [sub_resource type="AtlasTexture" id="AtlasTexture_4mwuh"]
 atlas = ExtResource("1_pjpgn")
 region = Rect2(72, 0, 18, 19)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ju3bg"]
-atlas = ExtResource("1_pjpgn")
-region = Rect2(90, 0, 18, 19)
 
 [resource]
 animations = [{
@@ -119,6 +119,14 @@ animations = [{
 "loop": false,
 "name": &"Success",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 3.0,
+"texture": SubResource("AtlasTexture_ju3bg")
+}],
+"loop": true,
+"name": &"Talk",
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,

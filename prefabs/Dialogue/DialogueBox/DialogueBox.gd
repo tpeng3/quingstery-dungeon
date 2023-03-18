@@ -23,23 +23,24 @@ func _reset_ui():
 	
 func show_new_item(item, amount):
 	# freeze character while there is dialogue
-	$"/root/Global".freezeQuingee = true
+	Global.freezeQuingee = true
 	
 	_reset_ui()
 	$NewItemPopup.show_item(item, amount)
+	Inventory.add_item(item, amount)
 
-func show_dialogue(dialogue):
+func show_dialogue(dialogue, dictKey=null):
 	# freeze character while there is dialogue
-	$"/root/Global".freezeQuingee = true
+	Global.freezeQuingee = true
 	
 	dialogue_node = dialogue
 	_reset_ui()
-	show()
+	$GUI.show()
 	if !dialogue_node.skipFade:
 		$AnimationPlayer.play("textbox_fade")
 	dialogue_node.dialogue_action.connect(_on_dialogue_action)
 	dialogue_node.dialogue_finished.connect(_on_dialogue_finished)
-	dialogue_node.start_dialogue()
+	dialogue_node.start_dialogue(dictKey)
 	_update_textbox()
 
 func _input(event):
@@ -48,7 +49,8 @@ func _input(event):
 		if Input.is_action_pressed("ui_accept"):
 #			DialogueSelect.ButtonHover.play()
 			dialogue_node.next_dialogue()
-			_update_textbox()
+			if dialogue_node:
+				_update_textbox()
 
 func _on_continue():
 	# TODO: clean this up later
@@ -115,7 +117,8 @@ func _on_dialogue_finished(action_type = 0, asset = null):
 	# OLD TODO: dunno if we want the above or to rework the logic hmmmmm
 	
 	# quingee can move again
-	$"/root/Global".freezeQuingee = false
+	await get_tree().create_timer(.1).timeout
+	Global.freezeQuingee = false
 
 # TODO: sound check later
 func _on_Button_mouse_entered():

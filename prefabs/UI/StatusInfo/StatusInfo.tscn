@@ -1,9 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://dom8vrn6qhhpc"]
+[gd_scene load_steps=13 format=3 uid="uid://dvvlc51g8by8k"]
 
 [ext_resource type="PackedScene" uid="uid://qehathayhhdl" path="res://prefabs/UI/StatusMenu/StatusMenu.tscn" id="1_w74t8"]
-[ext_resource type="Texture2D" uid="uid://ch2x4vcvgd7is" path="res://assets/ui/Icon_Menu.png" id="2_v0lnq"]
+[ext_resource type="Texture2D" uid="uid://c83mv6a2ehiy2" path="res://assets/ui/Icon_Menu.png" id="2_v0lnq"]
 [ext_resource type="Script" path="res://prefabs/UI/StatusInfo/HungerBarFill.gd" id="3_ejcwb"]
-[ext_resource type="Texture2D" uid="uid://bhtk7j2da7dbp" path="res://assets/ui/keycaps.png" id="3_gpifw"]
+[ext_resource type="Texture2D" uid="uid://bgw7b44atbjqc" path="res://assets/ui/keycaps.png" id="3_gpifw"]
 [ext_resource type="PackedScene" uid="uid://bpg4gj3cwghb7" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="3_iu4hi"]
 [ext_resource type="PackedScene" uid="uid://d3b21n0iaddhr" path="res://prefabs/UI/BulletinBoard/BulletinBoard.tscn" id="4_8rvv1"]
 [ext_resource type="PackedScene" uid="uid://l6juqk5dids0" path="res://prefabs/UI/SettingsMenu/SettingsMenu.tscn" id="4_j48ok"]

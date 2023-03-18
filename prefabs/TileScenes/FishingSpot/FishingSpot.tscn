@@ -1,8 +1,6 @@
-[gd_scene load_steps=31 format=3 uid="uid://bc8xgeqkh2j60"]
+[gd_scene load_steps=29 format=3 uid="uid://bc8xgeqkh2j60"]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/FishingSpot/FishingSpot.gd" id="1_7epku"]
-[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_f1cuf"]
-[ext_resource type="JSON" path="res://dialogue/Mountain/itemget.json" id="3_do35e"]
 [ext_resource type="Texture2D" uid="uid://orsottd48hlw" path="res://assets/tile/Forage_Fishing_Spot_Sprite1.png" id="4_meyd6"]
 [ext_resource type="Texture2D" uid="uid://d2wb4jo4vghyj" path="res://assets/tile/Forage_Fishing_Spot_Sprite2.png" id="5_myh06"]
 [ext_resource type="Texture2D" uid="uid://bh14222gfxrx3" path="res://assets/ui/m_fishing.png" id="6_htg17"]
@@ -178,9 +176,6 @@ animations = [{
 [node name="FishingSpot" type="Area2D"]
 z_index = 1
 script = ExtResource("1_7epku")
-
-[node name="DialoguePlayer" parent="." instance=ExtResource("2_f1cuf")]
-dialogue_file = ExtResource("3_do35e")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

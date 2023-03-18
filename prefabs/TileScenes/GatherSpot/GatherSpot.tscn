@@ -1,8 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://c1omvl0dm8vl5"]
+[gd_scene load_steps=9 format=3 uid="uid://c1omvl0dm8vl5"]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/GatherSpot/GatherSpot.gd" id="1_uvuq8"]
-[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_dt4m8"]
-[ext_resource type="JSON" path="res://dialogue/Mountain/itemget.json" id="3_1i5ge"]
 [ext_resource type="Texture2D" uid="uid://b13sg44rrgni3" path="res://assets/ui/m_gathering.png" id="4_24kyl"]
 [ext_resource type="Texture2D" uid="uid://cmna41tcka1ql" path="res://assets/tile/Forage_Gather_Field_Sprite2.png" id="4_ojoja"]
 [ext_resource type="SpriteFrames" uid="uid://cqbc547uw0sqf" path="res://assets/vfx/sparkle.tres" id="5_0cie2"]
@@ -61,9 +59,6 @@ _data = {
 [node name="GatherSpot" type="Area2D"]
 z_index = 1
 script = ExtResource("1_uvuq8")
-
-[node name="DialoguePlayer" parent="." instance=ExtResource("2_dt4m8")]
-dialogue_file = ExtResource("3_1i5ge")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

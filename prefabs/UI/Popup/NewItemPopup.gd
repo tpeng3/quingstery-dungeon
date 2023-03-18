@@ -16,11 +16,11 @@ func _on_confirm():
 	hide()
 	emit_signal("on_confirm")
 
-func show_item(item, amount):
+func show_item(item, amount, popup_text=default_text):
 	var sprite = $"/root/Inventory".find_item(item)
 	assert(sprite, "Failed to find sprite for " + item)
 	
 	$SplitContainer/ItemMargin/ItemSprite.texture = load(sprite.path)
-	PopupText.text = default_text.replace("[amount]", str(amount)).replace("[item]", item)
+	PopupText.text = popup_text.replace("[amount]", str(amount)).replace("[item]", item)
 	show()
 	$SplitContainer/PopupBox/FooterMargin/ButtonMid.grab_focus()

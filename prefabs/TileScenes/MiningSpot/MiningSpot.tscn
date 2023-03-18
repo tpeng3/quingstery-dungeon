@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://daaxp1o7huxb"]
+[gd_scene load_steps=12 format=3 uid="uid://daaxp1o7huxb"]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.gd" id="1_m33fi"]
+[ext_resource type="Texture2D" uid="uid://cmyqsvckerrrf" path="res://assets/tile/Forage_Rock_Sprite1.png" id="3_tnei3"]
 [ext_resource type="Texture2D" uid="uid://d3ibobo7kr5p3" path="res://assets/ui/m_mining.png" id="4_583kt"]
 [ext_resource type="Texture2D" uid="uid://dbwgh2xkcvqiq" path="res://assets/tile/Forage_Rock_Sprite2.png" id="4_x80l5"]
 [ext_resource type="SpriteFrames" uid="uid://cqbc547uw0sqf" path="res://assets/vfx/sparkle.tres" id="5_gs6xe"]
-[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="5_l2bfp"]
-[ext_resource type="JSON" path="res://dialogue/Mountain/itemget.json" id="6_os244"]
 
 [sub_resource type="Animation" id="Animation_jkf5a"]
 resource_name = "fade"
@@ -41,7 +40,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath(".:offset")
+tracks/0/path = NodePath("Icon:offset")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -84,9 +83,8 @@ _data = {
 z_index = 2
 y_sort_enabled = true
 script = ExtResource("1_m33fi")
-
-[node name="DialoguePlayer" parent="." instance=ExtResource("5_l2bfp")]
-dialogue_file = ExtResource("6_os244")
+Idle = ExtResource("4_x80l5")
+Highlight = ExtResource("3_tnei3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

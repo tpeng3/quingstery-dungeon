@@ -28,13 +28,16 @@ signal dialogue_action(action_type, asset)
 signal dialogue_finished(postaction_type, asset)
 
 # load cutscene json script from the given file path
-func load_dialogue(file_path):
-	print(file_path.data)
-	return file_path.data
+func load_dialogue(file_path, dictKey):
+	if dictKey:
+		assert(file_path.data[dictKey])
+		return file_path.data[dictKey]
+	else:
+		return file_path.data
 
 # set dialogue lines to the dialogue keys
-func index_dialogue():
-	var dialogue = load_dialogue(dialogue_file)
+func index_dialogue(dictKey):
+	var dialogue = load_dialogue(dialogue_file, dictKey)
 	dialogue_keys.clear()
 	for line in dialogue['lines']:
 		dialogue_keys.append(line)
@@ -42,10 +45,10 @@ func index_dialogue():
 		postaction = dialogue['post_action']
 
 # called in DialogueBox.gd when an event starts, updates dialogue screen values
-func start_dialogue():
+func start_dialogue(dictKey=null):
 	emit_signal("dialogue_started")
 	current = 0
-	index_dialogue()
+	index_dialogue(dictKey)
 	_set_dialogue()
 
 # updates line count and continues the dialogue script

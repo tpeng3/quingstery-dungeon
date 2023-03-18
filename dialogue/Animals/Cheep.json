@@ -1,0 +1,40 @@
+{
+	"hello1": {
+		"lines": [
+			{
+				"text": "Cheep cheep? (Looking for food... Do you have acorns?)",
+				"action": "CHOICES"
+			}
+		]
+	},
+	"hello2": {
+		"lines": [
+			{
+				"text": "Squeak! (Acorns! Trade acorns for sparkly?)",
+				"action": "CHOICES"
+			}
+		]
+	},
+	"no item": {
+		"lines": [
+			{
+				"text": "The Cheep seems to be eyeing you for food, but you don't have any acorns to give..."
+			}
+		]
+	},
+	"trade more": {
+		"lines": [
+			{
+				"text": "Cheep cheep? (Trade for more sparklies?)",
+				"action": "CHOICES"
+			}
+		]
+	},
+	"no more trading": {
+		"lines": [
+			{
+				"text": "Cheep cheep... (Winter soon... Need more food.)"
+			}
+		]
+	}
+}
