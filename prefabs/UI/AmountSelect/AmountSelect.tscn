@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://d0kb2p4gwj6fi"]
+[gd_scene load_steps=3 format=3 uid="uid://b72h35y28gs8e"]
 
-[ext_resource type="Theme" path="res://theme/Meter.tres" id="1_4psd5"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="1_vxv13"]
+[ext_resource type="Theme" path="res://theme/Meter.tres" id="2_va3ko"]
 
 [node name="AmountSelect" type="MarginContainer"]
 custom_minimum_size = Vector2(168, 89)
@@ -55,7 +55,7 @@ offset_top = 10.0
 offset_right = 146.0
 offset_bottom = 54.0
 pivot_offset = Vector2(80, 8)
-theme = ExtResource("1_4psd5")
+theme = ExtResource("2_va3ko")
 text = "0 0 0 0 0"
 
 [node name="Left" type="AnimatedSprite2D" parent="SplitContainer/MiddleRow"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://7kb3pvj7jya3"]
 
-[ext_resource type="PackedScene" uid="uid://o88oi5kw6pye" path="res://prefabs/UI/Popup/Popup.tscn" id="1_kia36"]
+[ext_resource type="PackedScene" uid="uid://cs2wn64u2f631" path="res://prefabs/UI/Popup/Popup.tscn" id="1_kia36"]
 [ext_resource type="Script" path="res://prefabs/UI/Popup/NewItemPopup.gd" id="1_mdyvp"]
 
 [node name="NewItemPopup" instance=ExtResource("1_kia36")]

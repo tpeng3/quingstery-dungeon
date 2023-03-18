@@ -1,14 +1,47 @@
-[gd_scene load_steps=11 format=3 uid="uid://bpg4gj3cwghb7"]
+[gd_scene load_steps=20 format=3 uid="uid://bpg4gj3cwghb7"]
 
-[ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="1_6b7a8"]
-[ext_resource type="PackedScene" uid="uid://cg7kh7584x7xg" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
+[ext_resource type="Theme" uid="uid://bdigthwnc4wdi" path="res://theme/Signpost.tres" id="1_6b7a8"]
+[ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="2_1s1md"]
 [ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="2_p56pw"]
-[ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="3_h24dk"]
-[ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="7_1nhbr"]
-[ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="7_hwq4l"]
-[ext_resource type="PackedScene" uid="uid://u7jf2y80hsiw" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
-[ext_resource type="PackedScene" uid="uid://o88oi5kw6pye" path="res://prefabs/UI/Popup/Popup.tscn" id="9_j02wv"]
+[ext_resource type="PackedScene" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="3_h24dk"]
+[ext_resource type="Theme" path="res://theme/Scroll.tres" id="7_1nhbr"]
+[ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_242x1"]
+[ext_resource type="Texture2D" uid="uid://dxqanehaak2pj" path="res://assets/ui/arrows.png" id="7_mnmky"]
+[ext_resource type="PackedScene" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
+[ext_resource type="PackedScene" path="res://prefabs/UI/Popup/Popup.tscn" id="9_j02wv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbudv"]
+atlas = ExtResource("7_mnmky")
+region = Rect2(0, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtfin"]
+atlas = ExtResource("7_mnmky")
+region = Rect2(9, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rswtq"]
+atlas = ExtResource("7_mnmky")
+region = Rect2(18, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukqys"]
+atlas = ExtResource("7_mnmky")
+region = Rect2(27, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q64qo"]
+atlas = ExtResource("7_mnmky")
+region = Rect2(0, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nud2m"]
+atlas = ExtResource("7_mnmky")
+region = Rect2(9, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j47j1"]
+atlas = ExtResource("7_mnmky")
+region = Rect2(18, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_siu4u"]
+atlas = ExtResource("7_mnmky")
+region = Rect2(27, 0, 9, 9)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rqao"]
 
@@ -129,9 +162,13 @@ text = "close "
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 8
-theme_override_constants/margin_right = 70
+theme_override_constants/margin_right = 32
 
-[node name="PaginationLabel" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PaginationLabel" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
 custom_minimum_size = Vector2(0, 32)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -140,17 +177,34 @@ theme = ExtResource("1_6b7a8")
 theme_type_variation = &"Label_Fancy"
 text = "Page 01/04"
 
-[node name="ArrowBack" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
-position = Vector2(144, 12)
-scale = Vector2(2, 2)
-sprite_frames = ExtResource("7_hwq4l")
-animation = &"Dark_L"
+[node name="ArrowBack" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
+custom_minimum_size = Vector2(18, 0)
+layout_mode = 2
 
-[node name="ArrowNext" type="AnimatedSprite2D" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
-position = Vector2(168, 12)
-scale = Vector2(2, 2)
-sprite_frames = ExtResource("7_hwq4l")
-animation = &"Dark_R"
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" instance=ExtResource("7_242x1")]
+layout_mode = 2
+offset_top = 3.0
+offset_right = 9.0
+offset_bottom = 12.0
+texture_normal = SubResource("AtlasTexture_kbudv")
+texture_pressed = SubResource("AtlasTexture_qtfin")
+texture_disabled = SubResource("AtlasTexture_rswtq")
+texture_focused = SubResource("AtlasTexture_ukqys")
+
+[node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
+custom_minimum_size = Vector2(18, 0)
+layout_mode = 2
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" instance=ExtResource("7_242x1")]
+layout_mode = 2
+offset_top = 3.0
+offset_right = 9.0
+offset_bottom = 12.0
+texture_normal = SubResource("AtlasTexture_q64qo")
+texture_pressed = SubResource("AtlasTexture_nud2m")
+texture_disabled = SubResource("AtlasTexture_j47j1")
+texture_focused = SubResource("AtlasTexture_siu4u")
+metadata/Direction = "right"
 
 [node name="RightPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]
 layout_mode = 2

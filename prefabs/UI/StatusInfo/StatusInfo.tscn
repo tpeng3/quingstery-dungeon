@@ -27,6 +27,112 @@ colors = PackedColorArray(0, 0, 0, 1, 0.935484, 0.935484, 0.935484, 1)
 gradient = SubResource("Gradient_gcyuc")
 width = 36
 
+[sub_resource type="Animation" id="Animation_nrjs7"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InventoryBtn/Inventory:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(24, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_2y20i"]
+resource_name = "MenuIn"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("InventoryBtn/Inventory:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(24, -0.25, 0, 0.25, 0, 96, 0, -40, 0, -40),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("QuestBtn/Quest:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(24, -0.25, 0, 0.25, 0, 96, 0, -40, 0, -40),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SettingsBtn/Settings:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(24, -0.25, 0, 0.25, 0, 96, 0, -40, 0, -40),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="Animation" id="Animation_3f1mw"]
+resource_name = "MenuOut"
+length = 0.5
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QuestBtn/Quest:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(),
+"points": PackedFloat32Array(),
+"times": PackedFloat32Array()
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("InventoryBtn/Inventory:position:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(96, -0.25, 0, 0, -40, 24, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("QuestBtn/Quest:position:x")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(96, -0.25, 0, 0, -40, 24, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SettingsBtn/Settings:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(96, -0.25, 0, 0, -40, 24, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.5)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3ah3a"]
+_data = {
+"MenuIn": SubResource("Animation_3f1mw"),
+"MenuOut": SubResource("Animation_2y20i"),
+"RESET": SubResource("Animation_nrjs7")
+}
+
 [node name="StatusInfo" type="CanvasLayer"]
 
 [node name="MenuWindows" type="MarginContainer" parent="."]
@@ -107,34 +213,37 @@ region_enabled = true
 region_rect = Rect2(0, 30, 17, 15)
 
 [node name="InventoryBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
+theme_override_constants/margin_right = 0
 
-[node name="Sprite2D" type="Sprite2D" parent="MenuButtons/VBoxContainer/InventoryBtn"]
+[node name="Inventory" type="Sprite2D" parent="MenuButtons/VBoxContainer/InventoryBtn"]
 position = Vector2(24, 24)
 texture = ExtResource("2_v0lnq")
 region_enabled = true
 region_rect = Rect2(0, 48, 48, 48)
 
 [node name="QuestBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="MenuButtons/VBoxContainer/QuestBtn"]
+[node name="Quest" type="Sprite2D" parent="MenuButtons/VBoxContainer/QuestBtn"]
 position = Vector2(24, 24)
 texture = ExtResource("2_v0lnq")
 region_enabled = true
 region_rect = Rect2(0, 96, 48, 48)
 
 [node name="SettingsBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
-visible = false
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="MenuButtons/VBoxContainer/SettingsBtn"]
+[node name="Settings" type="Sprite2D" parent="MenuButtons/VBoxContainer/SettingsBtn"]
 position = Vector2(24, 24)
 texture = ExtResource("2_v0lnq")
 region_enabled = true
 region_rect = Rect2(0, 144, 48, 48)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuButtons/VBoxContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_3ah3a")
+}

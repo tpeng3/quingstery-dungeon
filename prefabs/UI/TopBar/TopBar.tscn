@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://cg7kh7584x7xg"]
+[gd_scene load_steps=5 format=3 uid="uid://ucyl10fxy8rh"]
 
+[ext_resource type="Theme" path="res://theme/Scroll.tres" id="1_0g5es"]
 [ext_resource type="Script" path="res://prefabs/UI/TopBar/TopBar.gd" id="1_122t8"]
 [ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="2_xveov"]
 [ext_resource type="Texture2D" uid="uid://br0ne6j6aqo0s" path="res://assets/ui/Gald_Symbol.png" id="3_thkc1"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_0g5es")
 script = ExtResource("1_122t8")
 
 [node name="UpperInfo" type="CenterContainer" parent="."]
@@ -37,7 +39,6 @@ vertical = true
 
 [node name="GaldLabel" type="Label" parent="UpperInfo/HSplitContainer/GaldCounter/FlowContainer"]
 layout_mode = 2
-theme = ExtResource("2_xveov")
 text = "100  "
 
 [node name="GaldSymbol" type="MarginContainer" parent="UpperInfo/HSplitContainer/GaldCounter/FlowContainer"]
@@ -59,7 +60,6 @@ vertical = true
 
 [node name="InventoryLabel" type="Label" parent="UpperInfo/HSplitContainer/InventoryAmt/FlowContainer"]
 layout_mode = 2
-theme = ExtResource("2_xveov")
 text = "10/20   "
 
 [node name="GaldSymbol" type="MarginContainer" parent="UpperInfo/HSplitContainer/InventoryAmt/FlowContainer"]

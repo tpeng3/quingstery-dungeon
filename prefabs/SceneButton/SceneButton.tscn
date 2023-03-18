@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxr1xgd3ibyct"]
+[gd_scene load_steps=3 format=3]
 
-[ext_resource type="Theme" uid="uid://dygbods846xmt" path="res://theme/Signpost.tres" id="1_8kx7b"]
+[ext_resource type="Theme" path="res://theme/Signpost.tres" id="1_8kx7b"]
 [ext_resource type="Script" path="res://prefabs/SceneButton/SceneButton.gd" id="2_pga8w"]
 
 [node name="Button" type="Button"]
