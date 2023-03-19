@@ -1,6 +1,6 @@
-[gd_scene load_steps=20 format=3 uid="uid://bpg4gj3cwghb7"]
+[gd_scene load_steps=20 format=3 uid="uid://cdirrc5rr8huy"]
 
-[ext_resource type="Theme" uid="uid://bdigthwnc4wdi" path="res://theme/Signpost.tres" id="1_6b7a8"]
+[ext_resource type="Theme" path="res://theme/Signpost.tres" id="1_6b7a8"]
 [ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="2_1s1md"]
 [ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="2_p56pw"]
@@ -9,37 +9,37 @@
 [ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_242x1"]
 [ext_resource type="Texture2D" uid="uid://dxqanehaak2pj" path="res://assets/ui/arrows.png" id="7_mnmky"]
 [ext_resource type="PackedScene" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
-[ext_resource type="PackedScene" path="res://prefabs/UI/Popup/Popup.tscn" id="9_j02wv"]
+[ext_resource type="PackedScene" uid="uid://cjuix8vu67e3s" path="res://prefabs/UI/Popup/Popup.tscn" id="9_j02wv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kbudv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ww4ee"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qtfin"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0bie"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rswtq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xw1jq"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ukqys"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_63sit"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_q64qo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ns23q"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nud2m"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8j64"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j47j1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_envxc"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_siu4u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ny7tb"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(27, 0, 9, 9)
 
@@ -186,10 +186,10 @@ layout_mode = 2
 offset_top = 3.0
 offset_right = 9.0
 offset_bottom = 12.0
-texture_normal = SubResource("AtlasTexture_kbudv")
-texture_pressed = SubResource("AtlasTexture_qtfin")
-texture_disabled = SubResource("AtlasTexture_rswtq")
-texture_focused = SubResource("AtlasTexture_ukqys")
+texture_normal = SubResource("AtlasTexture_ww4ee")
+texture_pressed = SubResource("AtlasTexture_h0bie")
+texture_disabled = SubResource("AtlasTexture_xw1jq")
+texture_focused = SubResource("AtlasTexture_63sit")
 
 [node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
 custom_minimum_size = Vector2(18, 0)
@@ -200,10 +200,10 @@ layout_mode = 2
 offset_top = 3.0
 offset_right = 9.0
 offset_bottom = 12.0
-texture_normal = SubResource("AtlasTexture_q64qo")
-texture_pressed = SubResource("AtlasTexture_nud2m")
-texture_disabled = SubResource("AtlasTexture_j47j1")
-texture_focused = SubResource("AtlasTexture_siu4u")
+texture_normal = SubResource("AtlasTexture_ns23q")
+texture_pressed = SubResource("AtlasTexture_a8j64")
+texture_disabled = SubResource("AtlasTexture_envxc")
+texture_focused = SubResource("AtlasTexture_ny7tb")
 metadata/Direction = "right"
 
 [node name="RightPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]

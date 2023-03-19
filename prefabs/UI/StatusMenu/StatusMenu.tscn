@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://qehathayhhdl"]
 
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="1_f2lqs"]
-[ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="2_b412g"]
+[ext_resource type="Theme" path="res://theme/Scroll.tres" id="2_b412g"]
 
 [node name="StatusMenu" type="Control"]
 layout_mode = 3

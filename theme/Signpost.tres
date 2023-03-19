@@ -1,15 +1,15 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://bdigthwnc4wdi"]
+[gd_resource type="Theme" load_steps=13 format=3 uid="uid://dksvrshxgc4ql"]
 
-[ext_resource type="FontFile" uid="uid://c5jxg6vswppim" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_ua05e"]
-[ext_resource type="StyleBox" path="res://theme/tex_menuSignR.tres" id="2_o5bjb"]
-[ext_resource type="StyleBox" path="res://theme/tex_menuSignRH.tres" id="3_m83mw"]
-[ext_resource type="StyleBox" path="res://theme/tex_menuSignL.tres" id="4_5e8pr"]
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_ua05e"]
+[ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="2_jnril"]
+[ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="3_m83mw"]
+[ext_resource type="StyleBox" uid="uid://xk12q87v443s" path="res://theme/tex_MenuSign_L.tres" id="4_43txj"]
+[ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="4_bart7"]
+[ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="5_1hbcp"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="5_h24u7"]
-[ext_resource type="StyleBox" path="res://theme/tex_menuSignLH.tres" id="5_hgslk"]
-[ext_resource type="FontFile" uid="uid://dkcuhhgjtpmny" path="res://assets/ui/Dogica/dogicapixel.ttf" id="5_ipy2b"]
-[ext_resource type="StyleBox" path="res://theme/tex_menuSignM.tres" id="6_gc68c"]
-[ext_resource type="FontFile" uid="uid://bqqo6jyn854kp" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="7_g4pud"]
-[ext_resource type="StyleBox" path="res://theme/tex_menuSignMH.tres" id="7_wbjn2"]
+[ext_resource type="FontFile" uid="uid://oghqafn812mw" path="res://assets/ui/Dogica/dogicapixel.ttf" id="5_ipy2b"]
+[ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="7_g4pud"]
+[ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="7_wbjn2"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ql0t"]
 
@@ -25,22 +25,22 @@ Button/colors/font_hover_pressed_color = Color(0.729412, 0.384314, 0.294118, 1)
 Button/colors/font_pressed_color = Color(0.729412, 0.384314, 0.294118, 1)
 Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_ua05e")
-Button/styles/disabled = ExtResource("2_o5bjb")
+Button/styles/disabled = ExtResource("2_jnril")
 Button/styles/focus = ExtResource("3_m83mw")
 Button/styles/hover = ExtResource("3_m83mw")
-Button/styles/normal = ExtResource("2_o5bjb")
+Button/styles/normal = ExtResource("2_jnril")
 Button/styles/pressed = ExtResource("3_m83mw")
 Button_Alt/base_type = &"Button"
-Button_Alt/styles/disabled = ExtResource("4_5e8pr")
-Button_Alt/styles/focus = ExtResource("5_hgslk")
-Button_Alt/styles/hover = ExtResource("5_hgslk")
-Button_Alt/styles/normal = ExtResource("4_5e8pr")
-Button_Alt/styles/pressed = ExtResource("5_hgslk")
+Button_Alt/styles/disabled = ExtResource("4_43txj")
+Button_Alt/styles/focus = ExtResource("5_1hbcp")
+Button_Alt/styles/hover = ExtResource("5_1hbcp")
+Button_Alt/styles/normal = ExtResource("4_43txj")
+Button_Alt/styles/pressed = ExtResource("5_1hbcp")
 Button_Alt2/base_type = &"Button"
-Button_Alt2/styles/disabled = ExtResource("6_gc68c")
+Button_Alt2/styles/disabled = ExtResource("4_bart7")
 Button_Alt2/styles/focus = ExtResource("7_wbjn2")
 Button_Alt2/styles/hover = ExtResource("7_wbjn2")
-Button_Alt2/styles/normal = ExtResource("6_gc68c")
+Button_Alt2/styles/normal = ExtResource("4_bart7")
 Button_Alt2/styles/pressed = ExtResource("7_wbjn2")
 Label/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
 Label/fonts/font = ExtResource("5_ipy2b")
@@ -57,6 +57,9 @@ Label_Light_Bold/colors/font_color = Color(0.729412, 0.384314, 0.294118, 1)
 Label_Light_Bold/fonts/font = ExtResource("7_g4pud")
 Label_Red/base_type = &"Label"
 Label_Red/colors/font_color = Color(0.505882, 0.0235294, 0.0666667, 1)
+Label_Sign/base_type = &"Label"
+Label_Sign/fonts/font = ExtResource("1_ua05e")
+Label_Sign/styles/normal = ExtResource("4_bart7")
 Panel/styles/panel = SubResource("StyleBoxEmpty_1ql0t")
 Panel_Highlight/base_type = &"Panel"
 Panel_Highlight/styles/panel = SubResource("StyleBoxFlat_4o7b6")

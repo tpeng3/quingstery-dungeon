@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://12t6oq51ebyp"]
 
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="1_6cf50"]
-[ext_resource type="Theme" path="res://theme/Scroll.tres" id="2_8jex1"]
+[ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_8jex1"]
 [ext_resource type="Texture2D" uid="uid://3x3diojpvi7d" path="res://assets/ui/Mountain.png" id="3_70qi8"]
 [ext_resource type="Texture2D" uid="uid://c1hgqb2pgdh3f" path="res://assets/item/i_egg.png" id="3_x6wsf"]
 [ext_resource type="Theme" uid="uid://dqa8ky6nrewoa" path="res://prefabs/UI/MountainInfo/Mountain.tres" id="4_xpa22"]
@@ -14,9 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://bmrea7rs3o8jf" path="res://assets/item/i_tool.png" id="10_8i00s"]
 [ext_resource type="Texture2D" uid="uid://dwlphakbkwqxm" path="res://assets/item/i_iron.png" id="11_sin5k"]
 [ext_resource type="Texture2D" uid="uid://ckidl42yqqmn4" path="res://assets/item/i_milk.png" id="12_mh6jh"]
-[ext_resource type="Theme" uid="uid://bdigthwnc4wdi" path="res://theme/Signpost.tres" id="13_iju1k"]
+[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="13_iju1k"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vnocr"]
+content_margin_top = 7.0
 
 [node name="MountainInfo" type="Control"]
 layout_mode = 3
@@ -38,7 +39,14 @@ theme_override_constants/margin_top = 52
 theme_override_constants/margin_right = 52
 theme_override_constants/margin_bottom = 52
 
-[node name="MenuBG" type="NinePatchRect" parent="OuterPadding"]
+[node name="BoxContainer" type="BoxContainer" parent="OuterPadding"]
+layout_mode = 2
+
+[node name="LeftSide" type="MarginContainer" parent="OuterPadding/BoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_right = 8
+
+[node name="MenuBG" type="NinePatchRect" parent="OuterPadding/BoxContainer/LeftSide"]
 layout_mode = 2
 texture = ExtResource("1_6cf50")
 patch_margin_left = 32
@@ -48,54 +56,29 @@ patch_margin_bottom = 24
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
 
-[node name="TitleMargin" type="MarginContainer" parent="OuterPadding"]
+[node name="Mountain" type="MarginContainer" parent="OuterPadding/BoxContainer/LeftSide"]
+custom_minimum_size = Vector2(544, 0)
 layout_mode = 2
-size_flags_vertical = 0
-theme_override_constants/margin_left = -20
-theme_override_constants/margin_top = -44
-
-[node name="LeftTitle" type="Label" parent="OuterPadding/TitleMargin"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme = ExtResource("2_8jex1")
-text = "Galinn Peak"
-
-[node name="PanelPadding" type="MarginContainer" parent="OuterPadding"]
-layout_mode = 2
+size_flags_horizontal = 3
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 24
 
-[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/PanelPadding"]
-layout_mode = 2
-
-[node name="LeftPanel" type="MarginContainer" parent="OuterPadding/PanelPadding/BoxContainer"]
-custom_minimum_size = Vector2(480, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Mountain" type="Sprite2D" parent="OuterPadding/PanelPadding/BoxContainer/LeftPanel"]
-position = Vector2(240, 194)
+[node name="Mountain" type="Sprite2D" parent="OuterPadding/BoxContainer/LeftSide/Mountain"]
+position = Vector2(32, 23)
 scale = Vector2(2, 2)
 texture = ExtResource("3_70qi8")
+centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 240, 195)
 
-[node name="Mountain2" type="Sprite2D" parent="OuterPadding/PanelPadding/BoxContainer/LeftPanel"]
-position = Vector2(240, 194)
-scale = Vector2(2, 2)
-texture = ExtResource("3_70qi8")
-region_enabled = true
-region_rect = Rect2(0, 0, 240, 195)
-
-[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/PanelPadding/BoxContainer/LeftPanel"]
+[node name="Sections" type="BoxContainer" parent="OuterPadding/BoxContainer/LeftSide/Mountain"]
 layout_mode = 2
 theme_override_constants/separation = 2
 vertical = true
 
-[node name="Peak" type="Button" parent="OuterPadding/PanelPadding/BoxContainer/LeftPanel/BoxContainer"]
+[node name="Peak" type="Button" parent="OuterPadding/BoxContainer/LeftSide/Mountain/Sections"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("4_xpa22")
@@ -105,7 +88,21 @@ text = "
  The Peak"
 alignment = 0
 
-[node name="Steps" type="Button" parent="OuterPadding/PanelPadding/BoxContainer/LeftPanel/BoxContainer"]
+[node name="Floor" type="Label" parent="OuterPadding/BoxContainer/LeftSide/Mountain/Sections/Peak"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "??F "
+horizontal_alignment = 2
+
+[node name="Steps" type="Button" parent="OuterPadding/BoxContainer/LeftSide/Mountain/Sections"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("4_xpa22")
@@ -115,7 +112,21 @@ text = "
  The Steps"
 alignment = 0
 
-[node name="River" type="Button" parent="OuterPadding/PanelPadding/BoxContainer/LeftPanel/BoxContainer"]
+[node name="Floor" type="Label" parent="OuterPadding/BoxContainer/LeftSide/Mountain/Sections/Steps"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "??F "
+horizontal_alignment = 2
+
+[node name="River" type="Button" parent="OuterPadding/BoxContainer/LeftSide/Mountain/Sections"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("4_xpa22")
@@ -125,37 +136,89 @@ text = "
  The River In The Mountain"
 alignment = 0
 
-[node name="Throat" type="Button" parent="OuterPadding/PanelPadding/BoxContainer/LeftPanel/BoxContainer"]
+[node name="Floor" type="Label" parent="OuterPadding/BoxContainer/LeftSide/Mountain/Sections/River"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "??F "
+horizontal_alignment = 2
+
+[node name="Throat" type="Button" parent="OuterPadding/BoxContainer/LeftSide/Mountain/Sections"]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("4_xpa22")
 theme_type_variation = &"Throat"
+toggle_mode = true
 text = "
 
  The Throat"
 alignment = 0
 
-[node name="RightPanel" type="MarginContainer" parent="OuterPadding/PanelPadding/BoxContainer"]
+[node name="Floor" type="Label" parent="OuterPadding/BoxContainer/LeftSide/Mountain/Sections/Throat"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -26.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "0F "
+horizontal_alignment = 2
+
+[node name="RightSide" type="MarginContainer" parent="OuterPadding/BoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/PanelPadding/BoxContainer/RightPanel"]
+[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/BoxContainer/RightSide"]
 layout_mode = 2
 vertical = true
 
-[node name="LeftTitle" type="Label" parent="OuterPadding/PanelPadding/BoxContainer/RightPanel/BoxContainer"]
+[node name="LeftTitle" type="Label" parent="OuterPadding/BoxContainer/RightSide/BoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-theme = ExtResource("2_8jex1")
-text = "Gatherable Items"
+theme = ExtResource("13_iju1k")
+theme_type_variation = &"Label_Sign"
+text = "Gatherables"
+horizontal_alignment = 1
+vertical_alignment = 2
 
-[node name="ItemList" type="ItemList" parent="OuterPadding/PanelPadding/BoxContainer/RightPanel/BoxContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="OuterPadding/BoxContainer/RightSide/BoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_constants/margin_right = 0
+
+[node name="MenuBG" type="NinePatchRect" parent="OuterPadding/BoxContainer/RightSide/BoxContainer/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("1_6cf50")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="ContentPadding" type="MarginContainer" parent="OuterPadding/BoxContainer/RightSide/BoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 28
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 28
+theme_override_constants/margin_bottom = 20
+
+[node name="ItemList" type="ItemList" parent="OuterPadding/BoxContainer/RightSide/BoxContainer/MarginContainer/ContentPadding"]
+layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxEmpty_vnocr")
 item_count = 10
-max_columns = 5
-same_column_width = true
+max_columns = 4
 icon_mode = 0
 item_0/text = ""
 item_0/icon = ExtResource("3_x6wsf")
@@ -178,8 +241,41 @@ item_8/icon = ExtResource("11_sin5k")
 item_9/text = ""
 item_9/icon = ExtResource("12_mh6jh")
 
-[node name="GoButton" type="Button" parent="OuterPadding/PanelPadding/BoxContainer/RightPanel/BoxContainer"]
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/BoxContainer/RightSide/BoxContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_top = -32
+
+[node name="FooterMargin" type="MarginContainer" parent="OuterPadding"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="BackButton" type="Button" parent="OuterPadding/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("13_iju1k")
+theme_type_variation = &"Button_Alt"
+text = "back"
+
+[node name="GoButton" type="Button" parent="OuterPadding/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 8
 theme = ExtResource("13_iju1k")
 text = "let's go!"
+
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = -22
+theme_override_constants/margin_top = -36
+
+[node name="LeftTitle" type="Label" parent="OuterPadding/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("2_8jex1")
+text = "Galinn Peak"

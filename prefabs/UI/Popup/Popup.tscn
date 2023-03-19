@@ -1,11 +1,11 @@
-[gd_scene load_steps=15 format=3]
+[gd_scene load_steps=15 format=3 uid="uid://cjuix8vu67e3s"]
 
 [ext_resource type="Texture2D" uid="uid://cvj0ycmpctjq7" path="res://assets/item/i_bamboo.png" id="1_l0gmk"]
 [ext_resource type="Texture2D" uid="uid://b46bgyy4iumxs" path="res://assets/vfx/rays.png" id="1_mj5at"]
 [ext_resource type="SpriteFrames" uid="uid://cqbc547uw0sqf" path="res://assets/vfx/sparkle.tres" id="3_vhueh"]
 [ext_resource type="Theme" path="res://theme/Scroll.tres" id="4_oyn5b"]
 [ext_resource type="Texture2D" uid="uid://bwpq0b2vhdsje" path="res://assets/ui/menu_nametag.png" id="5_e04lh"]
-[ext_resource type="PackedScene" path="res://prefabs/UI/AmountSelect/AmountSelect.tscn" id="6_2o8r7"]
+[ext_resource type="PackedScene" uid="uid://b72h35y28gs8e" path="res://prefabs/UI/AmountSelect/AmountSelect.tscn" id="6_2o8r7"]
 [ext_resource type="Theme" uid="uid://bdigthwnc4wdi" path="res://theme/Signpost.tres" id="7_oycm8"]
 
 [sub_resource type="Gradient" id="Gradient_wpb06"]

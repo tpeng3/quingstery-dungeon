@@ -8,3 +8,4 @@ func _process(delta):
 		str(Inventory.gald) + "  "
 	$UpperInfo/HSplitContainer/InventoryAmt/FlowContainer/InventoryLabel.text = \
 		str(Inventory.get_inv_count()) + "/" + str(Inventory.max) + "   "
+	pass

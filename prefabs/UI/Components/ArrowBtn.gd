@@ -36,5 +36,3 @@ func _ready():
 	spriteDisabled.atlas = load("res://assets/ui/arrows.png")
 	spriteDisabled.region = Rect2(18, 9 * direction, 9, 9)
 	self.texture_disabled = spriteDisabled
-
-func meta_cha
