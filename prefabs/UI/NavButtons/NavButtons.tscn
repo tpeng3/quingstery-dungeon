@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw7q1cc3tci2i"]
+
+[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="1_8lgn7"]
+
+[node name="NavButtons" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="NavList" type="FlowContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 0
+vertical = true
+
+[node name="Button1" type="Button" parent="NavList"]
+layout_mode = 2
+theme = ExtResource("1_8lgn7")
+text = "Buy"
+
+[node name="Button2" type="Button" parent="NavList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_8lgn7")
+text = "Sell"
+
+[node name="Button3" type="Button" parent="NavList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_8lgn7")
+text = "Talk"
+metadata/onHoverText = "We are "
+
+[node name="Button4" type="Button" parent="NavList"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("1_8lgn7")
+theme_type_variation = &"Button_Alt"
+disabled = true
+text = "Leave Store"
+metadata/onHoverText = "We are "
