@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://regd4l41fbt5"]
+
+[ext_resource type="Script" path="res://scenes/Shops/TradingPost.gd" id="1_c5o70"]
+[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_famdf"]
+[ext_resource type="JSON" path="res://dialogue/Shopkeepers/Zane.json" id="3_vomgy"]
+[ext_resource type="Texture2D" uid="uid://dxrrfluavlu2i" path="res://assets/background/quingsterybgs_firestation.png" id="4_b7any"]
+[ext_resource type="Texture2D" uid="uid://doqvi2g6s26or" path="res://assets/character/talksprites/quingesterynpc_zane_sketch.png" id="5_j51ko"]
+[ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="6_lrm3t"]
+[ext_resource type="PackedScene" uid="uid://cm06xatxch52d" path="res://prefabs/UI/ItemMenu/BuyMenu.tscn" id="7_4nuli"]
+[ext_resource type="PackedScene" uid="uid://bw7q1cc3tci2i" path="res://prefabs/UI/NavButtons/NavButtons.tscn" id="8_2u8cq"]
+
+[node name="FireStation" type="Node2D"]
+script = ExtResource("1_c5o70")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("2_famdf")]
+dialogue_file = ExtResource("3_vomgy")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("4_b7any")
+centered = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 480.0
+offset_right = 960.0
+offset_bottom = 540.0
+size_flags_vertical = 8
+
+[node name="Character" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -156.0
+offset_top = -449.0
+offset_right = 133.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.1, 1.1)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("5_j51ko")
+
+[node name="ShopBox" parent="." instance=ExtResource("6_lrm3t")]
+
+[node name="BuyMenu" parent="." instance=ExtResource("7_4nuli")]
+visible = false
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="NavButtons" parent="." instance=ExtResource("8_2u8cq")]
+offset_right = 960.0
+offset_bottom = 540.0
+
+[connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
+[connection signal="pressed" from="NavButtons/NavList/Button2" to="." method="_on_sell_pressed"]
+[connection signal="pressed" from="NavButtons/NavList/Button3" to="." method="_on_talk_pressed"]
+[connection signal="pressed" from="NavButtons/NavList/Button4" to="." method="_on_leave_pressed"]
+
+[editable path="ShopBox"]
+[editable path="NavButtons"]

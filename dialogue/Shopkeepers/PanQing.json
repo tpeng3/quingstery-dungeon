@@ -1,0 +1,464 @@
+{
+    "welcome1": {
+        "key": "welcome1",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Hello, welcome! Oh hi hi [name]! Is there something you need today?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "welcome2": {
+        "key": "welcome2",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Hi again! [Giggle] Seeing you makes me happy! How have you been?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident1 (Bullfrog)": {
+        "key": "mention a resident1 (Bullfrog)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "You met Frog-gege? Hehe, he's super duper nice right? Bullfrog's my big brother! I love him very much!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident2 (Sorrel)": {
+        "key": "mention a resident2 (Sorrel)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Sorrel used to work on a ship, did you know? He's my other big brother! He likes giving me things, hehe!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident3 (Zane)": {
+        "key": "mention a resident3 (Zane)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Zane is super duper reliable! He works here too. Look at these eggs! They're huge! I've never seen eggs this big before!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident4 (Gabe)": {
+        "key": "mention a resident4 (Gabe)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Have you been to the police station before? Gabe-gege works there! He read Treasure Planet with me once!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident5 (Sina)": {
+        "key": "mention a resident5 (Sina)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Sina showed me his dress for Silver Night once! It was super duper pretty! He's real talented, I love him lots!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident6 (Sou)": {
+        "key": "mention a resident6 (Sou)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "I've never made much crafts before, but Sou showed me how to make paper stars once! He's like a little brother to me, hehe",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a business (Trading Post)": {
+        "key": "mention a business (Trading Post)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Some of the things don't grow here, so I have to put in an order through the Trading Post! You should go sometime, if you need something!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a business (Fire Station)": {
+        "key": "mention a business (Fire Station)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "The fire station guys are all super duper dedicated! I cook for them sometimes. Because they deserve it! Oh - come on by if you want food!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a business (A Map Stand)": {
+        "key": "mention a business (A Map Stand)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Wander likes to set up in random places! I think he sells maps? Would be useful if you're going up the mountain...Anyway, sometimes it's hard to find him, but I love bringing food to him!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after purchase1": {
+        "key": "after purchase1",
+        "type": "buy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Thank you for your purchase! Enjoy!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after purchase2": {
+        "key": "after purchase2",
+        "type": "buy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Hehe, I hope you like it! Do come again!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after trading": {
+        "key": "after trading",
+        "type": "trade",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Ooooh thank you! I've got plenty of uses for this I'm sure! Thank you for your items!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after trading 2 [probably soil that triggers this but feel free to add!!]": {
+        "key": "after trading 2 [probably soil that triggers this but feel free to add!!]",
+        "type": "trade",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Um...t-thanks? Oh! No no it's nothing bad I just--hmm...how do I...how do I use this....",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a rainy day": {
+        "key": "on a rainy day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Oh my stars! Please, come in come in! You'll get wet out there!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day": {
+        "key": "on a sunny day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Hi [name]! It's such nice weather out, huh? After I close up, I wanna wander around town and enjoy the sun for a bit!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 2": {
+        "key": "on a sunny day 2",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "It's a little hot today! Reminds me of home sometimes...oh! Do come in, it's cooler in here! Hmm...Quingees don't sweat do they?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a cloudy day": {
+        "key": "on a cloudy day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Hmm the clouds are a bit gray today...please take care out there!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a windy day": {
+        "key": "on a windy day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Wahhh why are you out on a day like this? You're so tiny you might fly away! Come in come in, wait it out first!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a stormy day": {
+        "key": "on a stormy day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Uuu...I don't like stormy weather...it's cold and noisy...here, I'll make a cup of warm teh tarik for you okay?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "meeting Quingee for the first time": {
+        "key": "meeting Quingee for the first time",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Oh! [blink] I didn't expect a Quingee in my store! Where's your owner? Wait - you're here to buy something?!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee becomes a regular": {
+        "key": "after Quingee becomes a regular",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Hehe welcome back! What would you like today?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee becomes a regular 2": {
+        "key": "after Quingee becomes a regular 2",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "I never thought a Quingee would come so often, but here you are! Hehe, what do you need?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee makes decent progress up the mountain": {
+        "key": "after Quingee makes decent progress up the mountain",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Wow!! It must be real hard huh, especially with how small you are! Come on in, rest your feet a bit!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee reaches the Peak": {
+        "key": "after Quingee reaches the Peak",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Uwahhh congratulations!! The trek must be super duper tiring right? Here, come in - I'll make something to celebrate!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you like": {
+        "key": "after receiving a gift you like",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Whooaaa!!! Thank you very much! I'll treasure this!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you like 2": {
+        "key": "after receiving a gift you like 2",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Really? For me? Thank you so, soooo much!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you don't like": {
+        "key": "after receiving a gift you don't like",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Uh. Um. Hmm. T-Thanks?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you're neutral about": {
+        "key": "after receiving a gift you're neutral about",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Oh thank you very much! I'm sure I can do something with this!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "chatter 1": {
+        "key": "chatter 1",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "I...I gotta ask. Can you really swim? Someone told me you're sea chickens and I really wanna know!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "chatter 2": {
+        "key": "chatter 2",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "I've made many friends while I've been here! Like Cam, Mallory, Tomoko, Naci, Apelsin, Ambrose, Legretta, Elodie, Hiraya, Esther -- Oh! You'll be my friend too, right?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "chatter 3": {
+        "key": "chatter 3",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Pan Qing",
+                "text": "Can Quingees take spicy? Would it be too hot for you...? Hmm........",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    }
+}

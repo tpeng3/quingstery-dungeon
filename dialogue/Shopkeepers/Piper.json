@@ -1,0 +1,968 @@
+{
+    "welcome1": {
+        "key": "welcome1",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Good morning! Nice weather we're having today, right?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "welcome2": {
+        "key": "welcome2",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Welcome in! Perfect timing, I've just finalised the forecast for the day.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Throat (advice)": {
+        "key": "about the Throat (advice)",
+        "type": "throat",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Hmm. How good are you on slippery ground? I recommend sticking close to the wall to grab if you slip-- actually, can you grab things? Maybe you should fly.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Throat": {
+        "key": "about the Throat",
+        "type": "throat",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Ugh, I slipped and fell in there once. My knees were bruised for days, be careful in there. ",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the River (advice)": {
+        "key": "about the River (advice)",
+        "type": "river",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Well, I would tell you to step lightly because the planks over the river are quite old, but you wouldn't weight much so you might be fine. Can you swim? Just in case.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the River": {
+        "key": "about the River",
+        "type": "river",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "I'll be honest with you, this is my least favourite part of the whole climb. Gods, I really need to learn how to swim.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Steps (advice)": {
+        "key": "about the Steps (advice)",
+        "type": "steps",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "I quite like climbing the Steps, even though the ground is very loose and uneven. There are a few spots that are more stable for you to catch your breath though.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Steps (misc comment)": {
+        "key": "about the Steps (misc comment)",
+        "type": "steps",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "If you come across a scientific instrument, do you think you could bring it back for me? I dropped it when I fell on my first climb.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Peak (advice)": {
+        "key": "about the Peak (advice)",
+        "type": "peak",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "The air gets a lot thinner in Fall, so make sure you keep your breathing steady as you reach the Peak.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Peak 2 (advice)": {
+        "key": "about the Peak 2 (advice)",
+        "type": "peak",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "It's so windy up there this time of year, take care to ensure that you don't get blown off the top of the Mountain.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Peak (misc comment)": {
+        "key": "about the Peak (misc comment)",
+        "type": "peak",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "The Peak is-- well, I don't want to ruin the surprise for you. But it's breathtaking, truly. Being on top of the world.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Peak (misc comment 2)": {
+        "key": "about the Peak (misc comment 2)",
+        "type": "peak",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Hey, while you're up on the Peak, do you think you could find a way to water the plants up there?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Oz": {
+        "key": "about Oz",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "If you need more advice for the climb, I would recommend asking Oz. I owe most of my knowledge to them.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Oz 2": {
+        "key": "about Oz 2",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Oz is wonderful, you should stop in and visit them in Pistachio on your way to your next climb. I think they're lonely, and they would like to have a visitor. Even if you're, well, a Quingee.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Oz 3": {
+        "key": "about Oz 3",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Here, let me give you a note to give to Oz if you stop by, I'll ask them to make you a broth-- it tastes horrible, but it stops your muscles from aching the next day.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a rainy day 1": {
+        "key": "on a rainy day 1",
+        "type": "rainy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "(Sighs.) No. I do not control the frequency at which rain falls from the sky. As much as everyone wishes I could.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a rainy day 2": {
+        "key": "on a rainy day 2",
+        "type": "rainy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a rainy day 3": {
+        "key": "on a rainy day 3",
+        "type": "rainy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a rainy day 4": {
+        "key": "on a rainy day 4",
+        "type": "rainy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a rainy day 5": {
+        "key": "on a rainy day 5",
+        "type": "rainy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a rainy day (helpful tip)": {
+        "key": "on a rainy day (helpful tip)",
+        "type": "rainy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Do they make rainhat's in Quingee size? I think it would be a good idea to get yourself one before you climb in this weather. ",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 1": {
+        "key": "on a sunny day 1",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "If you're climbing in this weather, make sure you take some water up with you. Sure, it's cooler than summer, but you still don't want to risk heatstroke.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 2": {
+        "key": "on a sunny day 2",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 3": {
+        "key": "on a sunny day 3",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 4": {
+        "key": "on a sunny day 4",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 5": {
+        "key": "on a sunny day 5",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 6": {
+        "key": "on a sunny day 6",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 7": {
+        "key": "on a sunny day 7",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 8": {
+        "key": "on a sunny day 8",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 9": {
+        "key": "on a sunny day 9",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day 10": {
+        "key": "on a sunny day 10",
+        "type": "sunny",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "If you need a break from the warmth, it'll get cooler the higher you climb, even though you're getting closer to the Sun. Funny how that works, isn't it?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a cloudy day 1": {
+        "key": "on a cloudy day 1",
+        "type": "cloudy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "These are my favourite days to climb. If you make it to the top, you have to pass through the clouds themselves, how cool is that! You'll get to be inside a cloud!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a cloudy day 2": {
+        "key": "on a cloudy day 2",
+        "type": "cloudy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "If you see clouds that are thin and wispy, similar to hair, they're called cirrus clouds. I named my Kasoot after them, maybe you should meet her sometime?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a cloudy day 3": {
+        "key": "on a cloudy day 3",
+        "type": "cloudy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Those really clumpy clouds, the ones that look fluffy? They're cumulus clouds, and most of the time they bring rainfall with them.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a cloudy day 4": {
+        "key": "on a cloudy day 4",
+        "type": "cloudy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "The clouds that seem to go on forever and ever in a big sheet, like a blanket, those are stratus clouds!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a cloudy day 5": {
+        "key": "on a cloudy day 5",
+        "type": "cloudy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Have you ever seen the clumpy clouds that make one big really tall structure? That's a cumulonimbus, they reach as high as clouds can go, and they bring thunderstorms with them!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a cloudy day 6": {
+        "key": "on a cloudy day 6",
+        "type": "cloudy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Did you know that fog is just cloud at ground level? So when you're outside in the fog, you're walking in a cloud.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a cloudy day (helpful tip)": {
+        "key": "on a cloudy day (helpful tip)",
+        "type": "cloudy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Since the clouds will block out some light, it might be harder to see sometimes. You should take something with you that can make light.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a windy day 1": {
+        "key": "on a windy day 1",
+        "type": "windy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "I don't like going outside when it's windy, my hair gets all blown around and gets tangled. You're lucky, having feathers. Feathers can't get tangled.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a windy day 2": {
+        "key": "on a windy day 2",
+        "type": "windy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "The higher you get, the windier it is. And it's already pretty windy down here, so be careful as you climb higher and higher. Don't want you getting blown away.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a windy day 3": {
+        "key": "on a windy day 3",
+        "type": "windy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a windy day 4": {
+        "key": "on a windy day 4",
+        "type": "windy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a windy day 5": {
+        "key": "on a windy day 5",
+        "type": "windy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a windy day (helpful tip)": {
+        "key": "on a windy day (helpful tip)",
+        "type": "windy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Being as light as you are, you should try to weigh yourself down with (the item for windy days) so you don't get blown away!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a stormy day 1": {
+        "key": "on a stormy day 1",
+        "type": "stormy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Are you sure you want to climb with weather this bad? Maybe this should be a rest day, run some errands, see what everyone is up to.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a stormy day 2": {
+        "key": "on a stormy day 2",
+        "type": "stormy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Look, I know it isn't *the* Storm, but it's still a storm. And sure, it'll be fine once you make it past the cloudline, but getting there will be really dangerous.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a stormy day 3": {
+        "key": "on a stormy day 3",
+        "type": "stormy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "This storm is going to bring lightning with it, be careful not to get struck by it or you might look like a Thunderstruck for a few days. Either that or-- actually, no. Forget I went to say anything else.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a stormy day 4": {
+        "key": "on a stormy day 4",
+        "type": "stormy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "If you make it to the cloud line in this weather, as you pass through the cloud you might get hit by some little pieces of hail, so watch out for those.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a stormy day 5": {
+        "key": "on a stormy day 5",
+        "type": "stormy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a stormy day (helpful tip)": {
+        "key": "on a stormy day (helpful tip)",
+        "type": "stormy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Storms are a mixture of wind and clouds and rain! So, you should try and prepare for all three of those.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after meeting Quingee on the mountain": {
+        "key": "after meeting Quingee on the mountain",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee makes decent progress up the mountain": {
+        "key": "after Quingee makes decent progress up the mountain",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Good progress so far! It gets easier each time you climb, so don't get discouraged, you'll make it up there eventually!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee makes progress up the mountain": {
+        "key": "after Quingee makes progress up the mountain",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "That must've taken you a while, right? With your little legs? Good work though, you'll get there eventually.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee reaches the Peak": {
+        "key": "after Quingee reaches the Peak",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Gods, even my legs ache after I make it all the way up there, and I don't need to take as many steps as you.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee first visit to the Institute": {
+        "key": "after Quingee first visit to the Institute",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Oh, hello! I didn't know if you'd end up coming by or not. I'll be honest, I didn't expect to be giving weather forecasts to a Quingee but the more the merrier.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee becomes a regular visitor": {
+        "key": "after Quingee becomes a regular visitor",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "I didn't know Quingee's were so interested in the weather, or climbing the Peak either, or is that just you [[name]]?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee becomes a regular visitor and has reached the Peak (if that is possible? all good if not!)": {
+        "key": "after Quingee becomes a regular visitor and has reached the Peak (if that is possible? all good if not!)",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "You're getting pretty good at climbing it sounds like, maybe we should climb together sometime?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you like": {
+        "key": "after receiving a gift you like",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "How did you know I like this? Oh, thank you so much! Is there some way I can repay you?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you don't like": {
+        "key": "after receiving a gift you don't like",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Oh, uh, thanks. I'm sure I can find... something to do with this.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you're neutral about": {
+        "key": "after receiving a gift you're neutral about",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Thank you for the thought, I really appreciate it.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving milk": {
+        "key": "after receiving milk",
+        "type": "milkgift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Ah-- you see, I actually can't have milk. At all. I think you should give this to someone else, it's wasted on me.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident (oleander)": {
+        "key": "mention a resident (oleander)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Have you visited Town Hall? I believe Oleander works there, he knows a lot about plants if you need to learn anything about them. Tell him I say hi!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident (bullfrog)": {
+        "key": "mention a resident (bullfrog)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "You should visit Bullfrog sometime, at the Trading Post. I'm sure if there's anything you need help with he'll be able to help!",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident (zane)": {
+        "key": "mention a resident (zane)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "I've climbed up the mountain with Zane before, and Cap too! Helping to train them for rescue jobs, hopefully you won't need those.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident (cyrus)": {
+        "key": "mention a resident (cyrus)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "I should introduce you to Cyrus sometime, maybe it'll help him like Quingee's a bit more. He finds your eyes unnerving.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident (ambrose)": {
+        "key": "mention a resident (ambrose)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident (tadhana)": {
+        "key": "mention a resident (tadhana)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Have you met Tadhana yet? She'd love you. Maybe too much, I wouldn't put it past her to build a shrine for you or something.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident (piper) (after quingee is a regular if that's possible?)": {
+        "key": "mention a resident (piper) (after quingee is a regular if that's possible?)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "I'm technically a Doctor, did you know that? Not a medical Doctor, so please don't come to me for that, but a Doctor of Meteorology.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "mention a resident (sinclair)": {
+        "key": "mention a resident (sinclair)",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Piper",
+                "text": "Be careful walking around in Butternut, someone's dug a large hole in their front yard and we don't want you falling in there.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    }
+}

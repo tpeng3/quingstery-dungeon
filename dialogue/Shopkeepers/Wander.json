@@ -1,0 +1,688 @@
+{
+    "welcome1": {
+        "key": "welcome1",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Hey. Lookin' for a map?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "welcome2": {
+        "key": "welcome2",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Oh, it's you again.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after purchase1": {
+        "key": "after purchase1",
+        "type": "buy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Thanks for the purchase.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after purchase2": {
+        "key": "after purchase2",
+        "type": "buy",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Nice doing business.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after trading": {
+        "key": "after trading",
+        "type": "trade",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Come by again if y'find something interesting.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after selling": {
+        "key": "after selling",
+        "type": "sell",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Y'got an eye for these things. Thanks.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Throat": {
+        "key": "about the Throat",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "The Throat's caves are difficult t'navigate. Would be best t'get a light.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the River": {
+        "key": "about the River",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "That bridge near the river got repaired recently, but... be careful.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Steps": {
+        "key": "about the Steps",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "The steps're slippery if you're not paying attention. Don't underestimate it.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Peak": {
+        "key": "about the Peak",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Y'know, at the top of the Peak, there's... well, never mind. Might be best t'see for yourself.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the town": {
+        "key": "about the town",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Mm? Well, the town's pretty nice... It'll grow bigger before y'know it.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Quingee": {
+        "key": "about Quingee",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Quingee 2": {
+        "key": "about Quingee 2",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Y'should stop by more often so I can get some practice with the Old Language. ",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Town Hall": {
+        "key": "about Town Hall",
+        "type": "",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Trading Post": {
+        "key": "about the Trading Post",
+        "type": "",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "The Trading Post offers a lotta stuff, but honestly, the most thing that they have in stock is gossip.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Bullfrog": {
+        "key": "about Bullfrog",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Tian's Corner": {
+        "key": "about Tian's Corner",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Tian's Corner has some pretty good produce. Pan Qing got a bunch from places overseas.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Pan Qing": {
+        "key": "about Pan Qing",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Y'should try Pan Qing's cooking if y'have the chance. The tofu's real good, but everything she cooks is great.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Fire Station": {
+        "key": "about the Fire Station",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "If y'need help, just ask the Fire Station. Zane's real reliable.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about the Fire Station 2": {
+        "key": "about the Fire Station 2",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Fire Station's got some beds and stuff t'rest on. Sometimes some food, too. Lotta volunteers there like t'cook, apparently.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Zane": {
+        "key": "about Zane",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Be careful goin' up. Zane overworks himself, don't cause him too much trouble by knockin' out, okay?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Textile Services": {
+        "key": "about Textile Services",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Meteor. Institute": {
+        "key": "about Meteor. Institute",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Bake & Roast": {
+        "key": "about Bake & Roast",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Oz": {
+        "key": "about Oz",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Have y'met Oz yet...? They know 'bout the mountain the most outta everyone.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Oz 2": {
+        "key": "about Oz 2",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "If y'see Oz, y'should lend 'em some company for a bit. They'll appreciate it.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Cashew": {
+        "key": "about Cashew",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "My Quingee? She's training t'be a messenger bird. (Cashew: Chirp! (Nice to meet you!))",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Cashew 2": {
+        "key": "about Cashew 2",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Play nice with Cash, yeah?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Cashew 3": {
+        "key": "about Cashew 3",
+        "type": "",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Cynn": {
+        "key": "about Cynn",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "... better not be doin' something stupid again - huh? Ah, sorry. Didn't see y'there.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Cynn 2": {
+        "key": "about Cynn 2",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "...Hey, if y'see a redhead with goggles climbing the peak... lemme know. Seriously.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Wander": {
+        "key": "about Wander",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "...'Bout me? Hah... not much t'say, really.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Wander 2": {
+        "key": "about Wander 2",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Yeah, I've been 'round Utlus. 'm just a traveler, nothing more.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about Wander 3": {
+        "key": "about Wander 3",
+        "type": "",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about maps": {
+        "key": "about maps",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Hey, careful with those. Maps take a while t'make, so if y'damage 'em, 'm gonna have t'charge you.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about maps 2": {
+        "key": "about maps 2",
+        "type": "",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "about maps 3": {
+        "key": "about maps 3",
+        "type": "",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a rainy day": {
+        "key": "on a rainy day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a sunny day": {
+        "key": "on a sunny day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Feel like takin' a nap...",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a cloudy day": {
+        "key": "on a cloudy day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a windy day": {
+        "key": "on a windy day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "on a stormy day": {
+        "key": "on a stormy day",
+        "type": "talk",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Hey, why're y'still climbing in this weather? Actually, c'mere. (Gift: Clothing item?)",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "meeting Quingee for the first time": {
+        "key": "meeting Quingee for the first time",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "...Huh? Y'wanna buy something? If a Quingee wants t'buy something and they have the money, no reason t'say no, right?",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee becomes a regular": {
+        "key": "after Quingee becomes a regular",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Y'sure come by this mountain a lot... safe travels, alright? (Gift: Seed Packet?)",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee makes decent progress up the mountain": {
+        "key": "after Quingee makes decent progress up the mountain",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Y'made it that far already? Guess Quingees're pretty tough.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after Quingee reaches the Peak": {
+        "key": "after Quingee reaches the Peak",
+        "type": "welcome",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Oh, y'got all the way up the Peak? Congrats. Y'should take it easy.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you like": {
+        "key": "after receiving a gift you like",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "Huh? For me? Y'sure y'don't want some coin for it? ...Thanks, this is pretty nice.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you don't like": {
+        "key": "after receiving a gift you don't like",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "...Go toss that somewhere else.",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    },
+    "after receiving a gift you're neutral about": {
+        "key": "after receiving a gift you're neutral about",
+        "type": "gift",
+        "popularity": 0,
+        "lines": [
+            {
+                "name": "Wander",
+                "text": "",
+                "action": [
+                    "FREEZE"
+                ]
+            }
+        ]
+    }
+}

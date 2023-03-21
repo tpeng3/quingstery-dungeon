@@ -36,7 +36,6 @@ func _on_sell_pressed():
 func _on_talk_pressed():
 	var talk_key = _weighted_rand("talk")
 	$ShopBox.show_dialogue($DialoguePlayer, talk_key)
-	$AnimationPlayer.play("bump")
 
 func _on_leave_pressed():
 	SceneManager.change_scene("Map")
