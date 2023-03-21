@@ -1,0 +1,50 @@
+[gd_scene load_steps=11 format=3 uid="uid://cm06xatxch52d"]
+
+[ext_resource type="PackedScene" uid="uid://cdirrc5rr8huy" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_g5nft"]
+[ext_resource type="Texture2D" uid="uid://b2jvgs4owo3dw" path="res://assets/ui/arrows.png" id="2_wmtfs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o51c0"]
+atlas = ExtResource("2_wmtfs")
+region = Rect2(0, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e82kt"]
+atlas = ExtResource("2_wmtfs")
+region = Rect2(9, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mxouv"]
+atlas = ExtResource("2_wmtfs")
+region = Rect2(18, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vqkl2"]
+atlas = ExtResource("2_wmtfs")
+region = Rect2(27, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8mlrc"]
+atlas = ExtResource("2_wmtfs")
+region = Rect2(0, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ah15m"]
+atlas = ExtResource("2_wmtfs")
+region = Rect2(9, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jllw"]
+atlas = ExtResource("2_wmtfs")
+region = Rect2(18, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dr5fy"]
+atlas = ExtResource("2_wmtfs")
+region = Rect2(27, 0, 9, 9)
+
+[node name="BuyMenu" instance=ExtResource("1_g5nft")]
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
+texture_normal = SubResource("AtlasTexture_o51c0")
+texture_pressed = SubResource("AtlasTexture_e82kt")
+texture_disabled = SubResource("AtlasTexture_mxouv")
+texture_focused = SubResource("AtlasTexture_vqkl2")
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
+texture_normal = SubResource("AtlasTexture_8mlrc")
+texture_pressed = SubResource("AtlasTexture_ah15m")
+texture_disabled = SubResource("AtlasTexture_3jllw")
+texture_focused = SubResource("AtlasTexture_dr5fy")

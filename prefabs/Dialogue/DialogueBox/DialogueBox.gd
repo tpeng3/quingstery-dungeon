@@ -1,14 +1,15 @@
 extends CanvasLayer
 
 var dialogue_node = null
+var freezeBox = false
 
 signal yes_selected
 signal no_selected
 
-@onready var DialogueBox = $GUI/VSplitContainer/DialogueBox
-@onready var DialogueName = $GUI/VSplitContainer/DialogueBox/NameContainer/Name
-@onready var DialogueText = $GUI/VSplitContainer/DialogueBox/DialogueText
-@onready var DialogueSelect = $GUI/VSplitContainer/DialogueBox/YesNo
+@onready var DialogueBox = $DialogueWrapper
+@onready var DialogueName = $DialogueWrapper/NameContainer/Name
+@onready var DialogueText = $DialogueWrapper/DialogueText
+@onready var DialogueSelect = $DialogueWrapper/YesNo/DialogueSelect
 
 func _ready():
 	hide()
@@ -32,20 +33,23 @@ func show_new_item(item, amount):
 func show_dialogue(dialogue, dictKey=null):
 	# freeze character while there is dialogue
 	Global.freezeQuingee = true
+	freezeBox = false
 	
 	dialogue_node = dialogue
 	_reset_ui()
-	$GUI.show()
+	$DialogueWrapper.show()
 	if !dialogue_node.skipFade:
 		$AnimationPlayer.play("textbox_fade")
-	dialogue_node.dialogue_action.connect(_on_dialogue_action)
-	dialogue_node.dialogue_finished.connect(_on_dialogue_finished)
+	if not dialogue_node.dialogue_action.is_connected(_on_dialogue_action):
+		dialogue_node.dialogue_action.connect(_on_dialogue_action)
+	if not dialogue_node.dialogue_finished.is_connected(_on_dialogue_finished):
+		dialogue_node.dialogue_finished.connect(_on_dialogue_finished)
 	dialogue_node.start_dialogue(dictKey)
 	_update_textbox()
 
 func _input(event):
 	# on enter/space or mouse click
-	if self.visible and not DialogueSelect.visible and dialogue_node != null:\
+	if self.visible and not DialogueSelect.visible and dialogue_node != null and not freezeBox:
 		if Input.is_action_pressed("ui_accept"):
 #			DialogueSelect.ButtonHover.play()
 			dialogue_node.next_dialogue()
@@ -60,6 +64,7 @@ func _update_textbox():
 	if dialogue_node.dialogue_name and dialogue_node.dialogue_name != "":
 		DialogueName.text = dialogue_node.dialogue_name
 		DialogueName.show()
+		$DialogueWrapper/ClickToContinue.visible = true
 #		if dialogue_node.dialogue_expression:
 #			# TODO: make this more generic later, this is just old code
 #			match dialogue_node.dialogue_name:
@@ -69,6 +74,8 @@ func _update_textbox():
 #				"Bullfrog":
 #					$Talksprites/Sprite2D.show()
 #					$Talksprites/Sprite2D.change(dialogue_node.dialogue_expression)
+		if freezeBox:
+			$DialogueWrapper/ClickToContinue.visible = false
 	else:
 		DialogueName.hide()
 #		$Talksprites/Sprite2D.hide()
@@ -90,6 +97,10 @@ func _on_dialogue_action(action_type, asset):
 			play_animation(asset)
 		dialogue_node.ActionType.SOUND:
 			play_sound(asset)
+		dialogue_node.ActionType.FREEZE:
+			emit_signal("no_selected")
+			Global.freezeQuingee = false
+			freezeBox = true
 
 func _on_dialogue_finished(action_type = 0, asset = null):
 #	self.hide_image()

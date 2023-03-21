@@ -3,17 +3,17 @@
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
 [ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
 [ext_resource type="Script" path="res://scenes/Map/Camera2D.gd" id="2_vecvs"]
-[ext_resource type="PackedScene" uid="uid://dxr1xgd3ibyct" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
-[ext_resource type="PackedScene" uid="uid://c04ryc3grkkv7" path="res://prefabs/MapButton/MapButton.tscn" id="4_618ha"]
+[ext_resource type="PackedScene" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
+[ext_resource type="PackedScene" uid="uid://c5evt78phsk3n" path="res://prefabs/MapButton/MapButton.tscn" id="4_618ha"]
 [ext_resource type="Texture2D" uid="uid://cqbp0f3r6orbp" path="res://assets/ui/locations/locations_townhall_pip.png" id="5_s1d2c"]
 [ext_resource type="Texture2D" uid="uid://bo1dw28nxmqj3" path="res://assets/ui/locations/locations_pecanhome_pip.png" id="6_62i57"]
 [ext_resource type="Texture2D" uid="uid://dkbboiaqvecbo" path="res://assets/ui/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
 [ext_resource type="Texture2D" uid="uid://dqnpxqjlgxml" path="res://assets/ui/locations/locations_acornhome_pip.png" id="8_y6cwr"]
 [ext_resource type="Texture2D" uid="uid://ct35jr0561r0v" path="res://assets/ui/locations/locations_marketplace_pip.png" id="9_ba8tq"]
 [ext_resource type="Texture2D" uid="uid://cxubk7ug2y8kn" path="res://assets/ui/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
-[ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="12_j3ysv"]
+[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="12_j3ysv"]
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="13_dboj1"]
-[ext_resource type="Theme" uid="uid://cpxy5j8yokdkr" path="res://theme/Scroll.tres" id="14_ruq6n"]
+[ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="14_ruq6n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d36gl"]
 
@@ -79,6 +79,7 @@ offset_bottom = 576.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Tian\'s Corner")
 focus_previous = NodePath("../Bulletin Board")
+scene = "TradingPost"
 preview = ExtResource("6_62i57")
 mapDesc = "(frogchamp)"
 

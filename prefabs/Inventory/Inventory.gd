@@ -5,7 +5,19 @@ extends Node
 @export var items_json: JSON
 
 @export var gald = 0
-var inventory = {}
+#var inventory = {}
+var inventory = {
+	"Acorn": {
+		"name": "Acorn",
+		"path": "test",
+		"count": 2
+	},
+	"Trash": {
+		"name": "Trash",
+		"path": "test",
+		"count": 1
+	}
+}
 var max = 20
 
 func get_items_json():
@@ -43,17 +55,18 @@ func print_items():
 	var inv = []
 	for key in inventory:
 		var item = find_item(key)
+		print(item)
 		var remainder = inventory[key].count
-		for n in ceil(item.count / item.maxcount):
+		for n in ceil(remainder / item.maxcount):
 			if remainder >= item.maxcount:
-				inv.push({
+				inv.push_back({
 					"name": inventory[key].name,
 					"path": inventory[key].path,
 					"count": item.maxcount
 				})
 				remainder -= item.maxcount
 			else:
-				inv.push({
+				inv.push_back({
 					"name": inventory[key].name,
 					"path": inventory[key].path,
 					"count": remainder

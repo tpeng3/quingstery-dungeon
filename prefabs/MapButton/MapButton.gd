@@ -1,6 +1,8 @@
 extends Control
 
 var bip:Texture2D = load("res://assets/ui/mapbip.png")
+
+@export var scene:String 
 @export var preview:Texture2D
 @export var skipPreview:bool = false
 @export var mapDesc:String

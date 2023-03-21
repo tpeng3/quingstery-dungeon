@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://u7jf2y80hsiw"]
 
-[ext_resource type="Texture2D" uid="uid://b10o1jb3y3lu7" path="res://assets/ui/Checkbox.png" id="1_02l0h"]
-[ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="1_sfnuu"]
-[ext_resource type="Texture2D" uid="uid://bdqemmusx4053" path="res://assets/ui/Gald_Symbol.png" id="2_6pjbo"]
+[ext_resource type="Texture2D" uid="uid://dsri5vwnmeii3" path="res://assets/ui/Checkbox.png" id="1_02l0h"]
+[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="1_sfnuu"]
+[ext_resource type="Texture2D" uid="uid://br0ne6j6aqo0s" path="res://assets/ui/Gald_Symbol.png" id="2_6pjbo"]
 
 [node name="ReqItem" type="MarginContainer"]
 

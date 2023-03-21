@@ -1,45 +1,45 @@
 [gd_scene load_steps=20 format=3 uid="uid://cdirrc5rr8huy"]
 
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="1_6b7a8"]
+[ext_resource type="Script" path="res://prefabs/UI/ItemMenu/ItemMenu.gd" id="1_25xo1"]
 [ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="2_1s1md"]
-[ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="2_p56pw"]
-[ext_resource type="PackedScene" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="3_h24dk"]
+[ext_resource type="Texture2D" uid="uid://bb43hfropg5lr" path="res://assets/item/i_acorn.png" id="2_p56pw"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="7_1nhbr"]
 [ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_242x1"]
-[ext_resource type="Texture2D" uid="uid://dxqanehaak2pj" path="res://assets/ui/arrows.png" id="7_mnmky"]
-[ext_resource type="PackedScene" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
+[ext_resource type="Texture2D" uid="uid://b2jvgs4owo3dw" path="res://assets/ui/arrows.png" id="7_mnmky"]
+[ext_resource type="PackedScene" uid="uid://u7jf2y80hsiw" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
 [ext_resource type="PackedScene" uid="uid://cjuix8vu67e3s" path="res://prefabs/UI/Popup/Popup.tscn" id="9_j02wv"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6fw2e"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oojx6"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qgnfi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4n70"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_70u2u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nyihg"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cycbr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqmd7"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xtkg5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb8d8"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yap8l"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_oww7k"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pa38x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sbf8p"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rw7fy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6epdk"]
 atlas = ExtResource("7_mnmky")
 region = Rect2(27, 0, 9, 9)
 
@@ -53,6 +53,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_25xo1")
 
 [node name="TopBar" parent="." instance=ExtResource("1_31h2c")]
 layout_mode = 1
@@ -98,38 +99,6 @@ theme_override_constants/margin_bottom = 24
 [node name="FlowContainer" type="FlowContainer" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding"]
 layout_mode = 2
 vertical = true
-
-[node name="ListItem1" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
-layout_mode = 2
-size_flags_horizontal = 0
-
-[node name="ListItem2" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ListItem3" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ListItem4" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ListItem5" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ListItem6" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ListItem7" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ListItem8" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("3_h24dk")]
-layout_mode = 2
-size_flags_horizontal = 3
 
 [node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
 layout_mode = 2
@@ -186,10 +155,10 @@ layout_mode = 2
 offset_top = 3.0
 offset_right = 9.0
 offset_bottom = 12.0
-texture_normal = SubResource("AtlasTexture_6fw2e")
-texture_pressed = SubResource("AtlasTexture_qgnfi")
-texture_disabled = SubResource("AtlasTexture_70u2u")
-texture_focused = SubResource("AtlasTexture_cycbr")
+texture_normal = SubResource("AtlasTexture_oojx6")
+texture_pressed = SubResource("AtlasTexture_r4n70")
+texture_disabled = SubResource("AtlasTexture_nyihg")
+texture_focused = SubResource("AtlasTexture_nqmd7")
 
 [node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
 custom_minimum_size = Vector2(18, 0)
@@ -200,10 +169,10 @@ layout_mode = 2
 offset_top = 3.0
 offset_right = 9.0
 offset_bottom = 12.0
-texture_normal = SubResource("AtlasTexture_xtkg5")
-texture_pressed = SubResource("AtlasTexture_yap8l")
-texture_disabled = SubResource("AtlasTexture_pa38x")
-texture_focused = SubResource("AtlasTexture_rw7fy")
+texture_normal = SubResource("AtlasTexture_xb8d8")
+texture_pressed = SubResource("AtlasTexture_oww7k")
+texture_disabled = SubResource("AtlasTexture_sbf8p")
+texture_focused = SubResource("AtlasTexture_6epdk")
 metadata/Direction = "right"
 
 [node name="RightPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]
@@ -256,6 +225,7 @@ text = "adfasfhskdfsdfsld aas oflsdjf dsklfas jdlkad fjdslkfasd fklasdjkfds dskf
 fit_content = true
 
 [node name="RequirementsList" type="FlowContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer"]
+visible = false
 layout_mode = 2
 
 [node name="ReqItem1" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("8_k8j6h")]
@@ -301,3 +271,7 @@ text = "use"
 [node name="Popup" parent="." instance=ExtResource("9_j02wv")]
 visible = false
 layout_mode = 1
+
+[connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_pressed"]
+[connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack/ArrowBtn" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext/ArrowBtn" to="." method="_on_next_pressed"]

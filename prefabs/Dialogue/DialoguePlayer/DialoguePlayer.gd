@@ -9,7 +9,8 @@ enum ActionType {
 	HIDE,
 	CHOICES,
 	ANIMATION,
-	SOUND
+	SOUND,
+	FREEZE
 }
 enum PostActionType { NONE, MORE_TEXT, DELETE, UNLOCK }
 
@@ -71,7 +72,7 @@ func _set_dialogue():
 			"expression":
 				dialogue_expression = dialogue_keys[current].expression
 			"text":
-				dialogue_text = dialogue_keys[current].text
+				dialogue_text = dialogue_keys[current].text.replace("[[name]]", Global.player)
 			"action":
 				_check_action(dialogue_keys[current].action)
 			"multi_action":

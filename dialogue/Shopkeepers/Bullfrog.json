@@ -1,0 +1,1122 @@
+{
+	"welcome1": {
+		"key": "welcome1",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Welcome in! Oh, it's [[name]]. How's it goin'?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"welcome2": {
+		"key": "welcome2",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Heyy, it's my lil' buddy! Look at you; what's up? Need somethin'?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after purchase1": {
+		"key": "after purchase1",
+		"type": "buy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "There you go; how's that? All set? Need anything else?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after purchase2": {
+		"key": "after purchase2",
+		"type": "buy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Man; gotta get me one of those, too. Guess I could just grab it off the shelf, huh?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after selling": {
+		"key": "after selling",
+		"type": "sell",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "I'll see what I can do with these; go have fun with that coin, or whatever you do.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee sells a LOT of items": {
+		"key": "after Quingee sells a LOT of items",
+		"type": "sell",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Damn, the hell did you get all these? Eh, I'll figure something out. Here; coin.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"welcome 3": {
+		"key": "welcome 3",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Back again, huh lil' buddy? Get on up here, whacha need today.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"welcome 4": {
+		"key": "welcome 4",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Well, well, if it isn't [[name]]. What can I do for you?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a rainy day": {
+		"key": "on a rainy day",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Weather's kinda shit today, isn't it? Too bad, huh. Stay dry out there!",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a rainy day 2": {
+		"key": "on a rainy day 2",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Rain sounds good on the roof, doesn't it? Just so long as it doesn't leak; gettin' up there's real rough on me.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a sunny day": {
+		"key": "on a sunny day",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Fuckin' beautiful out today. Lookin forward to heading for a walk or something after we close up later.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a sunny day 2": {
+		"key": "on a sunny day 2",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Great day to climb a mountain, am I right? I wouldn't know, actually; just a nice-ass day.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a cloudy day": {
+		"key": "on a cloudy day",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Weather like this makes me drowsy; you the same way? Would much rather the sun.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a cloudy day 2": {
+		"key": "on a cloudy day 2",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Another dreary day. Go hit up Piper, tell her to change the weather, will ya?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a windy day": {
+		"key": "on a windy day",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You look like you don't weigh jackshit; the wind pushing you around much?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a windy day 2": {
+		"key": "on a windy day 2",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "The way the wind howls is real freaky, isn't it? Has a different vibe when it runs through the mountain.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a stormy day": {
+		"key": "on a stormy day",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Window panes rattlin' like a goddamn snake today, what a pain in the ass. Hope it clears up soon.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a stormy day 2": {
+		"key": "on a stormy day 2",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Hey, stay safe out there, lil' buddy. Don't go making me worry about you, you hear?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident1 (Tadhana)": {
+		"key": "mention a resident1 (Tadhana)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Huh, where's Tadhana at? Bet she'd fuckin love to see you today.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident2 (Winter)": {
+		"key": "mention a resident2 (Winter)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You holdin' up alright? Winter's a doctor, y'know. Don't tell me you're afraid of doctors, too.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 3 (Cam)": {
+		"key": "mention a resident 3 (Cam)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Hey, have you seen Cameron on his bike out there? Can't he give you a ride up? No?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 4 (Marcelo)": {
+		"key": "mention a resident 4 (Marcelo)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You'd ought to get those guys over at Alfonso's print shop to get a photo of you.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 5 (Mimi)": {
+		"key": "mention a resident 5 (Mimi)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You hungry, lil' buddy? Mimi's around here somewhere, get you somethin' real good to eat today.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 6 (Sou)": {
+		"key": "mention a resident 6 (Sou)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "I think I saw Sou earlier--you met him? Real quiet type. Moves around like a little ghost.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 7 (Sinclair)": {
+		"key": "mention a resident 7 (Sinclair)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "I don't think Sinclair's been in while you're here, huh? If you head up toward Butternut, try not to fall in his hole.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 8 (Tao)": {
+		"key": "mention a resident 8 (Tao)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "I bet you 'n Tao would get along great. Neither of you say much. And you've got that--that glint in your eye.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 9 (Acu)": {
+		"key": "mention a resident 9 (Acu)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "I bet Acuity would go fuckin' nuts to get a look at you. They're that weird science-y type, and you're too smart.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 10 (Tempi)": {
+		"key": "mention a resident 10 (Tempi)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You're such a lil' thing--you seen Tempi yet? He's, like, ten times your height. Maybe more.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 11 (Gabe)": {
+		"key": "mention a resident 11 (Gabe)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "There's one cop in town--the good one--he seems like he'd help you out. Don't think he goes to the mountain, though.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 12 (Nikita)": {
+		"key": "mention a resident 12 (Nikita)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You met Sun Eater? That's, uh, Nikita's quingee. Guy's got some crazy-lookin' dogs, too.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 13 (Hawke)": {
+		"key": "mention a resident 13 (Hawke)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Y'know, there's a guy in town--Hawke?--that's real into studying the native species. Bet you'd strike his fancy.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 14 (Cuffie)": {
+		"key": "mention a resident 14 (Cuffie)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "If you see a ghost, there's a--person? Fuck if I know--in a mask that goes around. Spooky. Hear they make weird food.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 15 (Construction crew)": {
+		"key": "mention a resident 15 (Construction crew)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You need, like, a lil coop or somethin'? Wren, Ava, Sorrel, all them; they do construction down the road.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 16 (Hollis)": {
+		"key": "mention a resident 16 (Hollis)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Guy up in Pistachio, Hollis, he's got chickens--that close enough? You need some friends, lil' buddy?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 17 (Enoch)": {
+		"key": "mention a resident 17 (Enoch)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Your feathers gettin' a little ruffled, lil' buddy? You shou--wait, no, Enoch does haircuts, not feathers.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 18 (Caspi)": {
+		"key": "mention a resident 18 (Caspi)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Shame it's too early in the season; Caspiana sets up a nice lil' stand in town for hot drinks 'n stuff.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 19 (Deko)": {
+		"key": "mention a resident 19 (Deko)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You see any ghosts out on that peak? I bet uh, Deko, down in Walnut, would be all ears for it.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 20 (Wynne)": {
+		"key": "mention a resident 20 (Wynne)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Been real windy in the autumn, huh? Man, there's someone in the valley named Wynne Dee--think about 'em every time, now.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 21 (Sage)": {
+		"key": "mention a resident 21 (Sage)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "If anyone tries to bait you into an Olive Garden, just mind your lil' beak, alright? Sage is smart.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 22 (Cynn?!)": {
+		"key": "mention a resident 22 (Cynn?!)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Hey, you seen the lil' beans I got over by the window? Looks just like you. Cool fella over at the Toy Shop made the machine. ... Huh? What's that lookfor?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 23 (Somerset)": {
+		"key": "mention a resident 23 (Somerset)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Y'know, of all my customers, you still aren't the weirdest? That goes to the horse-thing, Death Machine.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 24 (Teri)": {
+		"key": "mention a resident 24 (Teri)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Shame you never got to meet Guillotine, the mayor's quingee. I think Teri ate him last winter, though.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 25 (Maelys)": {
+		"key": "mention a resident 25 (Maelys)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Hey, they found out in the trial you lil' things can understand the ol' language, right? You talk to Maelys?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 26 (Kat)": {
+		"key": "mention a resident 26 (Kat)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You need a bed, lil' buddy? Kat's inn has--well, actually, I guess a bird can't rent a room, huh?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 27 (Nancio)": {
+		"key": "mention a resident 27 (Nancio)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Y'know, I bet Nancio's carriages could get you partway up the mountain, right? Do they service birds?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 28 (Bee)": {
+		"key": "mention a resident 28 (Bee)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You like kids, lil' buddy? Bee's kids at the daycare would be all over you, I bet.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 29 (Cyrus)": {
+		"key": "mention a resident 29 (Cyrus)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Saw Cyrus the other day--I was thinkin', a bird would look pretty freaky with a piercing, wouldn't it?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 30 (Mallory)": {
+		"key": "mention a resident 30 (Mallory)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Can birds drink milk? Mallory's dairy farm up the road has the good shit.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 31 (Tomoko)": {
+		"key": "mention a resident 31 (Tomoko)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You're a kinda--like a peaceful quingee, huh? Should go bask in Tomoko's flowers, bet you'd both like that.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 32 (Greta)": {
+		"key": "mention a resident 32 (Greta)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Quingee don't play with toys like dogs, huh? Wonder if Greta has anything for that at the Toystore...",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident 33 (bfj)": {
+		"key": "mention a resident 33 (bfj)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Don't mind the frog in the corner--no, I don't know anything about it either. I didn't put it here. It's not me.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business 1 (Fire Station)": {
+		"key": "mention a business 1 (Fire Station)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "If you get stuck, do you get picked up by the fire station crew? Like when a cat gets stuck in a tree? Ha!",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business 2 (Tian's Corner)": {
+		"key": "mention a business 2 (Tian's Corner)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You been to see Pan Qing at her lil shop yet? Bet she's got plenty of good stuff for you, too.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business 3 (Town Hall)": {
+		"key": "mention a business 3 (Town Hall)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Saw you goin' in and outta Town Hall--I bet Oleander's gettin a reaaaaal kick outta that, huh?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business 4 (Textile Services)": {
+		"key": "mention a business 4 (Textile Services)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You look pretty cold, lil' buddy. I know, uh, Noah, at the textile shop's got stuff for that.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business 5 (A Map Stand..?": {
+		"key": "mention a business 5 (A Map Stand..?",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Someone told me you weird lil things can read. Can you read maps? You seen Wander yet?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business 6 (The Bake & Roast)": {
+		"key": "mention a business 6 (The Bake & Roast)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "If you don't pick up any food here, might be able to suck up to Rein down at the Bake & Roast.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business 7 (Meteorological Institute)": {
+		"key": "mention a business 7 (Meteorological Institute)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Weather's been all over lately, huh? Go waddle over to Piper at the Meterology place 'n see what's up.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"meeting Quingee for the first time": {
+		"key": "meeting Quingee for the first time",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "What the fuck is this. Are you just walking up to me? Hello? Am I losing my goddamn mind?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee becomes a regular": {
+		"key": "after Quingee becomes a regular",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Well, shit, it's the bird again. You doin' your best at, uh, bein' a lil' thing? Down there? Huh?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee becomes a regular 2": {
+		"key": "after Quingee becomes a regular 2",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You really come around all the time now, huh? You're one active lil' thing, I'll give you that.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee makes decent progress up the mountain": {
+		"key": "after Quingee makes decent progress up the mountain",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Heard you've been makin' it pretty far up the peak. Why don't you just fly? Seems silly to me. ",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee makes decent progress up the mountain 2": {
+		"key": "after Quingee makes decent progress up the mountain 2",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Word is that you've been doin' really well with climbing the mountain. How do you do that? It's impressive, but, yeowza.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee reaches the Peak": {
+		"key": "after Quingee reaches the Peak",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Did you actually make it all the way up there? That's fuckin nuts. You, uh, find what you were lookin' for up there?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you like": {
+		"key": "after receiving a gift you like",
+		"type": "gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Hey, this is fucking great; thanks! I love this.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you like 2": {
+		"key": "after receiving a gift you like 2",
+		"type": "gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Damn, for me? Seriously? Hey, that's real nice of you. This is fantastic.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you don't like": {
+		"key": "after receiving a gift you don't like",
+		"type": "gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Yeah, uh, thanks for this. Super great. Thanks. ",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you don't like 2": {
+		"key": "after receiving a gift you don't like 2",
+		"type": "gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Uh... Yeah. Sure, lil' buddy. Thanks.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you're neutral about": {
+		"key": "after receiving a gift you're neutral about",
+		"type": "gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Oh, shit, for me? This is nice; thanks, lil' buddy.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you're neutral about 2": {
+		"key": "after receiving a gift you're neutral about 2",
+		"type": "gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "C'mon, you shouldn't have. Thanks, though; appreciate it!",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 1": {
+		"key": "chatter 1",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "What's it like to be so small, huh? Valley must look even bigger. Mountain must look ridiculous.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 2": {
+		"key": "chatter 2",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Big shipment in this morning; least we're fully stocked, huh? Pain in the ass, but ah well.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 3": {
+		"key": "chatter 3",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Can lil critters like you eat, uh, sherbet? Ice cream? Eh, better safe than sorry, huh.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 4": {
+		"key": "chatter 4",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You been swimming at all, lil' buddy? You're fuckin, eh... sea chickens, right? Freaky.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 5": {
+		"key": "chatter 5",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Sometimes you make me feel a lilttle nutty, talkin' to a bird every time it comes in, y'know.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 6": {
+		"key": "chatter 6",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Anyone gives you issues, lil' buddy, you just point 'em out to me, alright? I got you.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 7": {
+		"key": "chatter 7",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Y'know, I don't think I've ever seen a quingee leave the valley. Kinda afraid to find out. Don't go take the train, alright?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 8": {
+		"key": "chatter 8",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "You got, like, a little quingee romance goin' on anywhere? ...Wait, yknow what? Don't tell me.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 9": {
+		"key": "chatter 9",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "So, uh, do you talk to any of the other valley animals? My spouse's got a sneether... kinda freaked out by it, though, personally.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 10": {
+		"key": "chatter 10",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Bullfrog",
+				"text": "Man, I could use some lunch. Still tryin' to keep my sugars down, though... you too, I bet, huh?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	}
+}

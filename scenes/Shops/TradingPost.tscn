@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://csqbs0iyymc1w"]
+
+[ext_resource type="Script" path="res://scenes/Shops/TradingPost.gd" id="1_to8eq"]
+[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_v32lo"]
+[ext_resource type="JSON" path="res://dialogue/Shopkeepers/Bullfrog.json" id="3_877a3"]
+[ext_resource type="Texture2D" uid="uid://c52bwtqskesls" path="res://assets/background/quingsterybgs_post.png" id="4_tltlf"]
+[ext_resource type="Texture2D" uid="uid://bklkymgeufrcb" path="res://assets/character/talksprites/npc_wander_sketch.png" id="5_8wmvj"]
+[ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="6_p17fq"]
+[ext_resource type="PackedScene" uid="uid://cm06xatxch52d" path="res://prefabs/UI/ItemMenu/BuyMenu.tscn" id="7_5non2"]
+[ext_resource type="PackedScene" uid="uid://bw7q1cc3tci2i" path="res://prefabs/UI/NavButtons/NavButtons.tscn" id="8_yuo3u"]
+
+[node name="TradingPost" type="Node2D"]
+script = ExtResource("1_to8eq")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("2_v32lo")]
+dialogue_file = ExtResource("3_877a3")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("4_tltlf")
+centered = false
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 480.0
+offset_right = 960.0
+offset_bottom = 540.0
+size_flags_vertical = 8
+
+[node name="Character" type="TextureRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -156.0
+offset_top = -449.0
+offset_right = 133.0
+offset_bottom = 24.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.1, 1.1)
+size_flags_horizontal = 4
+size_flags_vertical = 8
+texture = ExtResource("5_8wmvj")
+
+[node name="ShopBox" parent="." instance=ExtResource("6_p17fq")]
+
+[node name="TopBar" parent="ShopBox" index="1"]
+grow_horizontal = 1
+grow_vertical = 1
+
+[node name="BuyMenu" parent="." instance=ExtResource("7_5non2")]
+visible = false
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="NavButtons" parent="." instance=ExtResource("8_yuo3u")]
+offset_right = 960.0
+offset_bottom = 540.0
+
+[connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
+[connection signal="pressed" from="NavButtons/NavList/Button2" to="." method="_on_sell_pressed"]
+[connection signal="pressed" from="NavButtons/NavList/Button3" to="." method="_on_talk_pressed"]
+[connection signal="pressed" from="NavButtons/NavList/Button4" to="." method="_on_leave_pressed"]
+
+[editable path="ShopBox"]
+[editable path="NavButtons"]
