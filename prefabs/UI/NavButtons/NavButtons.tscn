@@ -40,6 +40,5 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = ExtResource("1_8lgn7")
 theme_type_variation = &"Button_Alt"
-disabled = true
 text = "Leave Store"
 metadata/onHoverText = "We are "
