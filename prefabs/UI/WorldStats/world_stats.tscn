@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://diobmjafrn7j0"]
+
+[ext_resource type="Script" path="res://prefabs/UI/WorldStats/WorldStats.gd" id="1_vmt8p"]
+
+[node name="WorldStats" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_vmt8p")
+
+[node name="CurrentDay" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 12.0
+offset_right = 870.0
+offset_bottom = 52.0
+text = "day"
+
+[node name="CurrentWeather" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 728.0
+offset_top = 10.0
+offset_right = 814.0
+offset_bottom = 44.0
+text = "weather"
