@@ -9,6 +9,8 @@ func _ready():
 	
 	for i in MapButtons.get_children():
 		i.map_focused.connect(update_panel)
+	
+	Global.newDay()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

@@ -1,10 +1,10 @@
 [gd_resource type="TileSet" load_steps=17 format=3 uid="uid://cwx7nq0li1fi1"]
 
-[ext_resource type="Texture2D" uid="uid://dsqy4psasswuh" path="res://assets/tile/tiles_puddle.png" id="1_s43or"]
+[ext_resource type="Texture2D" uid="uid://di7c5bln8d2o7" path="res://assets/tile/tiles_puddle.png" id="1_s43or"]
 [ext_resource type="Texture2D" uid="uid://2vphdrcvfcj3" path="res://assets/tile/ThroatTiles.png" id="2_c4taq"]
 [ext_resource type="PackedScene" uid="uid://daaxp1o7huxb" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.tscn" id="2_lnme1"]
 [ext_resource type="PackedScene" uid="uid://gvg8xyodjxn6" path="res://prefabs/TileScenes/Stairs/Stairs.tscn" id="3_6lvtm"]
-[ext_resource type="Texture2D" uid="uid://dxq0o84l6u1n3" path="res://assets/tile/tiles_water.png" id="3_kjd7d"]
+[ext_resource type="Texture2D" uid="uid://bbiaubsls65oa" path="res://assets/tile/tiles_water.png" id="3_kjd7d"]
 [ext_resource type="Texture2D" uid="uid://c0jumchtph5y1" path="res://assets/tile/iso_tile_template.png" id="4_jov4e"]
 [ext_resource type="PackedScene" uid="uid://c1omvl0dm8vl5" path="res://prefabs/TileScenes/GatherSpot/GatherSpot.tscn" id="5_tpmtv"]
 [ext_resource type="PackedScene" uid="uid://mfxb1gjncvlk" path="res://prefabs/Quingee/Quingee.tscn" id="6_ac1st"]

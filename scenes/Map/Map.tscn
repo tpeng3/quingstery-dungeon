@@ -1,19 +1,20 @@
-[gd_scene load_steps=16 format=3 uid="uid://dx0kws7hwpumu"]
+[gd_scene load_steps=17 format=3 uid="uid://dx0kws7hwpumu"]
 
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
 [ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
 [ext_resource type="Script" path="res://scenes/Map/Camera2D.gd" id="2_vecvs"]
 [ext_resource type="PackedScene" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
 [ext_resource type="PackedScene" uid="uid://c5evt78phsk3n" path="res://prefabs/MapButton/MapButton.tscn" id="4_618ha"]
-[ext_resource type="Texture2D" uid="uid://cqbp0f3r6orbp" path="res://assets/ui/locations/locations_townhall_pip.png" id="5_s1d2c"]
-[ext_resource type="Texture2D" uid="uid://bo1dw28nxmqj3" path="res://assets/ui/locations/locations_pecanhome_pip.png" id="6_62i57"]
-[ext_resource type="Texture2D" uid="uid://dkbboiaqvecbo" path="res://assets/ui/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
-[ext_resource type="Texture2D" uid="uid://dqnpxqjlgxml" path="res://assets/ui/locations/locations_acornhome_pip.png" id="8_y6cwr"]
-[ext_resource type="Texture2D" uid="uid://ct35jr0561r0v" path="res://assets/ui/locations/locations_marketplace_pip.png" id="9_ba8tq"]
-[ext_resource type="Texture2D" uid="uid://cxubk7ug2y8kn" path="res://assets/ui/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
+[ext_resource type="Texture2D" uid="uid://tb6wrfgfiif" path="res://assets/ui/locations/locations_townhall_pip.png" id="5_s1d2c"]
+[ext_resource type="Texture2D" uid="uid://cujbincuakxw3" path="res://assets/ui/locations/locations_pecanhome_pip.png" id="6_62i57"]
+[ext_resource type="Texture2D" uid="uid://gf5ow576th4" path="res://assets/ui/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
+[ext_resource type="Texture2D" uid="uid://villxl1rdl3s" path="res://assets/ui/locations/locations_acornhome_pip.png" id="8_y6cwr"]
+[ext_resource type="Texture2D" uid="uid://ch7dflyjfgx5i" path="res://assets/ui/locations/locations_marketplace_pip.png" id="9_ba8tq"]
+[ext_resource type="Texture2D" uid="uid://cemuo3irajl4u" path="res://assets/ui/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="12_j3ysv"]
-[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="13_dboj1"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="13_dboj1"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="14_ruq6n"]
+[ext_resource type="Script" path="res://prefabs/UI/WorldStats/WorldStats.gd" id="15_ay7p7"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d36gl"]
 
@@ -298,3 +299,26 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme = ExtResource("14_ruq6n")
 text = "Town Hall"
+
+[node name="WorldStats" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("15_ay7p7")
+
+[node name="CurrentDay" type="RichTextLabel" parent="WorldStats"]
+layout_mode = 0
+offset_left = 830.0
+offset_top = 12.0
+offset_right = 870.0
+offset_bottom = 52.0
+text = "day"
+
+[node name="CurrentWeather" type="RichTextLabel" parent="WorldStats"]
+layout_mode = 0
+offset_left = 728.0
+offset_top = 10.0
+offset_right = 814.0
+offset_bottom = 44.0
+text = "weather"
