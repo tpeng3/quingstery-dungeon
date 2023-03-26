@@ -1,0 +1,25 @@
+[gd_resource type="SpriteFrames" load_steps=4 format=3 uid="uid://daamhnd6ueq87"]
+
+[ext_resource type="Texture2D" uid="uid://b0byacj4056fi" path="res://assets/ui/quingprogress.png" id="1_8wemj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omwcq"]
+atlas = ExtResource("1_8wemj")
+region = Rect2(0, 0, 26, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hyv4p"]
+atlas = ExtResource("1_8wemj")
+region = Rect2(26, 0, 26, 18)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omwcq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hyv4p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

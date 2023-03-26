@@ -1,7 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://qehathayhhdl"]
+[gd_scene load_steps=9 format=3 uid="uid://qehathayhhdl"]
 
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="1_f2lqs"]
-[ext_resource type="Theme" path="res://theme/Scroll.tres" id="2_b412g"]
+[ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_b412g"]
+[ext_resource type="Texture2D" uid="uid://dajrkkk4ufh15" path="res://assets/ui/mountainprogress.png" id="2_tgc2h"]
+[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="3_eaifl"]
+[ext_resource type="SpriteFrames" uid="uid://daamhnd6ueq87" path="res://assets/ui/quingprogress.tres" id="4_kqlwo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75snv"]
+texture = ExtResource("2_tgc2h")
+region_rect = Rect2(0, 0, 6, 48)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bfmxa"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_x02ll"]
+blend_mode = 1
 
 [node name="StatusMenu" type="Control"]
 layout_mode = 3
@@ -32,6 +45,147 @@ patch_margin_right = 32
 patch_margin_bottom = 24
 axis_stretch_horizontal = 1
 axis_stretch_vertical = 1
+
+[node name="MainContentPadding" type="MarginContainer" parent="OuterPadding"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
+
+[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/MainContentPadding"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="OuterPadding/MainContentPadding/BoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 32
+
+[node name="ClimbProgress" type="ProgressBar" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer"]
+custom_minimum_size = Vector2(6, 360)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxTexture_75snv")
+theme_override_styles/fill = SubResource("StyleBoxFlat_bfmxa")
+value = 10.0
+fill_mode = 3
+show_percentage = false
+
+[node name="ProgressFill" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+material = SubResource("CanvasItemMaterial_x02ll")
+position = Vector2(3, 180)
+scale = Vector2(1, 3.75)
+texture = ExtResource("2_tgc2h")
+region_enabled = true
+region_rect = Rect2(8, 0, 6, 96)
+
+[node name="Throat" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+position = Vector2(3, 359)
+texture = ExtResource("2_tgc2h")
+region_enabled = true
+region_rect = Rect2(16, 54, 18, 18)
+
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/Throat"]
+offset_left = -48.0
+offset_top = -11.0
+offset_right = -11.0
+offset_bottom = 9.0
+theme = ExtResource("3_eaifl")
+theme_type_variation = &"Label_Bold"
+theme_override_font_sizes/font_size = 8
+text = "FL
+01"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="River" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+position = Vector2(3, 271)
+texture = ExtResource("2_tgc2h")
+region_enabled = true
+region_rect = Rect2(16, 72, 18, 18)
+
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/River"]
+offset_left = -48.0
+offset_top = -9.0
+offset_right = -11.0
+offset_bottom = 11.0
+theme = ExtResource("3_eaifl")
+theme_type_variation = &"Label_Bold"
+theme_override_font_sizes/font_size = 8
+text = "??"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Steps" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+position = Vector2(3, 183)
+texture = ExtResource("2_tgc2h")
+region_enabled = true
+region_rect = Rect2(16, 72, 18, 18)
+
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/Steps"]
+offset_left = -48.0
+offset_top = -9.0
+offset_right = -11.0
+offset_bottom = 11.0
+theme = ExtResource("3_eaifl")
+theme_type_variation = &"Label_Bold"
+theme_override_font_sizes/font_size = 8
+text = "??"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Peak" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+position = Vector2(3, 93)
+texture = ExtResource("2_tgc2h")
+region_enabled = true
+region_rect = Rect2(16, 72, 18, 18)
+
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/Peak"]
+offset_left = -48.0
+offset_top = -9.0
+offset_right = -11.0
+offset_bottom = 11.0
+theme = ExtResource("3_eaifl")
+theme_type_variation = &"Label_Bold"
+theme_override_font_sizes/font_size = 8
+text = "??"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="Crown" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+position = Vector2(3, -2)
+texture = ExtResource("2_tgc2h")
+region_enabled = true
+region_rect = Rect2(34, 0, 18, 16)
+
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/Crown"]
+offset_left = -48.0
+offset_top = -11.0
+offset_right = -11.0
+offset_bottom = 9.0
+theme = ExtResource("3_eaifl")
+theme_type_variation = &"Label_Bold"
+theme_override_font_sizes/font_size = 8
+text = "FL
+??"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="QuingProgress" type="AnimatedSprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+position = Vector2(26, 325)
+sprite_frames = ExtResource("4_kqlwo")
+frame_progress = 0.288246
+
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/QuingProgress"]
+offset_left = -11.0
+offset_top = 10.0
+offset_right = 22.0
+offset_bottom = 20.0
+theme = ExtResource("3_eaifl")
+theme_type_variation = &"Label_Bold"
+theme_override_font_sizes/font_size = 8
+text = "05"
+horizontal_alignment = 1
 
 [node name="TitleMargin" type="MarginContainer" parent="OuterPadding"]
 layout_mode = 2
