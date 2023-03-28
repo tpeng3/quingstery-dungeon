@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://scenes/Shops/TradingPost.gd" id="1_xdecf"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_yuh7w"]
 [ext_resource type="JSON" path="res://dialogue/Shopkeepers/Oleander.json" id="3_50mok"]
-[ext_resource type="Texture2D" uid="uid://ds0ui3languua" path="res://assets/background/quingsterybgs_townhall.png" id="4_almsi"]
-[ext_resource type="Texture2D" uid="uid://buwdb7ej62ikk" path="res://assets/character/talksprites/quingesterynpc_ole_sketch.png" id="5_l8ywa"]
+[ext_resource type="Texture2D" uid="uid://cwyxb2ghc4max" path="res://assets/background/quingsterybgs_townhall.png" id="4_almsi"]
+[ext_resource type="Texture2D" uid="uid://cryi6b4qb3ifd" path="res://assets/character/talksprites/quingesterynpc_ole_flats.png" id="5_ute2u"]
 [ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="6_y1wdc"]
 [ext_resource type="PackedScene" uid="uid://cm06xatxch52d" path="res://prefabs/UI/ItemMenu/BuyMenu.tscn" id="7_jxhy3"]
 [ext_resource type="PackedScene" uid="uid://bw7q1cc3tci2i" path="res://prefabs/UI/NavButtons/NavButtons.tscn" id="8_81g58"]
@@ -30,21 +30,15 @@ size_flags_vertical = 8
 
 [node name="Character" type="TextureRect" parent="Control"]
 layout_mode = 1
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
+anchors_preset = 15
+anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -156.0
-offset_top = -449.0
-offset_right = 133.0
-offset_bottom = 24.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 scale = Vector2(1.1, 1.1)
 size_flags_horizontal = 4
 size_flags_vertical = 8
-texture = ExtResource("5_l8ywa")
+texture = ExtResource("5_ute2u")
 
 [node name="ShopBox" parent="." instance=ExtResource("6_y1wdc")]
 

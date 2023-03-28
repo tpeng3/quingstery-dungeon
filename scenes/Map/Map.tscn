@@ -1,20 +1,34 @@
-[gd_scene load_steps=17 format=3 uid="uid://dx0kws7hwpumu"]
+[gd_scene load_steps=31 format=3 uid="uid://dx0kws7hwpumu"]
 
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
 [ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
 [ext_resource type="Script" path="res://scenes/Map/Camera2D.gd" id="2_vecvs"]
 [ext_resource type="PackedScene" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
 [ext_resource type="PackedScene" uid="uid://c5evt78phsk3n" path="res://prefabs/MapButton/MapButton.tscn" id="4_618ha"]
-[ext_resource type="Texture2D" uid="uid://tb6wrfgfiif" path="res://assets/UI/locations/locations_townhall_pip.png" id="5_s1d2c"]
-[ext_resource type="Texture2D" uid="uid://cujbincuakxw3" path="res://assets/UI/locations/locations_pecanhome_pip.png" id="6_62i57"]
-[ext_resource type="Texture2D" uid="uid://gf5ow576th4" path="res://assets/UI/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
-[ext_resource type="Texture2D" uid="uid://villxl1rdl3s" path="res://assets/UI/locations/locations_acornhome_pip.png" id="8_y6cwr"]
-[ext_resource type="Texture2D" uid="uid://ch7dflyjfgx5i" path="res://assets/UI/locations/locations_marketplace_pip.png" id="9_ba8tq"]
-[ext_resource type="Texture2D" uid="uid://cemuo3irajl4u" path="res://assets/UI/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
+[ext_resource type="Texture2D" uid="uid://cix760x53goy7" path="res://assets/ui/locations/locations_galinnpeak_pip.png" id="5_4c7dp"]
+[ext_resource type="Texture2D" uid="uid://cqbp0f3r6orbp" path="res://assets/ui/locations/locations_townhall_pip.png" id="5_s1d2c"]
+[ext_resource type="Texture2D" uid="uid://bo1dw28nxmqj3" path="res://assets/ui/locations/locations_pecanhome_pip.png" id="6_62i57"]
+[ext_resource type="Texture2D" uid="uid://dkbboiaqvecbo" path="res://assets/ui/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
+[ext_resource type="Texture2D" uid="uid://dqnpxqjlgxml" path="res://assets/ui/locations/locations_acornhome_pip.png" id="8_y6cwr"]
+[ext_resource type="Texture2D" uid="uid://ct35jr0561r0v" path="res://assets/ui/locations/locations_marketplace_pip.png" id="9_ba8tq"]
+[ext_resource type="Texture2D" uid="uid://cxubk7ug2y8kn" path="res://assets/ui/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="12_j3ysv"]
-[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="13_dboj1"]
+[ext_resource type="Texture2D" uid="uid://cq0atsfy2k28j" path="res://assets/ui/locations/locations_almondhome_pip.png" id="12_mrm7y"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="13_dboj1"]
+[ext_resource type="Texture2D" uid="uid://dup2skqu7cfak" path="res://assets/ui/locations/locations_attithcave_pip.png" id="13_rxcjq"]
+[ext_resource type="Texture2D" uid="uid://dj0ygsjnm7mcw" path="res://assets/ui/locations/locations_briarspond_pip.png" id="14_3e0pf"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="14_ruq6n"]
+[ext_resource type="Texture2D" uid="uid://c2v42kgwdkvb2" path="res://assets/ui/locations/locations_cashewhome_pip.png" id="15_r0no2"]
 [ext_resource type="PackedScene" uid="uid://diobmjafrn7j0" path="res://prefabs/UI/WorldStats/world_stats.tscn" id="15_savww"]
+[ext_resource type="Texture2D" uid="uid://duspp4bnqhdmh" path="res://assets/ui/locations/locations_lakegalinn_pip.png" id="16_wltem"]
+[ext_resource type="Texture2D" uid="uid://dmwrkkbinlsqa" path="res://assets/ui/locations/locations_lookoutpoint_pip.png" id="17_vsxwn"]
+[ext_resource type="Texture2D" uid="uid://cohbo3nhb5fog" path="res://assets/ui/locations/locations_pistachiohome_pip.png" id="18_y7wcs"]
+[ext_resource type="Texture2D" uid="uid://fao2ua3hfcsh" path="res://assets/ui/locations/locations_scrapyard_pip.png" id="19_ynvys"]
+[ext_resource type="Texture2D" uid="uid://pruu5i0ikvx4" path="res://assets/ui/locations/locations_forgottenwoman_pip.png" id="20_kypp1"]
+[ext_resource type="Texture2D" uid="uid://c7iwdxjhijexw" path="res://assets/ui/locations/locations_themines_pip.png" id="21_gk4hp"]
+[ext_resource type="Texture2D" uid="uid://dej2opkxlqbih" path="res://assets/ui/locations/locations_walnuthome_pip.png" id="22_c0kj6"]
+[ext_resource type="Texture2D" uid="uid://duroaskhl38kf" path="res://assets/ui/locations/locations_abandonedstorehouse_pip.png" id="23_0j1ud"]
+[ext_resource type="Texture2D" uid="uid://basgsredbnex1" path="res://assets/ui/locations/locations_watertower_pip.png" id="24_5ef4j"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d36gl"]
 
@@ -48,6 +62,16 @@ offset_bottom = 40.0
 size_flags_vertical = 8
 metadata/_edit_use_anchors_ = true
 
+[node name="Galinn Peak" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+offset_left = 136.0
+offset_top = 176.0
+offset_right = 176.0
+offset_bottom = 176.0
+scale = Vector2(1, 1)
+focus_next = NodePath("../Bulletin Board")
+preview = ExtResource("5_4c7dp")
+mapDesc = "Daunting in its long climb and unconventional terrain, a trek to the top is a risky endeavor but necessary if you wish to regain your human form. Are you ready?"
+
 [node name="Town Hall" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1178.0
@@ -57,7 +81,7 @@ offset_bottom = 529.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Bulletin Board")
 preview = ExtResource("5_s1d2c")
-mapDesc = "This is the Town Hall."
+mapDesc = "The Town Hall helps ensure you don't lose your progress in your adventure and stores any items you want to safekeep."
 
 [node name="Bulletin Board" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
@@ -69,7 +93,7 @@ scale = Vector2(1, 1)
 focus_next = NodePath("../Trading Post")
 focus_previous = NodePath("../Town Hall")
 preview = ExtResource("5_s1d2c")
-mapDesc = "whee bulletin board"
+mapDesc = "Served as a hub for town notices and requests. Accepting quests can lead to helpful rewards for the journey ahead."
 
 [node name="Trading Post" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
@@ -82,7 +106,7 @@ focus_next = NodePath("../Tian\'s Corner")
 focus_previous = NodePath("../Bulletin Board")
 scene = "TradingPost"
 preview = ExtResource("6_62i57")
-mapDesc = "(frogchamp)"
+mapDesc = "The main spot in town, it serves as a place to buy or sell general goods and plan for the trip ahead."
 
 [node name="Tian\'s Corner" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
@@ -94,9 +118,9 @@ scale = Vector2(1, 1)
 focus_next = NodePath("../Textile Services")
 focus_previous = NodePath("../Trading Post")
 preview = ExtResource("7_0i0u8")
-mapDesc = "someone add flavor text for me"
+mapDesc = "Fresh from the owner's garden plot in Peanut Home, this store sells produce from the Archipelago (Asian-inspired) as well as your regular kitchen staples!"
 
-[node name="Bake n\' Roast" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+[node name="Bake & Roast" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1298.0
 offset_top = 712.0
@@ -104,7 +128,7 @@ offset_right = 1338.0
 offset_bottom = 712.0
 scale = Vector2(1, 1)
 preview = ExtResource("8_y6cwr")
-mapDesc = "aaaaaaaa"
+mapDesc = "A cafe for baked goods and coffee with a charming homey-plant rustic atmosphere."
 
 [node name="Textile Services" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
@@ -116,7 +140,7 @@ scale = Vector2(1, 1)
 focus_next = NodePath("../Fire Station")
 focus_previous = NodePath("../Tian\'s Corner")
 preview = ExtResource("8_y6cwr")
-mapDesc = "hi noah"
+mapDesc = "A small textile store that produces and sells fabrics, knit goods, and woven goods."
 
 [node name="Fire Station" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
@@ -126,7 +150,7 @@ offset_right = 1290.0
 offset_bottom = 466.0
 scale = Vector2(1, 1)
 preview = ExtResource("9_ba8tq")
-mapDesc = "hi zane"
+mapDesc = "In addition to fire prevention, the Fire Station performs search and rescue operations for those lost on the peak and provides upgrades for equipment to increase safety."
 
 [node name="Meteor Institute" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
@@ -136,70 +160,208 @@ offset_right = 624.0
 offset_bottom = 438.0
 scale = Vector2(1, 1)
 preview = ExtResource("10_satxt")
-mapDesc = "hi piper"
+mapDesc = "Dedicated to collecting meteorological observations and forecasting for the areas within Galinn's Peak, but open for enquiries and anyone who may have questions about the weather."
 
-[node name="The Mines" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
-visible = false
-layout_mode = 2
-offset_top = 32.0
+[node name="NPC Spots" type="Control" parent="SubViewportContainer/SubViewport/MapButtons"]
+anchors_preset = 0
 offset_right = 40.0
-offset_bottom = 32.0
+offset_bottom = 40.0
+
+[node name="Almond Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 585.0
+offset_top = 579.0
+offset_right = 625.0
+offset_bottom = 579.0
+scale = Vector2(1, 1)
+preview = ExtResource("12_mrm7y")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="Attith Cave" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 320.0
+offset_top = 502.0
+offset_right = 360.0
+offset_bottom = 502.0
+scale = Vector2(1, 1)
+preview = ExtResource("13_rxcjq")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="Briar\'s Pond" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1033.0
+offset_top = 718.0
+offset_right = 1073.0
+offset_bottom = 718.0
+scale = Vector2(1, 1)
+preview = ExtResource("14_3e0pf")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="Butternut Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1000.0
+offset_top = 422.0
+offset_right = 1040.0
+offset_bottom = 422.0
 scale = Vector2(1, 1)
 skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Peanut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
-visible = false
+[node name="Cashew Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_top = 32.0
-offset_right = 40.0
-offset_bottom = 32.0
+offset_left = 1308.0
+offset_top = 376.0
+offset_right = 1348.0
+offset_bottom = 376.0
 scale = Vector2(1, 1)
+preview = ExtResource("15_r0no2")
 skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Walnut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
-visible = false
+[node name="Hazelnut Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_top = 32.0
-offset_right = 40.0
-offset_bottom = 32.0
+offset_left = 618.0
+offset_top = 452.0
+offset_right = 658.0
+offset_bottom = 452.0
 scale = Vector2(1, 1)
+preview = ExtResource("10_satxt")
 skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Pecan Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
-visible = false
+[node name="Lake Galinn" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_top = 32.0
-offset_right = 40.0
-offset_bottom = 32.0
+offset_left = 1246.0
+offset_top = 844.0
+offset_right = 1286.0
+offset_bottom = 844.0
 scale = Vector2(1, 1)
+preview = ExtResource("16_wltem")
 skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Butternut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
-visible = false
+[node name="Lookout Point" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_top = 32.0
-offset_right = 40.0
-offset_bottom = 32.0
+offset_left = 818.0
+offset_top = 470.0
+offset_right = 858.0
+offset_bottom = 470.0
 scale = Vector2(1, 1)
+preview = ExtResource("17_vsxwn")
 skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="The Mines6" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
-visible = false
+[node name="Peanut Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_top = 32.0
-offset_right = 40.0
-offset_bottom = 32.0
+offset_left = 934.0
+offset_top = 652.0
+offset_right = 974.0
+offset_bottom = 652.0
 scale = Vector2(1, 1)
+preview = ExtResource("7_0i0u8")
 skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="The Mines7" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
-visible = false
+[node name="Pecan Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_top = 32.0
-offset_right = 40.0
-offset_bottom = 32.0
+offset_left = 1056.0
+offset_top = 592.0
+offset_right = 1096.0
+offset_bottom = 592.0
 scale = Vector2(1, 1)
+preview = ExtResource("6_62i57")
 skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="Pistachio Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+offset_left = 106.0
+offset_top = 352.0
+offset_right = 146.0
+offset_bottom = 352.0
+scale = Vector2(1, 1)
+preview = ExtResource("18_y7wcs")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="Scrap Yard" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 903.0
+offset_top = 510.0
+offset_right = 943.0
+offset_bottom = 510.0
+scale = Vector2(1, 1)
+preview = ExtResource("19_ynvys")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="The Forgotten Woman" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1528.0
+offset_top = 930.0
+offset_right = 1568.0
+offset_bottom = 930.0
+scale = Vector2(1, 1)
+preview = ExtResource("20_kypp1")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="The Mines" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 821.0
+offset_top = 563.0
+offset_right = 861.0
+offset_bottom = 563.0
+scale = Vector2(1, 1)
+preview = ExtResource("21_gk4hp")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="Town Square" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1210.0
+offset_top = 546.0
+offset_right = 1250.0
+offset_bottom = 546.0
+scale = Vector2(1, 1)
+preview = ExtResource("5_s1d2c")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="Walnut Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1360.0
+offset_top = 974.0
+offset_right = 1400.0
+offset_bottom = 974.0
+scale = Vector2(1, 1)
+preview = ExtResource("22_c0kj6")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="Waste Disposal" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1386.0
+offset_top = 452.0
+offset_right = 1426.0
+offset_bottom = 452.0
+scale = Vector2(1, 1)
+preview = ExtResource("23_0j1ud")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="Water Tower" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1224.0
+offset_top = 410.0
+offset_right = 1264.0
+offset_bottom = 410.0
+scale = Vector2(1, 1)
+preview = ExtResource("24_5ef4j")
+skipPreview = true
+mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -226,11 +388,11 @@ offset_bottom = 118.0
 layout_mode = 2
 text = "Town Hall"
 
-[node name="Trading Post" parent="Control/VBoxContainer" instance=ExtResource("3_kren2")]
+[node name="Bulletin Board" parent="Control/VBoxContainer" instance=ExtResource("3_kren2")]
 layout_mode = 2
 text = "Bulletin Board"
 
-[node name="Button3" parent="Control/VBoxContainer" instance=ExtResource("3_kren2")]
+[node name="Explore Town" parent="Control/VBoxContainer" instance=ExtResource("3_kren2")]
 layout_mode = 2
 text = "Explore Town"
 

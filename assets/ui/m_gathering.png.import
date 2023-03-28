@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b13sg44rrgni3"
-path="res://.godot/imported/m_gathering.png-b49501e5a881a675499e94408a55366e.ctex"
+path="res://.godot/imported/m_gathering.png-a82cccf4e73e841a9c28437de15d59b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/UI/m_gathering.png"
-dest_files=["res://.godot/imported/m_gathering.png-b49501e5a881a675499e94408a55366e.ctex"]
+source_file="res://assets/ui/m_gathering.png"
+dest_files=["res://.godot/imported/m_gathering.png-a82cccf4e73e841a9c28437de15d59b9.ctex"]
 
 [params]
 
