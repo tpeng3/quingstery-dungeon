@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=13 format=3 uid="uid://dksvrshxgc4ql"]
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://dksvrshxgc4ql"]
 
 [ext_resource type="FontFile" uid="uid://c5jxg6vswppim" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_ua05e"]
 [ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="2_jnril"]
@@ -10,6 +10,8 @@
 [ext_resource type="FontFile" uid="uid://dkcuhhgjtpmny" path="res://assets/ui/Dogica/dogicapixel.ttf" id="5_ipy2b"]
 [ext_resource type="FontFile" uid="uid://bqqo6jyn854kp" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="7_g4pud"]
 [ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="7_wbjn2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ql0t"]
 
@@ -46,6 +48,7 @@ Label/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
 Label/fonts/font = ExtResource("5_ipy2b")
 Label_Bold/base_type = &"Label"
 Label_Bold/fonts/font = ExtResource("7_g4pud")
+Label_Bold/styles/normal = SubResource("StyleBoxTexture_shvys")
 Label_Fancy/base_type = &"Label"
 Label_Fancy/fonts/font = ExtResource("1_ua05e")
 Label_Grn/base_type = &"Label"

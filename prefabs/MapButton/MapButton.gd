@@ -10,7 +10,7 @@ var bip:Texture2D = load("res://assets/ui/mapbip.png")
 
 signal map_focused
 
-func _on_focus_entered():
+func enter_focus():
 	if not skipPreview:
 		$Sprite.texture = preview
 		$AnimationPlayer.play("scale")
@@ -18,7 +18,8 @@ func _on_focus_entered():
 	z_index = 1
 	emit_signal("map_focused", self)
 
-func _on_focus_exited():
+func exit_focus():
+	print("exit focus", self.name)
 	if not skipPreview:
 		$AnimationPlayer.play_backwards("scale")
 		await $AnimationPlayer.animation_finished

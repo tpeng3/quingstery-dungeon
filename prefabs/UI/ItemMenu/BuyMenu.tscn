@@ -1,50 +1,63 @@
-[gd_scene load_steps=11 format=3 uid="uid://cm06xatxch52d"]
+[gd_scene load_steps=12 format=3 uid="uid://cm06xatxch52d"]
 
 [ext_resource type="PackedScene" uid="uid://cdirrc5rr8huy" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_g5nft"]
+[ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="2_0xo8v"]
 [ext_resource type="Texture2D" uid="uid://b2jvgs4owo3dw" path="res://assets/ui/arrows.png" id="2_wmtfs"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o51c0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6svti"]
 atlas = ExtResource("2_wmtfs")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e82kt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_70guj"]
 atlas = ExtResource("2_wmtfs")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mxouv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjes3"]
 atlas = ExtResource("2_wmtfs")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vqkl2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa50i"]
 atlas = ExtResource("2_wmtfs")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8mlrc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_l2lun"]
 atlas = ExtResource("2_wmtfs")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ah15m"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cwmyb"]
 atlas = ExtResource("2_wmtfs")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3jllw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei2is"]
 atlas = ExtResource("2_wmtfs")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dr5fy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mv6v"]
 atlas = ExtResource("2_wmtfs")
 region = Rect2(27, 0, 9, 9)
 
 [node name="BuyMenu" instance=ExtResource("1_g5nft")]
 
+[node name="ListItem" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" index="0" instance=ExtResource("2_0xo8v")]
+layout_mode = 2
+
+[node name="ListItem2" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" index="1" instance=ExtResource("2_0xo8v")]
+layout_mode = 2
+
+[node name="ListItem3" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" index="2" instance=ExtResource("2_0xo8v")]
+layout_mode = 2
+
+[node name="ListItem4" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" index="3" instance=ExtResource("2_0xo8v")]
+layout_mode = 2
+
 [node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
-texture_normal = SubResource("AtlasTexture_o51c0")
-texture_pressed = SubResource("AtlasTexture_e82kt")
-texture_disabled = SubResource("AtlasTexture_mxouv")
-texture_focused = SubResource("AtlasTexture_vqkl2")
+texture_normal = SubResource("AtlasTexture_6svti")
+texture_pressed = SubResource("AtlasTexture_70guj")
+texture_disabled = SubResource("AtlasTexture_qjes3")
+texture_focused = SubResource("AtlasTexture_aa50i")
 
 [node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
-texture_normal = SubResource("AtlasTexture_8mlrc")
-texture_pressed = SubResource("AtlasTexture_ah15m")
-texture_disabled = SubResource("AtlasTexture_3jllw")
-texture_focused = SubResource("AtlasTexture_dr5fy")
+texture_normal = SubResource("AtlasTexture_l2lun")
+texture_pressed = SubResource("AtlasTexture_cwmyb")
+texture_disabled = SubResource("AtlasTexture_ei2is")
+texture_focused = SubResource("AtlasTexture_4mv6v")

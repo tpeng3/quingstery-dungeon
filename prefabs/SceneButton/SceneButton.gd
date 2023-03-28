@@ -2,18 +2,18 @@ extends Button
 
 @export var scene: String
 
+signal on_focus
+signal on_exit
+
 func _ready() -> void:
 	pass
 
-func _on_button_button_up():
+func _on_pressed():
 	if scene:
 		SceneManager.change_scene(scene)
-	else:
-		print("TODO: screen hasn't been set yet")
 
-func _on_reset_button_up():
-	SceneManager.reset_scene_manager()
+func _on_focus_entered():
+	on_focus.emit(self)
 
-func _on_loading_scene_button_up():
-	SceneManager.set_recorded_scene(scene)
-	SceneManager.change_scene("loading")
+func _on_focus_exited():
+	on_exit.emit(self)

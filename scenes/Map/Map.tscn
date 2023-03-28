@@ -1,20 +1,24 @@
-[gd_scene load_steps=31 format=3 uid="uid://dx0kws7hwpumu"]
+[gd_scene load_steps=50 format=3 uid="uid://dx0kws7hwpumu"]
 
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
 [ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
 [ext_resource type="Script" path="res://scenes/Map/Camera2D.gd" id="2_vecvs"]
-[ext_resource type="PackedScene" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
+[ext_resource type="PackedScene" uid="uid://dnpqq4mosh4n7" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
 [ext_resource type="PackedScene" uid="uid://c5evt78phsk3n" path="res://prefabs/MapButton/MapButton.tscn" id="4_618ha"]
 [ext_resource type="Texture2D" uid="uid://cix760x53goy7" path="res://assets/ui/locations/locations_galinnpeak_pip.png" id="5_4c7dp"]
 [ext_resource type="Texture2D" uid="uid://cqbp0f3r6orbp" path="res://assets/ui/locations/locations_townhall_pip.png" id="5_s1d2c"]
 [ext_resource type="Texture2D" uid="uid://bo1dw28nxmqj3" path="res://assets/ui/locations/locations_pecanhome_pip.png" id="6_62i57"]
 [ext_resource type="Texture2D" uid="uid://dkbboiaqvecbo" path="res://assets/ui/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
-[ext_resource type="Texture2D" uid="uid://dqnpxqjlgxml" path="res://assets/ui/locations/locations_acornhome_pip.png" id="8_y6cwr"]
-[ext_resource type="Texture2D" uid="uid://ct35jr0561r0v" path="res://assets/ui/locations/locations_marketplace_pip.png" id="9_ba8tq"]
+[ext_resource type="Texture2D" uid="uid://bqrrmbrni3rxq" path="res://assets/ui/locations/locations_bulletinboard_pip.png" id="7_5hqkh"]
+[ext_resource type="Texture2D" uid="uid://cssu1uptuudji" path="res://assets/ui/locations/locations_tradingpost_pip.png" id="8_d8ve6"]
+[ext_resource type="Texture2D" uid="uid://b3hlvs1hsbrkt" path="res://assets/ui/locations/locations_tianscorner_pip.png" id="9_m1ovn"]
+[ext_resource type="Texture2D" uid="uid://ciybfpx5xp5vd" path="res://assets/ui/locations/locations_bakeroast_pip.png" id="10_nbn57"]
 [ext_resource type="Texture2D" uid="uid://cxubk7ug2y8kn" path="res://assets/ui/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
-[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="12_j3ysv"]
+[ext_resource type="Texture2D" uid="uid://1ub3bnu13li6" path="res://assets/ui/locations/locations_textileservices_pip.png" id="11_tv7ax"]
+[ext_resource type="Texture2D" uid="uid://bu5ptdka7xr1l" path="res://assets/ui/locations/locations_firestation_pip.png" id="12_122ll"]
 [ext_resource type="Texture2D" uid="uid://cq0atsfy2k28j" path="res://assets/ui/locations/locations_almondhome_pip.png" id="12_mrm7y"]
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="13_dboj1"]
+[ext_resource type="Texture2D" uid="uid://uls6388udgid" path="res://assets/ui/locations/locations_meteorologicalinstitute_pip.png" id="13_qm57g"]
 [ext_resource type="Texture2D" uid="uid://dup2skqu7cfak" path="res://assets/ui/locations/locations_attithcave_pip.png" id="13_rxcjq"]
 [ext_resource type="Texture2D" uid="uid://dj0ygsjnm7mcw" path="res://assets/ui/locations/locations_briarspond_pip.png" id="14_3e0pf"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="14_ruq6n"]
@@ -29,6 +33,79 @@
 [ext_resource type="Texture2D" uid="uid://dej2opkxlqbih" path="res://assets/ui/locations/locations_walnuthome_pip.png" id="22_c0kj6"]
 [ext_resource type="Texture2D" uid="uid://duroaskhl38kf" path="res://assets/ui/locations/locations_abandonedstorehouse_pip.png" id="23_0j1ud"]
 [ext_resource type="Texture2D" uid="uid://basgsredbnex1" path="res://assets/ui/locations/locations_watertower_pip.png" id="24_5ef4j"]
+[ext_resource type="FontFile" uid="uid://c5jxg6vswppim" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="29_ovivd"]
+[ext_resource type="PackedScene" uid="uid://bfkcav2syaqel" path="res://prefabs/UI/Map/MapItem.tscn" id="30_q7jcd"]
+[ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="30_tvpyi"]
+[ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="31_rhg1i"]
+[ext_resource type="StyleBox" uid="uid://xk12q87v443s" path="res://theme/tex_MenuSign_L.tres" id="32_i2spu"]
+[ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="33_ibrkh"]
+[ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="34_nh7ep"]
+[ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="35_2n2ik"]
+[ext_resource type="FontFile" uid="uid://dkcuhhgjtpmny" path="res://assets/ui/Dogica/dogicapixel.ttf" id="36_t3381"]
+[ext_resource type="FontFile" uid="uid://bqqo6jyn854kp" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="37_pca6x"]
+[ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="38_1lj55"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ql0t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4o7b6"]
+bg_color = Color(0.729412, 0.384314, 0.294118, 1)
+
+[sub_resource type="Theme" id="Theme_vjmah"]
+Button/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
+Button/colors/font_disabled_color = Color(0.211765, 0.00784314, 0.396078, 0.25098)
+Button/colors/font_focus_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/colors/font_hover_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/colors/font_hover_pressed_color = Color(0.729412, 0.384314, 0.294118, 1)
+Button/colors/font_pressed_color = Color(0.729412, 0.384314, 0.294118, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("29_ovivd")
+Button/styles/disabled = ExtResource("30_tvpyi")
+Button/styles/focus = ExtResource("31_rhg1i")
+Button/styles/hover = ExtResource("31_rhg1i")
+Button/styles/normal = ExtResource("30_tvpyi")
+Button/styles/pressed = ExtResource("31_rhg1i")
+Button_Alt/base_type = &"Button"
+Button_Alt/styles/disabled = ExtResource("32_i2spu")
+Button_Alt/styles/focus = ExtResource("33_ibrkh")
+Button_Alt/styles/hover = ExtResource("33_ibrkh")
+Button_Alt/styles/normal = ExtResource("32_i2spu")
+Button_Alt/styles/pressed = ExtResource("33_ibrkh")
+Button_Alt2/base_type = &"Button"
+Button_Alt2/styles/disabled = ExtResource("34_nh7ep")
+Button_Alt2/styles/focus = ExtResource("35_2n2ik")
+Button_Alt2/styles/hover = ExtResource("35_2n2ik")
+Button_Alt2/styles/normal = ExtResource("34_nh7ep")
+Button_Alt2/styles/pressed = ExtResource("35_2n2ik")
+Label/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
+Label/fonts/font = ExtResource("36_t3381")
+Label_Bold/base_type = &"Label"
+Label_Bold/fonts/font = ExtResource("37_pca6x")
+Label_Bold/styles/normal = SubResource("StyleBoxTexture_shvys")
+Label_Fancy/base_type = &"Label"
+Label_Fancy/fonts/font = ExtResource("29_ovivd")
+Label_Grn/base_type = &"Label"
+Label_Grn/colors/font_color = Color(0.258824, 0.290196, 0.0705882, 1)
+Label_Light/base_type = &"Label"
+Label_Light/colors/font_color = Color(0.729412, 0.384314, 0.294118, 1)
+Label_Light_Bold/base_type = &"Label"
+Label_Light_Bold/colors/font_color = Color(0.729412, 0.384314, 0.294118, 1)
+Label_Light_Bold/fonts/font = ExtResource("37_pca6x")
+Label_Red/base_type = &"Label"
+Label_Red/colors/font_color = Color(0.505882, 0.0235294, 0.0666667, 1)
+Label_Sign/base_type = &"Label"
+Label_Sign/fonts/font = ExtResource("29_ovivd")
+Label_Sign/styles/normal = ExtResource("34_nh7ep")
+Panel/styles/panel = SubResource("StyleBoxEmpty_1ql0t")
+Panel_Highlight/base_type = &"Panel"
+Panel_Highlight/styles/panel = SubResource("StyleBoxFlat_4o7b6")
+RichTextLabel/colors/default_color = Color(0.215686, 0.00784314, 0.396078, 1)
+RichTextLabel/constants/line_separation = 3
+RichTextLabel/font_sizes/normal_font_size = 16
+RichTextLabel/fonts/bold_font = ExtResource("37_pca6x")
+RichTextLabel/fonts/normal_font = ExtResource("36_t3381")
+RichTextLabel/styles/normal = ExtResource("38_1lj55")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d36gl"]
 
@@ -92,7 +169,7 @@ offset_bottom = 524.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Trading Post")
 focus_previous = NodePath("../Town Hall")
-preview = ExtResource("5_s1d2c")
+preview = ExtResource("7_5hqkh")
 mapDesc = "Served as a hub for town notices and requests. Accepting quests can lead to helpful rewards for the journey ahead."
 
 [node name="Trading Post" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -105,7 +182,7 @@ scale = Vector2(1, 1)
 focus_next = NodePath("../Tian\'s Corner")
 focus_previous = NodePath("../Bulletin Board")
 scene = "TradingPost"
-preview = ExtResource("6_62i57")
+preview = ExtResource("8_d8ve6")
 mapDesc = "The main spot in town, it serves as a place to buy or sell general goods and plan for the trip ahead."
 
 [node name="Tian\'s Corner" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -117,7 +194,7 @@ offset_bottom = 626.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Textile Services")
 focus_previous = NodePath("../Trading Post")
-preview = ExtResource("7_0i0u8")
+preview = ExtResource("9_m1ovn")
 mapDesc = "Fresh from the owner's garden plot in Peanut Home, this store sells produce from the Archipelago (Asian-inspired) as well as your regular kitchen staples!"
 
 [node name="Bake & Roast" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -127,7 +204,7 @@ offset_top = 712.0
 offset_right = 1338.0
 offset_bottom = 712.0
 scale = Vector2(1, 1)
-preview = ExtResource("8_y6cwr")
+preview = ExtResource("10_nbn57")
 mapDesc = "A cafe for baked goods and coffee with a charming homey-plant rustic atmosphere."
 
 [node name="Textile Services" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -139,7 +216,7 @@ offset_bottom = 736.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Fire Station")
 focus_previous = NodePath("../Tian\'s Corner")
-preview = ExtResource("8_y6cwr")
+preview = ExtResource("11_tv7ax")
 mapDesc = "A small textile store that produces and sells fabrics, knit goods, and woven goods."
 
 [node name="Fire Station" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -149,25 +226,20 @@ offset_top = 466.0
 offset_right = 1290.0
 offset_bottom = 466.0
 scale = Vector2(1, 1)
-preview = ExtResource("9_ba8tq")
-mapDesc = "In addition to fire prevention, the Fire Station performs search and rescue operations for those lost on the peak and provides upgrades for equipment to increase safety."
+preview = ExtResource("12_122ll")
+mapDesc = "In addition to fire prevention, the Fire Station performs search and rescue operations for those lost on the Peak and provides upgrades to safety equipment."
 
-[node name="Meteor Institute" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+[node name="Meteorological Institute" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 584.0
 offset_top = 438.0
 offset_right = 624.0
 offset_bottom = 438.0
 scale = Vector2(1, 1)
-preview = ExtResource("10_satxt")
-mapDesc = "Dedicated to collecting meteorological observations and forecasting for the areas within Galinn's Peak, but open for enquiries and anyone who may have questions about the weather."
+preview = ExtResource("13_qm57g")
+mapDesc = "Dedicated to collecting meteorological observations for the areas within Galinn's Peak, and open for enquiries about the weather."
 
-[node name="NPC Spots" type="Control" parent="SubViewportContainer/SubViewport/MapButtons"]
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Almond Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Almond Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 585.0
 offset_top = 579.0
@@ -178,7 +250,7 @@ preview = ExtResource("12_mrm7y")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Attith Cave" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Attith Cave" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 320.0
 offset_top = 502.0
@@ -189,7 +261,7 @@ preview = ExtResource("13_rxcjq")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Briar\'s Pond" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Briar\'s Pond" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1033.0
 offset_top = 718.0
@@ -200,7 +272,7 @@ preview = ExtResource("14_3e0pf")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Butternut Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Butternut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1000.0
 offset_top = 422.0
@@ -210,7 +282,7 @@ scale = Vector2(1, 1)
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Cashew Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Cashew Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1308.0
 offset_top = 376.0
@@ -221,7 +293,7 @@ preview = ExtResource("15_r0no2")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Hazelnut Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Hazelnut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 618.0
 offset_top = 452.0
@@ -232,7 +304,7 @@ preview = ExtResource("10_satxt")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Lake Galinn" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Lake Galinn" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1246.0
 offset_top = 844.0
@@ -243,7 +315,7 @@ preview = ExtResource("16_wltem")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Lookout Point" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Lookout Point" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 818.0
 offset_top = 470.0
@@ -254,7 +326,7 @@ preview = ExtResource("17_vsxwn")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Peanut Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Peanut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 934.0
 offset_top = 652.0
@@ -265,7 +337,7 @@ preview = ExtResource("7_0i0u8")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Pecan Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Pecan Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1056.0
 offset_top = 592.0
@@ -276,7 +348,7 @@ preview = ExtResource("6_62i57")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Pistachio Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Pistachio Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 offset_left = 106.0
 offset_top = 352.0
 offset_right = 146.0
@@ -286,7 +358,7 @@ preview = ExtResource("18_y7wcs")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Scrap Yard" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Scrap Yard" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 903.0
 offset_top = 510.0
@@ -297,7 +369,7 @@ preview = ExtResource("19_ynvys")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="The Forgotten Woman" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="The Forgotten Woman" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1528.0
 offset_top = 930.0
@@ -308,7 +380,7 @@ preview = ExtResource("20_kypp1")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="The Mines" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="The Mines" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 821.0
 offset_top = 563.0
@@ -319,7 +391,7 @@ preview = ExtResource("21_gk4hp")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Town Square" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Town Square" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1210.0
 offset_top = 546.0
@@ -330,7 +402,7 @@ preview = ExtResource("5_s1d2c")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Walnut Home" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Walnut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1360.0
 offset_top = 974.0
@@ -341,7 +413,7 @@ preview = ExtResource("22_c0kj6")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Waste Disposal" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Waste Disposal" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1386.0
 offset_top = 452.0
@@ -352,7 +424,7 @@ preview = ExtResource("23_0j1ud")
 skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
-[node name="Water Tower" parent="SubViewportContainer/SubViewport/MapButtons/NPC Spots" instance=ExtResource("4_618ha")]
+[node name="Water Tower" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
 offset_left = 1224.0
 offset_top = 410.0
@@ -387,10 +459,12 @@ offset_bottom = 118.0
 [node name="Town Hall" parent="Control/VBoxContainer" instance=ExtResource("3_kren2")]
 layout_mode = 2
 text = "Town Hall"
+scene = "TownHall"
 
 [node name="Bulletin Board" parent="Control/VBoxContainer" instance=ExtResource("3_kren2")]
 layout_mode = 2
 text = "Bulletin Board"
+scene = "BulletinBoard"
 
 [node name="Explore Town" parent="Control/VBoxContainer" instance=ExtResource("3_kren2")]
 layout_mode = 2
@@ -399,7 +473,115 @@ text = "Explore Town"
 [node name="Climb Peak" parent="Control/VBoxContainer" instance=ExtResource("3_kren2")]
 layout_mode = 2
 text = "Climb Peak"
-scene = "Mountain"
+
+[node name="TownPanel" type="MarginContainer" parent="."]
+visible = false
+offset_right = 552.0
+offset_bottom = 540.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 52
+theme_override_constants/margin_top = 92
+theme_override_constants/margin_right = 52
+theme_override_constants/margin_bottom = 52
+
+[node name="SplitContainer" type="SplitContainer" parent="TownPanel"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="LeftPanel" type="MarginContainer" parent="TownPanel/SplitContainer"]
+custom_minimum_size = Vector2(448, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemListBG" type="NinePatchRect" parent="TownPanel/SplitContainer/LeftPanel"]
+layout_mode = 2
+texture = ExtResource("13_dboj1")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="PanelPadding" type="MarginContainer" parent="TownPanel/SplitContainer/LeftPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding"]
+layout_mode = 2
+focus_mode = 2
+
+[node name="Trading Post" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
+layout_mode = 2
+scene = "TradingPost"
+
+[node name="Tian\'s Corner" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
+layout_mode = 2
+text = "Tian's Corner"
+scene = "TiansCorner"
+
+[node name="Bake & Roast" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
+layout_mode = 2
+text = "Bake & Roast"
+scene = "BakeRoast"
+
+[node name="Textile Services" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
+layout_mode = 2
+text = "Textile Services"
+scene = "TextileServices"
+
+[node name="Fire Station" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
+layout_mode = 2
+text = "Fire Station"
+scene = "FireStation"
+
+[node name="Meteorological Institute" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
+layout_mode = 2
+text = "Meteorological Institute"
+scene = "MeteorologicalInstitute"
+
+[node name="Spot1" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
+layout_mode = 2
+text = "Spot1"
+
+[node name="Spot2" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
+layout_mode = 2
+text = "Spot2"
+
+[node name="Spot3" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
+layout_mode = 2
+text = "Spot3"
+
+[node name="TitleMargin" type="MarginContainer" parent="TownPanel/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_top = -44
+
+[node name="LeftTitle" type="Label" parent="TownPanel/SplitContainer/LeftPanel/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("14_ruq6n")
+text = "Explore Town"
+
+[node name="FooterMargin" type="MarginContainer" parent="TownPanel/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="NaviClose" type="Button" parent="TownPanel/SplitContainer/LeftPanel/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = SubResource("Theme_vjmah")
+theme_type_variation = &"Button_Alt"
+text = "back"
 
 [node name="RightPanel" type="MarginContainer" parent="."]
 anchors_preset = 3
@@ -415,7 +597,7 @@ grow_horizontal = 0
 grow_vertical = 0
 size_flags_horizontal = 3
 size_flags_vertical = 8
-theme = ExtResource("12_j3ysv")
+theme = SubResource("Theme_vjmah")
 
 [node name="MarginContainer" type="MarginContainer" parent="RightPanel"]
 custom_minimum_size = Vector2(0, 160)
@@ -463,3 +645,8 @@ theme = ExtResource("14_ruq6n")
 text = "Town Hall"
 
 [node name="WorldStats" parent="." instance=ExtResource("15_savww")]
+
+[connection signal="pressed" from="Control/VBoxContainer/Explore Town" to="." method="_on_explore_town_pressed"]
+[connection signal="pressed" from="TownPanel/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_pressed"]
+
+[editable path="Control/VBoxContainer/Explore Town"]
