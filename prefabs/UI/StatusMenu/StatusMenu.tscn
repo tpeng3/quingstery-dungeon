@@ -1,10 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://qehathayhhdl"]
+[gd_scene load_steps=16 format=3 uid="uid://qehathayhhdl"]
 
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="1_f2lqs"]
+[ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/StatusInfo.tscn" id="1_ksqmd"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_b412g"]
 [ext_resource type="Texture2D" uid="uid://dajrkkk4ufh15" path="res://assets/ui/mountainprogress.png" id="2_tgc2h"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="3_eaifl"]
 [ext_resource type="SpriteFrames" uid="uid://daamhnd6ueq87" path="res://assets/ui/quingprogress.tres" id="4_kqlwo"]
+[ext_resource type="Texture2D" uid="uid://dh2h60nw6ygnd" path="res://assets/character/statusmenu/QuingBase.png" id="5_gp7ii"]
+[ext_resource type="Texture2D" uid="uid://cgg82nd0tys68" path="res://assets/ui/ProgressBar.png" id="7_sdk5g"]
+[ext_resource type="StyleBox" path="res://theme/Signpost_Callout.tres" id="8_3uuko"]
+[ext_resource type="Texture2D" uid="uid://dhprylslwrii3" path="res://assets/item/i_clothing.png" id="9_aku4q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75snv"]
 texture = ExtResource("2_tgc2h")
@@ -16,6 +21,14 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_x02ll"]
 blend_mode = 1
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_rop31"]
+atlas = ExtResource("7_sdk5g")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efspj"]
+atlas = ExtResource("7_sdk5g")
+region = Rect2(0, 0, 8, 8)
+
 [node name="StatusMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -23,6 +36,8 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="StatusInfo" parent="." instance=ExtResource("1_ksqmd")]
 
 [node name="OuterPadding" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -56,13 +71,13 @@ theme_override_constants/margin_bottom = 24
 [node name="BoxContainer" type="BoxContainer" parent="OuterPadding/MainContentPadding"]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="OuterPadding/MainContentPadding/BoxContainer"]
+[node name="ClimbDisplay" type="MarginContainer" parent="OuterPadding/MainContentPadding/BoxContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 32
 
-[node name="ClimbProgress" type="ProgressBar" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer"]
+[node name="ClimbProgress" type="ProgressBar" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay"]
 custom_minimum_size = Vector2(6, 360)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_75snv")
@@ -71,7 +86,7 @@ value = 10.0
 fill_mode = 3
 show_percentage = false
 
-[node name="ProgressFill" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+[node name="ProgressFill" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress"]
 material = SubResource("CanvasItemMaterial_x02ll")
 position = Vector2(3, 180)
 scale = Vector2(1, 3.75)
@@ -79,13 +94,13 @@ texture = ExtResource("2_tgc2h")
 region_enabled = true
 region_rect = Rect2(8, 0, 6, 96)
 
-[node name="Throat" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+[node name="Throat" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress"]
 position = Vector2(3, 359)
 texture = ExtResource("2_tgc2h")
 region_enabled = true
 region_rect = Rect2(16, 54, 18, 18)
 
-[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/Throat"]
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress/Throat"]
 offset_left = -48.0
 offset_top = -11.0
 offset_right = -11.0
@@ -98,13 +113,13 @@ text = "FL
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="River" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+[node name="River" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress"]
 position = Vector2(3, 271)
 texture = ExtResource("2_tgc2h")
 region_enabled = true
 region_rect = Rect2(16, 72, 18, 18)
 
-[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/River"]
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress/River"]
 offset_left = -48.0
 offset_top = -9.0
 offset_right = -11.0
@@ -116,13 +131,13 @@ text = "??"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Steps" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+[node name="Steps" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress"]
 position = Vector2(3, 183)
 texture = ExtResource("2_tgc2h")
 region_enabled = true
 region_rect = Rect2(16, 72, 18, 18)
 
-[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/Steps"]
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress/Steps"]
 offset_left = -48.0
 offset_top = -9.0
 offset_right = -11.0
@@ -134,13 +149,13 @@ text = "??"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Peak" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+[node name="Peak" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress"]
 position = Vector2(3, 93)
 texture = ExtResource("2_tgc2h")
 region_enabled = true
 region_rect = Rect2(16, 72, 18, 18)
 
-[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/Peak"]
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress/Peak"]
 offset_left = -48.0
 offset_top = -9.0
 offset_right = -11.0
@@ -152,13 +167,13 @@ text = "??"
 horizontal_alignment = 2
 vertical_alignment = 1
 
-[node name="Crown" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+[node name="Crown" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress"]
 position = Vector2(3, -2)
 texture = ExtResource("2_tgc2h")
 region_enabled = true
 region_rect = Rect2(34, 0, 18, 16)
 
-[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/Crown"]
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress/Crown"]
 offset_left = -48.0
 offset_top = -11.0
 offset_right = -11.0
@@ -171,12 +186,12 @@ text = "FL
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="QuingProgress" type="AnimatedSprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress"]
+[node name="QuingProgress" type="AnimatedSprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress"]
 position = Vector2(26, 325)
 sprite_frames = ExtResource("4_kqlwo")
 frame_progress = 0.288246
 
-[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/MarginContainer/ClimbProgress/QuingProgress"]
+[node name="Label" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress/QuingProgress"]
 offset_left = -11.0
 offset_top = 10.0
 offset_right = 22.0
@@ -186,6 +201,170 @@ theme_type_variation = &"Label_Bold"
 theme_override_font_sizes/font_size = 8
 text = "05"
 horizontal_alignment = 1
+
+[node name="Dressup" type="MarginContainer" parent="OuterPadding/MainContentPadding/BoxContainer"]
+custom_minimum_size = Vector2(355, 0)
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/Dressup"]
+position = Vector2(-30, 0)
+texture = ExtResource("5_gp7ii")
+centered = false
+
+[node name="StatDisplay" type="BoxContainer" parent="OuterPadding/MainContentPadding/BoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 24
+alignment = 1
+vertical = true
+
+[node name="Hunger" type="BoxContainer" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay"]
+layout_mode = 2
+vertical = true
+
+[node name="HungerLabel" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/Hunger"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_eaifl")
+theme_type_variation = &"Label_Bold"
+text = "Hunger"
+
+[node name="HungerAmt" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/Hunger/HungerLabel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -8.5
+offset_bottom = 8.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "20/100 full"
+
+[node name="HungerBar" type="TextureProgressBar" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/Hunger"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 20.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = SubResource("AtlasTexture_rop31")
+texture_over = SubResource("AtlasTexture_efspj")
+texture_progress = SubResource("AtlasTexture_rop31")
+tint_progress = Color(0.513726, 0.752941, 0, 1)
+
+[node name="Inventory" type="BoxContainer" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay"]
+layout_mode = 2
+vertical = true
+
+[node name="InventoryLabel" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/Inventory"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_eaifl")
+theme_type_variation = &"Label_Bold"
+text = "Inventory"
+
+[node name="InventoryAmt" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/Inventory/InventoryLabel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -8.5
+offset_bottom = 8.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "10/10 slots"
+
+[node name="InventoryBar" type="TextureProgressBar" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/Inventory"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2
+size_flags_horizontal = 3
+value = 20.0
+rounded = true
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = SubResource("AtlasTexture_rop31")
+texture_over = SubResource("AtlasTexture_efspj")
+texture_progress = SubResource("AtlasTexture_rop31")
+tint_progress = Color(0.427451, 0.721569, 0.772549, 1)
+
+[node name="Quests" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("3_eaifl")
+theme_type_variation = &"Label_Bold"
+text = "Quests"
+vertical_alignment = 1
+
+[node name="QuestsAmt" type="Label" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/Quests"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -82.0
+offset_top = -8.5
+offset_bottom = 8.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "12 active"
+
+[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Equip1" type="Panel" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/BoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("8_3uuko")
+
+[node name="Sprite2D" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/BoxContainer/Equip1"]
+texture = ExtResource("9_aku4q")
+centered = false
+offset = Vector2(7, 7)
+
+[node name="Equip2" type="Panel" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/BoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("8_3uuko")
+
+[node name="Sprite2D" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/BoxContainer/Equip2"]
+texture = ExtResource("9_aku4q")
+centered = false
+offset = Vector2(7, 7)
+
+[node name="Equip3" type="Panel" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/BoxContainer"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = ExtResource("8_3uuko")
+
+[node name="Sprite2D" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay/BoxContainer/Equip3"]
+texture = ExtResource("9_aku4q")
+centered = false
+offset = Vector2(7, 7)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="OuterPadding/MainContentPadding/BoxContainer/StatDisplay"]
+layout_mode = 2
+theme = ExtResource("3_eaifl")
+theme_override_styles/normal = ExtResource("8_3uuko")
+text = "mining speed +1
+walk speed +1
+increased hunger capacity"
+fit_content = true
 
 [node name="TitleMargin" type="MarginContainer" parent="OuterPadding"]
 layout_mode = 2
