@@ -24,3 +24,6 @@ Button_Alt/styles/focus = ExtResource("3_e1w1t")
 Button_Alt/styles/hover = ExtResource("3_e1w1t")
 Button_Alt/styles/normal = ExtResource("3_e1w1t")
 Button_Alt/styles/pressed = ExtResource("3_e1w1t")
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("1_ybghr")
+Label/styles/normal = ExtResource("3_e1w1t")

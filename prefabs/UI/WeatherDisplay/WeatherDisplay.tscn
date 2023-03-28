@@ -1,0 +1,138 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpd8q7ortkh0f"]
+
+[ext_resource type="SpriteFrames" uid="uid://dpo1mfleip26q" path="res://assets/ui/Weather.tres" id="1_yb1gg"]
+[ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_oqp3w"]
+[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="3_oofmb"]
+
+[node name="WeatherDisplay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="OuterPadding" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -1.5
+offset_bottom = 1.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 52
+theme_override_constants/margin_top = 52
+theme_override_constants/margin_right = 52
+theme_override_constants/margin_bottom = 52
+
+[node name="FlowContainer" type="FlowContainer" parent="OuterPadding"]
+layout_mode = 2
+theme_override_constants/h_separation = 42
+alignment = 1
+
+[node name="WeatherToday" type="MarginContainer" parent="OuterPadding/FlowContainer"]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/FlowContainer/WeatherToday"]
+custom_minimum_size = Vector2(0, 439)
+layout_mode = 2
+theme_override_constants/separation = 0
+vertical = true
+
+[node name="WeatherContainer" type="MarginContainer" parent="OuterPadding/FlowContainer/WeatherToday/BoxContainer"]
+custom_minimum_size = Vector2(0, 230)
+layout_mode = 2
+
+[node name="Weather" type="AnimatedSprite2D" parent="OuterPadding/FlowContainer/WeatherToday/BoxContainer/WeatherContainer"]
+position = Vector2(190, 120)
+sprite_frames = ExtResource("1_yb1gg")
+animation = &"Cloudy"
+
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/FlowContainer/WeatherToday/BoxContainer"]
+z_index = 1
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="Title" type="Label" parent="OuterPadding/FlowContainer/WeatherToday/BoxContainer/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("2_oqp3w")
+text = "Today's Weather"
+
+[node name="WeatherText" type="RichTextLabel" parent="OuterPadding/FlowContainer/WeatherToday/BoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("3_oofmb")
+bbcode_enabled = true
+text = "
+[b]Cloudy:[/b] Effect Text can go here or something
+
+"
+fit_content = true
+
+[node name="MarginContainer" type="MarginContainer" parent="OuterPadding/FlowContainer/WeatherToday/BoxContainer"]
+layout_mode = 2
+
+[node name="WeatherTomorrow" type="MarginContainer" parent="OuterPadding/FlowContainer"]
+custom_minimum_size = Vector2(380, 0)
+layout_mode = 2
+
+[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/FlowContainer/WeatherTomorrow"]
+custom_minimum_size = Vector2(0, 439)
+layout_mode = 2
+theme_override_constants/separation = 0
+vertical = true
+
+[node name="WeatherContainer" type="MarginContainer" parent="OuterPadding/FlowContainer/WeatherTomorrow/BoxContainer"]
+custom_minimum_size = Vector2(0, 230)
+layout_mode = 2
+
+[node name="Weather" type="AnimatedSprite2D" parent="OuterPadding/FlowContainer/WeatherTomorrow/BoxContainer/WeatherContainer"]
+position = Vector2(190, 120)
+sprite_frames = ExtResource("1_yb1gg")
+animation = &"Storming"
+
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/FlowContainer/WeatherTomorrow/BoxContainer"]
+z_index = 1
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="Title" type="Label" parent="OuterPadding/FlowContainer/WeatherTomorrow/BoxContainer/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme = ExtResource("2_oqp3w")
+text = "Tomorrow's Weather"
+
+[node name="WeatherText" type="RichTextLabel" parent="OuterPadding/FlowContainer/WeatherTomorrow/BoxContainer"]
+visible = false
+layout_mode = 2
+theme = ExtResource("3_oofmb")
+bbcode_enabled = true
+text = "
+[b]Cloudy:[/b] Effect Text can go here or something
+
+"
+fit_content = true
+
+[node name="FooterMargin" type="MarginContainer" parent="OuterPadding"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="NaviClose" type="Button" parent="OuterPadding/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("3_oofmb")
+theme_type_variation = &"Button_Alt"
+text = "close "

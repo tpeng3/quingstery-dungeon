@@ -1,0 +1,101 @@
+[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://dpo1mfleip26q"]
+
+[ext_resource type="Texture2D" uid="uid://cggcyw1o877cp" path="res://assets/ui/WeatherFrame.png" id="1_jtq3t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5wdg"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(440, 0, 220, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsldk"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(660, 0, 220, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xr3it"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(880, 0, 220, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v82kx"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(1100, 0, 220, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5mlj"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(1760, 0, 220, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_836lx"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(1980, 0, 220, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ucys"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(0, 0, 220, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_am4n3"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(220, 0, 220, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqdw1"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(1320, 0, 220, 146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv6x2"]
+atlas = ExtResource("1_jtq3t")
+region = Rect2(1540, 0, 220, 146)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5wdg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xsldk")
+}],
+"loop": true,
+"name": &"Cloudy",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xr3it")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v82kx")
+}],
+"loop": true,
+"name": &"Rainy",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5mlj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_836lx")
+}],
+"loop": true,
+"name": &"Storming",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ucys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_am4n3")
+}],
+"loop": true,
+"name": &"Sunny",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqdw1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mv6x2")
+}],
+"loop": true,
+"name": &"Windy",
+"speed": 2.0
+}]
