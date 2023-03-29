@@ -42,39 +42,39 @@ colors = PackedColorArray(0, 0, 0, 1, 0.935484, 0.935484, 0.935484, 1)
 gradient = SubResource("Gradient_gcyuc")
 width = 36
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s6hw1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_iatkq"]
 atlas = ExtResource("7_cvq0h")
 region = Rect2(0, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1n8bq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx0nu"]
 atlas = ExtResource("7_cvq0h")
 region = Rect2(96, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5eq0g"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrbta"]
 atlas = ExtResource("7_cvq0h")
 region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ncin8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmn4o"]
 atlas = ExtResource("7_cvq0h")
 region = Rect2(0, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y6fed"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2co0"]
 atlas = ExtResource("7_cvq0h")
 region = Rect2(96, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_860ty"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsyd0"]
 atlas = ExtResource("7_cvq0h")
 region = Rect2(48, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yprph"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhhw4"]
 atlas = ExtResource("7_cvq0h")
 region = Rect2(0, 144, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bgso4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_chggl"]
 atlas = ExtResource("7_cvq0h")
 region = Rect2(96, 144, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_htb7l"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ppwvl"]
 atlas = ExtResource("7_cvq0h")
 region = Rect2(48, 144, 48, 48)
 
@@ -237,10 +237,10 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_s6hw1")
-texture_pressed = SubResource("AtlasTexture_1n8bq")
-texture_disabled = SubResource("AtlasTexture_s6hw1")
-texture_focused = SubResource("AtlasTexture_5eq0g")
+texture_normal = SubResource("AtlasTexture_iatkq")
+texture_pressed = SubResource("AtlasTexture_gx0nu")
+texture_disabled = SubResource("AtlasTexture_iatkq")
+texture_focused = SubResource("AtlasTexture_wrbta")
 
 [node name="QuestBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
 custom_minimum_size = Vector2(0, 48)
@@ -252,10 +252,10 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_ncin8")
-texture_pressed = SubResource("AtlasTexture_y6fed")
-texture_disabled = SubResource("AtlasTexture_ncin8")
-texture_focused = SubResource("AtlasTexture_860ty")
+texture_normal = SubResource("AtlasTexture_hmn4o")
+texture_pressed = SubResource("AtlasTexture_b2co0")
+texture_disabled = SubResource("AtlasTexture_hmn4o")
+texture_focused = SubResource("AtlasTexture_bsyd0")
 metadata/vertPosition = 2
 
 [node name="SettingsBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
@@ -268,10 +268,10 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_yprph")
-texture_pressed = SubResource("AtlasTexture_bgso4")
-texture_disabled = SubResource("AtlasTexture_yprph")
-texture_focused = SubResource("AtlasTexture_htb7l")
+texture_normal = SubResource("AtlasTexture_lhhw4")
+texture_pressed = SubResource("AtlasTexture_chggl")
+texture_disabled = SubResource("AtlasTexture_lhhw4")
+texture_focused = SubResource("AtlasTexture_ppwvl")
 metadata/vertPosition = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MenuButtons/VBoxContainer"]

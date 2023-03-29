@@ -22,19 +22,31 @@ func getSection(items, section):
 
 func _on_throat_focus_entered():
 	$"../../../../../LeftSide/Mountain/Sections/Throat".emit_signal("pressed")
+	self.clear()
+	for i in throat:
+		self.add_icon_item(i.path)
 	pass # Replace with function body.
 
 
 func _on_river_focus_entered():
 	$"../../../../../LeftSide/Mountain/Sections/River".emit_signal("pressed")
+	self.clear()
+	for i in river:
+		self.add_icon_item(i.path)
 	pass # Replace with function body.
 
 
 func _on_steps_focus_entered():
 	$"../../../../../LeftSide/Mountain/Sections/Steps".emit_signal("pressed")
+	self.clear()
+	for i in steps:
+		self.add_icon_item(i.path)
 	pass # Replace with function body.
 
 
 func _on_peak_focus_entered():
 	$"../../../../../LeftSide/Mountain/Sections/Peak".emit_signal("pressed")
+	self.clear()
+	for i in peak:
+		self.add_icon_item(i.path)
 	pass # Replace with function body.
