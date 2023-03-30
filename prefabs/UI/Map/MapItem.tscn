@@ -1,18 +1,24 @@
-[gd_scene load_steps=19 format=3 uid="uid://bfkcav2syaqel"]
+[gd_scene load_steps=20 format=3 uid="uid://bfkcav2syaqel"]
 
-[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_smh3i"]
+[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_smh3i"]
 [ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="2_v3jkk"]
-[ext_resource type="Texture2D" uid="uid://cfkiiyf7esgts" path="res://assets/ui/mapbip.png" id="3_sq4t3"]
+[ext_resource type="Texture2D" uid="uid://c1ilng8lpurjn" path="res://assets/UI/mapbip.png" id="3_sq4t3"]
 [ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="3_xvo46"]
 [ext_resource type="StyleBox" uid="uid://xk12q87v443s" path="res://theme/tex_MenuSign_L.tres" id="4_i5fci"]
 [ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="5_g8vyp"]
 [ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="6_tlme5"]
 [ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="7_gsy31"]
-[ext_resource type="StyleBox" path="res://theme/Signpost_Callout.tres" id="8_c03dn"]
-[ext_resource type="FontFile" uid="uid://oghqafn812mw" path="res://assets/ui/Dogica/dogicapixel.ttf" id="8_ct24y"]
-[ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="9_hfffd"]
+[ext_resource type="StyleBox" uid="uid://c2nb40sqt2n80" path="res://theme/Signpost_Callout.tres" id="8_c03dn"]
+[ext_resource type="FontFile" uid="uid://b0m4hay27djem" path="res://assets/UI/Dogica/dogicapixel.ttf" id="8_ct24y"]
+[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="9_hfffd"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="10_y6brf"]
 [ext_resource type="Script" path="res://prefabs/SceneButton/SceneButton.gd" id="12_bpiqe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gcxyk"]
+content_margin_left = 6.0
+content_margin_top = 8.0
+content_margin_right = 6.0
+content_margin_bottom = 8.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mn360"]
 content_margin_left = 6.0
@@ -57,6 +63,7 @@ Button_Menu/base_type = &"Button"
 Button_Menu/colors/font_focus_color = Color(0.458824, 0.337255, 0.533333, 1)
 Button_Menu/colors/font_pressed_color = Color(0.458824, 0.337255, 0.533333, 1)
 Button_Menu/fonts/font = ExtResource("9_hfffd")
+Button_Menu/styles/disabled = SubResource("StyleBoxEmpty_gcxyk")
 Button_Menu/styles/focus = ExtResource("8_c03dn")
 Button_Menu/styles/hover = ExtResource("8_c03dn")
 Button_Menu/styles/normal = SubResource("StyleBoxEmpty_mn360")

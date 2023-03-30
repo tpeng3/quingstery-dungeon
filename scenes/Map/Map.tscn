@@ -1,39 +1,38 @@
-[gd_scene load_steps=50 format=3 uid="uid://dx0kws7hwpumu"]
+[gd_scene load_steps=53 format=3 uid="uid://dx0kws7hwpumu"]
 
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
 [ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
 [ext_resource type="Script" path="res://scenes/Map/Camera2D.gd" id="2_vecvs"]
 [ext_resource type="PackedScene" uid="uid://dnpqq4mosh4n7" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
 [ext_resource type="PackedScene" uid="uid://c5evt78phsk3n" path="res://prefabs/MapButton/MapButton.tscn" id="4_618ha"]
-[ext_resource type="Texture2D" uid="uid://c35ytiqoh7cxb" path="res://assets/ui/locations/locations_galinnpeak_pip.png" id="5_4c7dp"]
-[ext_resource type="Texture2D" uid="uid://chmo1wo8om8fj" path="res://assets/ui/locations/locations_townhall_pip.png" id="5_s1d2c"]
-[ext_resource type="Texture2D" uid="uid://cc0rqgwdflegk" path="res://assets/ui/locations/locations_pecanhome_pip.png" id="6_62i57"]
-[ext_resource type="Texture2D" uid="uid://blcuoxgdtiy4t" path="res://assets/ui/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
-[ext_resource type="Texture2D" uid="uid://djunjv00vegql" path="res://assets/ui/locations/locations_bulletinboard_pip.png" id="7_5hqkh"]
-[ext_resource type="Texture2D" uid="uid://ojxd738fu1se" path="res://assets/ui/locations/locations_tradingpost_pip.png" id="8_d8ve6"]
-[ext_resource type="Texture2D" uid="uid://crk8t5xo2myvn" path="res://assets/ui/locations/locations_tianscorner_pip.png" id="9_m1ovn"]
-[ext_resource type="Texture2D" uid="uid://b420otmq7meoc" path="res://assets/ui/locations/locations_bakeroast_pip.png" id="10_nbn57"]
-[ext_resource type="Texture2D" uid="uid://dcu4ces3hk2kj" path="res://assets/ui/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
-[ext_resource type="Texture2D" uid="uid://clmeft3hg24uh" path="res://assets/ui/locations/locations_textileservices_pip.png" id="11_tv7ax"]
-[ext_resource type="Texture2D" uid="uid://d4d1rjvobukog" path="res://assets/ui/locations/locations_firestation_pip.png" id="12_122ll"]
-[ext_resource type="Texture2D" uid="uid://dg27cpt4plehr" path="res://assets/ui/locations/locations_almondhome_pip.png" id="12_mrm7y"]
-[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="13_dboj1"]
-[ext_resource type="Texture2D" uid="uid://dft8lnrw38e4a" path="res://assets/ui/locations/locations_meteorologicalinstitute_pip.png" id="13_qm57g"]
-[ext_resource type="Texture2D" uid="uid://b43wy65q11hg1" path="res://assets/ui/locations/locations_attithcave_pip.png" id="13_rxcjq"]
-[ext_resource type="Texture2D" uid="uid://bxmo5xr1utqql" path="res://assets/ui/locations/locations_briarspond_pip.png" id="14_3e0pf"]
+[ext_resource type="Texture2D" uid="uid://cxy2kys4qk0cm" path="res://assets/UI/locations/locations_galinnpeak_pip.png" id="5_4c7dp"]
+[ext_resource type="Texture2D" uid="uid://d26gebiwmbjj6" path="res://assets/UI/locations/locations_townhall_pip.png" id="5_s1d2c"]
+[ext_resource type="Texture2D" uid="uid://bb1tvlo15kpxy" path="res://assets/UI/locations/locations_pecanhome_pip.png" id="6_62i57"]
+[ext_resource type="Texture2D" uid="uid://5a7erdf8r3il" path="res://assets/UI/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
+[ext_resource type="Texture2D" uid="uid://cnqht2rnry8yk" path="res://assets/UI/locations/locations_bulletinboard_pip.png" id="7_5hqkh"]
+[ext_resource type="Texture2D" uid="uid://dnf3ptd2fno2p" path="res://assets/UI/locations/locations_tradingpost_pip.png" id="8_d8ve6"]
+[ext_resource type="Texture2D" uid="uid://cau8i0u62jvwa" path="res://assets/UI/locations/locations_tianscorner_pip.png" id="9_m1ovn"]
+[ext_resource type="Texture2D" uid="uid://dkioundbgdosg" path="res://assets/UI/locations/locations_bakeroast_pip.png" id="10_nbn57"]
+[ext_resource type="Texture2D" uid="uid://c4mkvxufil73y" path="res://assets/UI/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
+[ext_resource type="Texture2D" uid="uid://dt24fadidnfit" path="res://assets/UI/locations/locations_textileservices_pip.png" id="11_tv7ax"]
+[ext_resource type="Texture2D" uid="uid://bvno2x2ffvhcj" path="res://assets/UI/locations/locations_firestation_pip.png" id="12_122ll"]
+[ext_resource type="Texture2D" uid="uid://2q5p6d7wcod6" path="res://assets/UI/locations/locations_almondhome_pip.png" id="12_mrm7y"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="13_dboj1"]
+[ext_resource type="Texture2D" uid="uid://dpnpboqsvv02x" path="res://assets/UI/locations/locations_meteorologicalinstitute_pip.png" id="13_qm57g"]
+[ext_resource type="Texture2D" uid="uid://ebohf2flh1fq" path="res://assets/UI/locations/locations_attithcave_pip.png" id="13_rxcjq"]
+[ext_resource type="Texture2D" uid="uid://bn3vhms2a7sc8" path="res://assets/UI/locations/locations_briarspond_pip.png" id="14_3e0pf"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="14_ruq6n"]
-[ext_resource type="Texture2D" uid="uid://bnk2ytg2p0gqb" path="res://assets/ui/locations/locations_cashewhome_pip.png" id="15_r0no2"]
-[ext_resource type="PackedScene" uid="uid://diobmjafrn7j0" path="res://prefabs/UI/WorldStats/world_stats.tscn" id="15_savww"]
-[ext_resource type="Texture2D" uid="uid://bx4oti2i8noyg" path="res://assets/ui/locations/locations_lakegalinn_pip.png" id="16_wltem"]
-[ext_resource type="Texture2D" uid="uid://r163lvklgpy6" path="res://assets/ui/locations/locations_lookoutpoint_pip.png" id="17_vsxwn"]
-[ext_resource type="Texture2D" uid="uid://ur2b88n1a5dl" path="res://assets/ui/locations/locations_pistachiohome_pip.png" id="18_y7wcs"]
-[ext_resource type="Texture2D" uid="uid://bfgbinks8csmy" path="res://assets/ui/locations/locations_scrapyard_pip.png" id="19_ynvys"]
-[ext_resource type="Texture2D" uid="uid://cmm7hwqyxe8bj" path="res://assets/ui/locations/locations_forgottenwoman_pip.png" id="20_kypp1"]
-[ext_resource type="Texture2D" uid="uid://cq65yaowgeltj" path="res://assets/ui/locations/locations_themines_pip.png" id="21_gk4hp"]
-[ext_resource type="Texture2D" uid="uid://diwn7nkkhu1kg" path="res://assets/ui/locations/locations_walnuthome_pip.png" id="22_c0kj6"]
-[ext_resource type="Texture2D" uid="uid://b51cpjilubjgo" path="res://assets/ui/locations/locations_abandonedstorehouse_pip.png" id="23_0j1ud"]
-[ext_resource type="Texture2D" uid="uid://8k4vx6qyrhlx" path="res://assets/ui/locations/locations_watertower_pip.png" id="24_5ef4j"]
-[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="29_ovivd"]
+[ext_resource type="Texture2D" uid="uid://ct8ui0hscgjmb" path="res://assets/UI/locations/locations_cashewhome_pip.png" id="15_r0no2"]
+[ext_resource type="Texture2D" uid="uid://bt33lh43tagta" path="res://assets/UI/locations/locations_lakegalinn_pip.png" id="16_wltem"]
+[ext_resource type="Texture2D" uid="uid://bfrh5uy1npm6q" path="res://assets/UI/locations/locations_lookoutpoint_pip.png" id="17_vsxwn"]
+[ext_resource type="Texture2D" uid="uid://d4mpmcma27j23" path="res://assets/UI/locations/locations_pistachiohome_pip.png" id="18_y7wcs"]
+[ext_resource type="Texture2D" uid="uid://bpnj7gvb5jw6t" path="res://assets/UI/locations/locations_scrapyard_pip.png" id="19_ynvys"]
+[ext_resource type="Texture2D" uid="uid://c1p51585qpsxs" path="res://assets/UI/locations/locations_forgottenwoman_pip.png" id="20_kypp1"]
+[ext_resource type="Texture2D" uid="uid://dp1qw5l0vx2d" path="res://assets/UI/locations/locations_themines_pip.png" id="21_gk4hp"]
+[ext_resource type="Texture2D" uid="uid://cnq2cyi8atnyt" path="res://assets/UI/locations/locations_walnuthome_pip.png" id="22_c0kj6"]
+[ext_resource type="Texture2D" uid="uid://dgdjdfdd0aw4p" path="res://assets/UI/locations/locations_abandonedstorehouse_pip.png" id="23_0j1ud"]
+[ext_resource type="Texture2D" uid="uid://s6jh4eddq68v" path="res://assets/UI/locations/locations_watertower_pip.png" id="24_5ef4j"]
+[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="29_ovivd"]
 [ext_resource type="PackedScene" uid="uid://bfkcav2syaqel" path="res://prefabs/UI/Map/MapItem.tscn" id="30_q7jcd"]
 [ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="30_tvpyi"]
 [ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="31_rhg1i"]
@@ -41,9 +40,13 @@
 [ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="33_ibrkh"]
 [ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="34_nh7ep"]
 [ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="35_2n2ik"]
-[ext_resource type="FontFile" uid="uid://oghqafn812mw" path="res://assets/ui/Dogica/dogicapixel.ttf" id="36_t3381"]
-[ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="37_pca6x"]
+[ext_resource type="FontFile" uid="uid://b0m4hay27djem" path="res://assets/UI/Dogica/dogicapixel.ttf" id="36_t3381"]
+[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="37_pca6x"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="38_1lj55"]
+[ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="44_qdn27"]
+[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="45_sx7io"]
+[ext_resource type="JSON" path="res://dialogue/NPCs.json" id="46_5d36l"]
+[ext_resource type="PackedScene" uid="uid://8u6c5x2aksb6" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="47_prvth"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
 
@@ -247,7 +250,6 @@ offset_right = 625.0
 offset_bottom = 579.0
 scale = Vector2(1, 1)
 preview = ExtResource("12_mrm7y")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Attith Cave" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -258,7 +260,6 @@ offset_right = 360.0
 offset_bottom = 502.0
 scale = Vector2(1, 1)
 preview = ExtResource("13_rxcjq")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Briar\'s Pond" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -269,7 +270,6 @@ offset_right = 1073.0
 offset_bottom = 718.0
 scale = Vector2(1, 1)
 preview = ExtResource("14_3e0pf")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Butternut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -279,7 +279,6 @@ offset_top = 422.0
 offset_right = 1040.0
 offset_bottom = 422.0
 scale = Vector2(1, 1)
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Cashew Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -290,7 +289,6 @@ offset_right = 1348.0
 offset_bottom = 376.0
 scale = Vector2(1, 1)
 preview = ExtResource("15_r0no2")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Hazelnut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -301,7 +299,6 @@ offset_right = 658.0
 offset_bottom = 452.0
 scale = Vector2(1, 1)
 preview = ExtResource("10_satxt")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Lake Galinn" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -312,7 +309,6 @@ offset_right = 1286.0
 offset_bottom = 844.0
 scale = Vector2(1, 1)
 preview = ExtResource("16_wltem")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Lookout Point" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -323,7 +319,6 @@ offset_right = 858.0
 offset_bottom = 470.0
 scale = Vector2(1, 1)
 preview = ExtResource("17_vsxwn")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Peanut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -334,7 +329,6 @@ offset_right = 974.0
 offset_bottom = 652.0
 scale = Vector2(1, 1)
 preview = ExtResource("7_0i0u8")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Pecan Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -345,7 +339,6 @@ offset_right = 1096.0
 offset_bottom = 592.0
 scale = Vector2(1, 1)
 preview = ExtResource("6_62i57")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Pistachio Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -355,7 +348,6 @@ offset_right = 146.0
 offset_bottom = 352.0
 scale = Vector2(1, 1)
 preview = ExtResource("18_y7wcs")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Scrap Yard" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -366,7 +358,6 @@ offset_right = 943.0
 offset_bottom = 510.0
 scale = Vector2(1, 1)
 preview = ExtResource("19_ynvys")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="The Forgotten Woman" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -377,7 +368,6 @@ offset_right = 1568.0
 offset_bottom = 930.0
 scale = Vector2(1, 1)
 preview = ExtResource("20_kypp1")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="The Mines" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -388,7 +378,6 @@ offset_right = 861.0
 offset_bottom = 563.0
 scale = Vector2(1, 1)
 preview = ExtResource("21_gk4hp")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Town Square" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -399,7 +388,6 @@ offset_right = 1250.0
 offset_bottom = 546.0
 scale = Vector2(1, 1)
 preview = ExtResource("5_s1d2c")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Walnut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -410,7 +398,6 @@ offset_right = 1400.0
 offset_bottom = 974.0
 scale = Vector2(1, 1)
 preview = ExtResource("22_c0kj6")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Waste Disposal" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -421,7 +408,6 @@ offset_right = 1426.0
 offset_bottom = 452.0
 scale = Vector2(1, 1)
 preview = ExtResource("23_0j1ud")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Water Tower" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -432,7 +418,6 @@ offset_right = 1264.0
 offset_bottom = 410.0
 scale = Vector2(1, 1)
 preview = ExtResource("24_5ef4j")
-skipPreview = true
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Control" type="Control" parent="."]
@@ -532,8 +517,6 @@ scene = "BakeRoast"
 
 [node name="Textile Services" parent="TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer" instance=ExtResource("30_q7jcd")]
 layout_mode = 2
-toggle_mode = true
-button_pressed = true
 text = "Textile Services"
 scene = "TextileServices"
 
@@ -647,9 +630,16 @@ size_flags_horizontal = 4
 theme = ExtResource("14_ruq6n")
 text = "Town Hall"
 
-[node name="WorldStats" parent="." instance=ExtResource("15_savww")]
+[node name="WeatherHUD" parent="." instance=ExtResource("44_qdn27")]
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("45_sx7io")]
+dialogue_file = ExtResource("46_5d36l")
+
+[node name="DialogueBox" parent="." instance=ExtResource("47_prvth")]
+visible = false
 
 [connection signal="pressed" from="Control/VBoxContainer/Explore Town" to="." method="_on_explore_town_pressed"]
+[connection signal="focus_entered" from="TownPanel/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_focus_entered"]
 [connection signal="pressed" from="TownPanel/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_pressed"]
 
 [editable path="Control/VBoxContainer/Explore Town"]

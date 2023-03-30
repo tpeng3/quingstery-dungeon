@@ -5,7 +5,7 @@
 [ext_resource type="TileSet" uid="uid://mfrb20b87avp" path="res://theme/tileset_water.tres" id="2_qkva2"]
 [ext_resource type="JSON" path="res://dialogue/Mountain/hungry.json" id="4_5cqts"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_qklru"]
-[ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/StatusInfo.tscn" id="5_7r71l"]
+[ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="5_7r71l"]
 [ext_resource type="JSON" path="res://dialogue/Mountain/famished.json" id="5_c7hty"]
 [ext_resource type="PackedScene" uid="uid://8u6c5x2aksb6" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="5_yuxs7"]
 

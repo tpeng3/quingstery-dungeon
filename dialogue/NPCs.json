@@ -1,0 +1,2496 @@
+{
+	"tadhana10": {
+		"key": "tadhana10",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Haven't you heard the rumor?"
+			},
+			{
+				"name": "Tadhana",
+				"text": "If you climb all the way up the mountain, the Stars will grant you a single wish."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"akio1": {
+		"key": "akio1",
+		"name": "Akio",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Akio",
+				"text": "... A bird? I would prefer that you keep your distance from me."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"akio2": {
+		"key": "akio2",
+		"name": "Akio",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Akio",
+				"text": "Please stay away from me. I'm allergic."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"akio3": {
+		"key": "akio3",
+		"name": "Akio",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Akio",
+				"text": "Will this make you leave me alone?"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Seed Packet",
+			1
+		]
+	},
+	"andras1": {
+		"key": "andras1",
+		"name": "Andras",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Andras",
+				"text": "Hellu little one~ How are your joints feeling?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"andras2": {
+		"key": "andras2",
+		"name": "Andras",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Andras",
+				"text": "I wonder if Amaius is out fishing..."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava1": {
+		"key": "ava1",
+		"name": "Ava",
+		"location": "Peanut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Sorry. Busy."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava2": {
+		"key": "ava2",
+		"name": "Ava",
+		"location": "Peanut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "..."
+			},
+			{
+				"name": "Ava",
+				"text": "..."
+			},
+			{
+				"name": "Ava",
+				"text": "...Not much of a talker."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava3": {
+		"key": "ava3",
+		"name": "Ava",
+		"location": "Peanut Home",
+		"condition": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "A bit shit today, huh?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava4": {
+		"key": "ava4",
+		"name": "Ava",
+		"location": "Peanut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Hoping I can get more done before dark."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava5": {
+		"key": "ava5",
+		"name": "Ava",
+		"location": "The Mines",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Working hard?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava6": {
+		"key": "ava6",
+		"name": "Ava",
+		"location": "The Mines",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Hey. Seen Deko around? Tall, teal hair, lots of energy? Came here with him. Lost him."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava7": {
+		"key": "ava7",
+		"name": "Ava",
+		"location": "The Mines",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Think I need to spend more time down here..."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava8": {
+		"key": "ava8",
+		"name": "Ava",
+		"location": "The Mines",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Might need this more than me."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Iron",
+			1
+		]
+	},
+	"ava9": {
+		"key": "ava9",
+		"name": "Ava",
+		"location": "The Mines",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "...What? As long as I don't stay 'til 2am, I'm good."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava10": {
+		"key": "ava10",
+		"name": "Ava",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Hm? Need something?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava11": {
+		"key": "ava11",
+		"name": "Ava",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "You're [[name]], yeah? How's the climb?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava12": {
+		"key": "ava12",
+		"name": "Ava",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Oh, it's you again."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"ava13": {
+		"key": "ava13",
+		"name": "Ava",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Climbing today? If you see Wander up there, give this to him?"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Baked Good",
+			1
+		]
+	},
+	"ava14": {
+		"key": "ava14",
+		"name": "Ava",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Ava",
+				"text": "Is Sou looking for me? I'll be back in a sec, just went to grab something from the house."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cameron1": {
+		"key": "cameron1",
+		"name": "Cameron",
+		"location": "Lookout Point",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cameron",
+				"text": "..."
+			},
+			{
+				"name": "Cameron",
+				"text": "(He takes a picture of you with the valley behind you while you weren't looking.)"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Art",
+			1
+		]
+	},
+	"cameron2": {
+		"key": "cameron2",
+		"name": "Cameron",
+		"location": "Pistachio Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cameron",
+				"text": "... 'It's peaceful up here. But it can be tiring to get to, make sure you take it easy.` "
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cameron3": {
+		"key": "cameron3",
+		"name": "Cameron",
+		"location": "Water Tower",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cameron",
+				"text": "... (He seems to be in his own thoughts as he looks at the scenery.)"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"celsi1": {
+		"key": "celsi1",
+		"name": "Celsi",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Celsi",
+				"text": "Oh, good day."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"celsi2": {
+		"key": "celsi2",
+		"name": "Celsi",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Celsi",
+				"text": "Are you going out exploring? Best of luck."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"celsi3": {
+		"key": "celsi3",
+		"name": "Celsi",
+		"location": "Town Square",
+		"condition": "River unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Celsi",
+				"text": "I'm not especially adventurous, but the Peak sounds interesting."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"celsi4": {
+		"key": "celsi4",
+		"name": "Celsi",
+		"location": "Town Square",
+		"condition": "After at least 3 explorations",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Celsi",
+				"text": "Would it be rude of me to ask about your explorations?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"celsi5": {
+		"key": "celsi5",
+		"name": "Celsi",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Celsi",
+				"text": "...Oh, I'm sorry. I was watching the glowbugs."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"celsi6": {
+		"key": "celsi6",
+		"name": "Celsi",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Celsi",
+				"text": "Be sure to keep safe on your adventures."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Herb Bundle",
+			1
+		]
+	},
+	"celsi7": {
+		"key": "celsi7",
+		"name": "Celsi",
+		"location": "Town Square",
+		"condition": "Steps unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Celsi",
+				"text": "I found this earlier. I hope it will help with your climb."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Tool",
+			1
+		]
+	},
+	"cyrille1": {
+		"key": "cyrille1",
+		"name": "Cyrille",
+		"location": "Almond Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "I took some herbs from the garden. Don't tell Erebuni!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Herb Bundle",
+			1
+		]
+	},
+	"cyrille2": {
+		"key": "cyrille2",
+		"name": "Cyrille",
+		"location": "Almond Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "Would you love me if I were a worm?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille3": {
+		"key": "cyrille3",
+		"name": "Cyrille",
+		"location": "Almond Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "Call me Cuffie!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille4": {
+		"key": "cyrille4",
+		"name": "Cyrille",
+		"location": "Almond Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "Hi!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille5": {
+		"key": "cyrille5",
+		"name": "Cyrille",
+		"location": "Almond Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "Boogerwash."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille6": {
+		"key": "cyrille6",
+		"name": "Cyrille",
+		"location": "Almond Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "Keep an eye out for shooting stars tonight!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille7": {
+		"key": "cyrille7",
+		"name": "Cyrille",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "Hehehehehehehehe"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille8": {
+		"key": "cyrille8",
+		"name": "Cyrille",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "Have you heard about the story of the pond frog? Well, it goes like this—"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille9": {
+		"key": "cyrille9",
+		"name": "Cyrille",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "Have you seen my cheese wheel?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille10": {
+		"key": "cyrille10",
+		"name": "Cyrille",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "I'II give you a puffball mushroom if you start a fire in the next one secon— too late!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille11": {
+		"key": "cyrille11",
+		"name": "Cyrille",
+		"location": "Hazelnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "(You are given a vial of something that smells quite potent. The label on it reads: Assense.)"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Venom",
+			1
+		]
+	},
+	"cyrille12": {
+		"key": "cyrille12",
+		"name": "Cyrille",
+		"location": "Hazelnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "Ahaha! How dull~"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille13": {
+		"key": "cyrille13",
+		"name": "Cyrille",
+		"location": "Hazelnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "I made a tiny coffin for a bee I found."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille14": {
+		"key": "cyrille14",
+		"name": "Cyrille",
+		"location": "Hazelnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "The success rate of getting to the top of a tree is dependent on..."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille15": {
+		"key": "cyrille15",
+		"name": "Cyrille",
+		"location": "Scrapyard",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "By the laws of possession of people with possessions no longer in possession, you might become possessed if you don't find what you're looking for!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille16": {
+		"key": "cyrille16",
+		"name": "Cyrille",
+		"location": "Scrapyard",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "You get a gold star for trying."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrille17": {
+		"key": "cyrille17",
+		"name": "Cyrille",
+		"location": "Waste Disposal",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrille",
+				"text": "WATCH OUT!!!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Trash",
+			1
+		]
+	},
+	"cyrus1": {
+		"key": "cyrus1",
+		"name": "Cyrus",
+		"location": "Lookout Point",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "AWOOOOOOOOOOOOOO!! ...when did you show up."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrus2": {
+		"key": "cyrus2",
+		"name": "Cyrus",
+		"location": "Lookout Point",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "Don't you just wanna scream?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrus3": {
+		"key": "cyrus3",
+		"name": "Cyrus",
+		"location": "Lookout Point",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "Duuuuuuudddeeee... you gotta try this."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Herb Bundle x1",
+			1
+		]
+	},
+	"cyrus4": {
+		"key": "cyrus4",
+		"name": "Cyrus",
+		"location": "Lookout Point",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "Do you ever feel like a paper bag? Drifitng through the wind?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrus5": {
+		"key": "cyrus5",
+		"name": "Cyrus",
+		"location": "Scrapyard",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "Find anything good? Here, I don't want this."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Trash",
+			1
+		]
+	},
+	"cyrus6": {
+		"key": "cyrus6",
+		"name": "Cyrus",
+		"location": "Scrapyard",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "I live here. I'm kidding... or am I?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrus7": {
+		"key": "cyrus7",
+		"name": "Cyrus",
+		"location": "Scrapyard",
+		"condition": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "(He appears to be fiddling with something on the ground.)"
+			},
+			{
+				"name": "Cyrus",
+				"text": "What am I doing...? None of your business."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrus8": {
+		"key": "cyrus8",
+		"name": "Cyrus",
+		"location": "Scrapyard",
+		"condition": "Windy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "(A tin can is blown by the wind and hits the side of his head.)"
+			},
+			{
+				"name": "Cyrus",
+				"text": "Ow, what the fuck..."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Trash",
+			1
+		]
+	},
+	"cyrus9": {
+		"key": "cyrus9",
+		"name": "Cyrus",
+		"location": "Water Tower",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "Have you climbed the water tower?"
+			},
+			{
+				"name": "Cyrus",
+				"text": "...Actually, don't, that's my hangout spot."
+			},
+			{
+				"name": "Cyrus",
+				"text": "Well. I guess I don't own it."
+			},
+			{
+				"name": "Cyrus",
+				"text": "Do whatever you want."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrus10": {
+		"key": "cyrus10",
+		"name": "Cyrus",
+		"location": "Water Tower",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "How's the water get up there...?"
+			},
+			{
+				"name": "Cyrus",
+				"text": "It's a conspiracy."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrus11": {
+		"key": "cyrus11",
+		"name": "Cyrus",
+		"location": "Water Tower",
+		"condition": "Stormy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "(He appears lost in thought.) ...Huh?"
+			},
+			{
+				"name": "Cyrus",
+				"text": "Oh. Was just thinking."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"cyrus12": {
+		"key": "cyrus12",
+		"name": "Cyrus",
+		"location": "Water Tower",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cyrus",
+				"text": "What the fuck do you want?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"deko1": {
+		"key": "deko1",
+		"name": "Deko",
+		"location": "Attith Cave",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Deko",
+				"text": "If I were you I'd go say hi to the two cuties over there!"
+			},
+			{
+				"name": "Deko",
+				"text": "Yeah, I'm talking about the statues! They must get lonely here even though they have each other! It's only good manners to greet them!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"deko2": {
+		"key": "deko2",
+		"name": "Deko",
+		"location": "Attith Cave",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Deko",
+				"text": "Hey, I found this but I just restocked, so I don't need it! Hopefully it'll bring some good vibes! Can't be bad, it's locally sourced!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Jewel",
+			1
+		]
+	},
+	"deko3": {
+		"key": "deko3",
+		"name": "Deko",
+		"location": "The Mines",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Deko",
+				"text": "Any chance you've come across somebody called Ava while in here? I think we got separated..."
+			},
+			{
+				"name": "Deko",
+				"text": "This is why you use the buddy system, I'm telling you!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"deko4": {
+		"key": "deko4",
+		"name": "Deko",
+		"location": "The Mines",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Deko",
+				"text": "UWAAHH!! "
+			},
+			{
+				"name": "Deko",
+				"text": "O-Oh, oh it's just you. Stars, you gave me a fright!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"deko5": {
+		"key": "deko5",
+		"name": "Deko",
+		"location": "Walnut Home",
+		"condition": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Deko",
+				"text": "Hey hey! Just so you know, the door is never locked if you need shelter from the rain!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"deko6": {
+		"key": "deko6",
+		"name": "Deko",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Deko",
+				"text": "Don't mind the suspicious looking miniature mountain outside, he's a nice guy, really! Rarely moves!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"deko7": {
+		"key": "deko7",
+		"name": "Deko",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Deko",
+				"text": "Here, this should help with the climb! But you better ask somebody more experienced about the logistics of climbing a mountain!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Jewel",
+			1
+		]
+	},
+	"dinadan1": {
+		"key": "dinadan1",
+		"name": "Dinadan",
+		"location": "Hazelnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Dinadan",
+				"text": "Oh hey, little buddy! You didn't get lost, did you?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"dinadan2": {
+		"key": "dinadan2",
+		"name": "Dinadan",
+		"location": "Hazelnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Dinadan",
+				"text": "Who's the cat on my shoulder? Oh! It's my cousin's cat, Kamisa! She has a gift for you."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Guppy",
+			1
+		]
+	},
+	"dinadan3": {
+		"key": "dinadan3",
+		"name": "Dinadan",
+		"location": "Hazelnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Dinadan",
+				"text": "Living here on the mountain side reminds me of my home, Dagian. Have you heard of it by chance?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"dinadan4": {
+		"key": "dinadan4",
+		"name": "Dinadan",
+		"location": "Hazelnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Dinadan",
+				"text": "I'm not the only one from Dagian actually. I live here with a few of my friends!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"florian1": {
+		"key": "florian1",
+		"name": "Florian",
+		"location": "Attith Cave",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Florian",
+				"text": "If you're looking for Pistachio, it's over that way. The view is nice, if you can stand the cold."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"florian2": {
+		"key": "florian2",
+		"name": "Florian",
+		"location": "Attith Cave",
+		"condition": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Florian",
+				"text": "Hey, be careful when you exit the caves. You don't want to slip or anything."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"florian3": {
+		"key": "florian3",
+		"name": "Florian",
+		"location": "Pistachio Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Florian",
+				"text": "Hm? Did you need something?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"florian4": {
+		"key": "florian4",
+		"name": "Florian",
+		"location": "Pistachio Home",
+		"condition": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Florian",
+				"text": "On days like this, the view really takes your breath away."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"goldie1": {
+		"key": "goldie1",
+		"name": "Goldie",
+		"location": "Cashew Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Goldie",
+				"text": "What's up, buttercup?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"goldie2": {
+		"key": "goldie2",
+		"name": "Goldie",
+		"location": "Cashew Home",
+		"condition": "After at least 3 explorations",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Goldie",
+				"text": "How's the climb going? Stay safe out there."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"goldie3": {
+		"key": "goldie3",
+		"name": "Goldie",
+		"location": "Cashew Home",
+		"condition": "After at least 3 explorations",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Goldie",
+				"text": "Hail! Intrepid adventurer! It's dangerous out there- have this!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Fruit",
+			1
+		]
+	},
+	"goldie4": {
+		"key": "goldie4",
+		"name": "Goldie",
+		"location": "Cashew Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Goldie",
+				"text": "Have you seen Zane? I hope that guy's taking breaks."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"goldie5": {
+		"key": "goldie5",
+		"name": "Goldie",
+		"location": "Cashew Home",
+		"condition": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Goldie",
+				"text": "Beautiful day, isn't it? I could go for some volleyball  right about now."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"goldie6": {
+		"key": "goldie6",
+		"name": "Goldie",
+		"location": "Cashew Home",
+		"condition": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Goldie",
+				"text": "Groooss, rain. I hope this clears up soon, it's no fun like this."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"hiraya2": {
+		"key": "hiraya2",
+		"name": "Hiraya",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Hiraya",
+				"text": "Oh! Hello! Are you having a good day? "
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"hiraya3": {
+		"key": "hiraya3",
+		"name": "Hiraya",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Hiraya",
+				"text": "Be careful out there! It's a big valley! "
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"hiraya4": {
+		"key": "hiraya4",
+		"name": "Hiraya",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Hiraya",
+				"text": "Have you ate yet? Here, have some!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Seed Packet",
+			1
+		]
+	},
+	"hiraya5": {
+		"key": "hiraya5",
+		"name": "Hiraya",
+		"location": "Butternut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Hiraya",
+				"text": "You're egg-cellent! "
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Egg",
+			1
+		]
+	},
+	"irene1": {
+		"key": "irene1",
+		"name": "Irene",
+		"location": "Briar's Pond",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Irene",
+				"text": "Nice view, isn't it?"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Paint",
+			1
+		]
+	},
+	"irene2": {
+		"key": "irene2",
+		"name": "Irene",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Irene",
+				"text": "Hello, there. Oh, me? I'm just watching my owl from afar."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"irene3": {
+		"key": "irene3",
+		"name": "Irene",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Irene",
+				"text": "You remind me of my friend's quingee, Bippy. Except Bippy is tinier and always has a blank stare. "
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"irene4": {
+		"key": "irene4",
+		"name": "Irene",
+		"location": "Scrap Yard",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Irene",
+				"text": "You'd be surprised by the amount of inspiration that can be found here."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"irene5": {
+		"key": "irene5",
+		"name": "Irene",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Irene",
+				"text": "Another day of running errands..."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"legretta": {
+		"key": "legretta",
+		"name": "Legretta",
+		"location": "Lake Galinn",
+		"condition": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Legretta",
+				"text": "You know I own a restaurant? It's called El Encanto, it's in Butternut Home, you should come by sometime!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"marcelo1": {
+		"key": "marcelo1",
+		"name": "Marcelo",
+		"location": "Cashew Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Marcelo",
+				"text": "..."
+			},
+			{
+				"name": "Marcelo",
+				"text": "Scram. "
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"marcelo2": {
+		"key": "marcelo2",
+		"name": "Marcelo",
+		"location": "Cashew Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Marcelo",
+				"text": "I don't have food for you. "
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"marcelo3": {
+		"key": "marcelo3",
+		"name": "Marcelo",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Marcelo",
+				"text": "..."
+			},
+			{
+				"name": "Marcelo",
+				"text": "Shoo. "
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"marcelo4": {
+		"key": "marcelo4",
+		"name": "Marcelo",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Marcelo",
+				"text": "You caught me in a good mood. Take this. "
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Art",
+			1
+		]
+	},
+	"paxis1": {
+		"key": "paxis1",
+		"name": "Paxis",
+		"location": "The Forgotten Woman",
+		"condition": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Paxis",
+				"text": "Oh, hey. Wanna keep me and my friend here company?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"paxis2": {
+		"key": "paxis2",
+		"name": "Paxis",
+		"location": "The Forgotten Woman",
+		"condition": "Cloudy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Paxis",
+				"text": "... Oh. Hi. Sorry, I was just thinking..."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"paxis3": {
+		"key": "paxis3",
+		"name": "Paxis",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Paxis",
+				"text": "Oh, hello! Have we met before?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"paxis4": {
+		"key": "paxis4",
+		"name": "Paxis",
+		"location": "Walnut Home",
+		"condition": "Cloudy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Paxis",
+				"text": "Ah! You startled me, little buddy."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"paxis5": {
+		"key": "paxis5",
+		"name": "Paxis",
+		"location": "Walnut Home",
+		"condition": "Cloudy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Paxis",
+				"text": "Hey, little buddy. Wanna hear a song?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"paxis6": {
+		"key": "paxis6",
+		"name": "Paxis",
+		"location": "Walnut Home",
+		"condition": "River unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Paxis",
+				"text": "You've been busy, huh? Here. I'm trying some new things too."
+			},
+			{
+				"name": "Paxis",
+				"text": "Let me know if you like it!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Baked Good",
+			1
+		]
+	},
+	"quyen1": {
+		"key": "quyen1",
+		"name": "Quyen",
+		"location": "Almond Home",
+		"condition": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Quyen",
+				"text": "Hey, you! Stay still for a moment. Let me draw you!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"quyen2": {
+		"key": "quyen2",
+		"name": "Quyen",
+		"location": "Almond Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Quyen",
+				"text": "Well aren't you adventurous? Have this for good luck!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Silk",
+			1
+		]
+	},
+	"quyen3": {
+		"key": "quyen3",
+		"name": "Quyen",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Quyen",
+				"text": "Whoah! You look like you're in a hurry."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"quyen4": {
+		"key": "quyen4",
+		"name": "Quyen",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Quyen",
+				"text": "I'm curious, do you know how to read? You should come to the library."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"rosendo1": {
+		"key": "rosendo1",
+		"name": "Rosendo",
+		"location": "Almond Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Rosendo",
+				"text": "Hm? Watch where you're going, you're going to get hurt."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"rosendo2": {
+		"key": "rosendo2",
+		"name": "Rosendo",
+		"location": "Almond Home",
+		"condition": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Rosendo",
+				"text": "Taking shelter, huh? Well, stay as long as you need."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"rosendo4": {
+		"key": "rosendo4",
+		"name": "Rosendo",
+		"location": "Almond Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Rosendo",
+				"text": "You're awfully in a hurry…"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"rosendo5": {
+		"key": "rosendo5",
+		"name": "Rosendo",
+		"location": "Lake Galinn",
+		"condition": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Rosendo",
+				"text": "Did you need something? A fish? Yeah, you can have one of mine."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Fish",
+			1
+		]
+	},
+	"sou1": {
+		"key": "sou1",
+		"name": "Sou",
+		"location": "Briar's Pond",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Sou",
+				"text": "The flowers around here are pretty... Here, you should have one."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Flower",
+			1
+		]
+	},
+	"sou2": {
+		"key": "sou2",
+		"name": "Sou",
+		"location": "Lake Galinn",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Sou",
+				"text": "Have you seen Ava around? I wonder where she wandered off to..."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"sou3": {
+		"key": "sou3",
+		"name": "Sou",
+		"location": "Peanut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Sou",
+				"text": "Could you say hi to Bullfrog for me? I hear he's been hard at work."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"sou4": {
+		"key": "sou4",
+		"name": "Sou",
+		"location": "Peanut Home",
+		"condition": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Sou",
+				"text": "I could stand in the rain forever... Do you like the rain?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"sou5": {
+		"key": "sou5",
+		"name": "Sou",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Sou",
+				"text": "Oh, hey there little guy! You're so cute..."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"sou6": {
+		"key": "sou6",
+		"name": "Sou",
+		"location": "Town Square",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Sou",
+				"text": "Ah, I almost didn't see you there- are you okay?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana1": {
+		"key": "tadhana1",
+		"name": "Tadhana",
+		"location": "Attith Cave",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "You've ☝️  just 📉  been 😤  GUPPIED!!! 🤪 ⚠️ pass 🌬️ this 🤾‍♀️ guppy 🦐 to 😚 TEN 🚠 other 📲 GUPSTERS 🚷 to 🧭 avoid 🚩 the 💭 GUPPY 🐟 CURSE☠️ "
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Guppy",
+			10
+		]
+	},
+	"tadhana2": {
+		"key": "tadhana2",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "You're destined for greatness, little one. "
+			},
+			{
+				"name": "Tadhana",
+				"text": "But you already knew that, didn't you?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana3": {
+		"key": "tadhana3",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Have you been to the Trading Post yet? We sell everything there!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana4": {
+		"key": "tadhana4",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Can you hold onto this for me for a moment? "
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Guppy",
+			1
+		]
+	},
+	"tadhana5": {
+		"key": "tadhana5",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Have you met Sun Eater? I think you two would get along well."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana6": {
+		"key": "tadhana6",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "High inventory count",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Hey-- if you're holding onto a lot of stuff you don't think you'll use, you can sell them at the Trading Post!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana7": {
+		"key": "tadhana7",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Did you know I can see the future? I know yours!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana8": {
+		"key": "tadhana8",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Take this. It's important. Don't lose it."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Egg",
+			1
+		]
+	},
+	"tadhana9": {
+		"key": "tadhana9",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Hehe. Wanna help me play a prank?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana11": {
+		"key": "tadhana11",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "Stormy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Piper said it's going to storm today. Haha! Would you believe it? She was right!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana12": {
+		"key": "tadhana12",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "You'll need this. Trust me."
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Guppy",
+			1
+		]
+	},
+	"tadhana13": {
+		"key": "tadhana13",
+		"name": "Tadhana",
+		"location": "Pecan Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "SCRAAAAAAAAAAA!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana14": {
+		"key": "tadhana14",
+		"name": "Tadhana",
+		"location": "Pistachio Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Hm? Making an attempt at fulfilling your destiny today?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana15": {
+		"key": "tadhana15",
+		"name": "Tadhana",
+		"location": "Pistachio Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Do you think you'll find what you're looking for there?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana16": {
+		"key": "tadhana16",
+		"name": "Tadhana",
+		"location": "Pistachio Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "At the end of your journey, will you finally be satisfied?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana17": {
+		"key": "tadhana17",
+		"name": "Tadhana",
+		"location": "Pistachio Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Do you believe in the Stars, [[name]]?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana18": {
+		"key": "tadhana18",
+		"name": "Tadhana",
+		"location": "Pistachio Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "I'm visiting Oz today. I think they'd love to meet you-- do you like flusters?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana19": {
+		"key": "tadhana19",
+		"name": "Tadhana",
+		"location": "Pistachio Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Did you know Piper climbs the mountain like every week?"
+			},
+			{
+				"name": "Tadhana",
+				"text": "What's she doing there? Controlling the weather, duh!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana20": {
+		"key": "tadhana20",
+		"name": "Tadhana",
+		"location": "Pistachio Home",
+		"condition": "River unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Fate is often easier to deal with when one is not alone. "
+			},
+			{
+				"name": "Tadhana",
+				"text": "But sometimes, it is one's fate to be alone."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"tadhana21": {
+		"key": "tadhana21",
+		"name": "Tadhana",
+		"location": "Pistachio Home",
+		"condition": "Failed once",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Tadhana",
+				"text": "Keep at it, Fated One. Eventually, the answers will be yours to take."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"toki1": {
+		"key": "toki1",
+		"name": "Toki",
+		"location": "Cashew Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Toki",
+				"text": "Quibby! Wait, you're not- my bad. What's up?"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"wynne1": {
+		"key": "wynne1",
+		"name": "Wynne",
+		"location": "Broken Crag",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "Oh, me? I'm looking for Quingfoot! "
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"wynne2": {
+		"key": "wynne2",
+		"name": "Wynne",
+		"location": "Lake Galinn",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "What do you think is on that island at the middle of the lake? Maybe buried treasure!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"wynne3": {
+		"key": "wynne3",
+		"name": "Wynne",
+		"location": "Lookout Point",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "Hey there! Do you think it'll be a nice night for star-gazing? Here, make a chart with me when you get the chance!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Art",
+			1
+		]
+	},
+	"wynne4": {
+		"key": "wynne4",
+		"name": "Wynne",
+		"location": "Lookout Point",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "This is the best spot to see the whole valley if you don't wanna go all the way to Pistachio."
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"wynne5": {
+		"key": "wynne5",
+		"name": "Wynne",
+		"location": "Lookout Point",
+		"condition": "After at least 3 explorations",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "Did ya find anything cool today? Here! "
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Flower",
+			1
+		]
+	},
+	"wynne6": {
+		"key": "wynne6",
+		"name": "Wynne",
+		"location": "Lookout Point",
+		"condition": "River unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "Have you been climbing up to the Peak? Honestly, it makes me a little nervous, haha!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"wynne7": {
+		"key": "wynne7",
+		"name": "Wynne",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "Nice to meet'ya, [[name]]! I'm Wynne Dee, hehe!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"wynne8": {
+		"key": "wynne8",
+		"name": "Wynne",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "Heya! Do you need a hand? I used to get lost here all the time!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"wynne9": {
+		"key": "wynne9",
+		"name": "Wynne",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "Have you seen the Wishing Well, yet? It's pretty neat!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"wynne10": {
+		"key": "wynne10",
+		"name": "Wynne",
+		"location": "Walnut Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "Good to see you again!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"wynne11": {
+		"key": "wynne11",
+		"name": "Wynne",
+		"location": "Walnut Home",
+		"condition": "After at least 3 explorations",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Wynne",
+				"text": "I hope the explorin' has been going good!"
+			}
+		],
+		"post_action": [
+			"NONE"
+		]
+	},
+	"yuliya1": {
+		"key": "yuliya1",
+		"name": "Yuliya",
+		"location": "Cashew Home",
+		"condition": "",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Yuliya",
+				"text": "We always need a friend, here have one!"
+			}
+		],
+		"post_action": [
+			"GIVE",
+			"Rock",
+			1
+		]
+	}
+}

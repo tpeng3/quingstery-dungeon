@@ -12,7 +12,7 @@ enum ActionType {
 	SOUND,
 	FREEZE
 }
-enum PostActionType { NONE, MORE_TEXT, DELETE, UNLOCK }
+enum PostActionType { NONE, MORE_TEXT, DELETE, UNLOCK, GIVE }
 
 @export var dialogue_file: JSON
 @export var skipFade:bool = false
@@ -26,7 +26,7 @@ var dialogue_text = ""
 
 signal dialogue_started
 signal dialogue_action(action_type, asset)
-signal dialogue_finished(postaction_type, asset)
+signal dialogue_finished(postaction_type, asset, amount)
 
 # load cutscene json script from the given file path
 func load_dialogue(file_path, dictKey):
@@ -58,7 +58,8 @@ func next_dialogue():
 	# check for dialogue actions
 	if current < dialogue_keys.size():
 		_set_dialogue()
-	elif current == dialogue_keys.size():
+	elif current >= dialogue_keys.size():
+		print("get in here?")
 		_check_post_action()
 
 func _set_dialogue():
@@ -98,11 +99,17 @@ func _check_action(action):
 func _check_post_action():
 	var postaction_type = PostActionType.NONE
 	var asset = null
+	var amount = 1
+	
+	print(postaction[0] in PostActionType, postaction[0])
 	if postaction and postaction[0] in PostActionType:
 		postaction_type = PostActionType[postaction[0]]
 		if len(postaction) == 2 \
-		and postaction_type == PostActionType.MORE_TEXT:
-			if postaction[1].get_extension() == "json":
-				asset = postaction[1]
+			and postaction_type == PostActionType.MORE_TEXT:
+				if postaction[1].get_extension() == "json":
+					asset = postaction[1]
+		if postaction_type == PostActionType.GIVE:
+			asset = postaction[1]
+			amount = postaction[2]
 
-	emit_signal("dialogue_finished", postaction_type, asset)
+	emit_signal("dialogue_finished", postaction_type, asset, amount)

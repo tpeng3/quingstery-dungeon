@@ -1,9 +1,9 @@
 [gd_scene load_steps=29 format=3 uid="uid://bc8xgeqkh2j60"]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/FishingSpot/FishingSpot.gd" id="1_7epku"]
-[ext_resource type="Texture2D" uid="uid://orsottd48hlw" path="res://assets/tile/Forage_Fishing_Spot_Sprite1.png" id="4_meyd6"]
-[ext_resource type="Texture2D" uid="uid://d2wb4jo4vghyj" path="res://assets/tile/Forage_Fishing_Spot_Sprite2.png" id="5_myh06"]
-[ext_resource type="Texture2D" uid="uid://bh14222gfxrx3" path="res://assets/ui/m_fishing.png" id="6_htg17"]
+[ext_resource type="Texture2D" uid="uid://bc6icn13mxndp" path="res://assets/tile/Forage_Fishing_Spot_Sprite1.png" id="4_meyd6"]
+[ext_resource type="Texture2D" uid="uid://2a0ks7calodc" path="res://assets/tile/Forage_Fishing_Spot_Sprite2.png" id="5_myh06"]
+[ext_resource type="Texture2D" uid="uid://bh14222gfxrx3" path="res://assets/UI/m_fishing.png" id="6_htg17"]
 [ext_resource type="SpriteFrames" uid="uid://cqbc547uw0sqf" path="res://assets/vfx/sparkle.tres" id="6_plyx6"]
 
 [sub_resource type="Animation" id="Animation_jkf5a"]

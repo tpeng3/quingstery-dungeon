@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cpd8q7ortkh0f"]
 
-[ext_resource type="SpriteFrames" uid="uid://dpo1mfleip26q" path="res://assets/ui/Weather.tres" id="1_yb1gg"]
+[ext_resource type="SpriteFrames" uid="uid://dpo1mfleip26q" path="res://assets/UI/Weather.tres" id="1_yb1gg"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_oqp3w"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="3_oofmb"]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dom8vrn6qhhpc"]
+[gd_scene load_steps=6 format=3 uid="uid://dom8vrn6qhhpc"]
 
+[ext_resource type="Script" path="res://prefabs/UI/StatusInfo/WeatherHUD.gd" id="2_8mj4x"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_fgrb7"]
-[ext_resource type="Texture2D" uid="uid://cg5o1bairotum" path="res://assets/ui/WeatherDisplay.png" id="3_h81tf"]
-[ext_resource type="Texture2D" uid="uid://c022xlnbge1l" path="res://assets/ui/WeatherBorder.png" id="5_nblia"]
+[ext_resource type="Texture2D" uid="uid://dtohgbbe7k34h" path="res://assets/UI/WeatherDisplay.png" id="3_h81tf"]
+[ext_resource type="Texture2D" uid="uid://c6ajppg2jobaf" path="res://assets/UI/WeatherBorder.png" id="5_nblia"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4o6l6"]
 atlas = ExtResource("5_nblia")
@@ -14,9 +15,9 @@ offset_left = 868.0
 offset_right = 1028.0
 offset_bottom = 92.0
 texture_normal = SubResource("AtlasTexture_4o6l6")
+script = ExtResource("2_8mj4x")
 
 [node name="Label" type="Label" parent="."]
-z_index = -1
 z_as_relative = false
 custom_minimum_size = Vector2(180, 0)
 layout_mode = 0
@@ -34,4 +35,4 @@ position = Vector2(53, 39)
 scale = Vector2(2, 2)
 texture = ExtResource("3_h81tf")
 region_enabled = true
-region_rect = Rect2(0, 0, 39, 39)
+region_rect = Rect2(39, 0, 39, 39)

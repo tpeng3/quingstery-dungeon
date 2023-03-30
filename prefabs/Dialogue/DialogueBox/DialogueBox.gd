@@ -9,7 +9,7 @@ signal no_selected
 @onready var DialogueBox = $DialogueWrapper
 @onready var DialogueName = $DialogueWrapper/NameContainer/Name
 @onready var DialogueText = $DialogueWrapper/DialogueText
-@onready var DialogueSelect = $DialogueWrapper/YesNo/DialogueSelect
+@onready var DialogueSelect = $DialogueWrapper/YesNo
 
 func _ready():
 	hide()
@@ -25,6 +25,7 @@ func _reset_ui():
 func show_new_item(item, amount):
 	# freeze character while there is dialogue
 	Global.freezeQuingee = true
+	await get_tree().create_timer(.1).timeout
 	
 	_reset_ui()
 	$NewItemPopup.show_item(item, amount)
@@ -102,17 +103,19 @@ func _on_dialogue_action(action_type, asset):
 			Global.freezeQuingee = false
 			freezeBox = true
 
-func _on_dialogue_finished(action_type = 0, asset = null):
+func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
 #	self.hide_image()
 #	$Talksprites/Sprite2D.hide()
 	DialogueSelect.hide()
 #	$AnimationPlayer.play_backwards("textbox_fade")
 #	await $AnimationPlayer.animation_finished
 	self.hide()
+	
 #	Input.set_custom_mouse_cursor(Utilities.CURSOR_DEFAULT)
 	if dialogue_node:
 		dialogue_node.dialogue_action.disconnect(_on_dialogue_action)
 		dialogue_node.dialogue_finished.disconnect(_on_dialogue_finished)
+		print("on dialogue finished?", action_type)
 		match action_type:
 			dialogue_node.PostActionType.MORE_TEXT:
 				dialogue_node.dialogue_file = asset
@@ -122,6 +125,11 @@ func _on_dialogue_finished(action_type = 0, asset = null):
 			dialogue_node.PostActionType.DELETE:
 				var to_delete = dialogue_node
 				to_delete.get_parent().queue_free()
+			dialogue_node.PostActionType.GIVE:
+				print("give here?", asset, amount)
+				show_new_item(asset, amount)
+				dialogue_node = null
+				return
 		dialogue_node = null
 				
 	emit_signal("no_selected")
