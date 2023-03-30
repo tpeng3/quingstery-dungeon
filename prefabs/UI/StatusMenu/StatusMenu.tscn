@@ -1,14 +1,15 @@
-[gd_scene load_steps=16 format=3 uid="uid://qehathayhhdl"]
+[gd_scene load_steps=17 format=3 uid="uid://qehathayhhdl"]
 
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="1_f2lqs"]
-[ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/StatusInfo.tscn" id="1_ksqmd"]
+[ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="1_ksqmd"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_b412g"]
 [ext_resource type="Texture2D" uid="uid://dajrkkk4ufh15" path="res://assets/ui/mountainprogress.png" id="2_tgc2h"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="3_eaifl"]
 [ext_resource type="SpriteFrames" uid="uid://daamhnd6ueq87" path="res://assets/ui/quingprogress.tres" id="4_kqlwo"]
 [ext_resource type="Texture2D" uid="uid://dh2h60nw6ygnd" path="res://assets/character/statusmenu/QuingBase.png" id="5_gp7ii"]
+[ext_resource type="Texture2D" uid="uid://cavacot3802hk" path="res://assets/character/statusmenu/FrogHat.png" id="7_pgn8e"]
 [ext_resource type="Texture2D" uid="uid://cgg82nd0tys68" path="res://assets/ui/ProgressBar.png" id="7_sdk5g"]
-[ext_resource type="StyleBox" path="res://theme/Signpost_Callout.tres" id="8_3uuko"]
+[ext_resource type="StyleBox" uid="uid://c2nb40sqt2n80" path="res://theme/Signpost_Callout.tres" id="8_3uuko"]
 [ext_resource type="Texture2D" uid="uid://dhprylslwrii3" path="res://assets/item/i_clothing.png" id="9_aku4q"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_75snv"]
@@ -38,6 +39,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="StatusInfo" parent="." instance=ExtResource("1_ksqmd")]
+layout_mode = 0
 
 [node name="OuterPadding" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -206,9 +208,13 @@ horizontal_alignment = 1
 custom_minimum_size = Vector2(355, 0)
 layout_mode = 2
 
-[node name="Sprite2D" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/Dressup"]
+[node name="Quingee" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/Dressup"]
 position = Vector2(-30, 0)
 texture = ExtResource("5_gp7ii")
+centered = false
+
+[node name="Equip" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/Dressup/Quingee"]
+texture = ExtResource("7_pgn8e")
 centered = false
 
 [node name="StatDisplay" type="BoxContainer" parent="OuterPadding/MainContentPadding/BoxContainer"]
