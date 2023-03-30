@@ -1,8 +1,8 @@
 [gd_scene load_steps=6 format=3 uid="uid://c5evt78phsk3n"]
 
 [ext_resource type="Script" path="res://prefabs/MapButton/MapButton.gd" id="1_byj6d"]
-[ext_resource type="Texture2D" uid="uid://bemxv2n0y8cdr" path="res://assets/ui/locations/locations_butternuthome_pip.png" id="2_i0iut"]
-[ext_resource type="Texture2D" uid="uid://c1ilng8lpurjn" path="res://assets/ui/mapbip.png" id="3_l0ewv"]
+[ext_resource type="Texture2D" uid="uid://bemxv2n0y8cdr" path="res://assets/UI/locations/locations_butternuthome_pip.png" id="2_i0iut"]
+[ext_resource type="Texture2D" uid="uid://c1ilng8lpurjn" path="res://assets/UI/mapbip.png" id="3_l0ewv"]
 
 [sub_resource type="Animation" id="Animation_hebl4"]
 resource_name = "scale"
