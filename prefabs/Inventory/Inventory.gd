@@ -9,13 +9,15 @@ var storage = {}
 var inventory = {
 	"Acorn": {
 		"name": "Acorn",
-		"path": "test",
 		"count": 2
 	},
 	"Trash": {
 		"name": "Trash",
-		"path": "test",
-		"count": 1
+		"count": 30
+	},
+	"Flower": {
+		"name": "Flower",
+		"count": 30
 	}
 }
 var max = 20
@@ -40,7 +42,6 @@ func add_item(key, count=1):
 	else:
 		inventory[key] = {
 			"name": item.name,
-			"path": item.path,
 			"count": count
 		}
 		

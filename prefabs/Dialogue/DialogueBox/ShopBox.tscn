@@ -10,11 +10,9 @@
 [ext_resource type="PackedScene" uid="uid://7kb3pvj7jya3" path="res://prefabs/UI/Popup/NewItemPopup.tscn" id="8_wiags"]
 [ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="8_y0hv3"]
 
-[sub_resource type="Animation" id="Animation_q44kr"]
-resource_name = "textbox_fade"
-
 [sub_resource type="Animation" id="Animation_v8xer"]
 resource_name = "bump"
+length = 0.3
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -27,6 +25,9 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector2(480, 0), Vector2(480, -10), Vector2(480, 0)]
 }
+
+[sub_resource type="Animation" id="Animation_q44kr"]
+resource_name = "textbox_fade"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xuf1v"]
 _data = {

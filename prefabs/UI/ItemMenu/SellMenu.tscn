@@ -1,0 +1,75 @@
+[gd_scene load_steps=13 format=3 uid="uid://c8nppuh66j6pc"]
+
+[ext_resource type="PackedScene" uid="uid://cdirrc5rr8huy" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_dydce"]
+[ext_resource type="Script" path="res://prefabs/UI/ItemMenu/SellMenu.gd" id="2_a587s"]
+[ext_resource type="PackedScene" uid="uid://dnfv6q8hkcav3" path="res://prefabs/UI/Popup/AmountPopup.tscn" id="4_n8cvy"]
+[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="8_l6d8l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wavf"]
+resource_local_to_scene = true
+atlas = ExtResource("8_l6d8l")
+region = Rect2(0, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lq4k7"]
+resource_local_to_scene = true
+atlas = ExtResource("8_l6d8l")
+region = Rect2(9, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg8ss"]
+resource_local_to_scene = true
+atlas = ExtResource("8_l6d8l")
+region = Rect2(18, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fr7am"]
+resource_local_to_scene = true
+atlas = ExtResource("8_l6d8l")
+region = Rect2(27, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jefra"]
+resource_local_to_scene = true
+atlas = ExtResource("8_l6d8l")
+region = Rect2(0, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gehwh"]
+resource_local_to_scene = true
+atlas = ExtResource("8_l6d8l")
+region = Rect2(9, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cgysp"]
+resource_local_to_scene = true
+atlas = ExtResource("8_l6d8l")
+region = Rect2(18, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xsg48"]
+resource_local_to_scene = true
+atlas = ExtResource("8_l6d8l")
+region = Rect2(27, 0, 9, 9)
+
+[node name="SellMenu" instance=ExtResource("1_dydce")]
+script = ExtResource("2_a587s")
+cost_type = 2
+
+[node name="LeftTitle" parent="OuterPadding/SplitContainer/LeftPanel/TitleMargin" index="0"]
+text = "Sell Items"
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
+texture_normal = SubResource("AtlasTexture_8wavf")
+texture_pressed = SubResource("AtlasTexture_lq4k7")
+texture_disabled = SubResource("AtlasTexture_hg8ss")
+texture_focused = SubResource("AtlasTexture_fr7am")
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
+texture_normal = SubResource("AtlasTexture_jefra")
+texture_pressed = SubResource("AtlasTexture_gehwh")
+texture_disabled = SubResource("AtlasTexture_cgysp")
+texture_focused = SubResource("AtlasTexture_xsg48")
+
+[node name="ButtonMid" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" index="0"]
+visible = false
+
+[node name="ButtonRight" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" index="1"]
+text = "sell"
+
+[node name="AmountPopup" parent="." index="3" instance=ExtResource("4_n8cvy")]
+visible = false
+layout_mode = 1

@@ -6,22 +6,22 @@
 [sub_resource type="AtlasTexture" id="AtlasTexture_bop0m"]
 resource_local_to_scene = true
 atlas = ExtResource("1_3bqof")
-region = Rect2(9, 9, 9, 9)
+region = Rect2(0, 18, 9, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1eu27"]
 resource_local_to_scene = true
 atlas = ExtResource("1_3bqof")
-region = Rect2(9, 9, 9, 9)
+region = Rect2(9, 18, 9, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_khh8l"]
 resource_local_to_scene = true
 atlas = ExtResource("1_3bqof")
-region = Rect2(18, 9, 9, 9)
+region = Rect2(18, 18, 9, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1wmfc"]
 resource_local_to_scene = true
 atlas = ExtResource("1_3bqof")
-region = Rect2(27, 9, 9, 9)
+region = Rect2(27, 18, 9, 9)
 
 [node name="ArrowBtn" type="TextureButton"]
 custom_minimum_size = Vector2(9, 9)

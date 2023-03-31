@@ -29,12 +29,12 @@ func _on_menu_closed(bought=false):
 func _on_buy_pressed():
 	$ShopBox.hide()
 	$NavButtons.hide()
-	$BuyMenu.show()
+	$BuyMenu.show_menu()
 
 func _on_sell_pressed():
-	$NavButtons.hide()
 	$ShopBox.hide()
-	$BuyMenu.show()
+	$NavButtons.hide()
+	$BuyMenu.show_menu()
 
 func _on_talk_pressed():
 	var talk_key = _weighted_rand("talk")

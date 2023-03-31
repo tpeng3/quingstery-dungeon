@@ -12,16 +12,16 @@
 [ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="9_olvpq"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_opkrh"]
-region = Rect2(0, 9, 9, 9)
+region = Rect2(0, 0, 9, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3yodh"]
-region = Rect2(9, 9, 9, 9)
+region = Rect2(9, 0, 9, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iphkb"]
-region = Rect2(18, 9, 9, 9)
+region = Rect2(18, 0, 9, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dikwb"]
-region = Rect2(27, 9, 9, 9)
+region = Rect2(27, 0, 9, 9)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kljjr"]
 region = Rect2(0, 0, 9, 9)

@@ -202,7 +202,7 @@
 		"description": "Reduce, reuse, recycle!",
 		"category": "Fishing",
 		"source": "Throat",
-		"maxcount": 1,
+		"maxcount": 6,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_trash.png"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://b72h35y28gs8e"]
 
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="1_vxv13"]
-[ext_resource type="Theme" path="res://theme/Meter.tres" id="2_va3ko"]
+[ext_resource type="Theme" uid="uid://c1tcpban3jq26" path="res://theme/Meter.tres" id="2_va3ko"]
 
 [node name="AmountSelect" type="MarginContainer"]
 custom_minimum_size = Vector2(168, 89)
@@ -78,6 +78,7 @@ position = Vector2(40, 78)
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_vxv13")
 animation = &"Med_D"
+frame_progress = 0.721635
 
 [node name="Downe3" type="AnimatedSprite2D" parent="SplitContainer/DownArrows"]
 position = Vector2(66, 83)
