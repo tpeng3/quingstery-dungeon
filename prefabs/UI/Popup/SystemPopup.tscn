@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cewxqueqnp0vj"]
+
+[ext_resource type="PackedScene" uid="uid://cjuix8vu67e3s" path="res://prefabs/UI/Popup/Popup.tscn" id="1_diy3y"]
+
+[node name="SystemPopup" instance=ExtResource("1_diy3y")]
+
+[node name="ItemMargin" parent="SplitContainer" index="0"]
+visible = false
+
+[node name="AmountSelect" parent="SplitContainer/PopupBox/SplitContainer" index="1"]
+visible = false
+
+[node name="ButtonMid" parent="SplitContainer/PopupBox/FooterMargin" index="1"]
+visible = false

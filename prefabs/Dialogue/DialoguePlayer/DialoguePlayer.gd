@@ -87,8 +87,7 @@ func _check_action(action):
 		action_type = ActionType[action[0]]
 		if len(action) == 2:
 			if action_type in [ActionType.BG, ActionType.SHOW_FOCUS, ActionType.SOUND]:
-				var file = FileAccess.open(action[1], FileAccess.READ)
-				if file.file_exists(action[1]):
+				if FileAccess.file_exists(action[1]):
 					asset = load(action[1])
 					print(asset)
 			elif action_type == ActionType.ANIMATION:

@@ -1,10 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://ob6j0n1secd3"]
+[gd_scene load_steps=6 format=3 uid="uid://ob6j0n1secd3"]
 
+[ext_resource type="Texture2D" uid="uid://c66o36ygrleew" path="res://assets/ui/Icon_Menu.png" id="1_72a1r"]
 [ext_resource type="Script" path="res://prefabs/UI/StatusInfo/MenuButton.gd" id="1_itiu6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_stqmq"]
+atlas = ExtResource("1_72a1r")
+region = Rect2(0, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p5sys"]
+atlas = ExtResource("1_72a1r")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msdis"]
+atlas = ExtResource("1_72a1r")
+region = Rect2(48, 48, 48, 48)
 
 [node name="MenuButton" type="TextureButton"]
 offset_right = 48.0
 offset_bottom = 48.0
+texture_normal = SubResource("AtlasTexture_stqmq")
+texture_pressed = SubResource("AtlasTexture_p5sys")
+texture_disabled = SubResource("AtlasTexture_stqmq")
+texture_focused = SubResource("AtlasTexture_msdis")
 script = ExtResource("1_itiu6")
 metadata/vertPosition = 1
 

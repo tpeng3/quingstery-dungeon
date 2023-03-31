@@ -2,34 +2,66 @@
 # This is a singleton so script is preloaded before game starts
 extends Node
 
-var player = "Quingee"
-
-# true when a screen pops up and player should focus on the dialogue box
-var freezeQuingee = false
-
-# global player stats
-var currentHunger = 20
-var maxHunger = 20
-var exploreCount = 0
-var timesFailed = 0
-
 enum CheckpointType {
 	THROAT,
 	RIVER,
 	STEPS,
 	PEAK
 }
+
+# true when a screen pops up and player should focus on the dialogue box
+var freezeQuingee = false
+
+# global player stats
+var player = "Quingee"
+var currentHunger = 20
+var maxHunger = 20
+var exploreCount = 0
+var timesFailed = 0
 var currentCheckpoint = CheckpointType.THROAT
-var highestFloor = 1
+var highestFloor = 0
 
 # global world stats
 var currentDay = 1
 var currentWeather = "Sunny"
 var futureWeather = "Sunny"
+var weatherList = ["Sunny", "Cloudy", "Windy", "Rainy", "Stormy"]
 
 # global town stats
 var npc_dialogue: JSON = load("res://dialogue/NPCs.json")
 var npcData = []
+
+func save():
+	var save_dict = {
+		"player" : player,
+		"maxHunger" : maxHunger,
+		"exploreCount" : exploreCount,
+		"timesFailed" : timesFailed,
+		"currentCheckpoint" : currentCheckpoint,
+		"highestFloor" : highestFloor,
+		"currentDay" : currentDay,
+		"currentWeather" : currentWeather,
+		"futureWeather" : futureWeather
+	}
+	return save_dict
+
+func load_data(node_data):
+	assert(node_data, "We ball if the save file data is corrupt.")
+	player = node_data.player
+	maxHunger = node_data.maxHunger
+	exploreCount = node_data.exploreCount
+	timesFailed = node_data.timesFailed
+	currentCheckpoint = node_data.currentCheckpoint
+	highestFloor = node_data.highestFloor
+	currentDay = node_data.currentDay
+	currentWeather = node_data.currentWeather
+	futureWeather = node_data.futureWeather
+
+func newDay():
+	currentDay += 1
+	currentWeather = futureWeather
+	generateWeather()
+	generateNPCs()
 
 func generateWeather():
 	var chance = randi_range(1,100)
@@ -43,12 +75,6 @@ func generateWeather():
 		futureWeather = "Windy"
 	else:
 		futureWeather = "Stormy"
-
-func newDay():
-	currentDay += 1
-	currentWeather = futureWeather
-	generateWeather()
-	generateNPCs()
 
 func generateNPCs():
 	# logic for the conditions
@@ -82,7 +108,7 @@ func _weighted_rand(charas, locations):
 				return currentCheckpoint >= CheckpointType.RIVER
 			elif i.condition == "Steps unlocked":
 				return currentCheckpoint >= CheckpointType.STEPS
-			elif i.condition in ["Sunny", "Cloudy", "Windy", "Rainy", "Stormy"]:
+			elif i.condition in weatherList:
 				return i.condition == currentWeather
 			else:
 				return true

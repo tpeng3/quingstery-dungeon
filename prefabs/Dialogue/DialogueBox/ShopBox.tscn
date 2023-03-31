@@ -3,7 +3,3 @@
 [ext_resource type="PackedScene" uid="uid://8u6c5x2aksb6" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="1_x6a88"]
 
 [node name="ShopBox" instance=ExtResource("1_x6a88")]
-
-[node name="TopBar" parent="." index="1"]
-grow_horizontal = 1
-grow_vertical = 1

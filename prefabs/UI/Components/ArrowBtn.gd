@@ -21,18 +21,14 @@ func _ready():
 		_:
 			direction = 0
 	
-	sprite.atlas = load("res://assets/ui/arrows.png")
 	sprite.region = Rect2(0, 9 * direction, 9, 9)
 	self.texture_normal = sprite
 	
-	spriteFocus.atlas = load("res://assets/ui/arrows.png")
 	spriteFocus.region = Rect2(27, 9 * direction, 9, 9)
 	self.texture_focused = spriteFocus
 	
-	spritePress.atlas = load("res://assets/ui/arrows.png")
 	spritePress.region = Rect2(9, 9 * direction, 9, 9)
 	self.texture_pressed = spritePress
 	
-	spriteDisabled.atlas = load("res://assets/ui/arrows.png")
 	spriteDisabled.region = Rect2(18, 9 * direction, 9, 9)
 	self.texture_disabled = spriteDisabled

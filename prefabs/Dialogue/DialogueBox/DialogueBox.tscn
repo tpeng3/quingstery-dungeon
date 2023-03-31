@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://8u6c5x2aksb6"]
+[gd_scene load_steps=11 format=3 uid="uid://8u6c5x2aksb6"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="2_dpae3"]
@@ -7,7 +7,6 @@
 [ext_resource type="Theme" uid="uid://bnb6osg7rfj47" path="res://theme/smallround.tres" id="4_jvqjy"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="5_hwskm"]
 [ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="6_ef0cp"]
-[ext_resource type="PackedScene" uid="uid://cjuix8vu67e3s" path="res://prefabs/UI/Popup/Popup.tscn" id="8_1iosi"]
 [ext_resource type="PackedScene" uid="uid://7kb3pvj7jya3" path="res://prefabs/UI/Popup/NewItemPopup.tscn" id="8_elakg"]
 
 [sub_resource type="Animation" id="Animation_q44kr"]
@@ -103,9 +102,6 @@ grow_horizontal = 1
 grow_vertical = 1
 
 [node name="NewItemPopup" parent="." instance=ExtResource("8_elakg")]
-visible = false
-
-[node name="Popup" parent="." instance=ExtResource("8_1iosi")]
 visible = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

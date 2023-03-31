@@ -1,884 +1,856 @@
 {
-    "welcome 1": {
-        "key": "welcome 1",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Be with you in a moment. // ... // Hi. What do you need?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "welcome 1 (alt)": {
-        "key": "welcome 1 (alt)",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Hi. What do you need?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "welcome 2": {
-        "key": "welcome 2",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Hoeijendagh.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "welcome 3": {
-        "key": "welcome 3",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Oe 'wis't?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after saving 1": {
-        "key": "after saving 1",
-        "type": "save",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "All right. You're all set.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after saving 2": {
-        "key": "after saving 2",
-        "type": "save",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "You're set.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after saving 3": {
-        "key": "after saving 3",
-        "type": "save",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Everything's secure.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after loading 1": {
-        "key": "after loading 1",
-        "type": "load",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Ah, you again.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after loading 2": {
-        "key": "after loading 2",
-        "type": "load",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "You again. Welcome back.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after loading 3": {
-        "key": "after loading 3",
-        "type": "load",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Welcome back.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after storing items 1": {
-        "key": "after storing items 1",
-        "type": "store",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "I cannot imagine what it is you've got there.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after storing items 2": {
-        "key": "after storing items 2",
-        "type": "store",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Whatever... that is, you can leave it over there.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after storing items 3": {
-        "key": "after storing items 3",
-        "type": "store",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "This isn't a storage locker, you know.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a rainy day 1": {
-        "key": "on a rainy day 1",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Wet shoes at the door, please-- oh. Well, never mind.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a rainy day 2": {
-        "key": "on a rainy day 2",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "I guess this sort of weather wouldn't bother you, would it?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a rainy day 3": {
-        "key": "on a rainy day 3",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "The mountain's going to be slick today, I imagine. Be careful if you're going up.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a sunny day 1": {
-        "key": "on a sunny day 1",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Nice day. Enjoy it for me, would you?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a sunny day 2": {
-        "key": "on a sunny day 2",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "... Mm. It's a bit bright out, isn't it?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a sunny day 3": {
-        "key": "on a sunny day 3",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Nice day for a bit of gardening. If only, right?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a cloudy day 1": {
-        "key": "on a cloudy day 1",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "This weather tends to make people drowsy. If you need a break, you're welcome to a cot.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a cloudy day 2": {
-        "key": "on a cloudy day 2",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Are you one for full sun or partial shade?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a cloudy day 3": {
-        "key": "on a cloudy day 3",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "I may step outside a moment. You wouldn't mind, would you?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a windy day 1": {
-        "key": "on a windy day 1",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Careful you're not blown away out there.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a windy day 2": {
-        "key": "on a windy day 2",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "You're looking a bit ruffled.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a windy day 3": {
-        "key": "on a windy day 3",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Up in the mountains, the wind chill gets a bit-- well, I'm sure you're familiar.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a stormy day 1": {
-        "key": "on a stormy day 1",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "You're going out in this?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a stormy day 2": {
-        "key": "on a stormy day 2",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Bit of refuge from the weather? Sure, stay a while.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a stormy day 3": {
-        "key": "on a stormy day 3",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Where I'm from, storms represent creation and progress. Make of that what you will.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (teri)": {
-        "key": "mention a resident (teri)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Ms Shortte? She's not in right now. I'll... let her know you came by.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (bullfrog)": {
-        "key": "mention a resident (bullfrog)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Huh. Bullheaded, indeed.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (winter)": {
-        "key": "mention a resident (winter)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Dr Lake is-- I'm not sure they treat animals, you understand.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (jek)": {
-        "key": "mention a resident (jek)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "The officer is... well, he works hard, anyway.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (oleander)": {
-        "key": "mention a resident (oleander)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "I'm just the secretary.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (wren)": {
-        "key": "mention a resident (wren)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Oh, Hendrickson? He's quite the carpenter, if you've need of a-- coop?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (cameron)": {
-        "key": "mention a resident (cameron)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Ah, he's-- one of the Post's deliverymen, no? I can't imagine you receive much by way of mail.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (hawke)": {
-        "key": "mention a resident (hawke)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Mm, Hawke is... Well, he isn't exactly the most personable. Something tells me that won't be an issue for you, though.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (cyrus)": {
-        "key": "mention a resident (cyrus)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "He's, ah... Well, anyway.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (piper)": {
-        "key": "mention a resident (piper)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Dr Ainsley? We're well acquainted. If you've any questions about the mountain, you're better off asking her than me.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident (oz)": {
-        "key": "mention a resident (oz)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "I wouldn't bother Oz about the climb. Not that they wouldn't welcome it - rather, I think they're a bit too accomodating.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a business (town hall)": {
-        "key": "mention a business (town hall)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Ah, well... What you see is about what you get, I'm afraid.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a business (trading post)": {
-        "key": "mention a business (trading post)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Mm. Your sort eats frogs, is that right? There's one at the Post that could use a good bite on the ankle.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a business (tian's corner)": {
-        "key": "mention a business (tian's corner)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Ms Tian produces excellent greenery. I... don't know how much that interests you, actually.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a business (textile services)": {
-        "key": "mention a business (textile services)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Down feathers aren't enough?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a business (fire station)": {
-        "key": "mention a business (fire station)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "One can only hope they don't become too acquainted with emergency services.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a business (meteorological institute)": {
-        "key": "mention a business (meteorological institute)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Dr Ainsley does good work. I hope you'll take her efforts seriously and to heart.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "meeting Quingee for the first time": {
-        "key": "meeting Quingee for the first time",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "(... he's reaching for a broom.)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after Quingee becomes a regular": {
-        "key": "after Quingee becomes a regular",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "You know, this is generally intended to be temporary lodging.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after Quingee makes decent progress up the mountain": {
-        "key": "after Quingee makes decent progress up the mountain",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "You're rather stubborn, aren't you? It's admirable.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after Quingee reaches the Peak": {
-        "key": "after Quingee reaches the Peak",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "... Something about you seems different.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after receiving a gift you like": {
-        "key": "after receiving a gift you like",
-        "type": "gift",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "... Oh. Uh, thank you. That's very-- thank you.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after receiving a gift you don't like": {
-        "key": "after receiving a gift you don't like",
-        "type": "gift",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "... Right. Thanks anyway.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after receiving a gift you're neutral about": {
-        "key": "after receiving a gift you're neutral about",
-        "type": "gift",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Mm. This is...?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "leaving town hall": {
-        "key": "leaving town hall",
-        "type": "leave",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Saluu.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 1": {
-        "key": "chatter 1",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Hm?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 2": {
-        "key": "chatter 2",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Yes?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 3": {
-        "key": "chatter 3",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Do you need something?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 4": {
-        "key": "chatter 4",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "I'm busy.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 5": {
-        "key": "chatter 5",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "I've a lot of work today. Sorry.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 6": {
-        "key": "chatter 6",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "You might watch for the birds out back. They're not as... affable as you.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 7": {
-        "key": "chatter 7",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "I suppose it's no stranger talking to you than to a fern. I can't say either reflects particularly well on me, though.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 8": {
-        "key": "chatter 8",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Do you ever talk back? // ... Surely not.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 9": {
-        "key": "chatter 9",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Despite the absurdity of the situation, I do appreciate the company.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "chatter 10": {
-        "key": "chatter 10",
-        "type": "talk again",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Oleander",
-                "text": "Nosy little thing, aren't you.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    }
+	"welcome 1 (alt)": {
+		"key": "welcome 1 (alt)",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Hi. What do you need?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"welcome 2": {
+		"key": "welcome 2",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Hoeijendagh.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"welcome 3": {
+		"key": "welcome 3",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Oe 'wis't?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after saving 1": {
+		"key": "after saving 1",
+		"type": "save",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "All right. You're all set.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after saving 2": {
+		"key": "after saving 2",
+		"type": "save",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "You're set.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after saving 3": {
+		"key": "after saving 3",
+		"type": "save",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Everything's secure.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after loading 1": {
+		"key": "after loading 1",
+		"type": "load",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Ah, you again.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after loading 2": {
+		"key": "after loading 2",
+		"type": "load",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "You again. Welcome back.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after loading 3": {
+		"key": "after loading 3",
+		"type": "load",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Welcome back.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after storing items 1": {
+		"key": "after storing items 1",
+		"type": "store",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "I cannot imagine what it is you've got there.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after storing items 2": {
+		"key": "after storing items 2",
+		"type": "store",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Whatever... that is, you can leave it over there.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after storing items 3": {
+		"key": "after storing items 3",
+		"type": "store",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "This isn't a storage locker, you know.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a rainy day 1": {
+		"key": "on a rainy day 1",
+		"type": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "[b]Wet shoes at the door, please--[/b] oh. Well, never mind.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a rainy day 2": {
+		"key": "on a rainy day 2",
+		"type": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "I guess this sort of weather wouldn't bother you, would it?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a rainy day 3": {
+		"key": "on a rainy day 3",
+		"type": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "The mountain's going to be slick today, I imagine. Be careful if you're going up.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a sunny day 1": {
+		"key": "on a sunny day 1",
+		"type": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Nice day. Enjoy it for me, would you?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a sunny day 2": {
+		"key": "on a sunny day 2",
+		"type": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "... Mm. It's a bit bright out, isn't it?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a sunny day 3": {
+		"key": "on a sunny day 3",
+		"type": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Nice day to be out in the garden. If only, right?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a cloudy day 1": {
+		"key": "on a cloudy day 1",
+		"type": "Cloudy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "This sort of weather tends to make people drowsy. If you need a break, you're welcome to a cot.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a cloudy day 2": {
+		"key": "on a cloudy day 2",
+		"type": "Cloudy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Are you one for full sun or partial shade?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a cloudy day 3": {
+		"key": "on a cloudy day 3",
+		"type": "Cloudy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "I may step outside a moment. You wouldn't mind, would you?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a windy day 1": {
+		"key": "on a windy day 1",
+		"type": "Windy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Careful you're not blown away out there.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a windy day 2": {
+		"key": "on a windy day 2",
+		"type": "Windy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "You're looking a bit ruffled.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a windy day 3": {
+		"key": "on a windy day 3",
+		"type": "Windy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Up in the mountains, the wind chill gets a bit-- well, I'm sure you're familiar.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a stormy day 1": {
+		"key": "on a stormy day 1",
+		"type": "Stormy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "You're going out in this?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a stormy day 2": {
+		"key": "on a stormy day 2",
+		"type": "Stormy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Bit of refuge from the weather? Sure, stay a while.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a stormy day 3": {
+		"key": "on a stormy day 3",
+		"type": "Stormy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Where I'm from, storms represent creation and progress. Make of that what you will.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (teri)": {
+		"key": "mention a resident (teri)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Ms Shortte? She's not in right now. I'll... let her know you came by.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (bullfrog)": {
+		"key": "mention a resident (bullfrog)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Bullfrog? Huh. Bullheaded, indeed.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (winter)": {
+		"key": "mention a resident (winter)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Dr Lake is-- I'm not sure they treat animals, you understand.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (jek)": {
+		"key": "mention a resident (jek)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "The officer is... well, he works hard, anyway.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (oleander)": {
+		"key": "mention a resident (oleander)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "I'm just the secretary.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (wren)": {
+		"key": "mention a resident (wren)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Oh, Hendrickson? He's quite the carpenter, if you've need of a-- coop?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (cameron)": {
+		"key": "mention a resident (cameron)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Ah, Cameron is-- he's one of the Post's deliverymen, no? I can't imagine you receive much by way of mail.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (hawke)": {
+		"key": "mention a resident (hawke)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Mm, Hawke is... Well, he isn't exactly the most personable. Something tells me that won't be an issue for you, though.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (piper)": {
+		"key": "mention a resident (piper)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Dr Ainsley? We're well acquainted. If you've any questions about the mountain, you're better off asking her than me.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident (oz)": {
+		"key": "mention a resident (oz)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "I wouldn't bother Oz about the climb. Not that they wouldn't welcome it - rather, I think they're a bit too accomodating.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business (town hall)": {
+		"key": "mention a business (town hall)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Ah, well... What you see here is about what you get, I'm afraid.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business (trading post)": {
+		"key": "mention a business (trading post)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Mm. Your sort eats frogs, is that right? There's one at the Post that could use a good bite on the ankle.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business (tian's corner)": {
+		"key": "mention a business (tian's corner)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Ms Tian produces excellent greenery. I... don't know how much that interests you, actually.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business (textile services)": {
+		"key": "mention a business (textile services)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "What do you need textiles for? Down feathers aren't enough?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business (fire station)": {
+		"key": "mention a business (fire station)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "One can only hope they don't become [b]too[/b] acquainted with emergency services.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a business (meteorological institute)": {
+		"key": "mention a business (meteorological institute)",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Dr Ainsley does good work. I hope you'll take her efforts seriously and to heart.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"meeting Quingee for the first time": {
+		"key": "meeting Quingee for the first time",
+		"type": "tutorial",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "(... He's reaching for a broom.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee becomes a regular": {
+		"key": "after Quingee becomes a regular",
+		"type": "regular",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "You know, this is generally intended to be [b]temporary[/b] lodging.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee makes decent progress up the mountain": {
+		"key": "after Quingee makes decent progress up the mountain",
+		"type": "Steps unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "You're rather stubborn, aren't you? It's admirable.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee reaches the Peak": {
+		"key": "after Quingee reaches the Peak",
+		"type": "Peak unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Something about you seems... different.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you like": {
+		"key": "after receiving a gift you like",
+		"type": "liked gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "... Oh. Uh, thank you. That's very-- thank you.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you don't like": {
+		"key": "after receiving a gift you don't like",
+		"type": "disliked gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "... Right. Thanks anyway.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you're neutral about": {
+		"key": "after receiving a gift you're neutral about",
+		"type": "neutral gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Mm. This is...?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"leaving town hall": {
+		"key": "leaving town hall",
+		"type": "leave",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Saluu.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 1": {
+		"key": "chatter 1",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Hm?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 2": {
+		"key": "chatter 2",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Yes?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 3": {
+		"key": "chatter 3",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Do you need something?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 4": {
+		"key": "chatter 4",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "I'm busy.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 5": {
+		"key": "chatter 5",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "I've a lot of work today. Sorry.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 6": {
+		"key": "chatter 6",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "[b]Huh.[/b] Nosy little thing, aren't you?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 7": {
+		"key": "chatter 7",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "You might watch for the birds out back. They're not as... [b]affable[/b] as you.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 8": {
+		"key": "chatter 8",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "I suppose it's no stranger talking to you than to a fern. I can't say either reflects particularly well on me, though.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 9": {
+		"key": "chatter 9",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Do you ever talk back? ... No, surely not.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 10": {
+		"key": "chatter 10",
+		"type": "talk friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Despite the absurdity of the situation, I do appreciate the company.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	}
 }

@@ -20,7 +20,7 @@
 		"description": "Go get 'em!",
 		"category": "Trading",
 		"source": "Trading Post",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": true,
 		"canTrade": false,
 		"path": "assets/item/i_bait.png"
@@ -72,7 +72,7 @@
 		"description": "A Quingee’s generous offering to you.",
 		"category": "Animal",
 		"source": "Quingee, Tian's Corner",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": true,
 		"canTrade": true,
 		"path": "assets/item/i_egg.png"
@@ -85,7 +85,7 @@
 		"description": "Vitamin-rich and refreshing. Calcium!",
 		"category": "Animal",
 		"source": "Cyao, Tian's Corner",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": true,
 		"canTrade": true,
 		"path": "assets/item/i_milk.png"
@@ -98,7 +98,7 @@
 		"description": "A moth loved you enough to make you this.",
 		"category": "Animal",
 		"source": "Pipod",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_silk.png"
@@ -189,7 +189,7 @@
 		"description": "Once someone's home, now your treasure.",
 		"category": "Fishing",
 		"source": "Mountain (global)",
-		"maxcount": 20,
+		"maxcount": 1,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_shell.png"
@@ -202,7 +202,7 @@
 		"description": "Reduce, reuse, recycle!",
 		"category": "Fishing",
 		"source": "Throat",
-		"maxcount": 20,
+		"maxcount": 1,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_trash.png"
@@ -215,7 +215,7 @@
 		"description": "I hope you have it in a container.",
 		"category": "Fishing",
 		"source": "Mountain (global)",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": true,
 		"canTrade": true,
 		"path": "assets/item/i_worm.png"
@@ -228,7 +228,7 @@
 		"description": "A tree comes from this. Isn’t that bananas?",
 		"category": "Gathering",
 		"source": "Throat, Peak",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": true,
 		"canTrade": true,
 		"path": "assets/item/i_acorn.png"
@@ -241,7 +241,7 @@
 		"description": "A shard of what was once something.",
 		"category": "Gathering",
 		"source": "Mountain (global)",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_ceramic.png"
@@ -254,7 +254,7 @@
 		"description": "Pretty and pleasantly floral (unless you’re allergic).",
 		"category": "Gathering",
 		"source": "Mountain (global)",
-		"maxcount": 20,
+		"maxcount": 1,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_flower.png"
@@ -267,7 +267,7 @@
 		"description": "You can think of plenty of uses for this.",
 		"category": "Gathering",
 		"source": "Throat",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": true,
 		"canTrade": true,
 		"path": "assets/item/i_herb bundle.png"
@@ -280,7 +280,7 @@
 		"description": "It tips its cap to you.",
 		"category": "Gathering",
 		"source": "Mountain (global)",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": true,
 		"canTrade": true,
 		"path": "assets/item/i_mushroom.png"
@@ -306,7 +306,7 @@
 		"description": "A packet full of new friends.",
 		"category": "Gathering",
 		"source": "Throat",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_seed packet.png"
@@ -319,7 +319,7 @@
 		"description": "It smells like the earth. The earth smells damp.",
 		"category": "Gathering",
 		"source": "Mountain (global)",
-		"maxcount": 20,
+		"maxcount": 1,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_soil.png"
@@ -345,7 +345,7 @@
 		"description": "Hard and sturdy, just as it should be.",
 		"category": "Gathering",
 		"source": "River, Peak",
-		"maxcount": 20,
+		"maxcount": 1,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_wood.png"
@@ -501,7 +501,7 @@
 		"description": "The land's gift to you.",
 		"category": "Trading",
 		"source": "Tian's Corner",
-		"maxcount": 6,
+		"maxcount": 1,
 		"canUse": false,
 		"canTrade": true,
 		"path": "assets/item/i_crop.png"
