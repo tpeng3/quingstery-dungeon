@@ -1,25 +1,23 @@
 [gd_scene load_steps=19 format=3 uid="uid://cklgq1yqdgf2s"]
 
-[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_qoo2l"]
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_qoo2l"]
 [ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="2_hju7a"]
 [ext_resource type="Script" path="res://prefabs/UI/ItemMenu/ListItem.gd" id="2_m3cx0"]
-[ext_resource type="Texture2D" uid="uid://lbb4teo8jls7" path="res://assets/item/i_acorn.png" id="2_qxj6x"]
+[ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="2_qxj6x"]
 [ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="3_mtt02"]
-[ext_resource type="Texture2D" uid="uid://om06x8r6olju" path="res://assets/UI/Gald_Symbol.png" id="3_ybu0t"]
+[ext_resource type="Texture2D" uid="uid://bdqemmusx4053" path="res://assets/UI/Gald_Symbol.png" id="3_ybu0t"]
 [ext_resource type="StyleBox" uid="uid://xk12q87v443s" path="res://theme/tex_MenuSign_L.tres" id="4_16dhe"]
 [ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="5_f7ghv"]
 [ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="6_3fdlf"]
 [ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="7_g5ggn"]
-[ext_resource type="FontFile" uid="uid://b0m4hay27djem" path="res://assets/UI/Dogica/dogicapixel.ttf" id="8_0rt6f"]
-[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="9_odpt6"]
+[ext_resource type="FontFile" uid="uid://oghqafn812mw" path="res://assets/UI/Dogica/dogicapixel.ttf" id="8_0rt6f"]
+[ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="9_odpt6"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="10_352iu"]
+[ext_resource type="StyleBox" uid="uid://c2nb40sqt2n80" path="res://theme/Signpost_Callout.tres" id="10_h54xc"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ql0t"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4o7b6"]
-bg_color = Color(0.729412, 0.384314, 0.294118, 1)
 
 [sub_resource type="Theme" id="Theme_vjmah"]
 Button/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
@@ -68,7 +66,7 @@ Label_Sign/fonts/font = ExtResource("1_qoo2l")
 Label_Sign/styles/normal = ExtResource("6_3fdlf")
 Panel/styles/panel = SubResource("StyleBoxEmpty_1ql0t")
 Panel_Highlight/base_type = &"Panel"
-Panel_Highlight/styles/panel = SubResource("StyleBoxFlat_4o7b6")
+Panel_Highlight/styles/panel = ExtResource("10_h54xc")
 RichTextLabel/colors/default_color = Color(0.215686, 0.00784314, 0.396078, 1)
 RichTextLabel/constants/line_separation = 3
 RichTextLabel/font_sizes/normal_font_size = 16

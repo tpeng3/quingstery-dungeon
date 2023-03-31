@@ -1,0 +1,104 @@
+[gd_scene load_steps=7 format=3 uid="uid://6farlbbdivnx"]
+
+[ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="1_xhwqs"]
+[ext_resource type="Texture2D" uid="uid://4gas44rbefi5" path="res://assets/vfx/rain.png" id="2_1dcu3"]
+[ext_resource type="Material" uid="uid://cmvctaum5g4ir" path="res://prefabs/WeatherFX/RainParticle.tres" id="2_eli5u"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lpmjp"]
+bg_color = Color(0.223529, 0.313726, 0.352941, 0.34902)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sm8py"]
+light_mode = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c708n"]
+bg_color = Color(0.498039, 0.552941, 0.556863, 0.207843)
+
+[node name="Test" type="CanvasLayer"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(481, 215)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_xhwqs")
+
+[node name="Rainy" type="Panel" parent="Sprite2D"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1625.0
+offset_top = -1225.0
+offset_right = -1625.0
+offset_bottom = -1225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lpmjp")
+
+[node name="Rainy" type="CanvasModulate" parent="Sprite2D/Rainy"]
+position = Vector2(1625, 1225)
+scale = Vector2(1, 1)
+color = Color(0.701961, 0.831373, 0.945098, 1)
+
+[node name="RainParticles" type="GPUParticles2D" parent="Sprite2D/Rainy/Rainy"]
+material = SubResource("CanvasItemMaterial_sm8py")
+position = Vector2(160.606, -659.394)
+scale = Vector2(1, 1)
+amount = 100
+process_material = ExtResource("2_eli5u")
+texture = ExtResource("2_1dcu3")
+lifetime = 0.7
+
+[node name="Stormy" type="Panel" parent="Sprite2D"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1625.0
+offset_top = -1225.0
+offset_right = -1625.0
+offset_bottom = -1225.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Rainy" type="CanvasModulate" parent="Sprite2D/Stormy"]
+position = Vector2(1625, 1225)
+scale = Vector2(1, 1)
+color = Color(0.72549, 0.827451, 0.92549, 1)
+
+[node name="RainParticles" type="GPUParticles2D" parent="Sprite2D/Stormy/Rainy"]
+material = SubResource("CanvasItemMaterial_sm8py")
+position = Vector2(160.606, -659.394)
+scale = Vector2(1, 1)
+amount = 200
+process_material = ExtResource("2_eli5u")
+texture = ExtResource("2_1dcu3")
+lifetime = 0.7
+
+[node name="Cloudy" type="Panel" parent="Sprite2D"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1625.0
+offset_top = -1225.0
+offset_right = -1625.0
+offset_bottom = -1225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_lpmjp")
+
+[node name="Cloudy" type="CanvasModulate" parent="Sprite2D/Cloudy"]
+position = Vector2(1625, 1225)
+scale = Vector2(1, 1)
+color = Color(0.85098, 0.831373, 0.843137, 1)
+
+[node name="Windy" type="Panel" parent="Sprite2D"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1625.0
+offset_top = -1225.0
+offset_right = -1625.0
+offset_bottom = -1225.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_c708n")
