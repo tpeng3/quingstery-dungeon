@@ -1,47 +1,15 @@
-[gd_scene load_steps=20 format=3 uid="uid://cdirrc5rr8huy"]
+[gd_scene load_steps=12 format=3 uid="uid://cdirrc5rr8huy"]
 
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="1_6b7a8"]
 [ext_resource type="Script" path="res://prefabs/UI/ItemMenu/ItemMenu.gd" id="1_25xo1"]
 [ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
-[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="2_1s1md"]
-[ext_resource type="Texture2D" uid="uid://bb43hfropg5lr" path="res://assets/item/i_acorn.png" id="2_p56pw"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="2_1s1md"]
+[ext_resource type="Texture2D" uid="uid://lbb4teo8jls7" path="res://assets/item/i_acorn.png" id="2_p56pw"]
+[ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="4_uwq0p"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="7_1nhbr"]
 [ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_242x1"]
-[ext_resource type="Texture2D" uid="uid://b2jvgs4owo3dw" path="res://assets/ui/arrows.png" id="7_mnmky"]
 [ext_resource type="PackedScene" uid="uid://u7jf2y80hsiw" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
 [ext_resource type="PackedScene" uid="uid://cjuix8vu67e3s" path="res://prefabs/UI/Popup/Popup.tscn" id="9_j02wv"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oojx6"]
-atlas = ExtResource("7_mnmky")
-region = Rect2(0, 9, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_r4n70"]
-atlas = ExtResource("7_mnmky")
-region = Rect2(9, 9, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nyihg"]
-atlas = ExtResource("7_mnmky")
-region = Rect2(18, 9, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nqmd7"]
-atlas = ExtResource("7_mnmky")
-region = Rect2(27, 9, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_xb8d8"]
-atlas = ExtResource("7_mnmky")
-region = Rect2(0, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oww7k"]
-atlas = ExtResource("7_mnmky")
-region = Rect2(9, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_sbf8p"]
-atlas = ExtResource("7_mnmky")
-region = Rect2(18, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6epdk"]
-atlas = ExtResource("7_mnmky")
-region = Rect2(27, 0, 9, 9)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rqao"]
 
@@ -96,9 +64,14 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 32
 theme_override_constants/margin_bottom = 24
 
-[node name="FlowContainer" type="FlowContainer" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding"]
+[node name="FlowContainer" type="VBoxContainer" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding"]
 layout_mode = 2
-vertical = true
+
+[node name="ListItem" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("4_uwq0p")]
+layout_mode = 2
+
+[node name="ListItem2" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("4_uwq0p")]
+layout_mode = 2
 
 [node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
 layout_mode = 2
@@ -151,28 +124,19 @@ custom_minimum_size = Vector2(18, 0)
 layout_mode = 2
 
 [node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" instance=ExtResource("7_242x1")]
-layout_mode = 2
-offset_top = 3.0
+layout_mode = 0
 offset_right = 9.0
-offset_bottom = 12.0
-texture_normal = SubResource("AtlasTexture_oojx6")
-texture_pressed = SubResource("AtlasTexture_r4n70")
-texture_disabled = SubResource("AtlasTexture_nyihg")
-texture_focused = SubResource("AtlasTexture_nqmd7")
+offset_bottom = 9.0
+direction = 1
 
 [node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
 custom_minimum_size = Vector2(18, 0)
 layout_mode = 2
 
 [node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" instance=ExtResource("7_242x1")]
-layout_mode = 2
-offset_top = 3.0
+layout_mode = 0
 offset_right = 9.0
-offset_bottom = 12.0
-texture_normal = SubResource("AtlasTexture_xb8d8")
-texture_pressed = SubResource("AtlasTexture_oww7k")
-texture_disabled = SubResource("AtlasTexture_sbf8p")
-texture_focused = SubResource("AtlasTexture_6epdk")
+offset_bottom = 9.0
 metadata/Direction = "right"
 
 [node name="RightPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]

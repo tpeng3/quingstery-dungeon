@@ -17,15 +17,14 @@ signal menu_closed
 func _ready():
 	_show_page()
 	max_pages = ceil(Inventory.print_items().size() / 8)
+	print(max_pages)
 	_update_page_text()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _input(event):
-	pass
+	$OuterPadding/SplitContainer/LeftPanel/FooterMargin/NaviClose.grab_focus()
 
 func _show_page(page=0):
 	var items = Inventory.print_items().slice(page * 8, (page * 8) + 8)
-	for n in items.size():
+	for n in items.size() - 1:
+		print(n)
 		var dict_item = Inventory.find_item(items[n].name)
 		var node = ListItem.instantiate()
 		node.set("item_name", items[n].name)

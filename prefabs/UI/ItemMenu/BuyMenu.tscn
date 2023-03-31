@@ -1,54 +1,297 @@
-[gd_scene load_steps=11 format=3 uid="uid://cm06xatxch52d"]
+[gd_scene load_steps=21 format=3 uid="uid://cm06xatxch52d"]
 
-[ext_resource type="PackedScene" uid="uid://cdirrc5rr8huy" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_g5nft"]
+[ext_resource type="Script" path="res://prefabs/UI/ItemMenu/ItemMenu.gd" id="1_mw0od"]
 [ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="2_0xo8v"]
+[ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="2_djqr7"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="3_hcgur"]
+[ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="5_mmvp1"]
+[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="6_326w2"]
+[ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_sjig8"]
+[ext_resource type="Texture2D" uid="uid://lbb4teo8jls7" path="res://assets/item/i_acorn.png" id="8_88bnl"]
+[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="8_ltlah"]
+[ext_resource type="PackedScene" uid="uid://u7jf2y80hsiw" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="9_cc8w0"]
+[ext_resource type="PackedScene" uid="uid://cjuix8vu67e3s" path="res://prefabs/UI/Popup/Popup.tscn" id="10_3haeo"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_glao7"]
-region = Rect2(0, 9, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_248o4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ad562"]
+resource_local_to_scene = true
+atlas = ExtResource("8_ltlah")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nwcm0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_cm0ru"]
+resource_local_to_scene = true
+atlas = ExtResource("8_ltlah")
+region = Rect2(9, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3m5q"]
+resource_local_to_scene = true
+atlas = ExtResource("8_ltlah")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_of0pr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_em87q"]
+resource_local_to_scene = true
+atlas = ExtResource("8_ltlah")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rxerh"]
-region = Rect2(0, 0, 9, 9)
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4y4r"]
+resource_local_to_scene = true
+atlas = ExtResource("8_ltlah")
+region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_g664r"]
-region = Rect2(9, 0, 9, 9)
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8xku"]
+resource_local_to_scene = true
+atlas = ExtResource("8_ltlah")
+region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ev41d"]
-region = Rect2(18, 0, 9, 9)
+[sub_resource type="AtlasTexture" id="AtlasTexture_glhjp"]
+resource_local_to_scene = true
+atlas = ExtResource("8_ltlah")
+region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w8h0e"]
-region = Rect2(27, 0, 9, 9)
+[sub_resource type="AtlasTexture" id="AtlasTexture_56ip6"]
+resource_local_to_scene = true
+atlas = ExtResource("8_ltlah")
+region = Rect2(27, 9, 9, 9)
 
-[node name="BuyMenu" instance=ExtResource("1_g5nft")]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7rqao"]
 
-[node name="ListItem" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" index="0" instance=ExtResource("2_0xo8v")]
+[node name="BuyMenu" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mw0od")
+
+[node name="TopBar" parent="." instance=ExtResource("2_djqr7")]
+layout_mode = 1
+
+[node name="OuterPadding" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 52
+theme_override_constants/margin_top = 92
+theme_override_constants/margin_right = 52
+theme_override_constants/margin_bottom = 52
+
+[node name="SplitContainer" type="SplitContainer" parent="OuterPadding"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="LeftPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]
+custom_minimum_size = Vector2(448, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ItemListBG" type="NinePatchRect" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+texture = ExtResource("3_hcgur")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="PanelPadding" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 24
+
+[node name="FlowContainer" type="VBoxContainer" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding"]
 layout_mode = 2
 
-[node name="ListItem2" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" index="1" instance=ExtResource("2_0xo8v")]
+[node name="ListItem" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("2_0xo8v")]
 layout_mode = 2
 
-[node name="ListItem3" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" index="2" instance=ExtResource("2_0xo8v")]
+[node name="ListItem2" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("2_0xo8v")]
 layout_mode = 2
 
-[node name="ListItem4" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" index="3" instance=ExtResource("2_0xo8v")]
+[node name="ListItem3" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("2_0xo8v")]
 layout_mode = 2
 
-[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
-texture_normal = SubResource("AtlasTexture_glao7")
-texture_pressed = SubResource("AtlasTexture_248o4")
-texture_disabled = SubResource("AtlasTexture_nwcm0")
-texture_focused = SubResource("AtlasTexture_of0pr")
+[node name="ListItem4" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("2_0xo8v")]
+layout_mode = 2
 
-[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
-texture_normal = SubResource("AtlasTexture_rxerh")
-texture_pressed = SubResource("AtlasTexture_g664r")
-texture_disabled = SubResource("AtlasTexture_ev41d")
-texture_focused = SubResource("AtlasTexture_w8h0e")
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_top = -44
+
+[node name="LeftTitle" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme = ExtResource("5_mmvp1")
+text = "Inventory"
+
+[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="NaviClose" type="Button" parent="OuterPadding/SplitContainer/LeftPanel/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("6_326w2")
+theme_type_variation = &"Button_Alt"
+text = "close "
+
+[node name="Pagination" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_constants/margin_right = 32
+
+[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PaginationLabel" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
+custom_minimum_size = Vector2(0, 32)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme = ExtResource("6_326w2")
+theme_type_variation = &"Label_Fancy"
+text = "Page 01/04"
+
+[node name="ArrowBack" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
+custom_minimum_size = Vector2(18, 0)
+layout_mode = 2
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" instance=ExtResource("7_sjig8")]
+layout_mode = 0
+offset_right = 9.0
+offset_bottom = 9.0
+texture_normal = SubResource("AtlasTexture_ad562")
+texture_pressed = SubResource("AtlasTexture_cm0ru")
+texture_disabled = SubResource("AtlasTexture_i3m5q")
+texture_focused = SubResource("AtlasTexture_em87q")
+direction = 1
+
+[node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
+custom_minimum_size = Vector2(18, 0)
+layout_mode = 2
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" instance=ExtResource("7_sjig8")]
+layout_mode = 0
+offset_right = 9.0
+offset_bottom = 9.0
+texture_normal = SubResource("AtlasTexture_h4y4r")
+texture_pressed = SubResource("AtlasTexture_k8xku")
+texture_disabled = SubResource("AtlasTexture_glhjp")
+texture_focused = SubResource("AtlasTexture_56ip6")
+direction = 0
+metadata/Direction = "right"
+
+[node name="RightPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("6_326w2")
+
+[node name="SpriteCentering" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ItemSprite" type="Sprite2D" parent="OuterPadding/SplitContainer/RightPanel/SpriteCentering"]
+position = Vector2(0, -75)
+scale = Vector2(3, 3)
+texture = ExtResource("8_88bnl")
+
+[node name="MarginContainer" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel"]
+custom_minimum_size = Vector2(0, 160)
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="ItemDescBG" type="NinePatchRect" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("3_hcgur")
+patch_margin_left = 32
+patch_margin_top = 24
+patch_margin_right = 32
+patch_margin_bottom = 24
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="DescPadding" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 35
+
+[node name="FlowContainer" type="FlowContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding"]
+layout_mode = 2
+
+[node name="ItemDesc" type="RichTextLabel" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer"]
+clip_contents = false
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7rqao")
+text = "adfasfhskdfsdfsld aas oflsdjf dsklfas jdlkad fjdslkfasd fklasdjkfds dskfdlj dskalf jldkak  "
+fit_content = true
+
+[node name="RequirementsList" type="FlowContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer"]
+visible = false
+layout_mode = 2
+
+[node name="ReqItem1" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("9_cc8w0")]
+layout_mode = 2
+
+[node name="ReqItem2" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("9_cc8w0")]
+layout_mode = 2
+
+[node name="ReqItem3" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("9_cc8w0")]
+layout_mode = 2
+
+[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/margin_top = -43
+
+[node name="ItemName" type="Label" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/TitleMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("5_mmvp1")
+text = "ITEM NAME"
+
+[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="ButtonMid" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme = ExtResource("6_326w2")
+theme_type_variation = &"Button_Alt2"
+text = "toss"
+
+[node name="ButtonRight" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 8
+theme = ExtResource("6_326w2")
+text = "use"
+
+[node name="Popup" parent="." instance=ExtResource("10_3haeo")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_pressed" flags=18]
+[connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack/ArrowBtn" to="." method="_on_prev_pressed" flags=18]
+[connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext/ArrowBtn" to="." method="_on_next_pressed" flags=18]

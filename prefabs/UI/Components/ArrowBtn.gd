@@ -1,34 +1,16 @@
-@tool
 extends TextureButton
-var direction = 0;
-var sprite = AtlasTexture.new()
-var spriteFocus = AtlasTexture.new()
-var spritePress = AtlasTexture.new()
-var spriteDisabled = AtlasTexture.new()
 
+enum Direction {
+	RIGHT,
+	LEFT,
+	UP,
+	DOWN
+}
+@export var direction:Direction = 0;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	var dir = get_meta("Direction").to_lower()
-	
-	match (dir): # multiplier for Y position of Atlas texture
-		"left":
-			direction = 1
-		"up":
-			direction = 2
-		"down":
-			direction = 3
-		_:
-			direction = 0
-	
-	sprite.region = Rect2(0, 9 * direction, 9, 9)
-	self.texture_normal = sprite
-	
-	spriteFocus.region = Rect2(27, 9 * direction, 9, 9)
-	self.texture_focused = spriteFocus
-	
-	spritePress.region = Rect2(9, 9 * direction, 9, 9)
-	self.texture_pressed = spritePress
-	
-	spriteDisabled.region = Rect2(18, 9 * direction, 9, 9)
-	self.texture_disabled = spriteDisabled
+	texture_normal.region = Rect2(0, 9 * direction, 9, 9)
+	texture_focused.region = Rect2(27, 9 * direction, 9, 9)
+	texture_pressed.region = Rect2(9, 9 * direction, 9, 9)
+	texture_disabled.region = Rect2(18, 9 * direction, 9, 9)

@@ -1,30 +1,34 @@
 [gd_scene load_steps=7 format=3 uid="uid://by7wdo8rfud48"]
 
-[ext_resource type="Texture2D" uid="uid://dxqanehaak2pj" path="res://assets/ui/arrows.png" id="1_2u1pq"]
+[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="1_3bqof"]
 [ext_resource type="Script" path="res://prefabs/UI/Components/ArrowBtn.gd" id="1_grf05"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fvvyv"]
-atlas = ExtResource("1_2u1pq")
-region = Rect2(0, 9, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ci3qk"]
-atlas = ExtResource("1_2u1pq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_bop0m"]
+resource_local_to_scene = true
+atlas = ExtResource("1_3bqof")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hwqy3"]
-atlas = ExtResource("1_2u1pq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1eu27"]
+resource_local_to_scene = true
+atlas = ExtResource("1_3bqof")
+region = Rect2(9, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khh8l"]
+resource_local_to_scene = true
+atlas = ExtResource("1_3bqof")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_60v4r"]
-atlas = ExtResource("1_2u1pq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_1wmfc"]
+resource_local_to_scene = true
+atlas = ExtResource("1_3bqof")
 region = Rect2(27, 9, 9, 9)
 
 [node name="ArrowBtn" type="TextureButton"]
 custom_minimum_size = Vector2(9, 9)
 scale = Vector2(2, 2)
-texture_normal = SubResource("AtlasTexture_fvvyv")
-texture_pressed = SubResource("AtlasTexture_ci3qk")
-texture_disabled = SubResource("AtlasTexture_hwqy3")
-texture_focused = SubResource("AtlasTexture_60v4r")
+texture_normal = SubResource("AtlasTexture_bop0m")
+texture_pressed = SubResource("AtlasTexture_1eu27")
+texture_disabled = SubResource("AtlasTexture_khh8l")
+texture_focused = SubResource("AtlasTexture_1wmfc")
 script = ExtResource("1_grf05")
-metadata/Direction = "left"
+direction = 2

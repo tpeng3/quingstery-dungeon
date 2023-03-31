@@ -11,28 +11,28 @@
 [ext_resource type="PackedScene" uid="uid://cewxqueqnp0vj" path="res://prefabs/UI/Popup/SystemPopup.tscn" id="9_8sk8i"]
 [ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="9_olvpq"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jto2l"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_opkrh"]
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j2yot"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3yodh"]
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2fhrk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_iphkb"]
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1j2qm"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dikwb"]
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_32wau"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kljjr"]
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_a8gfo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_glt6k"]
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hr6sd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4wfi8"]
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mmkmc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_efs4b"]
 region = Rect2(27, 0, 9, 9)
 
 [node name="TownHall" type="Node2D"]
@@ -131,16 +131,23 @@ offset_bottom = 540.0
 text = "Store Items"
 
 [node name="ArrowBtn" parent="StorageMenu/OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
-texture_normal = SubResource("AtlasTexture_jto2l")
-texture_pressed = SubResource("AtlasTexture_j2yot")
-texture_disabled = SubResource("AtlasTexture_2fhrk")
-texture_focused = SubResource("AtlasTexture_1j2qm")
+layout_mode = 2
+offset_top = 3.0
+offset_bottom = 12.0
+texture_normal = SubResource("AtlasTexture_opkrh")
+texture_pressed = SubResource("AtlasTexture_3yodh")
+texture_disabled = SubResource("AtlasTexture_iphkb")
+texture_focused = SubResource("AtlasTexture_dikwb")
+direction = 0
 
 [node name="ArrowBtn" parent="StorageMenu/OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
-texture_normal = SubResource("AtlasTexture_32wau")
-texture_pressed = SubResource("AtlasTexture_a8gfo")
-texture_disabled = SubResource("AtlasTexture_hr6sd")
-texture_focused = SubResource("AtlasTexture_mmkmc")
+layout_mode = 2
+offset_top = 3.0
+offset_bottom = 12.0
+texture_normal = SubResource("AtlasTexture_kljjr")
+texture_pressed = SubResource("AtlasTexture_glt6k")
+texture_disabled = SubResource("AtlasTexture_4wfi8")
+texture_focused = SubResource("AtlasTexture_efs4b")
 
 [node name="ButtonRight" parent="StorageMenu/OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" index="1"]
 text = "store"

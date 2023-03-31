@@ -6,7 +6,6 @@ extends MarginContainer
 var item_texture:Texture2D
 
 func _ready():
-	print(item_name, item_amount, item_info)
 	item_texture = load(Inventory.find_item(item_name).path)
 	$FlowContainer/SpriteBox/ItemSprite.texture = item_texture
 	var amount_str = " x" + str(item_amount) if item_amount > 1 else ""
@@ -19,3 +18,11 @@ func _ready():
 func update_item():
 	# TODO: if an item gets sold or traded or out of stock
 	pass
+
+
+func _on_focus_entered():
+	print("i dare you to focus")
+	$Panel.theme_type_variation = "Panel_Highlight"
+
+func _on_focus_exited():
+	$Panel.theme_type_variation = ""
