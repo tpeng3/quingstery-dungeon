@@ -31,6 +31,7 @@ func show_new_item(item, amount):
 	Inventory.add_item(item, amount)
 
 func show_dialogue(dialogue, dictKey=null):
+	$AnimationPlayer.play("bump")
 	# freeze character while there is dialogue
 	Global.freezeQuingee = true
 	freezeBox = false
@@ -38,8 +39,6 @@ func show_dialogue(dialogue, dictKey=null):
 	dialogue_node = dialogue
 	_reset_ui()
 	$DialogueWrapper.show()
-	if !dialogue_node.skipFade:
-		$AnimationPlayer.play("textbox_fade")
 	if not dialogue_node.dialogue_action.is_connected(_on_dialogue_action):
 		dialogue_node.dialogue_action.connect(_on_dialogue_action)
 	if not dialogue_node.dialogue_finished.is_connected(_on_dialogue_finished):
@@ -106,8 +105,6 @@ func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
 #	self.hide_image()
 #	$Talksprites/Sprite2D.hide()
 	DialogueSelect.hide()
-#	$AnimationPlayer.play_backwards("textbox_fade")
-#	await $AnimationPlayer.animation_finished
 	self.hide()
 	
 #	Input.set_custom_mouse_cursor(Utilities.CURSOR_DEFAULT)

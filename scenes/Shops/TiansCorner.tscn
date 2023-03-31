@@ -1,16 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://ds4fmboxrdwtx"]
+[gd_scene load_steps=10 format=3 uid="uid://ds4fmboxrdwtx"]
 
-[ext_resource type="Script" path="res://scenes/Shops/TradingPost.gd" id="1_jtfsu"]
+[ext_resource type="Script" path="res://scenes/Shops/TiansCorner.gd" id="1_bsv5a"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_02nox"]
 [ext_resource type="JSON" path="res://dialogue/Shopkeepers/PanQing.json" id="3_8hj15"]
-[ext_resource type="Texture2D" uid="uid://cmn57o3uky62g" path="res://assets/background/quingsterybgs_tianscorner.png" id="4_b0f3l"]
-[ext_resource type="Texture2D" uid="uid://tfgufkp84hdu" path="res://assets/character/talksprites/quingesterynpc_pq_flats.png" id="5_mwfu8"]
+[ext_resource type="Texture2D" uid="uid://p3lblv2hscrv" path="res://assets/background/quingsterybgs_tianscorner.png" id="4_b0f3l"]
+[ext_resource type="Texture2D" uid="uid://cathepc8wouo6" path="res://assets/character/talksprites/quingesterynpc_pq_flats.png" id="5_mwfu8"]
 [ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="6_erwt2"]
 [ext_resource type="PackedScene" uid="uid://cm06xatxch52d" path="res://prefabs/UI/ItemMenu/BuyMenu.tscn" id="7_wnrv8"]
 [ext_resource type="PackedScene" uid="uid://bw7q1cc3tci2i" path="res://prefabs/UI/NavButtons/NavButtons.tscn" id="8_20w0f"]
+[ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="9_vnnge"]
 
 [node name="TiansCorner" type="Node2D"]
-script = ExtResource("1_jtfsu")
+script = ExtResource("1_bsv5a")
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("2_02nox")]
 dialogue_file = ExtResource("3_8hj15")
@@ -20,27 +21,10 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_b0f3l")
 centered = false
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 480.0
-offset_right = 960.0
-offset_bottom = 540.0
-size_flags_vertical = 8
-
-[node name="Character" type="TextureRect" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.1, 1.1)
-size_flags_horizontal = 4
-size_flags_vertical = 8
-texture = ExtResource("5_mwfu8")
-
 [node name="ShopBox" parent="." instance=ExtResource("6_erwt2")]
+
+[node name="Character" parent="ShopBox/Control" index="0"]
+texture = ExtResource("5_mwfu8")
 
 [node name="BuyMenu" parent="." instance=ExtResource("7_wnrv8")]
 visible = false
@@ -50,6 +34,11 @@ offset_bottom = 540.0
 [node name="NavButtons" parent="." instance=ExtResource("8_20w0f")]
 offset_right = 960.0
 offset_bottom = 540.0
+
+[node name="Button2" parent="NavButtons/NavList" index="1"]
+visible = false
+
+[node name="WeatherHUD" parent="." instance=ExtResource("9_vnnge")]
 
 [connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button2" to="." method="_on_sell_pressed"]

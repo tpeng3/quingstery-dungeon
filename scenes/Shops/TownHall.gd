@@ -1,18 +1,13 @@
 extends Node2D
 
-var oleanderFP = 0
-var welcome_key
+const FRIEND_STATUS = 20
 @onready var dialogue_tracker = $DialoguePlayer.dialogue_file.data
-# TODO: move dialogue_tracker to Global
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	# TODO: grab special keys 
-	welcome_key = _weighted_rand("welcome")
+	var welcome_key = _weighted_rand("welcome")
 	$ShopBox.show_dialogue($DialoguePlayer, welcome_key)
-	$AnimationPlayer.play("bump")
 	$ShopBox.no_selected.connect(_on_dialogue_end)
-	$BuyMenu.menu_closed.connect(_on_menu_closed)
+	$StorageMenu.menu_closed.connect(_on_menu_closed)
 	
 	$Menu/NavButtons.show()
 	$Menu/SaveLoadButtons.hide()
@@ -21,6 +16,8 @@ func _ready():
 	$LoadPopup.hide()
 	$Menu/NavButtons/NavList/Button1.grab_focus()
 	
+	Global.FP.oleander += 1
+	
 func _on_dialogue_end():
 	$Menu.show()
 	$Menu/NavButtons/NavList/Button3.grab_focus()
@@ -28,18 +25,17 @@ func _on_dialogue_end():
 func _on_menu_closed(bought=false):
 	var buy_key = _weighted_rand("buy")
 	$ShopBox.show_dialogue($DialoguePlayer, buy_key)
-	$AnimationPlayer.play("bump")
 	$Menu/NavButtons.show()
 
 func _on_buy_pressed():
 	$ShopBox.hide()
 	$Menu/NavButtons.hide()
-	$BuyMenu.show()
+	$StorageMenu.show()
 
 func _on_sell_pressed():
 	$Menu/NavButtons.hide()
 	$ShopBox.hide()
-	$BuyMenu.show()
+	$StorageMenu.show()
 
 # NavButtons
 func _on_room_pressed():
@@ -56,7 +52,6 @@ func _on_storage_pressed():
 func _on_talk_pressed():
 	var talk_key = _weighted_rand("talk")
 	$ShopBox.show_dialogue($DialoguePlayer, talk_key)
-	$AnimationPlayer.play("bump")
 
 func _on_leave_pressed():
 	SceneManager.change_scene("Map")
@@ -70,10 +65,9 @@ func _after_save():
 	$Menu/SaveLoadButtons/NavList/Button2.disabled = !FileAccess.file_exists("user://quingsterydungeon.save")
 	$ConfirmPopup.hide()
 	$ShopBox.show()
-	$Menu/SaveLoadButtons/NavList/Button1.grab_focus()
 	var dialogue_key = _weighted_rand("save")
 	$ShopBox.show_dialogue($DialoguePlayer, dialogue_key)
-	$AnimationPlayer.play("bump")
+	$Menu/SaveLoadButtons/NavList/Button1.grab_focus()
 
 func _on_load_pressed():
 	$ShopBox.hide()
@@ -86,6 +80,7 @@ func _on_load_pressed():
 	
 func _after_no_load():
 	$LoadPopup/SplitContainer/PopupBox/FooterMargin/ButtonLeft.pressed.disconnect(_after_no_load)
+	$LoadPopup/SplitContainer/PopupBox/FooterMargin/ButtonRight.pressed.disconnect(load_game)
 	$LoadPopup.hide()
 	$ShopBox.show()
 	$Menu/SaveLoadButtons/NavList/Button2.grab_focus()
@@ -96,7 +91,6 @@ func _after_load():
 	$ShopBox.show()
 	var dialogue_key = _weighted_rand("load")
 	$ShopBox.show_dialogue($DialoguePlayer, dialogue_key)
-	$AnimationPlayer.play("bump")
 	$Menu/SaveLoadButtons/NavList/Button2.grab_focus()
 
 func _on_back_pressed():
@@ -117,26 +111,31 @@ func _weighted_rand(filter):
 			match filter:
 				# show welcome and weather lines
 				"welcome":
-					if Global.currentDay <= 1:
+					if Global.FP.oleander < 1:
 						return i.type == "tutorial"
 					else:
-						return i.type == "welcome" or i.type in Global.weatherList or \
-							(i.type == "regular" and oleanderFP >= 25) or \
-							(i.type == "Steps unlocked" and Global.currentCheckpoint >= Global.CheckpointType.RIVER) or \
+						return i.type == "welcome" or \
+							(i.type in Global.weatherList and i.type == Global.currentWeather) or \
+							(i.type == "regular" and Global.FP.oleander >= FRIEND_STATUS) or \
+							(i.type == "Steps unlocked" and Global.currentCheckpoint >= Global.CheckpointType.STEPS) or \
 							(i.type == "Peak unlocked" and Global.currentCheckpoint >= Global.CheckpointType.PEAK)
 				"talk":
-					return i.type == "talk" or (i.type == "talk friend" and oleanderFP >= 25)
-				# save / load / store / leave
+					return i.type == "talk" or (i.type == "talk friend" and Global.FP.oleander >= FRIEND_STATUS)
+				# save / load / store / leave / liked gift / disliked gift / neutral gift
 				_:
 					return i.type == filter
 	)
 	sortedDialogue.sort_custom(
 		func sort_by_popularity(a, b):
-			return a.popularity < b.popularity
+			var aPop = Global.dialogue_popularity.oleander[a.key] if a.key in Global.dialogue_popularity.oleander else 0
+			var bPop = Global.dialogue_popularity.oleander[b.key] if b.key in Global.dialogue_popularity.oleander else 0
+			return aPop < bPop
 	)
 	var randInd = (round(sortedDialogue.size() / (randf_range(0, 1) * sortedDialogue.size() + 1))) - 1;
-	sortedDialogue[randInd].popularity += 1;
-	print(sortedDialogue[randInd])
+	if sortedDialogue[randInd].key in Global.dialogue_popularity.oleander:
+		Global.dialogue_popularity.oleander[sortedDialogue[randInd].key] += 1
+	else:
+		Global.dialogue_popularity.oleander[sortedDialogue[randInd].key] = 1
 	return sortedDialogue[randInd].key;
 
 func save_game():
@@ -154,6 +153,7 @@ func save_game():
 	$ConfirmPopup/SplitContainer/PopupBox/FooterMargin/ButtonMid.pressed.connect(_after_save)
 
 func load_game():
+	$LoadPopup/SplitContainer/PopupBox/FooterMargin/ButtonLeft.pressed.disconnect(_after_no_load)
 	$LoadPopup/SplitContainer/PopupBox/FooterMargin/ButtonRight.pressed.disconnect(load_game)
 	if not FileAccess.file_exists("user://quingsterydungeon.save"):
 		return # Error! We don't have a save to load.

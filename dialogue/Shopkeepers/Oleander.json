@@ -699,8 +699,36 @@
 			}
 		]
 	},
-	"leaving town hall": {
-		"key": "leaving town hall",
+	"leaving town hall 1": {
+		"key": "leaving town hall 1",
+		"type": "leave",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "You're going out? I'll be here.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"leaving town hall 2": {
+		"key": "leaving town hall 2",
+		"type": "leave",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oleander",
+				"text": "Be seeing you.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"leaving town hall 3": {
+		"key": "leaving town hall 3",
 		"type": "leave",
 		"popularity": 0,
 		"lines": [

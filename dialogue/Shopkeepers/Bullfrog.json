@@ -6,7 +6,7 @@
 		"lines": [
 			{
 				"name": "Bullfrog",
-				"text": "Welcome in! Oh, it's [[name]]. How's it goin'?",
+				"text": "[b]Welcome in![/b] Oh, it's [[name]]. How's it goin'?",
 				"action": [
 					"FREEZE"
 				]
@@ -71,7 +71,7 @@
 	},
 	"after Quingee sells a LOT of items": {
 		"key": "after Quingee sells a LOT of items",
-		"type": "sell",
+		"type": "sell a lot",
 		"popularity": 0,
 		"lines": [
 			{
@@ -113,7 +113,7 @@
 	},
 	"on a rainy day": {
 		"key": "on a rainy day",
-		"type": "talk",
+		"type": "Rainy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -127,7 +127,7 @@
 	},
 	"on a rainy day 2": {
 		"key": "on a rainy day 2",
-		"type": "talk",
+		"type": "Rainy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -141,7 +141,7 @@
 	},
 	"on a sunny day": {
 		"key": "on a sunny day",
-		"type": "talk",
+		"type": "Sunny",
 		"popularity": 0,
 		"lines": [
 			{
@@ -155,7 +155,7 @@
 	},
 	"on a sunny day 2": {
 		"key": "on a sunny day 2",
-		"type": "talk",
+		"type": "Sunny",
 		"popularity": 0,
 		"lines": [
 			{
@@ -169,7 +169,7 @@
 	},
 	"on a cloudy day": {
 		"key": "on a cloudy day",
-		"type": "talk",
+		"type": "Cloudy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -183,7 +183,7 @@
 	},
 	"on a cloudy day 2": {
 		"key": "on a cloudy day 2",
-		"type": "talk",
+		"type": "Cloudy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -197,7 +197,7 @@
 	},
 	"on a windy day": {
 		"key": "on a windy day",
-		"type": "talk",
+		"type": "Windy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -211,7 +211,7 @@
 	},
 	"on a windy day 2": {
 		"key": "on a windy day 2",
-		"type": "talk",
+		"type": "Windy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -225,7 +225,7 @@
 	},
 	"on a stormy day": {
 		"key": "on a stormy day",
-		"type": "talk",
+		"type": "Stormy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -239,7 +239,7 @@
 	},
 	"on a stormy day 2": {
 		"key": "on a stormy day 2",
-		"type": "talk",
+		"type": "Stormy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -813,7 +813,7 @@
 	},
 	"meeting Quingee for the first time": {
 		"key": "meeting Quingee for the first time",
-		"type": "welcome",
+		"type": "tutorial",
 		"popularity": 0,
 		"lines": [
 			{
@@ -827,7 +827,7 @@
 	},
 	"after Quingee becomes a regular": {
 		"key": "after Quingee becomes a regular",
-		"type": "welcome",
+		"type": "regular",
 		"popularity": 0,
 		"lines": [
 			{
@@ -841,7 +841,7 @@
 	},
 	"after Quingee becomes a regular 2": {
 		"key": "after Quingee becomes a regular 2",
-		"type": "welcome",
+		"type": "regular2",
 		"popularity": 0,
 		"lines": [
 			{
@@ -855,7 +855,7 @@
 	},
 	"after Quingee makes decent progress up the mountain": {
 		"key": "after Quingee makes decent progress up the mountain",
-		"type": "welcome",
+		"type": "River unlocked",
 		"popularity": 0,
 		"lines": [
 			{
@@ -869,7 +869,7 @@
 	},
 	"after Quingee makes decent progress up the mountain 2": {
 		"key": "after Quingee makes decent progress up the mountain 2",
-		"type": "welcome",
+		"type": "Steps unlocked",
 		"popularity": 0,
 		"lines": [
 			{
@@ -883,7 +883,7 @@
 	},
 	"after Quingee reaches the Peak": {
 		"key": "after Quingee reaches the Peak",
-		"type": "welcome",
+		"type": "Peak unlocked",
 		"popularity": 0,
 		"lines": [
 			{
@@ -897,7 +897,7 @@
 	},
 	"after receiving a gift you like": {
 		"key": "after receiving a gift you like",
-		"type": "gift",
+		"type": "liked gift",
 		"popularity": 0,
 		"lines": [
 			{
@@ -911,7 +911,7 @@
 	},
 	"after receiving a gift you like 2": {
 		"key": "after receiving a gift you like 2",
-		"type": "gift",
+		"type": "liked gift",
 		"popularity": 0,
 		"lines": [
 			{
@@ -925,7 +925,7 @@
 	},
 	"after receiving a gift you don't like": {
 		"key": "after receiving a gift you don't like",
-		"type": "gift",
+		"type": "disliked gift",
 		"popularity": 0,
 		"lines": [
 			{
@@ -939,7 +939,7 @@
 	},
 	"after receiving a gift you don't like 2": {
 		"key": "after receiving a gift you don't like 2",
-		"type": "gift",
+		"type": "disliked gift",
 		"popularity": 0,
 		"lines": [
 			{
@@ -953,7 +953,7 @@
 	},
 	"after receiving a gift you're neutral about": {
 		"key": "after receiving a gift you're neutral about",
-		"type": "gift",
+		"type": "neutral gift",
 		"popularity": 0,
 		"lines": [
 			{
@@ -967,7 +967,7 @@
 	},
 	"after receiving a gift you're neutral about 2": {
 		"key": "after receiving a gift you're neutral about 2",
-		"type": "gift",
+		"type": "neutral gift",
 		"popularity": 0,
 		"lines": [
 			{

@@ -3,28 +3,28 @@
 [ext_resource type="PackedScene" uid="uid://cdirrc5rr8huy" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_g5nft"]
 [ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="2_0xo8v"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wt8w3"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_glao7"]
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bvbc6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_248o4"]
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nsknp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwcm0"]
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_t6816"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_of0pr"]
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xa2yx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rxerh"]
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vcumu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g664r"]
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ry2us"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ev41d"]
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_onkgl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w8h0e"]
 region = Rect2(27, 0, 9, 9)
 
 [node name="BuyMenu" instance=ExtResource("1_g5nft")]
@@ -42,13 +42,13 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
-texture_normal = SubResource("AtlasTexture_wt8w3")
-texture_pressed = SubResource("AtlasTexture_bvbc6")
-texture_disabled = SubResource("AtlasTexture_nsknp")
-texture_focused = SubResource("AtlasTexture_t6816")
+texture_normal = SubResource("AtlasTexture_glao7")
+texture_pressed = SubResource("AtlasTexture_248o4")
+texture_disabled = SubResource("AtlasTexture_nwcm0")
+texture_focused = SubResource("AtlasTexture_of0pr")
 
 [node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
-texture_normal = SubResource("AtlasTexture_xa2yx")
-texture_pressed = SubResource("AtlasTexture_vcumu")
-texture_disabled = SubResource("AtlasTexture_ry2us")
-texture_focused = SubResource("AtlasTexture_onkgl")
+texture_normal = SubResource("AtlasTexture_rxerh")
+texture_pressed = SubResource("AtlasTexture_g664r")
+texture_disabled = SubResource("AtlasTexture_ev41d")
+texture_focused = SubResource("AtlasTexture_w8h0e")

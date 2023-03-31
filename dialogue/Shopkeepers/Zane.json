@@ -1,366 +1,744 @@
 {
-    "welcome1": {
-        "key": "welcome1",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "Hey.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "welcome2": {
-        "key": "welcome2",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "Hey, [[name]].",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after saving1": {
-        "key": "after saving1",
-        "type": "death",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "Take it easy. You're safe now. How're ya feelin'?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after saving2": {
-        "key": "after saving2",
-        "type": "death",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "S'all right. I gotcha. Y'gotta be more careful with yourself.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after upgrade1": {
-        "key": "after upgrade1",
-        "type": "trade",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "This should make it easier for ya. Still, stay safe.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after upgrade2": {
-        "key": "after upgrade2",
-        "type": "trade",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "Better equipment leads t'better outcomes. But it's important t'stay sharp as your tools.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after upgrade3": {
-        "key": "after upgrade3",
-        "type": "trade",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention Tian's Corner": {
-        "key": "mention Tian's Corner",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "I work there, too. Provide some o' my harvest an' eggs.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident1 (Pan Qing)": {
-        "key": "mention a resident1 (Pan Qing)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "Pan Qing likes t'cook us breakfast when I'm over stockin' Tian's Corner with her.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident2 (Piper)": {
-        "key": "mention a resident2 (Piper)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "I've climbed the peak with Piper before. Trainin' t'help rescue everyone who gets stuck, like you. (He pats [[name]].)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident3 (Wander)": {
-        "key": "mention a resident3 (Wander)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident4 (Cynn)": {
-        "key": "mention a resident4 (Cynn)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "Wonder what Cynn's been up to... Hope they're stayin' safe. You stay safe out there too. (He gently pats [[name]].)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention a resident5 (Cashew)": {
-        "key": "mention a resident5 (Cashew)",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "You've met Cash? She's sweet, ain't she? Give her this for me next time, will ya? (He gives [[name]] a pat.)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a rainy day": {
-        "key": "on a rainy day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "Careful out there. Rain can make it slippery.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a sunny day": {
-        "key": "on a sunny day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "Nice weather.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a cloudy day": {
-        "key": "on a cloudy day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a windy day": {
-        "key": "on a windy day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a stormy day": {
-        "key": "on a stormy day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "meeting Quingee for the first time at the station": {
-        "key": "meeting Quingee for the first time at the station",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "[quingloading to feex probably after writing meeting cutscene on mountain]",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after Quingee becomes a regular": {
-        "key": "after Quingee becomes a regular",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after Quingee makes decent progress up the mountain": {
-        "key": "after Quingee makes decent progress up the mountain",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after Quingee reaches the Peak": {
-        "key": "after Quingee reaches the Peak",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "Y'did it, huh. Glad ya didn't get hurt. Rest up now.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after receiving a gift you like": {
-        "key": "after receiving a gift you like",
-        "type": "gift",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "For me? ...Thanks. (He pats [[name]] softly.)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after receiving a gift you don't like": {
-        "key": "after receiving a gift you don't like",
-        "type": "gift",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "... (He still pats [[name]] anyway, briefly.)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after receiving a gift you're neutral about": {
-        "key": "after receiving a gift you're neutral about",
-        "type": "gift",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "[add more rows if youd like]": {
-        "key": "[add more rows if youd like]",
-        "type": "",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Zane",
-                "text": "",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    }
+	"welcome1": {
+		"key": "welcome1",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Hey.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"welcome2": {
+		"key": "welcome2",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Hey, [[name]].",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after saving1": {
+		"key": "after saving1",
+		"type": "death",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Take it easy. You're safe now. How're ya feelin'?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after saving2": {
+		"key": "after saving2",
+		"type": "death",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "S'all right. I gotcha. Y'gotta be more careful with yourself.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after upgrade1": {
+		"key": "after upgrade1",
+		"type": "buy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "This should make it easier for ya. Still, stay safe.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after upgrade2": {
+		"key": "after upgrade2",
+		"type": "buy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Better equipment leads t'better outcomes. But it's important t'stay sharp as your tools.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after upgrade3": {
+		"key": "after upgrade3",
+		"type": "buy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "All right, that should get the job done.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention Tian's Corner": {
+		"key": "mention Tian's Corner",
+		"type": "talk friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "I work at Tian's Corner, too. Provide some o' my harvest an' eggs.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident1 (Pan Qing)": {
+		"key": "mention a resident1 (Pan Qing)",
+		"type": "talk friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Pan Qing likes t'cook us breakfast when I'm over stockin' Tian's Corner with her.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident2 (Piper)": {
+		"key": "mention a resident2 (Piper)",
+		"type": "talk friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "I've climbed the peak with Piper before. Trainin' t'help rescue everyone who gets stuck, like you. (He pats [[name]].)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident3 (Wander)": {
+		"key": "mention a resident3 (Wander)",
+		"type": "talk friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Y'ran into Wander up there? How was he? I should check in on him...",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident4 (Cynn)": {
+		"key": "mention a resident4 (Cynn)",
+		"type": "talk friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Wonder what Cynn's been up to... Hope they're stayin' safe. You stay safe out there too. (He gently pats [[name]].)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention a resident5 (Cashew)": {
+		"key": "mention a resident5 (Cashew)",
+		"type": "talk friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "You've met Cash? She's sweet, ain't she? Give her this for me next time, will ya? (He gives [[name]] a pat.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a rainy day": {
+		"key": "on a rainy day",
+		"type": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Careful out there. Rain can make it slippery.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a rainy day 2": {
+		"key": "on a rainy day 2",
+		"type": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Rain's good for rechargin' the soil for next year's crops.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a sunny day": {
+		"key": "on a sunny day",
+		"type": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Nice weather.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a sunny day 2": {
+		"key": "on a sunny day 2",
+		"type": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "You'll wanna stay hydrated when the sun's makin' it hot like this.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a cloudy day": {
+		"key": "on a cloudy day",
+		"type": "Cloudy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Make sure t'be prepared in case it starts pourin'.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a cloudy day 2": {
+		"key": "on a cloudy day 2",
+		"type": "Cloudy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Dimmer than usual out there, so watch your footin'.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a windy day": {
+		"key": "on a windy day",
+		"type": "Windy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Wind'll blow the acorns right off the trees like this. Careful ya don't get nailed by one.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a windy day 2": {
+		"key": "on a windy day 2",
+		"type": "Windy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "With weather like this, twigles play fetch with the wind.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a stormy day": {
+		"key": "on a stormy day",
+		"type": "Stormy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Y'should stay inside an' stay safe.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a stormy day 2": {
+		"key": "on a stormy day 2",
+		"type": "Stormy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "... (He's staring silently out at the weather before he notices [[name]] and gives the customary pat.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"meeting Quingee for the first time at the station": {
+		"key": "meeting Quingee for the first time at the station",
+		"type": "tutorial",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "...S'you. Hey. Glad t'see you've recovered 'nough t'be up an' about. (He looks [[name]] over carefully.) Take it slow, all right?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee becomes a regular": {
+		"key": "after Quingee becomes a regular",
+		"type": "regular",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Hey, there. (He gives [[name]] a greeting pat.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee dies too many times": {
+		"key": "after Quingee dies too many times",
+		"type": "death2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Listen, I'm worried 'bout you. You've been collapsin' on the mountain too much. Y'should rest.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee makes decent progress up the mountain": {
+		"key": "after Quingee makes decent progress up the mountain",
+		"type": "Steps unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Y'made it pretty far last time, but ya still need to take care, all right? (He pats [[name]].)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee reaches the Peak": {
+		"key": "after Quingee reaches the Peak",
+		"type": "Peak unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Y'did it, huh. Glad ya didn't get hurt. Rest up now.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you like": {
+		"key": "after receiving a gift you like",
+		"type": "liked gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "For me? ...Thanks. S'nice o' ya. (He pats [[name]] softly.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you don't like": {
+		"key": "after receiving a gift you don't like",
+		"type": "disliked gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "... (He still pats [[name]] anyway, briefly.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you're neutral about": {
+		"key": "after receiving a gift you're neutral about",
+		"type": "neutral gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "A gift? 'Preciate it. (He pats [[name]].)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 0": {
+		"key": "chatter 0",
+		"type": "tutorial2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "This is Cap, by the way. (A spotted twigle wearing a Fire Station hat woofs softly in greeting.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 1": {
+		"key": "chatter 1",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "... (The silence is comfortable, somehow. Being here gives a sense of security.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 2": {
+		"key": "chatter 2",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "... (It's nice to have some peace and quiet.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 3": {
+		"key": "chatter 3",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "... (Time for some inner comtemplation, perhaps.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 4": {
+		"key": "chatter 4",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "... (Zane appears to be thinking about something.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 5": {
+		"key": "chatter 5",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "... (Maybe now is the time to take a moment and just breathe. It's a safe space to do so.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 6": {
+		"key": "chatter 6",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "I train with Cap for search an' rescue 'cause he can sniff out those in need. (He pats Cap, whose tail wags.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 7, after Quingee becomes a regular, if quingee is wearing any accessory": {
+		"key": "chatter 7, after Quingee becomes a regular, if quingee is wearing any accessory",
+		"type": "accessory friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Ever met a draft mule? I could introduce ya to Temperance sometime. She can pull a fire pump all by herself. Strong old gal.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 8, after Quingee becomes a regular": {
+		"key": "chatter 8, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Bet if Queengee saw ya goin' up the Peak, she'd wanna be carried up there. Likes bein' above others. She looks out for other quingees like you, too.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 9, after Quingee becomes a regular": {
+		"key": "chatter 9, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "You ever tried rollin' t'get 'round? Polly, one o' my quingees, likes doin' it.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 10, after Quingee becomes a regular": {
+		"key": "chatter 10, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Tea's the first quingee I ever met. Wonder if y'all would have fun hangin' out.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 11, after Quingee becomes a regular, if quingee is wearing any accessory": {
+		"key": "chatter 11, after Quingee becomes a regular, if quingee is wearing any accessory",
+		"type": "accessory friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Your accessory makes me think o' Ivy. She's one o' my quingees, an' she likes wearin' a vine 'round her neck.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 12, after Quingee becomes a regular": {
+		"key": "chatter 12, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Aside from Cap, I got a coupla other twigles: Watt an' Tim. They're still young, but me an' Cap look out for 'em.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 13, after Quingee becomes a regular": {
+		"key": "chatter 13, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "I got a fluster, Gent, who steps so quiet you'd think his hooves were as small as your feet.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 14, after Quingee becomes a regular": {
+		"key": "chatter 14, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "If ya ever wanna meet a real friendly fluster, Cud's 'round here sometimes. She rotates between the station an' my farm like the others.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 15, after Quingee becomes a regular": {
+		"key": "chatter 15, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "If ya hear a fluster from the stables here, s'probably Rough. He's got a big personality.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 16, after Quingee becomes a regular": {
+		"key": "chatter 16, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Seer's the first fluster I took up the peak with me. She's calm in a pinch an' follows directions well.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 17, after Quingee becomes a regular": {
+		"key": "chatter 17, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Y'got any cyao friends? My cyao, Pea, gets along well with my quingees.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 18, after Quingee becomes a regular": {
+		"key": "chatter 18, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Met any wroxen yet? I got a family o' them on the farm. All three o' them are artists. ",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 19, after Quingee becomes a regular, on a sunny day": {
+		"key": "chatter 19, after Quingee becomes a regular, on a sunny day",
+		"type": "sunny friend",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "My kasoots, Mae an' Gala, like lyin' in the sun on days like this. D'you?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"chatter 20, after Quingee becomes a regular": {
+		"key": "chatter 20, after Quingee becomes a regular",
+		"type": "talk friend2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "Y'might see some o' my cheeps runnin' round the station: Chari, Hue, Pattie, Grattie, Nessie, Connie, Dill...",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"if Quingee has the Stick of Hay equipped": {
+		"key": "if Quingee has the Stick of Hay equipped",
+		"type": "stick of hay",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Zane",
+				"text": "...... (He stoops down to get a better look at the stick of hay in [[name]]'s beak.) ...Guess we match. (He pats [[name]] contentedly. He seems endeared.)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	}
 }

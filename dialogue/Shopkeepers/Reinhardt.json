@@ -1,436 +1,436 @@
 {
-    "welcome1": {
-        "key": "welcome1",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Welcome to the Bake an-- oh. Come in small friend.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "welcome2": {
-        "key": "welcome2",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Hello there. I serve everyone... even quingee.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "welcome 3": {
-        "key": "welcome 3",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Are you here to buy or trade?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after purchase1": {
-        "key": "after purchase1",
-        "type": "buy",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Please enjoy yourself. I won't ask where you got the gald from.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after purchase2": {
-        "key": "after purchase2",
-        "type": "buy",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "I'd be happy if you came to buy things again.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after trading": {
-        "key": "after trading",
-        "type": "trade",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "This has been a good exchange.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "about Nora": {
-        "key": "about Nora",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "My daughter, Nora, loves quingees. She would love to say hi to you.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "mention Noah": {
-        "key": "mention Noah",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Noah? He's a hard worker. A little soft. Gentle. He has his own business.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "about the town": {
-        "key": "about the town",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Gale's End is a good town. Strong. I feel good about raising Nora here.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a rainy day": {
-        "key": "on a rainy day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Come in and dry off. I have a hot cup of coffee or cocoa for you, if you'd like.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a sunny day": {
-        "key": "on a sunny day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "It's a beautiful day. Would you like a cake to go with it?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a cloudy day": {
-        "key": "on a cloudy day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "It's a touch cloudy. Good weather for a cookie and a cup of coffee.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a windy day": {
-        "key": "on a windy day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "The harsh wind blew you in? Rest a while.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "on a stormy day": {
-        "key": "on a stormy day",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Hey, what are you doing here? You should be staying inside!",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "meeting Quingee for the first time": {
-        "key": "meeting Quingee for the first time",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Hello little one. You remind me of [[name]], somehow. It is.. nice to meet you? Is this the first time we've met?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after Quingee becomes a regular": {
-        "key": "after Quingee becomes a regular",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Small friend, you really do keep coming back here. It makes me happy. Thank you.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after Quingee makes decent progress up the mountain": {
-        "key": "after Quingee makes decent progress up the mountain",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "I heard a rumor you've been climbing Galinn, small friend. It hardly sounds safe.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after Quingee reaches the Peak": {
-        "key": "after Quingee reaches the Peak",
-        "type": "welcome",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Something looks different about you. More accomplished, somehow. What did you do?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after receiving a gift you like": {
-        "key": "after receiving a gift you like",
-        "type": "gift",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "That's a wonderful gift you got there. Nora would love this.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after receiving a gift you don't like": {
-        "key": "after receiving a gift you don't like",
-        "type": "gift",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": ".. Really?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "after receiving a gift you're neutral about": {
-        "key": "after receiving a gift you're neutral about",
-        "type": "gift",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Thank you for the kind gesture.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 1": {
-        "key": "Nora sprite random dialogue 1",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: Oh my Stars, hi! Are you a quingee? Can you talk? Is it true that quingees can speak?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 2": {
-        "key": "Nora sprite random dialogue 2",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: You're so cute!! Can I give you a hug? Do you want a snackie? Are you a good quingee?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 3": {
-        "key": "Nora sprite random dialogue 3",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: Can we play? Please? Pleaaasee? Pretty please with a cherry on top?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 4": {
-        "key": "Nora sprite random dialogue 4",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: Do you see my hat? It looks like a quingee, just like you!",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 5": {
-        "key": "Nora sprite random dialogue 5",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: It's my favoritist quingee ever, [[name]]-quingee! Papa, papa, look!",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 6": {
-        "key": "Nora sprite random dialogue 6",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: Do you like cake? I love chocolate cake!",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 7": {
-        "key": "Nora sprite random dialogue 7",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: Coffee is too bitter for me, yuck. Do you like coffee?",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 8": {
-        "key": "Nora sprite random dialogue 8",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: SCRAAAAAAAAA! ..hehe!",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 9": {
-        "key": "Nora sprite random dialogue 9",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: Buy one hug now and get two free! And, and, maybe even a cookie!",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Nora sprite random dialogue 10": {
-        "key": "Nora sprite random dialogue 10",
-        "type": "talk",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Reinhardt",
-                "text": "Nora: Please enjoy yourself [[name]]-quingee! My papa makes the best sweets.",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    }
+	"welcome1": {
+		"key": "welcome1",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Welcome to the Bake an-- oh. Come in small friend.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"welcome2": {
+		"key": "welcome2",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Hello there. I serve everyone... even quingee.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"welcome 3": {
+		"key": "welcome 3",
+		"type": "welcome",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Are you here to buy or trade?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after purchase1": {
+		"key": "after purchase1",
+		"type": "buy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Please enjoy yourself. I won't ask where you got the gald from.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after purchase2": {
+		"key": "after purchase2",
+		"type": "buy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "I'd be happy if you came to buy things again.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after trading": {
+		"key": "after trading",
+		"type": "buy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "This has been a good exchange.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"about Nora": {
+		"key": "about Nora",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "My daughter, Nora, loves quingees. She would love to say hi to you.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"mention Noah": {
+		"key": "mention Noah",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Noah? He's a hard worker. A little soft. Gentle. He has his own business.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"about the town": {
+		"key": "about the town",
+		"type": "talk",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Gale's End is a good town. Strong. I feel good about raising Nora here.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a rainy day": {
+		"key": "on a rainy day",
+		"type": "Rainy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Come in and dry off. I have a hot cup of coffee or cocoa for you, if you'd like.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a sunny day": {
+		"key": "on a sunny day",
+		"type": "Sunny",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "It's a beautiful day. Would you like a cake to go with it?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a cloudy day": {
+		"key": "on a cloudy day",
+		"type": "Cloudy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "It's a touch cloudy. Good weather for a cookie and a cup of coffee.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a windy day": {
+		"key": "on a windy day",
+		"type": "Windy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "The harsh wind blew you in? Rest a while.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"on a stormy day": {
+		"key": "on a stormy day",
+		"type": "Stormy",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Hey, what are you doing here? You should be staying inside!",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"meeting Quingee for the first time": {
+		"key": "meeting Quingee for the first time",
+		"type": "tutorial",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Hello little one. You remind me of [[name]], somehow. It is.. nice to meet you? Is this the first time we've met?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee becomes a regular": {
+		"key": "after Quingee becomes a regular",
+		"type": "regular",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Small friend, you really do keep coming back here. It makes me happy. Thank you.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee makes decent progress up the mountain": {
+		"key": "after Quingee makes decent progress up the mountain",
+		"type": "River unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "I heard a rumor you've been climbing Galinn, small friend. It hardly sounds safe.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after Quingee reaches the Peak": {
+		"key": "after Quingee reaches the Peak",
+		"type": "Peak unlocked",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Something looks different about you. More accomplished, somehow. What did you do?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you like": {
+		"key": "after receiving a gift you like",
+		"type": "liked gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "That's a wonderful gift you got there. Nora would love this.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you don't like": {
+		"key": "after receiving a gift you don't like",
+		"type": "disliked gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": ".. Really?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"after receiving a gift you're neutral about": {
+		"key": "after receiving a gift you're neutral about",
+		"type": "neutral gift",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Reinhardt",
+				"text": "Thank you for the kind gesture.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 1": {
+		"key": "Nora sprite random dialogue 1",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "Oh my Stars, hi! Are you a quingee? Can you talk? Is it true that quingees can speak?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 2": {
+		"key": "Nora sprite random dialogue 2",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "You're so cute!! Can I give you a hug? Do you want a snackie? Are you a good quingee?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 3": {
+		"key": "Nora sprite random dialogue 3",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "Can we play? Please? Pleaaasee? Pretty please with a cherry on top?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 4": {
+		"key": "Nora sprite random dialogue 4",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "Do you see my hat? It looks like a quingee, just like you!",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 5": {
+		"key": "Nora sprite random dialogue 5",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "It's my favoritist quingee ever, [[name]]-quingee! Papa, papa, look!",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 6": {
+		"key": "Nora sprite random dialogue 6",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "Do you like cake? I love chocolate cake!",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 7": {
+		"key": "Nora sprite random dialogue 7",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "Coffee is too bitter for me, yuck. Do you like coffee?",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 8": {
+		"key": "Nora sprite random dialogue 8",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "SCRAAAAAAAAA! ...Hehe!",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 9": {
+		"key": "Nora sprite random dialogue 9",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "Buy one hug now and get two free! And, and, maybe even a cookie!",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Nora sprite random dialogue 10": {
+		"key": "Nora sprite random dialogue 10",
+		"type": "nora",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Nora",
+				"text": "Please enjoy yourself [[name]]-quingee! My papa makes the best sweets.",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	}
 }

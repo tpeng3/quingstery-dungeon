@@ -1,34 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://6d838u0eabfw"]
+[gd_scene load_steps=9 format=3 uid="uid://6d838u0eabfw"]
 
 [ext_resource type="Script" path="res://scenes/Shops/TradingPost.gd" id="1_hofod"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_qjs2d"]
 [ext_resource type="JSON" path="res://dialogue/Shopkeepers/Bullfrog.json" id="3_bnxup"]
 [ext_resource type="Texture2D" uid="uid://dclo0ooi3uhon" path="res://assets/background/quingsterybgs_post.png" id="4_li7ot"]
-[ext_resource type="Texture2D" uid="uid://bvbqmsxgxn5p1" path="res://assets/character/talksprites/quingesterynpc_bullfrog_flats.png" id="5_8syb5"]
 [ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="6_yxph0"]
 [ext_resource type="PackedScene" uid="uid://cm06xatxch52d" path="res://prefabs/UI/ItemMenu/BuyMenu.tscn" id="7_xuprc"]
+[ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="8_j0f7l"]
 [ext_resource type="PackedScene" uid="uid://bw7q1cc3tci2i" path="res://prefabs/UI/NavButtons/NavButtons.tscn" id="8_qwxmw"]
-
-[sub_resource type="Animation" id="Animation_4gvkj"]
-resource_name = "bump"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3),
-"transitions": PackedFloat32Array(1, 1, 3.73213),
-"update": 0,
-"values": [Vector2(480, 0), Vector2(480, -10), Vector2(480, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_eubjm"]
-_data = {
-"bump": SubResource("Animation_4gvkj")
-}
 
 [node name="TradingPost" type="Node2D"]
 script = ExtResource("1_hofod")
@@ -41,26 +20,6 @@ scale = Vector2(2, 2)
 texture = ExtResource("4_li7ot")
 centered = false
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = 480.0
-offset_right = 960.0
-offset_bottom = 540.0
-size_flags_vertical = 8
-
-[node name="Character" type="TextureRect" parent="Control"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-scale = Vector2(1.1, 1.1)
-size_flags_horizontal = 4
-size_flags_vertical = 8
-texture = ExtResource("5_8syb5")
-
 [node name="ShopBox" parent="." instance=ExtResource("6_yxph0")]
 
 [node name="BuyMenu" parent="." instance=ExtResource("7_xuprc")]
@@ -72,10 +31,7 @@ offset_bottom = 540.0
 offset_right = 960.0
 offset_bottom = 540.0
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_eubjm")
-}
+[node name="WeatherHUD" parent="." instance=ExtResource("8_j0f7l")]
 
 [connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button2" to="." method="_on_sell_pressed"]

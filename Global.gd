@@ -23,13 +23,35 @@ var highestFloor = 0
 
 # global world stats
 var currentDay = 1
-var currentWeather = "Sunny"
+var currentWeather = "Stormy"
 var futureWeather = "Sunny"
 var weatherList = ["Sunny", "Cloudy", "Windy", "Rainy", "Stormy"]
 
 # global town stats
 var npc_dialogue: JSON = load("res://dialogue/NPCs.json")
 var npcData = []
+var FP = {
+	"bullfrog": 0,
+	"noah": 0,
+	"oleander": 0,
+	"oz": 0,
+	"piper": 0,
+	"reinhardt": 0,
+	"wander": 0,
+	"zane": 0,
+	"panqing": 0
+}
+var dialogue_popularity = {
+	"bullfrog": {},
+	"noah": {},
+	"oleander": {},
+	"oz": {},
+	"piper": {},
+	"reinhardt": {},
+	"wander": {},
+	"zane": {},
+	"panqing": {}
+}
 
 func save():
 	var save_dict = {

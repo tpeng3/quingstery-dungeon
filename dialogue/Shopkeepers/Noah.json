@@ -57,7 +57,7 @@
 	},
 	"after trading": {
 		"key": "after trading",
-		"type": "trade",
+		"type": "buy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -71,7 +71,7 @@
 	},
 	"on a rainy day": {
 		"key": "on a rainy day",
-		"type": "talk",
+		"type": "Rainy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -83,51 +83,9 @@
 			}
 		]
 	},
-	"on a sunny day": {
-		"key": "on a sunny day",
-		"type": "talk",
-		"popularity": 0,
-		"lines": [
-			{
-				"name": "Noah",
-				"text": "",
-				"action": [
-					"FREEZE"
-				]
-			}
-		]
-	},
-	"on a cloudy day": {
-		"key": "on a cloudy day",
-		"type": "talk",
-		"popularity": 0,
-		"lines": [
-			{
-				"name": "Noah",
-				"text": "",
-				"action": [
-					"FREEZE"
-				]
-			}
-		]
-	},
-	"on a windy day": {
-		"key": "on a windy day",
-		"type": "talk",
-		"popularity": 0,
-		"lines": [
-			{
-				"name": "Noah",
-				"text": "",
-				"action": [
-					"FREEZE"
-				]
-			}
-		]
-	},
 	"on a stormy day": {
 		"key": "on a stormy day",
-		"type": "talk",
+		"type": "Stormy",
 		"popularity": 0,
 		"lines": [
 			{
@@ -141,7 +99,7 @@
 	},
 	"mention Bake & Roast": {
 		"key": "mention Bake & Roast",
-		"type": "talk",
+		"type": "regular",
 		"popularity": 0,
 		"lines": [
 			{
@@ -155,7 +113,7 @@
 	},
 	"mention Fire Station": {
 		"key": "mention Fire Station",
-		"type": "talk",
+		"type": "regular",
 		"popularity": 0,
 		"lines": [
 			{
@@ -169,7 +127,7 @@
 	},
 	"meeting Quingee for the first time": {
 		"key": "meeting Quingee for the first time",
-		"type": "welcome",
+		"type": "tutorial",
 		"popularity": 0,
 		"lines": [
 			{
@@ -183,7 +141,7 @@
 	},
 	"after Quingee becomes a regular": {
 		"key": "after Quingee becomes a regular",
-		"type": "welcome",
+		"type": "regular2",
 		"popularity": 0,
 		"lines": [
 			{
@@ -197,7 +155,7 @@
 	},
 	"after Quingee makes decent progress up the mountain": {
 		"key": "after Quingee makes decent progress up the mountain",
-		"type": "welcome",
+		"type": "Steps unlocked",
 		"popularity": 0,
 		"lines": [
 			{
@@ -211,7 +169,7 @@
 	},
 	"after Quingee reaches the Peak": {
 		"key": "after Quingee reaches the Peak",
-		"type": "welcome",
+		"type": "Peak unlocked",
 		"popularity": 0,
 		"lines": [
 			{
@@ -225,12 +183,12 @@
 	},
 	"after receiving a gift you like": {
 		"key": "after receiving a gift you like",
-		"type": "gift",
+		"type": "liked gift",
 		"popularity": 0,
 		"lines": [
 			{
 				"name": "Noah",
-				"text": "......thanks.",
+				"text": "......Thanks.",
 				"action": [
 					"FREEZE"
 				]
@@ -239,7 +197,7 @@
 	},
 	"after receiving a gift you don't like": {
 		"key": "after receiving a gift you don't like",
-		"type": "gift",
+		"type": "disliked gift",
 		"popularity": 0,
 		"lines": [
 			{
@@ -253,7 +211,7 @@
 	},
 	"after receiving a gift you're neutral about": {
 		"key": "after receiving a gift you're neutral about",
-		"type": "gift",
+		"type": "neutral gift",
 		"popularity": 0,
 		"lines": [
 			{
