@@ -1,8 +1,8 @@
 [gd_resource type="TileSet" load_steps=15 format=3 uid="uid://mfrb20b87avp"]
 
-[ext_resource type="Texture2D" uid="uid://c7jsqk57ipua8" path="res://assets/tile/tiles_puddle.png" id="1_8c3wf"]
+[ext_resource type="Texture2D" uid="uid://ctlvnqpiaeovo" path="res://assets/tile/tiles_puddle.png" id="1_8c3wf"]
 [ext_resource type="Texture2D" uid="uid://2vphdrcvfcj3" path="res://assets/tile/ThroatTiles.png" id="2_ia6no"]
-[ext_resource type="Texture2D" uid="uid://dpbcmlf3pvi5p" path="res://assets/tile/tiles_water.png" id="3_ux5d4"]
+[ext_resource type="Texture2D" uid="uid://b4gqm60mkfpea" path="res://assets/tile/tiles_water.png" id="3_ux5d4"]
 [ext_resource type="Texture2D" uid="uid://c0jumchtph5y1" path="res://assets/tile/iso_tile_template.png" id="4_fnfng"]
 [ext_resource type="PackedScene" uid="uid://daaxp1o7huxb" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.tscn" id="5_57d86"]
 [ext_resource type="PackedScene" uid="uid://gvg8xyodjxn6" path="res://prefabs/TileScenes/Stairs/Stairs.tscn" id="6_c7bqr"]

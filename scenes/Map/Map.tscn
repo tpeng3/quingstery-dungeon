@@ -1,52 +1,62 @@
-[gd_scene load_steps=53 format=3 uid="uid://dx0kws7hwpumu"]
+[gd_scene load_steps=58 format=3 uid="uid://dx0kws7hwpumu"]
 
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
 [ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
 [ext_resource type="Script" path="res://scenes/Map/Camera2D.gd" id="2_vecvs"]
 [ext_resource type="PackedScene" uid="uid://dnpqq4mosh4n7" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
+[ext_resource type="Material" uid="uid://cmvctaum5g4ir" path="res://prefabs/WeatherFX/RainParticle.tres" id="3_r0bka"]
 [ext_resource type="PackedScene" uid="uid://c5evt78phsk3n" path="res://prefabs/MapButton/MapButton.tscn" id="4_618ha"]
-[ext_resource type="Texture2D" uid="uid://cxy2kys4qk0cm" path="res://assets/UI/locations/locations_galinnpeak_pip.png" id="5_4c7dp"]
-[ext_resource type="Texture2D" uid="uid://d26gebiwmbjj6" path="res://assets/UI/locations/locations_townhall_pip.png" id="5_s1d2c"]
-[ext_resource type="Texture2D" uid="uid://bb1tvlo15kpxy" path="res://assets/UI/locations/locations_pecanhome_pip.png" id="6_62i57"]
-[ext_resource type="Texture2D" uid="uid://5a7erdf8r3il" path="res://assets/UI/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
-[ext_resource type="Texture2D" uid="uid://cnqht2rnry8yk" path="res://assets/UI/locations/locations_bulletinboard_pip.png" id="7_5hqkh"]
-[ext_resource type="Texture2D" uid="uid://dnf3ptd2fno2p" path="res://assets/UI/locations/locations_tradingpost_pip.png" id="8_d8ve6"]
-[ext_resource type="Texture2D" uid="uid://cau8i0u62jvwa" path="res://assets/UI/locations/locations_tianscorner_pip.png" id="9_m1ovn"]
-[ext_resource type="Texture2D" uid="uid://dkioundbgdosg" path="res://assets/UI/locations/locations_bakeroast_pip.png" id="10_nbn57"]
-[ext_resource type="Texture2D" uid="uid://c4mkvxufil73y" path="res://assets/UI/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
-[ext_resource type="Texture2D" uid="uid://dt24fadidnfit" path="res://assets/UI/locations/locations_textileservices_pip.png" id="11_tv7ax"]
-[ext_resource type="Texture2D" uid="uid://bvno2x2ffvhcj" path="res://assets/UI/locations/locations_firestation_pip.png" id="12_122ll"]
-[ext_resource type="Texture2D" uid="uid://2q5p6d7wcod6" path="res://assets/UI/locations/locations_almondhome_pip.png" id="12_mrm7y"]
+[ext_resource type="Texture2D" uid="uid://4gas44rbefi5" path="res://assets/vfx/rain.png" id="4_psgtx"]
+[ext_resource type="Texture2D" uid="uid://c35ytiqoh7cxb" path="res://assets/UI/locations/locations_galinnpeak_pip.png" id="5_4c7dp"]
+[ext_resource type="Texture2D" uid="uid://chmo1wo8om8fj" path="res://assets/UI/locations/locations_townhall_pip.png" id="5_s1d2c"]
+[ext_resource type="Texture2D" uid="uid://cc0rqgwdflegk" path="res://assets/UI/locations/locations_pecanhome_pip.png" id="6_62i57"]
+[ext_resource type="Texture2D" uid="uid://blcuoxgdtiy4t" path="res://assets/UI/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
+[ext_resource type="Texture2D" uid="uid://djunjv00vegql" path="res://assets/UI/locations/locations_bulletinboard_pip.png" id="7_5hqkh"]
+[ext_resource type="Texture2D" uid="uid://ojxd738fu1se" path="res://assets/UI/locations/locations_tradingpost_pip.png" id="8_d8ve6"]
+[ext_resource type="Texture2D" uid="uid://crk8t5xo2myvn" path="res://assets/UI/locations/locations_tianscorner_pip.png" id="9_m1ovn"]
+[ext_resource type="Texture2D" uid="uid://b420otmq7meoc" path="res://assets/UI/locations/locations_bakeroast_pip.png" id="10_nbn57"]
+[ext_resource type="Texture2D" uid="uid://dcu4ces3hk2kj" path="res://assets/UI/locations/locations_hazelnuthome_pip.png" id="10_satxt"]
+[ext_resource type="Texture2D" uid="uid://clmeft3hg24uh" path="res://assets/UI/locations/locations_textileservices_pip.png" id="11_tv7ax"]
+[ext_resource type="Texture2D" uid="uid://d4d1rjvobukog" path="res://assets/UI/locations/locations_firestation_pip.png" id="12_122ll"]
+[ext_resource type="Texture2D" uid="uid://dg27cpt4plehr" path="res://assets/UI/locations/locations_almondhome_pip.png" id="12_mrm7y"]
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="13_dboj1"]
-[ext_resource type="Texture2D" uid="uid://dpnpboqsvv02x" path="res://assets/UI/locations/locations_meteorologicalinstitute_pip.png" id="13_qm57g"]
-[ext_resource type="Texture2D" uid="uid://ebohf2flh1fq" path="res://assets/UI/locations/locations_attithcave_pip.png" id="13_rxcjq"]
-[ext_resource type="Texture2D" uid="uid://bn3vhms2a7sc8" path="res://assets/UI/locations/locations_briarspond_pip.png" id="14_3e0pf"]
+[ext_resource type="Texture2D" uid="uid://dft8lnrw38e4a" path="res://assets/UI/locations/locations_meteorologicalinstitute_pip.png" id="13_qm57g"]
+[ext_resource type="Texture2D" uid="uid://b43wy65q11hg1" path="res://assets/UI/locations/locations_attithcave_pip.png" id="13_rxcjq"]
+[ext_resource type="Texture2D" uid="uid://bxmo5xr1utqql" path="res://assets/UI/locations/locations_briarspond_pip.png" id="14_3e0pf"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="14_ruq6n"]
-[ext_resource type="Texture2D" uid="uid://ct8ui0hscgjmb" path="res://assets/UI/locations/locations_cashewhome_pip.png" id="15_r0no2"]
-[ext_resource type="Texture2D" uid="uid://bt33lh43tagta" path="res://assets/UI/locations/locations_lakegalinn_pip.png" id="16_wltem"]
-[ext_resource type="Texture2D" uid="uid://bfrh5uy1npm6q" path="res://assets/UI/locations/locations_lookoutpoint_pip.png" id="17_vsxwn"]
-[ext_resource type="Texture2D" uid="uid://d4mpmcma27j23" path="res://assets/UI/locations/locations_pistachiohome_pip.png" id="18_y7wcs"]
-[ext_resource type="Texture2D" uid="uid://bpnj7gvb5jw6t" path="res://assets/UI/locations/locations_scrapyard_pip.png" id="19_ynvys"]
-[ext_resource type="Texture2D" uid="uid://c1p51585qpsxs" path="res://assets/UI/locations/locations_forgottenwoman_pip.png" id="20_kypp1"]
-[ext_resource type="Texture2D" uid="uid://dp1qw5l0vx2d" path="res://assets/UI/locations/locations_themines_pip.png" id="21_gk4hp"]
-[ext_resource type="Texture2D" uid="uid://cnq2cyi8atnyt" path="res://assets/UI/locations/locations_walnuthome_pip.png" id="22_c0kj6"]
-[ext_resource type="Texture2D" uid="uid://dgdjdfdd0aw4p" path="res://assets/UI/locations/locations_abandonedstorehouse_pip.png" id="23_0j1ud"]
-[ext_resource type="Texture2D" uid="uid://s6jh4eddq68v" path="res://assets/UI/locations/locations_watertower_pip.png" id="24_5ef4j"]
-[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="29_ovivd"]
+[ext_resource type="Texture2D" uid="uid://bnk2ytg2p0gqb" path="res://assets/UI/locations/locations_cashewhome_pip.png" id="15_r0no2"]
+[ext_resource type="Texture2D" uid="uid://bx4oti2i8noyg" path="res://assets/UI/locations/locations_lakegalinn_pip.png" id="16_wltem"]
+[ext_resource type="Texture2D" uid="uid://r163lvklgpy6" path="res://assets/UI/locations/locations_lookoutpoint_pip.png" id="17_vsxwn"]
+[ext_resource type="Texture2D" uid="uid://ur2b88n1a5dl" path="res://assets/UI/locations/locations_pistachiohome_pip.png" id="18_y7wcs"]
+[ext_resource type="Texture2D" uid="uid://bfgbinks8csmy" path="res://assets/UI/locations/locations_scrapyard_pip.png" id="19_ynvys"]
+[ext_resource type="Texture2D" uid="uid://cmm7hwqyxe8bj" path="res://assets/UI/locations/locations_forgottenwoman_pip.png" id="20_kypp1"]
+[ext_resource type="Texture2D" uid="uid://cq65yaowgeltj" path="res://assets/UI/locations/locations_themines_pip.png" id="21_gk4hp"]
+[ext_resource type="Texture2D" uid="uid://diwn7nkkhu1kg" path="res://assets/UI/locations/locations_walnuthome_pip.png" id="22_c0kj6"]
+[ext_resource type="Texture2D" uid="uid://b51cpjilubjgo" path="res://assets/UI/locations/locations_abandonedstorehouse_pip.png" id="23_0j1ud"]
+[ext_resource type="Texture2D" uid="uid://8k4vx6qyrhlx" path="res://assets/UI/locations/locations_watertower_pip.png" id="24_5ef4j"]
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="29_ovivd"]
+[ext_resource type="Texture2D" path="res://assets/vfx/Leaf.png" id="30_84yac"]
 [ext_resource type="PackedScene" uid="uid://bfkcav2syaqel" path="res://prefabs/UI/Map/MapItem.tscn" id="30_q7jcd"]
+[ext_resource type="Material" path="res://prefabs/WeatherFX/LeafParticle.tres" id="30_sj5v0"]
 [ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="30_tvpyi"]
 [ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="31_rhg1i"]
 [ext_resource type="StyleBox" uid="uid://xk12q87v443s" path="res://theme/tex_MenuSign_L.tres" id="32_i2spu"]
 [ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="33_ibrkh"]
 [ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="34_nh7ep"]
 [ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="35_2n2ik"]
-[ext_resource type="FontFile" uid="uid://b0m4hay27djem" path="res://assets/UI/Dogica/dogicapixel.ttf" id="36_t3381"]
-[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="37_pca6x"]
+[ext_resource type="FontFile" uid="uid://oghqafn812mw" path="res://assets/UI/Dogica/dogicapixel.ttf" id="36_t3381"]
+[ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="37_pca6x"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="38_1lj55"]
 [ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="44_qdn27"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="45_sx7io"]
 [ext_resource type="JSON" path="res://dialogue/NPCs.json" id="46_5d36l"]
 [ext_resource type="PackedScene" uid="uid://8u6c5x2aksb6" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="47_prvth"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rxlrc"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 2
+particles_anim_loop = false
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
 
@@ -419,6 +429,26 @@ offset_bottom = 410.0
 scale = Vector2(1, 1)
 preview = ExtResource("24_5ef4j")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
+
+[node name="LeafParticles" type="GPUParticles2D" parent="SubViewportContainer/SubViewport"]
+material = SubResource("CanvasItemMaterial_rxlrc")
+amount = 50
+process_material = ExtResource("30_sj5v0")
+texture = ExtResource("30_84yac")
+lifetime = 5.0
+
+[node name="RainParticles" type="GPUParticles2D" parent="SubViewportContainer/SubViewport"]
+visible = false
+z_as_relative = false
+position = Vector2(503, -3)
+scale = Vector2(0.5, 0.5)
+amount = 100
+process_material = ExtResource("3_r0bka")
+texture = ExtResource("4_psgtx")
+lifetime = 0.7
+trail_lifetime = 0.1
+trail_sections = 2
+trail_section_subdivisions = 1
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

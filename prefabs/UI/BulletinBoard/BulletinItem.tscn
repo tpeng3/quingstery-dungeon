@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cuj4hjtjp6xfa"]
 
-[ext_resource type="Theme" uid="uid://bfqypb3lfrfpt" path="res://theme/Signpost.tres" id="1_qpwni"]
+[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="1_qpwni"]
 [ext_resource type="Texture2D" uid="uid://c0ctf6w5y22en" path="res://assets/character/beans/Zane.png" id="2_0xsua"]
 
 [node name="BulletinItem" type="MarginContainer"]
