@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://by3os4pcokgew"]
+
+[ext_resource type="Script" path="res://prefabs/WeatherFX/WeatherFilter.gd" id="1_k7knu"]
+[ext_resource type="Material" uid="uid://bigg4incwi6gt" path="res://prefabs/WeatherFX/LeafParticle.tres" id="2_urmg6"]
+[ext_resource type="Texture2D" uid="uid://crm8pi37rd30e" path="res://assets/vfx/Leaf.png" id="3_wttr4"]
+[ext_resource type="Material" uid="uid://cmvctaum5g4ir" path="res://prefabs/WeatherFX/RainParticle.tres" id="4_vjv46"]
+[ext_resource type="Texture2D" uid="uid://dfqjgfuykaexr" path="res://assets/vfx/rain.png" id="5_x8e8c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fesdn"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rxlrc"]
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[node name="WeatherFilter" type="Node"]
+script = ExtResource("1_k7knu")
+
+[node name="Panel" type="Panel" parent="."]
+visible = false
+modulate = Color(0.219608, 0.309804, 0.34902, 0.34902)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(4, 4)
+theme_override_styles/panel = SubResource("StyleBoxFlat_fesdn")
+
+[node name="LeafParticles" type="GPUParticles2D" parent="."]
+visible = false
+material = SubResource("CanvasItemMaterial_rxlrc")
+amount = 50
+process_material = ExtResource("2_urmg6")
+texture = ExtResource("3_wttr4")
+lifetime = 5.0
+
+[node name="RainParticles" type="GPUParticles2D" parent="."]
+visible = false
+z_as_relative = false
+position = Vector2(503, -3)
+amount = 100
+process_material = ExtResource("4_vjv46")
+texture = ExtResource("5_x8e8c")
+lifetime = 0.7
+trail_lifetime = 0.1
+trail_sections = 2
+trail_section_subdivisions = 1

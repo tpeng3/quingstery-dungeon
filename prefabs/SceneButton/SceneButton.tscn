@@ -1,6 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dnpqq4mosh4n7"]
 
-[ext_resource type="FontFile" uid="uid://c5jxg6vswppim" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_ms67w"]
+[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_ms67w"]
 [ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="2_im03w"]
 [ext_resource type="Script" path="res://prefabs/SceneButton/SceneButton.gd" id="2_pga8w"]
 [ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="3_3ou8t"]
@@ -8,8 +8,8 @@
 [ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="5_7lhhk"]
 [ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="6_x1gb0"]
 [ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="7_4b2ri"]
-[ext_resource type="FontFile" uid="uid://dkcuhhgjtpmny" path="res://assets/ui/Dogica/dogicapixel.ttf" id="8_cegc8"]
-[ext_resource type="FontFile" uid="uid://bqqo6jyn854kp" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="9_kvyr3"]
+[ext_resource type="FontFile" uid="uid://b0m4hay27djem" path="res://assets/UI/Dogica/dogicapixel.ttf" id="8_cegc8"]
+[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="9_kvyr3"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="10_q6soq"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
@@ -85,6 +85,4 @@ script = ExtResource("2_pga8w")
 
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
-[connection signal="mouse_entered" from="." to="." method="_on_focus_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_focus_exited"]
 [connection signal="pressed" from="." to="." method="_on_pressed"]

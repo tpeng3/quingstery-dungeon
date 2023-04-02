@@ -53,6 +53,9 @@ var dialogue_popularity = {
 	"panqing": {}
 }
 
+func _ready():
+	generateNPCs()
+
 func save():
 	var save_dict = {
 		"player" : player,
@@ -104,13 +107,11 @@ func generateNPCs():
 	var locations = ["Lake Galinn"]
 	npcData = {}
 	for n in 3:
-		print(charas, locations)
 		var npc = _weighted_rand(charas, locations)
 		npcData[n] = npc
 		npcData[n].visited = false
 		charas.push_back(npc.name)
 		locations.push_back(npc.location)
-	print(npcData)
 		
 func _weighted_rand(charas, locations):
 	var sortedDialogue = npc_dialogue.data.values().filter(

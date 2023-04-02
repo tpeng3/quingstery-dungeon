@@ -16,5 +16,4 @@ func _ready():
 		WEATHER_MAP[Global.currentWeather] * PADDING, 0,
 		PADDING, PADDING
 	)
-	print(Global.currentWeather)
 	$Sprite2D.region_rect = region
