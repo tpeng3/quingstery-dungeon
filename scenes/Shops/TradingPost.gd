@@ -4,6 +4,7 @@ const FRIEND_STATUS = 20
 const BESTIE_STATUS = 40
 const SELL_MARK = 100
 var sellTotal = 0
+var last_menu_button
 @onready var dialogue_tracker = $DialoguePlayer.dialogue_file.data
 
 func _ready():
@@ -11,35 +12,40 @@ func _ready():
 	$ShopBox.show_dialogue($DialoguePlayer, welcome_key)
 	$ShopBox.no_selected.connect(_on_dialogue_end)
 	$BuyMenu.menu_closed.connect(_on_menu_closed)
+	$SellMenu.menu_closed.connect(_on_menu_closed)
 	
 	$NavButtons.show()
-	$NavButtons/NavList/Button1.grab_focus()
+	last_menu_button = $NavButtons/NavList/Button1
+	last_menu_button.grab_focus()
 
 	Global.FP.bullfrog += 1
 	
 func _on_dialogue_end():
-	$NavButtons/NavList/Button3.grab_focus()
+	last_menu_button.grab_focus()
 	
-func _on_menu_closed(bought=false):
+func _on_menu_closed():
 	var buy_key = _weighted_rand("buy")
 	$ShopBox.show_dialogue($DialoguePlayer, buy_key)
 	$NavButtons.show()
-	$NavButtons/NavList/Button1.grab_focus()
+	last_menu_button.grab_focus()
 
 func _on_buy_pressed():
 	$ShopBox.hide()
 	$NavButtons.hide()
 	$BuyMenu.show_menu()
+	last_menu_button = $NavButtons/NavList/Button1
 
 func _on_sell_pressed():
 	$ShopBox.hide()
 	$NavButtons.hide()
-	$BuyMenu.show_menu()
+	$SellMenu.show_menu()
+	last_menu_button = $NavButtons/NavList/Button2
 
 func _on_talk_pressed():
 	var talk_key = _weighted_rand("talk")
 	$ShopBox.show_dialogue($DialoguePlayer, talk_key)
 	$AnimationPlayer.play("bump")
+	last_menu_button = $NavButtons/NavList/Button3
 
 func _on_leave_pressed():
 	SceneManager.change_scene("Map")

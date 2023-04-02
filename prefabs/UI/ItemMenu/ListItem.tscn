@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cklgq1yqdgf2s"]
+[gd_scene load_steps=20 format=3 uid="uid://cklgq1yqdgf2s"]
 
 [ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_qoo2l"]
 [ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="2_hju7a"]
@@ -12,6 +12,7 @@
 [ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="7_g5ggn"]
 [ext_resource type="FontFile" uid="uid://b0m4hay27djem" path="res://assets/UI/Dogica/dogicapixel.ttf" id="8_0rt6f"]
 [ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="9_odpt6"]
+[ext_resource type="StyleBox" uid="uid://druhp57aw2njt" path="res://theme/Signpost_Callout_Alt.tres" id="10_1r3br"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="10_352iu"]
 [ext_resource type="StyleBox" uid="uid://c2nb40sqt2n80" path="res://theme/Signpost_Callout.tres" id="10_h54xc"]
 
@@ -67,6 +68,7 @@ Label_Sign/styles/normal = ExtResource("6_3fdlf")
 Panel/styles/panel = SubResource("StyleBoxEmpty_1ql0t")
 Panel_Highlight/base_type = &"Panel"
 Panel_Highlight/styles/panel = ExtResource("10_h54xc")
+Panel_Highlight_Alt/styles/panel = ExtResource("10_1r3br")
 RichTextLabel/colors/default_color = Color(0.215686, 0.00784314, 0.396078, 1)
 RichTextLabel/constants/line_separation = 3
 RichTextLabel/font_sizes/normal_font_size = 16

@@ -73,3 +73,5 @@ text = "sell"
 [node name="AmountPopup" parent="." index="3" instance=ExtResource("4_n8cvy")]
 visible = false
 layout_mode = 1
+
+[connection signal="pressed" from="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight" to="." method="_on_sell_pressed"]

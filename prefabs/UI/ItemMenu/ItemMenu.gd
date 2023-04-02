@@ -3,7 +3,7 @@ extends Control
 var current_page = 1
 var max_pages = 1
 var ListItem = load("res://prefabs/UI/ItemMenu/ListItem.tscn")
-var focused_item = null
+@export var focused_item:ListItem = null
 
 enum CostType {
 	NONE,
@@ -57,6 +57,20 @@ func show_menu():
 		$OuterPadding/SplitContainer/LeftPanel/PanelPadding/NoItemsText.hide()
 		ItemContainer.get_child(0).grab_focus()
 
+# update after a listitem is removed from the page after sell or use
+func _update_page():
+	_show_page()
+	if Inventory.get_inv_count() < 1:
+		ItemContainer.hide()
+		$OuterPadding/SplitContainer/RightPanel.hide()
+		$OuterPadding/SplitContainer/LeftPanel/PanelPadding/NoItemsText.show()
+		$OuterPadding/SplitContainer/LeftPanel/FooterMargin/NaviClose.grab_focus()
+	else:
+		ItemContainer.show()
+		$OuterPadding/SplitContainer/RightPanel.show()
+		$OuterPadding/SplitContainer/LeftPanel/PanelPadding/NoItemsText.hide()
+		ItemContainer.get_child(0).grab_focus()
+
 func _show_page(page=current_page):
 	_update_page_text()
 	var visible_items = ItemContainer.get_children().slice((page - 1) * 8, page * 8)
@@ -90,3 +104,12 @@ func _update_right_panel(node):
 	$OuterPadding/SplitContainer/RightPanel/MarginContainer/TitleMargin/ItemName.text = node.item_name.to_upper()
 	$OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/ItemDesc.text = item_dict.description
 	$AnimationPlayer.play("bump")
+
+
+func _on_button_right_focus_entered():
+	focused_item.find_child("Panel").theme_type_variation = "Panel_Highlight_Alt"
+	var path = $OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.get_path_to(focused_item)
+	$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.focus_neighbor_left = path
+
+func _on_button_right_focus_exited():
+	focused_item.find_child("Panel").theme_type_variation = ""

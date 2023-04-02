@@ -13,42 +13,42 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2utro"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mwiny"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_d41j1"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4phn8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_t0n3w"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bh0py"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jvvd5"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_p2qrg"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_eblov"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lsjg6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_45vh3"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pr6wn"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bougy"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h425p"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_umco3"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d1rhe"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jc67l"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(27, 0, 9, 9)
@@ -203,10 +203,10 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 9.0
 offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_mwiny")
-texture_pressed = SubResource("AtlasTexture_4phn8")
-texture_disabled = SubResource("AtlasTexture_bh0py")
-texture_focused = SubResource("AtlasTexture_p2qrg")
+texture_normal = SubResource("AtlasTexture_d41j1")
+texture_pressed = SubResource("AtlasTexture_t0n3w")
+texture_disabled = SubResource("AtlasTexture_jvvd5")
+texture_focused = SubResource("AtlasTexture_eblov")
 direction = 1
 
 [node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
@@ -217,10 +217,10 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 9.0
 offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_lsjg6")
-texture_pressed = SubResource("AtlasTexture_pr6wn")
-texture_disabled = SubResource("AtlasTexture_h425p")
-texture_focused = SubResource("AtlasTexture_d1rhe")
+texture_normal = SubResource("AtlasTexture_45vh3")
+texture_pressed = SubResource("AtlasTexture_bougy")
+texture_disabled = SubResource("AtlasTexture_umco3")
+texture_focused = SubResource("AtlasTexture_jc67l")
 direction = 0
 metadata/Direction = "right"
 
@@ -314,6 +314,7 @@ text = "toss"
 [node name="ButtonRight" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 8
+focus_neighbor_left = NodePath("../../../../LeftPanel/PanelPadding/FlowContainer/ListItem")
 theme = ExtResource("1_6b7a8")
 text = "use"
 
@@ -325,3 +326,5 @@ libraries = {
 [connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_pressed" flags=18]
 [connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack/ArrowBtn" to="." method="_on_prev_pressed" flags=18]
 [connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext/ArrowBtn" to="." method="_on_next_pressed" flags=18]
+[connection signal="focus_entered" from="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight" to="." method="_on_button_right_focus_entered"]
+[connection signal="focus_exited" from="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight" to="." method="_on_button_right_focus_exited"]
