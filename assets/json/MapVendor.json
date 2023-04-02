@@ -1,0 +1,201 @@
+[
+    {
+        "item": "Guppy",
+        "type": "Random",
+        "cost": 25,
+        "condition": "None"
+    },
+    {
+        "item": "Fish",
+        "type": "Random",
+        "cost": 25,
+        "condition": "River"
+    },
+    {
+        "item": "Koikoi",
+        "type": "Random",
+        "cost": 40,
+        "condition": "River"
+    },
+    {
+        "item": "Munnie",
+        "type": "Random",
+        "cost": 150,
+        "condition": "River, Peak"
+    },
+    {
+        "item": "Marimo",
+        "type": "Random",
+        "cost": 35,
+        "condition": "None"
+    },
+    {
+        "item": "Venom",
+        "type": "Random",
+        "cost": 35,
+        "condition": "Steps"
+    },
+    {
+        "item": "Shell",
+        "type": "Random",
+        "cost": 25,
+        "condition": "None"
+    },
+    {
+        "item": "Worm",
+        "type": "Random",
+        "cost": 25,
+        "condition": "None"
+    },
+    {
+        "item": "Acorn",
+        "type": "Random",
+        "cost": 25,
+        "condition": "Throat, Peak"
+    },
+    {
+        "item": "Ceramic",
+        "type": "Random",
+        "cost": 35,
+        "condition": "None"
+    },
+    {
+        "item": "Flower",
+        "type": "Random",
+        "cost": 25,
+        "condition": "Throat"
+    },
+    {
+        "item": "Herb Bundle",
+        "type": "Random",
+        "cost": 35,
+        "condition": "Throat"
+    },
+    {
+        "item": "Mushroom",
+        "type": "Random",
+        "cost": 15,
+        "condition": "None"
+    },
+    {
+        "item": "Seed Packet",
+        "type": "Random",
+        "cost": 100,
+        "condition": "Throat"
+    },
+    {
+        "item": "Silk",
+        "type": "Random",
+        "cost": 35,
+        "condition": "None"
+    },
+    {
+        "item": "Soil",
+        "type": "Random",
+        "cost": 25,
+        "condition": "None"
+    },
+    {
+        "item": "Wood",
+        "type": "Random",
+        "cost": 35,
+        "condition": "River, Peak"
+    },
+    {
+        "item": "Rare Wood",
+        "type": "Random",
+        "cost": 100,
+        "condition": "Peak"
+    },
+    {
+        "item": "Bronze",
+        "type": "Random",
+        "cost": 25,
+        "condition": "Throat"
+    },
+    {
+        "item": "Clay",
+        "type": "Random",
+        "cost": 15,
+        "condition": "None"
+    },
+    {
+        "item": "Glowbug",
+        "type": "Random",
+        "cost": 25,
+        "condition": "None"
+    },
+    {
+        "item": "Gold",
+        "type": "Random",
+        "cost": 40,
+        "condition": "Steps"
+    },
+    {
+        "item": "Iron",
+        "type": "Random",
+        "cost": 35,
+        "condition": "River"
+    },
+    {
+        "item": "Jewel",
+        "type": "Random",
+        "cost": 100,
+        "condition": "Steps"
+    },
+    {
+        "item": "Stone",
+        "type": "Random",
+        "cost": 10,
+        "condition": "None"
+    },
+    {
+        "item": "Tree Sap",
+        "type": "Random",
+        "cost": 200,
+        "condition": "Peak"
+    },
+    {
+        "item": "Goddess Tear",
+        "type": "Random",
+        "cost": 200,
+        "condition": "Peak"
+    },
+    {
+        "item": "Bait",
+        "type": "Buy",
+        "cost": 35,
+        "condition": "None"
+    },
+    {
+        "item": "Bait",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Worm x1",
+        "trade2": "Trash x1",
+        "trade3": "Guppy x1",
+        "condition": "None"
+    },
+    {
+        "item": "Art",
+        "type": "Buy",
+        "cost": 50,
+        "condition": "None"
+    },
+    {
+        "item": "Art",
+        "type": "Trade",
+        "trade1": "Ceramic x1",
+        "trade2": "Clay x1",
+        "trade3": "Flower x1",
+        "condition": "None"
+    },
+    {
+        "item": "Compass",
+        "type": "Trade",
+        "trade1": "Art x5",
+        "trade2": "Gold x5",
+        "trade3": "Baked Good x1",
+        "condition": "Friendship with Wander"
+    }
+]

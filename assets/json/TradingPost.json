@@ -1,0 +1,87 @@
+[
+    {
+        "item": "Glowbug",
+        "type": "Buy",
+        "cost": 25,
+        "condition": "None"
+    },
+    {
+        "item": "Fish",
+        "type": "Buy",
+        "cost": 25,
+        "condition": "None"
+    },
+    {
+        "item": "Flower",
+        "type": "Buy",
+        "cost": 25,
+        "condition": "None"
+    },
+    {
+        "item": "Wood",
+        "type": "Buy",
+        "cost": 35,
+        "condition": "None"
+    },
+    {
+        "item": "Wish Lantern",
+        "type": "Buy",
+        "cost": 80,
+        "condition": "None"
+    },
+    {
+        "item": "Wish Lantern",
+        "type": "Buy",
+        "trade1": "Silk x1",
+        "trade2": "Glowbug x1",
+        "condition": "None"
+    },
+    {
+        "item": "Medicine",
+        "type": "Buy",
+        "cost": 300,
+        "condition": "None"
+    },
+    {
+        "item": "Medicine",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Herb Bundle x1",
+        "trade2": "Venom x1",
+        "trade3": "Marimo x1",
+        "condition": "None"
+    },
+    {
+        "item": "Bait",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Worm x1",
+        "trade2": "Trash x1",
+        "trade3": "Guppy x1",
+        "condition": "None"
+    },
+    {
+        "item": "Bouquet",
+        "type": "Buy",
+        "cost": 300,
+        "condition": "None"
+    },
+    {
+        "item": "Bouquet",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Flower x3",
+        "trade2": "Silk x3",
+        "trade3": "Jewel x1",
+        "condition": "None"
+    },
+    {
+        "item": "Beanie",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Silk x5",
+        "trade2": "Wood x5",
+        "trade3": "Bouquet x1",
+        "condition": "Friendship with Bullfrog"
+    }
+]

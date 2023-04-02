@@ -1,0 +1,109 @@
+[
+    {
+        "item": "Medicine",
+        "type": "Buy",
+        "cost": 300,
+        "condition": "None"
+    },
+    {
+        "item": "Wish Lantern",
+        "type": "Buy",
+        "cost": 80,
+        "condition": "None"
+    },
+    {
+        "item": "Bronze Pickaxe",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Bronze x5",
+        "condition": "None"
+    },
+    {
+        "item": "Iron Pickaxe",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Iron x5",
+        "trade2": "Wood x5",
+        "condition": "after upgrade1"
+    },
+    {
+        "item": "Gold Pickaxe",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Gold x5",
+        "trade2": "Rare Wood x5",
+        "condition": "after upgrade2"
+    },
+    {
+        "item": "Soft Basket",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Ceramic x5",
+        "condition": "None"
+    },
+    {
+        "item": "Sturdy Basket",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Herb Bundle x5",
+        "trade2": "Wood x5",
+        "condition": "after upgrade1"
+    },
+    {
+        "item": "Fancy Basket",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Tree Sap x5",
+        "trade2": "Rare Wood x5",
+        "condition": "after upgrade2"
+    },
+    {
+        "item": "Bronze Fishing Rod",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Guppy x5",
+        "condition": "None"
+    },
+    {
+        "item": "Iron Fishing Rod",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Fish x5",
+        "trade2": "Wood x5",
+        "condition": "after upgrade1"
+    },
+    {
+        "item": "Gold Fishing Rod",
+        "type": "Trade",
+        "cost": -1,
+        "trade1": "Koikoi x5",
+        "trade2": "Rare Wood x5",
+        "condition": "after upgrade2"
+    },
+    {
+        "item": "Small Backpack",
+        "type": "Buy",
+        "cost": 500,
+        "condition": "None"
+    },
+    {
+        "item": "Medium Backpack",
+        "type": "Buy",
+        "cost": 2000,
+        "condition": "after upgrade1"
+    },
+    {
+        "item": "Large Backpack",
+        "type": "Buy",
+        "cost": 5000,
+        "condition": "after upgrade2"
+    },
+    {
+        "item": "Glowbug Lantern",
+        "type": "Trade",
+        "cost": 5000,
+        "trade1": "Glowbug x20",
+        "trade2": "Goddess Tear x5",
+        "condition": "Peak unlocked"
+    }
+]

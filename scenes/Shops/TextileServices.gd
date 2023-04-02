@@ -14,6 +14,7 @@ func _ready():
 	$NavButtons/NavList/Button1.grab_focus()
 
 	Global.FP.noah += 1
+	$WeatherFilter.show_weather()
 	
 func _on_dialogue_end():
 	$NavButtons/NavList/Button3.grab_focus()

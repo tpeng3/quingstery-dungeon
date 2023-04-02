@@ -1,12 +1,13 @@
 [gd_resource type="Theme" load_steps=4 format=3 uid="uid://c1tcpban3jq26"]
 
-[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_ui84b"]
+[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_3xuqk"]
 [ext_resource type="StyleBox" uid="uid://bppx8c5fitsul" path="res://theme/tex_meter.tres" id="2_sbe78"]
 [ext_resource type="StyleBox" uid="uid://ymtf320l6lw6" path="res://theme/tex_meter_focus.tres" id="3_2lihp"]
 
 [resource]
+default_font_size = 0
 Label/colors/font_color = Color(0.215686, 0.00784314, 0.396078, 1)
-Label/fonts/font = ExtResource("1_ui84b")
+Label/fonts/font = ExtResource("1_3xuqk")
 Label/styles/normal = ExtResource("2_sbe78")
 Label_Active/base_type = &"Label"
 Label_Active/styles/normal = ExtResource("3_2lihp")
