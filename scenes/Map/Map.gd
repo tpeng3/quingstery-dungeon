@@ -19,11 +19,13 @@ func _ready():
 	$"Control/VBoxContainer/Town Hall".grab_focus()
 	$TownPanel.hide()
 	
-	Global.newDay()
 	# generate the random NPC spots
 	var Spots = $TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer
 	for n in 3:
 		_add_npc(Global.npcData[n], Spots.get_node("Spot" + str(n + 1)))
+		
+	$SubViewportContainer/SubViewport/WeatherFilter.show_weather()
+	$SubViewportContainer/SubViewport/WeatherFilter.update_rect($"Control/VBoxContainer/Town Hall".position)
 	
 func _add_npc(npc, node):
 	node.text = npc.location
@@ -51,10 +53,12 @@ func update_panel(node):
 			$RightPanel/MarginContainer/DescPadding/FlowContainer/MapDesc.text = "No one seems to be around here anymore."
 		else:
 			$RightPanel/MarginContainer/DescPadding/FlowContainer/MapDesc.text = bip.mapDesc
+		$SubViewportContainer/SubViewport/WeatherFilter.update_rect(bip.position)
 	else:
 		$RightPanel.hide()
 		$SubViewportContainer/SubViewport/Camera2D.focused_location = null
 		$SubViewportContainer/SubViewport/Camera2D.position = Vector2(0, 0)
+		$SubViewportContainer/SubViewport/WeatherFilter.update_rect(Vector2(0, 0))
 
 func exit_panel(node):
 	if $SubViewportContainer/SubViewport/MapButtons.has_node(str(node.text)):
@@ -75,7 +79,6 @@ func _on_npc_finished():
 	$TownPanel.show()
 	$RightPanel.show()
 	last_focused.grab_focus()
-
 
 func _on_navi_close_focus_entered():
 	$RightPanel.hide()
