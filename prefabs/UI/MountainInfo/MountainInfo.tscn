@@ -1,25 +1,27 @@
-[gd_scene load_steps=19 format=3 uid="uid://12t6oq51ebyp"]
+[gd_scene load_steps=20 format=3 uid="uid://12t6oq51ebyp"]
 
-[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="1_6cf50"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="1_6cf50"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_8jex1"]
-[ext_resource type="Texture2D" uid="uid://3x3diojpvi7d" path="res://assets/ui/Mountain.png" id="3_70qi8"]
-[ext_resource type="Texture2D" uid="uid://c1hgqb2pgdh3f" path="res://assets/item/i_egg.png" id="3_x6wsf"]
+[ext_resource type="Texture2D" uid="uid://knes30jh6u6i" path="res://assets/UI/Mountain.png" id="3_70qi8"]
+[ext_resource type="Texture2D" uid="uid://j1p8xyq6t6tb" path="res://assets/item/i_egg.png" id="3_x6wsf"]
 [ext_resource type="ButtonGroup" uid="uid://b57aabvu0fcn5" path="res://prefabs/UI/MountainInfo/mountainSection.tres" id="4_pr7d3"]
 [ext_resource type="Theme" uid="uid://dqa8ky6nrewoa" path="res://prefabs/UI/MountainInfo/Mountain.tres" id="4_xpa22"]
-[ext_resource type="Texture2D" uid="uid://d2h7kqmg5kd8j" path="res://assets/item/i_ice.png" id="4_yv01x"]
-[ext_resource type="Texture2D" uid="uid://k1kh2gryy018" path="res://assets/item/i_clay.png" id="5_7evso"]
-[ext_resource type="Texture2D" uid="uid://uws5slibesmv" path="res://assets/item/i_crop.png" id="6_00ox1"]
-[ext_resource type="Texture2D" uid="uid://dvhgmtjuf80fm" path="res://assets/item/i_fish.png" id="7_f5ck4"]
-[ext_resource type="Texture2D" uid="uid://c82i304rfmt56" path="res://assets/item/i_bait.png" id="8_ekvj5"]
-[ext_resource type="Texture2D" uid="uid://c1ofuj8evbp8r" path="res://assets/item/i_gold.png" id="9_y235h"]
-[ext_resource type="Texture2D" uid="uid://bmrea7rs3o8jf" path="res://assets/item/i_tool.png" id="10_8i00s"]
-[ext_resource type="Texture2D" uid="uid://dwlphakbkwqxm" path="res://assets/item/i_iron.png" id="11_sin5k"]
-[ext_resource type="Texture2D" uid="uid://ckidl42yqqmn4" path="res://assets/item/i_milk.png" id="12_mh6jh"]
+[ext_resource type="Texture2D" uid="uid://cgcl2jteey6i3" path="res://assets/item/i_ice.png" id="4_yv01x"]
+[ext_resource type="Texture2D" uid="uid://b6v4u3bnqxcno" path="res://assets/item/i_clay.png" id="5_7evso"]
+[ext_resource type="Texture2D" uid="uid://cyq77vkdcs4mf" path="res://assets/item/i_crop.png" id="6_00ox1"]
+[ext_resource type="Texture2D" uid="uid://b3hedjjnstxgw" path="res://assets/item/i_fish.png" id="7_f5ck4"]
+[ext_resource type="Texture2D" uid="uid://3ixxhaxwd2mh" path="res://assets/item/i_bait.png" id="8_ekvj5"]
+[ext_resource type="Texture2D" uid="uid://bt0wcqrk7is43" path="res://assets/item/i_gold.png" id="9_y235h"]
+[ext_resource type="Texture2D" uid="uid://cmfu5qke1eus8" path="res://assets/item/i_tool.png" id="10_8i00s"]
+[ext_resource type="Texture2D" uid="uid://dbmh0n0b11xl" path="res://assets/item/i_iron.png" id="11_sin5k"]
+[ext_resource type="Texture2D" uid="uid://b57xnxaaewfcn" path="res://assets/item/i_milk.png" id="12_mh6jh"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="13_iju1k"]
 [ext_resource type="Script" path="res://prefabs/UI/MountainInfo/Gatherables.gd" id="16_46dx6"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vnocr"]
 content_margin_top = 7.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xcf30"]
 
 [node name="MountainInfo" type="Control"]
 layout_mode = 3
@@ -161,6 +163,7 @@ horizontal_alignment = 2
 [node name="Throat" type="Button" parent="OuterPadding/BoxContainer/LeftSide/Mountain/Sections"]
 layout_mode = 2
 size_flags_vertical = 3
+focus_neighbor_bottom = NodePath("../../../../../FooterMargin/BackButton")
 theme = ExtResource("4_xpa22")
 theme_type_variation = &"Throat"
 toggle_mode = true
@@ -226,6 +229,7 @@ theme_override_constants/margin_bottom = 20
 
 [node name="ItemList" type="ItemList" parent="OuterPadding/BoxContainer/RightSide/BoxContainer/MarginContainer/ContentPadding"]
 layout_mode = 2
+focus_mode = 0
 theme_override_styles/panel = SubResource("StyleBoxEmpty_vnocr")
 item_count = 10
 max_columns = 4
@@ -252,6 +256,16 @@ item_9/text = ""
 item_9/icon = ExtResource("12_mh6jh")
 script = ExtResource("16_46dx6")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="OuterPadding/BoxContainer/RightSide/BoxContainer/MarginContainer/ContentPadding"]
+visible = false
+layout_mode = 2
+theme = ExtResource("13_iju1k")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_xcf30")
+text = "
+
+
+Checkpoint has yet to be unlocked."
+
 [node name="TitleMargin" type="MarginContainer" parent="OuterPadding/BoxContainer/RightSide/BoxContainer/MarginContainer"]
 layout_mode = 2
 size_flags_vertical = 0
@@ -268,6 +282,10 @@ theme_override_constants/margin_bottom = -20
 [node name="BackButton" type="Button" parent="OuterPadding/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 0
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../../BoxContainer/LeftSide/Mountain/Sections/Throat")
+focus_neighbor_right = NodePath("../GoButton")
+focus_neighbor_bottom = NodePath(".")
 theme = ExtResource("13_iju1k")
 theme_type_variation = &"Button_Alt"
 text = "back"
@@ -275,6 +293,10 @@ text = "back"
 [node name="GoButton" type="Button" parent="OuterPadding/FooterMargin"]
 layout_mode = 2
 size_flags_horizontal = 8
+focus_neighbor_left = NodePath("../BackButton")
+focus_neighbor_top = NodePath("../../BoxContainer/LeftSide/Mountain/Sections/Throat")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
 theme = ExtResource("13_iju1k")
 text = "let's go!"
 

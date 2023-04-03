@@ -1,82 +1,116 @@
 [
-    {
-        "item": "Flower",
-        "type": "Buy",
-        "cost": 25,
-        "condition": "None"
-    },
-    {
-        "item": "Egg",
-        "type": "Buy",
-        "cost": 35,
-        "condition": "None"
-    },
-    {
-        "item": "Milk",
-        "type": "Buy",
-        "cost": 35,
-        "condition": "None"
-    },
-    {
-        "item": "Produce",
-        "type": "Buy",
-        "cost": 35,
-        "condition": "None"
-    },
-    {
-        "item": "Fruit",
-        "type": "Buy",
-        "cost": 35,
-        "condition": "None"
-    },
-    {
-        "item": "Wood",
-        "type": "Buy",
-        "cost": 35,
-        "condition": "None"
-    },
-    {
-        "item": "Herb Bundle",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Trash x5",
-        "condition": "None"
-    },
-    {
-        "item": "Tree Sap",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Trash x50",
-        "condition": "None"
-    },
-    {
-        "item": "Crop",
-        "type": "Buy",
-        "cost": 35,
-        "condition": "None"
-    },
-    {
-        "item": "Crop",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Soil x3",
-        "trade2": "Worm x3",
-        "condition": "None"
-    },
-    {
-        "item": "Crop",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Seed Packet x1",
-        "condition": "None"
-    },
-    {
-        "item": "Stick of Hay",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Tree Sap x5",
-        "trade2": "Rare Wood x5",
-        "trade3": "Stone x5",
-        "condition": "Friendship with Zane"
-    }
+	{
+		"item": "Flower",
+		"type": "Buy",
+		"cost": 25,
+		"condition": "None"
+	},
+	{
+		"item": "Egg",
+		"type": "Buy",
+		"cost": 35,
+		"condition": "None"
+	},
+	{
+		"item": "Milk",
+		"type": "Buy",
+		"cost": 35,
+		"condition": "None"
+	},
+	{
+		"item": "Produce",
+		"type": "Buy",
+		"cost": 35,
+		"condition": "None"
+	},
+	{
+		"item": "Fruit",
+		"type": "Buy",
+		"cost": 35,
+		"condition": "None"
+	},
+	{
+		"item": "Wood",
+		"type": "Buy",
+		"cost": 35,
+		"condition": "None"
+	},
+	{
+		"item": "Herb Bundle",
+		"type": "Trade",
+		"cost": -1,
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Trash",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Tree Sap",
+		"type": "Trade",
+		"cost": -1,
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Trash",
+				"amount": 50
+			}
+		]
+	},
+	{
+		"item": "Crop",
+		"type": "Buy",
+		"cost": 35,
+		"condition": "None"
+	},
+	{
+		"item": "Crop",
+		"type": "Trade",
+		"cost": -1,
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Soil",
+				"amount": 3
+			},
+			{
+				"item": "Worm",
+				"amount": 3
+			}
+		]
+	},
+	{
+		"item": "Crop",
+		"type": "Trade",
+		"cost": -1,
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Seed Packet",
+				"amount": 1
+			}
+		]
+	},
+	{
+		"item": "Stick of Hay",
+		"type": "Equip",
+		"cost": -1,
+		"condition": "Friendship with Zane",
+		"trade": [
+			{
+				"item": "Tree Sap",
+				"amount": 5
+			},
+			{
+				"item": "Rare Wood",
+				"amount": 5
+			},
+			{
+				"item": "Stone",
+				"amount": 5
+			}
+		]
+	}
 ]

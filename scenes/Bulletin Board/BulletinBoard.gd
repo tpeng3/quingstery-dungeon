@@ -7,12 +7,6 @@ var welcome_key
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	# TODO: grab special keys 
-	welcome_key = _weighted_rand("welcome")
-	$ShopBox.show_dialogue($DialoguePlayer, welcome_key)
-	$ShopBox.no_selected.connect(_on_dialogue_end)
-	$BuyMenu.menu_closed.connect(_on_menu_closed)
-	
 	$NavButtons/NavList/Button1.grab_focus()
 	
 func _on_dialogue_end():
@@ -22,20 +16,6 @@ func _on_menu_closed(bought=false):
 	var buy_key = _weighted_rand("buy")
 	$ShopBox.show_dialogue($DialoguePlayer, buy_key)
 	$NavButtons.show()
-
-func _on_buy_pressed():
-	$ShopBox.hide()
-	$NavButtons.hide()
-	$BuyMenu.show()
-
-func _on_sell_pressed():
-	$NavButtons.hide()
-	$ShopBox.hide()
-	$BuyMenu.show()
-
-func _on_talk_pressed():
-	var talk_key = _weighted_rand("talk")
-	$ShopBox.show_dialogue($DialoguePlayer, talk_key)
 
 func _on_leave_pressed():
 	SceneManager.change_scene("Map")

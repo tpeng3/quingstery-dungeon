@@ -4,20 +4,33 @@ extends Node
 
 @export var items_json: JSON
 
-@export var gald = 0
-var storage = {}
+@export var gald = 999
+var storage = {
+	"Trash": {
+		"name": "Trash",
+		"count": 5
+	}
+}
 var inventory = {
 	"Acorn": {
 		"name": "Acorn",
 		"count": 2
 	},
+	"Stick of Hay": {
+		"name": "Stick of Hay",
+		"count": 1
+	},
+	"Glowbug": {
+		"name": "Glowbug",
+		"count": 3
+	},
+	"Silk": {
+		"name": "Silk",
+		"count": 5
+	},
 	"Trash": {
 		"name": "Trash",
-		"count": 30
-	},
-	"Flower": {
-		"name": "Flower",
-		"count": 30
+		"count": 5
 	}
 }
 var max = 20
@@ -33,52 +46,64 @@ func add_gald(amount):
 func remove_gald(amount):
 	gald -= max(amount, 0)
 
-# TODO: add an error when inventory is maxed, and prompt user to toss items
-func add_item(key, count=1):
+func add_item(key, count=1, addToStorage=false):
 	var item = find_item(key)
 	assert(item, "Key Error: This item does not exist: " + key)
-	if key in inventory:
-		inventory[key].count += count
+	var box = storage if addToStorage else inventory
+	if key in box:
+		box[key].count += count
 	else:
-		inventory[key] = {
+		box[key] = {
 			"name": item.name,
 			"count": count
 		}
 		
-func remove_item(key, count=1):
+func remove_item(key, count=1, takeFromStorage=false):
 	var item = find_item(key)
 	assert(item, "Key Error: This item does not exist: " + key)
-	if key in inventory:
-		inventory[key].count -= count
-		if inventory[key].count <= 0:
-			inventory.erase(key)
+	var box = storage if takeFromStorage else inventory
+	if key in box:
+		box[key].count -= count
+		if box[key].count <= 0:
+			box.erase(key)
 		
 # UI calls this to get a sorted array of player's inventory
-func print_items():
+func print_items(printStorage=false):
 	var inv = []
-	for key in inventory:
+	var box = storage if printStorage else inventory
+	for key in box:
 		var item = find_item(key)
-		var remainder = inventory[key].count
-		for n in ceil(remainder / item.maxcount):
-			if remainder >= item.maxcount:
-				inv.push_back({
-					"name": inventory[key].name,
-					"count": item.maxcount
-				})
-				remainder -= item.maxcount
-			else:
-				inv.push_back({
-					"name": inventory[key].name,
-					"count": remainder
-				})
+		if item.type == "Upgrade":
+			continue
+		inv.push_back({
+			"name": box[key].name,
+			"count": box[key].count
+		})
+#		var remainder = box[key].count
+#		for n in ceil(remainder / item.maxcount):
+#			if remainder >= item.maxcount:
+#				inv.push_back({
+#					"name": box[key].name,
+#					"count": item.maxcount
+#				})
+#				remainder -= item.maxcount
+#			else:
+#				inv.push_back({
+#					"name": box[key].name,
+#					"count": remainder
+#				})
 	return inv
 
 # UI call this to view how much items have taken up inventory space
-func get_inv_count():
+func get_inv_count(getStorage=false):
 	var count = 0
-	for key in inventory:
+	var box = storage if getStorage else inventory
+	for key in box:
 		var item = find_item(key)
-		count += ceil(inventory[key].count / item.maxcount)
+		if item.type == "Upgrade":
+			continue
+		count += box[key].count
+#		count += ceil(box[key].count / item.maxcount)
 	return count
 
 func find_item(key):

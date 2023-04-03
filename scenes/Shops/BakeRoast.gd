@@ -2,6 +2,8 @@ extends Node2D
 
 const FRIEND_STATUS = 20
 @onready var dialogue_tracker = $DialoguePlayer.dialogue_file.data
+@export var shop_json:JSON
+@export var shop_items = []
 
 func _ready():
 	var welcome_key = _weighted_rand("welcome")
@@ -13,6 +15,7 @@ func _ready():
 	$NavButtons/NavList/Button1.grab_focus()
 
 	Global.FP.reinhardt += 1
+	_init_shop_items()
 	
 func _on_dialogue_end():
 	$NavButtons/NavList/Button3.grab_focus()
@@ -27,7 +30,7 @@ func _on_menu_closed(bought=false):
 func _on_buy_pressed():
 	$ShopBox.hide()
 	$NavButtons.hide()
-	$BuyMenu.show()
+	$BuyMenu.show_menu()
 
 func _on_talk_pressed():
 	var talk_key = _weighted_rand("talk")
@@ -74,3 +77,31 @@ func _weighted_rand(filter):
 	else:
 		Global.dialogue_popularity.reinhardt[sortedDialogue[randInd].key] = 1
 	return sortedDialogue[randInd].key;
+
+func _init_shop_items():
+	if Global.daily_bakeroast_items:
+		shop_items = Global.daily_bakeroast_items
+	else:
+		var randi_drink = []
+		var randi_bread = []
+		var randi_meal = []
+		var randi_snack = []
+		for i in shop_json.data:
+			if i.condition in Global.weatherList and i.condition == Global.currentWeather:
+				shop_items.push_back(i)
+			elif i.condition == "Random Drink":
+				randi_drink.push_back(i)
+			elif i.condition == "Random Bread":
+				randi_bread.push_back(i)
+			elif i.condition == "Random Meal":
+				randi_meal.push_back(i)
+			elif i.condition == "Random Snack":
+				randi_snack.push_back(i)
+			else:
+				shop_items.push_back(i)
+		shop_items.push_back(randi_drink[randi() % randi_drink.size()])
+		shop_items.push_back(randi_bread[randi() % randi_bread.size()])
+		shop_items.push_back(randi_meal[randi() % randi_meal.size()])
+		shop_items.push_back(randi_snack[randi() % randi_snack.size()])
+		Global.daily_bakeroast_items = shop_items
+	$BuyMenu.init_shop()

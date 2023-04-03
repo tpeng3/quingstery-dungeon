@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dx0kws7hwpumu"]
+[gd_scene load_steps=57 format=3 uid="uid://dx0kws7hwpumu"]
 
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
 [ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cxy2kys4qk0cm" path="res://assets/UI/locations/locations_galinnpeak_pip.png" id="5_4c7dp"]
 [ext_resource type="Texture2D" uid="uid://d26gebiwmbjj6" path="res://assets/UI/locations/locations_townhall_pip.png" id="5_s1d2c"]
 [ext_resource type="Texture2D" uid="uid://bb1tvlo15kpxy" path="res://assets/UI/locations/locations_pecanhome_pip.png" id="6_62i57"]
+[ext_resource type="Texture2D" uid="uid://d1tf11dnvgh06" path="res://assets/UI/locations/locations_townsquare_pip.png" id="6_el66v"]
 [ext_resource type="Texture2D" uid="uid://5a7erdf8r3il" path="res://assets/UI/locations/locations_peanuthome_pip.png" id="7_0i0u8"]
 [ext_resource type="Texture2D" uid="uid://cnqht2rnry8yk" path="res://assets/UI/locations/locations_bulletinboard_pip.png" id="7_5hqkh"]
 [ext_resource type="Texture2D" uid="uid://dnf3ptd2fno2p" path="res://assets/UI/locations/locations_tradingpost_pip.png" id="8_d8ve6"]
@@ -48,6 +49,7 @@
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="45_sx7io"]
 [ext_resource type="JSON" path="res://dialogue/NPCs.json" id="46_5d36l"]
 [ext_resource type="PackedScene" uid="uid://8u6c5x2aksb6" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="47_prvth"]
+[ext_resource type="PackedScene" uid="uid://12t6oq51ebyp" path="res://prefabs/UI/MountainInfo/MountainInfo.tscn" id="49_21p5l"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
 
@@ -113,6 +115,8 @@ RichTextLabel/styles/normal = ExtResource("38_1lj55")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_d36gl"]
 
+[sub_resource type="ButtonGroup" id="ButtonGroup_nthay"]
+
 [node name="Map" type="Node2D"]
 script = ExtResource("1_3k0c8")
 
@@ -143,7 +147,7 @@ offset_bottom = 40.0
 size_flags_vertical = 8
 metadata/_edit_use_anchors_ = true
 
-[node name="Galinn Peak" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+[node name="Climb Peak" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 offset_left = 136.0
 offset_top = 176.0
 offset_right = 176.0
@@ -151,7 +155,18 @@ offset_bottom = 176.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Bulletin Board")
 preview = ExtResource("5_4c7dp")
-mapDesc = "Daunting in its long climb and unconventional terrain, a trek to the top is a risky endeavor but necessary if you wish to regain your human form. Are you ready?"
+mapDesc = "Daunting in its long climb and unconventional terrain, a trek to the top is a risky endeavor but necessary if you wish to regain your human form. Ready to embark?"
+
+[node name="Explore Town" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
+layout_mode = 2
+offset_left = 1178.0
+offset_top = 529.0
+offset_right = 1218.0
+offset_bottom = 529.0
+scale = Vector2(1, 1)
+focus_next = NodePath("../Bulletin Board")
+preview = ExtResource("6_el66v")
+mapDesc = "Meet some residents and shop around for equipment to prepare for the hike ahead. Don't forget to eat!"
 
 [node name="Town Hall" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
@@ -209,7 +224,7 @@ offset_right = 1338.0
 offset_bottom = 712.0
 scale = Vector2(1, 1)
 preview = ExtResource("10_nbn57")
-mapDesc = "A cafe for baked goods and coffee with a charming homey-plant rustic atmosphere."
+mapDesc = "A cafe for baked goods and coffee with a charming homey-plant rustic atmosphere. The selection changes daily."
 
 [node name="Textile Services" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
@@ -388,7 +403,7 @@ offset_top = 546.0
 offset_right = 1250.0
 offset_bottom = 546.0
 scale = Vector2(1, 1)
-preview = ExtResource("5_s1d2c")
+preview = ExtResource("6_el66v")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Walnut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
@@ -620,7 +635,7 @@ custom_minimum_size = Vector2(320, 0)
 layout_mode = 2
 size_flags_vertical = 8
 theme_override_styles/normal = SubResource("StyleBoxEmpty_d36gl")
-text = "This is the Town Hall."
+text = "The Town Hall helps ensure you don't lose your progress in your adventure and stores any items you want to safekeep."
 fit_content = true
 
 [node name="TitleMargin" type="MarginContainer" parent="RightPanel/MarginContainer"]
@@ -634,6 +649,23 @@ size_flags_horizontal = 4
 theme = ExtResource("14_ruq6n")
 text = "Town Hall"
 
+[node name="MountainInfo" parent="." instance=ExtResource("49_21p5l")]
+visible = false
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="Peak" parent="MountainInfo/OuterPadding/BoxContainer/LeftSide/Mountain/Sections" index="0"]
+button_group = SubResource("ButtonGroup_nthay")
+
+[node name="Steps" parent="MountainInfo/OuterPadding/BoxContainer/LeftSide/Mountain/Sections" index="1"]
+button_group = SubResource("ButtonGroup_nthay")
+
+[node name="River" parent="MountainInfo/OuterPadding/BoxContainer/LeftSide/Mountain/Sections" index="2"]
+button_group = SubResource("ButtonGroup_nthay")
+
+[node name="Throat" parent="MountainInfo/OuterPadding/BoxContainer/LeftSide/Mountain/Sections" index="3"]
+button_group = SubResource("ButtonGroup_nthay")
+
 [node name="WeatherHUD" parent="." instance=ExtResource("44_qdn27")]
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("45_sx7io")]
@@ -643,7 +675,11 @@ dialogue_file = ExtResource("46_5d36l")
 visible = false
 
 [connection signal="pressed" from="Control/VBoxContainer/Explore Town" to="." method="_on_explore_town_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/Climb Peak" to="." method="_on_climb_peak_pressed"]
 [connection signal="focus_entered" from="TownPanel/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_focus_entered"]
 [connection signal="pressed" from="TownPanel/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_pressed"]
+[connection signal="pressed" from="MountainInfo/OuterPadding/FooterMargin/BackButton" to="." method="_on_navi_close_pressed"]
+[connection signal="pressed" from="MountainInfo/OuterPadding/FooterMargin/GoButton" to="." method="_on_go_button_pressed"]
 
 [editable path="Control/VBoxContainer/Explore Town"]
+[editable path="MountainInfo"]

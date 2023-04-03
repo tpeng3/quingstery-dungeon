@@ -121,7 +121,7 @@ vertical = true
 
 [node name="ItemInfo" type="Label" parent="FlowContainer/RightAlign"]
 layout_mode = 2
-text = "100"
+text = "x100"
 
 [node name="GaldSymbol" type="MarginContainer" parent="FlowContainer/RightAlign"]
 custom_minimum_size = Vector2(14, 25)

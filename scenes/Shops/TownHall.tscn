@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://daxw3bxy5lqcc"]
+[gd_scene load_steps=11 format=3 uid="uid://daxw3bxy5lqcc"]
 
 [ext_resource type="Script" path="res://scenes/Shops/TownHall.gd" id="1_7fsli"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_yuh7w"]
@@ -6,34 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://caxqasrg8eq1a" path="res://assets/background/quingsterybgs_townhall.png" id="4_almsi"]
 [ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="6_y1wdc"]
 [ext_resource type="Texture2D" uid="uid://cosmcncsiogu" path="res://assets/character/talksprites/quingesterynpc_ole_flats.png" id="7_c8cnx"]
-[ext_resource type="PackedScene" uid="uid://cm06xatxch52d" path="res://prefabs/UI/ItemMenu/BuyMenu.tscn" id="7_jxhy3"]
 [ext_resource type="PackedScene" uid="uid://bw7q1cc3tci2i" path="res://prefabs/UI/NavButtons/NavButtons.tscn" id="8_81g58"]
 [ext_resource type="PackedScene" uid="uid://cewxqueqnp0vj" path="res://prefabs/UI/Popup/SystemPopup.tscn" id="9_8sk8i"]
+[ext_resource type="PackedScene" uid="uid://rbmak1sromfn" path="res://prefabs/UI/ItemMenu/StorageMenu.tscn" id="9_cu5ui"]
 [ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="9_olvpq"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_opkrh"]
-region = Rect2(0, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3yodh"]
-region = Rect2(9, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_iphkb"]
-region = Rect2(18, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_dikwb"]
-region = Rect2(27, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kljjr"]
-region = Rect2(0, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_glt6k"]
-region = Rect2(9, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4wfi8"]
-region = Rect2(18, 0, 9, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_efs4b"]
-region = Rect2(27, 0, 9, 9)
 
 [node name="TownHall" type="Node2D"]
 script = ExtResource("1_7fsli")
@@ -122,35 +98,16 @@ offset_right = 960.0
 offset_bottom = 540.0
 size_flags_vertical = 8
 
-[node name="StorageMenu" parent="." instance=ExtResource("7_jxhy3")]
+[node name="StorageMenu" parent="." instance=ExtResource("9_cu5ui")]
 visible = false
 offset_right = 960.0
 offset_bottom = 540.0
 
-[node name="LeftTitle" parent="StorageMenu/OuterPadding/SplitContainer/LeftPanel/TitleMargin" index="0"]
-text = "Store Items"
-
-[node name="ArrowBtn" parent="StorageMenu/OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
-layout_mode = 2
-offset_top = 3.0
-offset_bottom = 12.0
-texture_normal = SubResource("AtlasTexture_opkrh")
-texture_pressed = SubResource("AtlasTexture_3yodh")
-texture_disabled = SubResource("AtlasTexture_iphkb")
-texture_focused = SubResource("AtlasTexture_dikwb")
-direction = 0
-
-[node name="ArrowBtn" parent="StorageMenu/OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
-layout_mode = 2
-offset_top = 3.0
-offset_bottom = 12.0
-texture_normal = SubResource("AtlasTexture_kljjr")
-texture_pressed = SubResource("AtlasTexture_glt6k")
-texture_disabled = SubResource("AtlasTexture_4wfi8")
-texture_focused = SubResource("AtlasTexture_efs4b")
-
-[node name="ButtonRight" parent="StorageMenu/OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" index="1"]
-text = "store"
+[node name="TakeMenu" parent="." instance=ExtResource("9_cu5ui")]
+visible = false
+offset_right = 960.0
+offset_bottom = 540.0
+show_storage = true
 
 [node name="WeatherHUD" parent="." instance=ExtResource("9_olvpq")]
 
@@ -188,5 +145,4 @@ visible = false
 [editable path="Menu/SaveLoadButtons"]
 [editable path="Menu/StorageButtons"]
 [editable path="ShopBox"]
-[editable path="StorageMenu"]
 [editable path="ConfirmPopup"]

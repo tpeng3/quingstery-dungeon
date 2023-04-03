@@ -23,7 +23,7 @@ var highestFloor = 0
 
 # global world stats
 var currentDay = 1
-var currentWeather = "Stormy"
+var currentWeather = "Sunny"
 var futureWeather = "Sunny"
 var weatherList = ["Sunny", "Cloudy", "Windy", "Rainy", "Stormy"]
 
@@ -52,6 +52,8 @@ var dialogue_popularity = {
 	"zane": {},
 	"panqing": {}
 }
+var daily_bakeroast_items = []
+var last_town_menu_button
 
 func _ready():
 	generateNPCs()
@@ -87,16 +89,17 @@ func newDay():
 	currentWeather = futureWeather
 	generateWeather()
 	generateNPCs()
+	daily_bakeroast_items = []
 
 func generateWeather():
 	var chance = randi_range(1,100)
-	if chance <= 69:
+	if chance <= 65:
 		futureWeather = "Sunny"
-	elif chance <= 79:
+	elif chance <= 75:
 		futureWeather = "Rainy"
-	elif chance <= 89:
+	elif chance <= 85:
 		futureWeather = "Cloudy"
-	elif chance <= 99:
+	elif chance <= 95:
 		futureWeather = "Windy"
 	else:
 		futureWeather = "Stormy"

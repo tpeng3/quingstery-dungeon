@@ -1,109 +1,183 @@
 [
-    {
-        "item": "Medicine",
-        "type": "Buy",
-        "cost": 300,
-        "condition": "None"
-    },
-    {
-        "item": "Wish Lantern",
-        "type": "Buy",
-        "cost": 80,
-        "condition": "None"
-    },
-    {
-        "item": "Bronze Pickaxe",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Bronze x5",
-        "condition": "None"
-    },
-    {
-        "item": "Iron Pickaxe",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Iron x5",
-        "trade2": "Wood x5",
-        "condition": "after upgrade1"
-    },
-    {
-        "item": "Gold Pickaxe",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Gold x5",
-        "trade2": "Rare Wood x5",
-        "condition": "after upgrade2"
-    },
-    {
-        "item": "Soft Basket",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Ceramic x5",
-        "condition": "None"
-    },
-    {
-        "item": "Sturdy Basket",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Herb Bundle x5",
-        "trade2": "Wood x5",
-        "condition": "after upgrade1"
-    },
-    {
-        "item": "Fancy Basket",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Tree Sap x5",
-        "trade2": "Rare Wood x5",
-        "condition": "after upgrade2"
-    },
-    {
-        "item": "Bronze Fishing Rod",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Guppy x5",
-        "condition": "None"
-    },
-    {
-        "item": "Iron Fishing Rod",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Fish x5",
-        "trade2": "Wood x5",
-        "condition": "after upgrade1"
-    },
-    {
-        "item": "Gold Fishing Rod",
-        "type": "Trade",
-        "cost": -1,
-        "trade1": "Koikoi x5",
-        "trade2": "Rare Wood x5",
-        "condition": "after upgrade2"
-    },
-    {
-        "item": "Small Backpack",
-        "type": "Buy",
-        "cost": 500,
-        "condition": "None"
-    },
-    {
-        "item": "Medium Backpack",
-        "type": "Buy",
-        "cost": 2000,
-        "condition": "after upgrade1"
-    },
-    {
-        "item": "Large Backpack",
-        "type": "Buy",
-        "cost": 5000,
-        "condition": "after upgrade2"
-    },
-    {
-        "item": "Glowbug Lantern",
-        "type": "Trade",
-        "cost": 5000,
-        "trade1": "Glowbug x20",
-        "trade2": "Goddess Tear x5",
-        "condition": "Peak unlocked"
-    }
+	{
+		"item": "Medicine",
+		"type": "Buy",
+		"cost": 300,
+		"condition": "None"
+	},
+	{
+		"item": "Wish Lantern",
+		"type": "Buy",
+		"cost": 80,
+		"condition": "None"
+	},
+	{
+		"item": "Bronze Pickaxe",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Bronze",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Iron Pickaxe",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Bronze Pickaxe",
+		"trade": [
+			{
+				"item": "Iron",
+				"amount": 5
+			},
+			{
+				"item": "Wood",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Gold Pickaxe",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Iron Pickaxe",
+		"trade": [
+			{
+				"item": "Gold",
+				"amount": 5
+			},
+			{
+				"item": "Rare Wood",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Soft Basket",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Ceramic",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Sturdy Basket",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Soft Basket",
+		"trade": [
+			{
+				"item": "Herb Bundle",
+				"amount": 5
+			},
+			{
+				"item": "Wood",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Fancy Basket",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Sturdy Basket",
+		"trade": [
+			{
+				"item": "Tree Sap",
+				"amount": 5
+			},
+			{
+				"item": "Rare Wood",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Bronze Fishing Rod",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Guppy",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Iron Fishing Rod",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Bronze Fishing Rod",
+		"trade": [
+			{
+				"item": "Fish",
+				"amount": 5
+			},
+			{
+				"item": "Wood",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Gold Fishing Rod",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Iron Fishing Rod",
+		"trade": [
+			{
+				"item": "Koikoi",
+				"amount": 5
+			},
+			{
+				"item": "Rare Wood",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Small Backpack",
+		"type": "Upgrade",
+		"cost": 500,
+		"condition": "None",
+		"trade": []
+	},
+	{
+		"item": "Medium Backpack",
+		"type": "Upgrade",
+		"cost": 2000,
+		"condition": "Small Backpack",
+		"trade": []
+	},
+	{
+		"item": "Large Backpack",
+		"type": "Upgrade",
+		"cost": 5000,
+		"condition": "Medium Backpack",
+		"trade": []
+	},
+	{
+		"item": "Glowbug Lantern",
+		"type": "Equip",
+		"cost": -1,
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Glowbug",
+				"amount": 12
+			},
+			{
+				"item": "Goddess Tear",
+				"amount": 5
+			}
+		]
+	}
 ]

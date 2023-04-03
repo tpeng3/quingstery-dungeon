@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://cxy7w1xmp0p8h"]
+[gd_scene load_steps=12 format=3 uid="uid://cxy7w1xmp0p8h"]
 
 [ext_resource type="Script" path="res://scenes/Shops/TextileServices.gd" id="1_jj01b"]
+[ext_resource type="JSON" path="res://assets/json/TextileServices.json" id="2_yccmp"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_yk6me"]
 [ext_resource type="JSON" path="res://dialogue/Shopkeepers/Noah.json" id="3_irec3"]
 [ext_resource type="Texture2D" uid="uid://b6auehuww04m8" path="res://assets/background/quingsterybgs_textileservices.png" id="4_icu58"]
@@ -13,6 +14,7 @@
 
 [node name="TextileServices" type="Node2D"]
 script = ExtResource("1_jj01b")
+shop_json = ExtResource("2_yccmp")
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("2_yk6me")]
 dialogue_file = ExtResource("3_irec3")
@@ -30,10 +32,12 @@ Background = NodePath("../Background")
 [node name="Character" parent="ShopBox/Control" index="0"]
 texture = ExtResource("5_vbwwq")
 
-[node name="BuyMenu" parent="." instance=ExtResource("7_l6wvs")]
+[node name="BuyMenu" parent="." node_paths=PackedStringArray("shop_node") instance=ExtResource("7_l6wvs")]
 visible = false
+z_index = 1
 offset_right = 960.0
 offset_bottom = 540.0
+shop_node = NodePath("..")
 
 [node name="NavButtons" parent="." instance=ExtResource("8_hsie8")]
 z_index = 1

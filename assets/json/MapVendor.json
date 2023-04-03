@@ -171,10 +171,21 @@
         "item": "Bait",
         "type": "Trade",
         "cost": -1,
-        "trade1": "Worm x1",
-        "trade2": "Trash x1",
-        "trade3": "Guppy x1",
-        "condition": "None"
+        "condition": "None",
+        "trade": [
+            {
+                "item": "Worm",
+                "amount": 1
+            },
+            {
+                "item": "Trash",
+                "amount": 1
+            },
+            {
+                "item": "Guppy",
+                "amount": 1
+            }
+        ]
     },
     {
         "item": "Art",
@@ -185,17 +196,39 @@
     {
         "item": "Art",
         "type": "Trade",
-        "trade1": "Ceramic x1",
-        "trade2": "Clay x1",
-        "trade3": "Flower x1",
-        "condition": "None"
+        "condition": "None",
+        "trade": [
+            {
+                "item": "Ceramic",
+                "amount": 1
+            },
+            {
+                "item": "Clay",
+                "amount": 1
+            },
+            {
+                "item": "Flower",
+                "amount": 1
+            }
+        ]
     },
     {
         "item": "Compass",
         "type": "Trade",
-        "trade1": "Art x5",
-        "trade2": "Gold x5",
-        "trade3": "Baked Good x1",
-        "condition": "Friendship with Wander"
+        "condition": "Friendship with Wander",
+        "trade": [
+            {
+                "item": "Art",
+                "amount": 5
+            },
+            {
+                "item": "Gold",
+                "amount": 5
+            },
+            {
+                "item": "Baked Good",
+                "amount": 1
+            }
+        ]
     }
 ]

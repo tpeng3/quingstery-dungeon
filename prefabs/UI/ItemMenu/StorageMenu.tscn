@@ -1,0 +1,82 @@
+[gd_scene load_steps=14 format=3 uid="uid://rbmak1sromfn"]
+
+[ext_resource type="PackedScene" uid="uid://cdirrc5rr8huy" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_cycox"]
+[ext_resource type="Script" path="res://prefabs/UI/ItemMenu/StorageMenu.gd" id="2_nl452"]
+[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="2_tani8"]
+[ext_resource type="PackedScene" uid="uid://dnfv6q8hkcav3" path="res://prefabs/UI/Popup/AmountPopup.tscn" id="4_qlfk3"]
+[ext_resource type="PackedScene" uid="uid://cl8b7gtcakyrn" path="res://prefabs/UI/Popup/ClosePopup.tscn" id="4_tii4d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxt57"]
+resource_local_to_scene = true
+atlas = ExtResource("2_tani8")
+region = Rect2(0, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_im0i6"]
+resource_local_to_scene = true
+atlas = ExtResource("2_tani8")
+region = Rect2(9, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gm1e"]
+resource_local_to_scene = true
+atlas = ExtResource("2_tani8")
+region = Rect2(18, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqk2c"]
+resource_local_to_scene = true
+atlas = ExtResource("2_tani8")
+region = Rect2(27, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6me1"]
+resource_local_to_scene = true
+atlas = ExtResource("2_tani8")
+region = Rect2(0, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xrmpd"]
+resource_local_to_scene = true
+atlas = ExtResource("2_tani8")
+region = Rect2(9, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r7q"]
+resource_local_to_scene = true
+atlas = ExtResource("2_tani8")
+region = Rect2(18, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bebuj"]
+resource_local_to_scene = true
+atlas = ExtResource("2_tani8")
+region = Rect2(27, 0, 9, 9)
+
+[node name="StorageMenu" instance=ExtResource("1_cycox")]
+script = ExtResource("2_nl452")
+show_storage = false
+
+[node name="LeftTitle" parent="OuterPadding/SplitContainer/LeftPanel/TitleMargin" index="0"]
+text = "Store Items"
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
+texture_normal = SubResource("AtlasTexture_xxt57")
+texture_pressed = SubResource("AtlasTexture_im0i6")
+texture_disabled = SubResource("AtlasTexture_6gm1e")
+texture_focused = SubResource("AtlasTexture_gqk2c")
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
+texture_normal = SubResource("AtlasTexture_i6me1")
+texture_pressed = SubResource("AtlasTexture_xrmpd")
+texture_disabled = SubResource("AtlasTexture_y4r7q")
+texture_focused = SubResource("AtlasTexture_bebuj")
+
+[node name="ButtonMid" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" index="0"]
+visible = false
+
+[node name="ButtonRight" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" index="1"]
+text = "store"
+
+[node name="AmountPopup" parent="." index="3" instance=ExtResource("4_qlfk3")]
+visible = false
+layout_mode = 1
+
+[node name="ClosePopup" parent="." index="4" instance=ExtResource("4_tii4d")]
+visible = false
+layout_mode = 1
+
+[connection signal="pressed" from="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight" to="." method="_on_store_pressed"]

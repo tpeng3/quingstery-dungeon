@@ -1,333 +1,76 @@
-[gd_scene load_steps=24 format=3 uid="uid://cm06xatxch52d"]
+[gd_scene load_steps=13 format=3 uid="uid://cm06xatxch52d"]
 
-[ext_resource type="Script" path="res://prefabs/UI/ItemMenu/ItemMenu.gd" id="1_mw0od"]
-[ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="2_0xo8v"]
-[ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="2_djqr7"]
-[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="3_hcgur"]
-[ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="5_mmvp1"]
-[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="6_326w2"]
-[ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_sjig8"]
-[ext_resource type="Texture2D" uid="uid://lbb4teo8jls7" path="res://assets/item/i_acorn.png" id="8_88bnl"]
+[ext_resource type="PackedScene" uid="uid://cdirrc5rr8huy" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_4im6j"]
+[ext_resource type="Script" path="res://prefabs/UI/ItemMenu/BuyMenu.gd" id="2_an4h0"]
+[ext_resource type="PackedScene" uid="uid://cl8b7gtcakyrn" path="res://prefabs/UI/Popup/ClosePopup.tscn" id="4_s2wfi"]
 [ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="8_ltlah"]
-[ext_resource type="PackedScene" uid="uid://u7jf2y80hsiw" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="9_cc8w0"]
-[ext_resource type="PackedScene" uid="uid://cjuix8vu67e3s" path="res://prefabs/UI/Popup/Popup.tscn" id="10_3haeo"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2utro"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bl8gu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dgwhc"]
 resource_local_to_scene = true
 atlas = ExtResource("8_ltlah")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jyegx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_22wm0"]
 resource_local_to_scene = true
 atlas = ExtResource("8_ltlah")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_o43ob"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qrw3e"]
 resource_local_to_scene = true
 atlas = ExtResource("8_ltlah")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tseg7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xv06w"]
 resource_local_to_scene = true
 atlas = ExtResource("8_ltlah")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y44yb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2nvi"]
 resource_local_to_scene = true
 atlas = ExtResource("8_ltlah")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2a3c0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_671mj"]
 resource_local_to_scene = true
 atlas = ExtResource("8_ltlah")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1uq42"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_e13bb"]
 resource_local_to_scene = true
 atlas = ExtResource("8_ltlah")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ol2m0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5xvc"]
 resource_local_to_scene = true
 atlas = ExtResource("8_ltlah")
 region = Rect2(27, 0, 9, 9)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2npap"]
+[node name="BuyMenu" instance=ExtResource("1_4im6j")]
+script = ExtResource("2_an4h0")
 
-[sub_resource type="Animation" id="Animation_k42bn"]
-resource_name = "bump"
-length = 0.3
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("OuterPadding/SplitContainer/RightPanel/SpriteCentering/ItemSprite:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.3),
-"transitions": PackedFloat32Array(1, 1, 3.73213),
-"update": 0,
-"values": [Vector2(0, -75), Vector2(0, -85), Vector2(0, -75)]
-}
+[node name="LeftTitle" parent="OuterPadding/SplitContainer/LeftPanel/TitleMargin" index="0"]
+text = "Buy Items"
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_wmmwv"]
-_data = {
-"bump": SubResource("Animation_k42bn")
-}
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
+texture_normal = SubResource("AtlasTexture_dgwhc")
+texture_pressed = SubResource("AtlasTexture_22wm0")
+texture_disabled = SubResource("AtlasTexture_qrw3e")
+texture_focused = SubResource("AtlasTexture_xv06w")
 
-[node name="BuyMenu" type="Control"]
-texture_filter = 1
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_mw0od")
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
+texture_normal = SubResource("AtlasTexture_q2nvi")
+texture_pressed = SubResource("AtlasTexture_671mj")
+texture_disabled = SubResource("AtlasTexture_e13bb")
+texture_focused = SubResource("AtlasTexture_e5xvc")
 
-[node name="TopBar" parent="." instance=ExtResource("2_djqr7")]
-layout_mode = 1
-
-[node name="OuterPadding" type="MarginContainer" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 52
-theme_override_constants/margin_top = 92
-theme_override_constants/margin_right = 52
-theme_override_constants/margin_bottom = 52
-
-[node name="SplitContainer" type="SplitContainer" parent="OuterPadding"]
-layout_mode = 2
-theme_override_constants/separation = 24
-
-[node name="LeftPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]
-custom_minimum_size = Vector2(448, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="ItemListBG" type="NinePatchRect" parent="OuterPadding/SplitContainer/LeftPanel"]
-layout_mode = 2
-texture = ExtResource("3_hcgur")
-patch_margin_left = 32
-patch_margin_top = 24
-patch_margin_right = 32
-patch_margin_bottom = 24
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-
-[node name="PanelPadding" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
-layout_mode = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 24
-
-[node name="FlowContainer" type="VBoxContainer" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding"]
-layout_mode = 2
-
-[node name="ListItem" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("2_0xo8v")]
-layout_mode = 2
-
-[node name="ListItem2" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("2_0xo8v")]
-layout_mode = 2
-
-[node name="ListItem3" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("2_0xo8v")]
-layout_mode = 2
-
-[node name="ListItem4" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding/FlowContainer" instance=ExtResource("2_0xo8v")]
-layout_mode = 2
-
-[node name="NoItemsText" type="RichTextLabel" parent="OuterPadding/SplitContainer/LeftPanel/PanelPadding"]
+[node name="ButtonMid" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" index="0"]
 visible = false
-layout_mode = 2
-theme = ExtResource("6_326w2")
-theme_override_styles/normal = SubResource("StyleBoxEmpty_2utro")
-text = "There are no items to show."
 
-[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_constants/margin_left = -20
-theme_override_constants/margin_top = -44
+[node name="ButtonRight" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" index="1"]
+text = "buy"
 
-[node name="LeftTitle" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/TitleMargin"]
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 0
-theme = ExtResource("5_mmvp1")
-text = "Sell Items"
-
-[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_constants/margin_left = -20
-theme_override_constants/margin_right = -20
-theme_override_constants/margin_bottom = -20
-
-[node name="NaviClose" type="Button" parent="OuterPadding/SplitContainer/LeftPanel/FooterMargin"]
-layout_mode = 2
-size_flags_horizontal = 0
-theme = ExtResource("6_326w2")
-theme_type_variation = &"Button_Alt"
-text = "back"
-
-[node name="Pagination" type="MarginContainer" parent="OuterPadding/SplitContainer/LeftPanel"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme_override_constants/margin_right = 32
-
-[node name="BoxContainer" type="BoxContainer" parent="OuterPadding/SplitContainer/LeftPanel/Pagination"]
-layout_mode = 2
-theme_override_constants/separation = 8
-
-[node name="PaginationLabel" type="Label" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
-custom_minimum_size = Vector2(0, 32)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-theme = ExtResource("6_326w2")
-theme_type_variation = &"Label_Fancy"
-text = "Page 01/04"
-
-[node name="ArrowBack" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
-custom_minimum_size = Vector2(18, 0)
-layout_mode = 2
-
-[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" instance=ExtResource("7_sjig8")]
-layout_mode = 0
-offset_right = 9.0
-offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_bl8gu")
-texture_pressed = SubResource("AtlasTexture_jyegx")
-texture_disabled = SubResource("AtlasTexture_o43ob")
-texture_focused = SubResource("AtlasTexture_tseg7")
-direction = 1
-
-[node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
-custom_minimum_size = Vector2(18, 0)
-layout_mode = 2
-
-[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" instance=ExtResource("7_sjig8")]
-layout_mode = 0
-offset_right = 9.0
-offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_y44yb")
-texture_pressed = SubResource("AtlasTexture_2a3c0")
-texture_disabled = SubResource("AtlasTexture_1uq42")
-texture_focused = SubResource("AtlasTexture_ol2m0")
-direction = 0
-metadata/Direction = "right"
-
-[node name="RightPanel" type="MarginContainer" parent="OuterPadding/SplitContainer"]
-layout_mode = 2
-size_flags_horizontal = 3
-theme = ExtResource("6_326w2")
-
-[node name="SpriteCentering" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="ItemSprite" type="Sprite2D" parent="OuterPadding/SplitContainer/RightPanel/SpriteCentering"]
-position = Vector2(0, -75)
-scale = Vector2(3, 3)
-texture = ExtResource("8_88bnl")
-
-[node name="MarginContainer" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel"]
-custom_minimum_size = Vector2(0, 160)
-layout_mode = 2
-size_flags_vertical = 8
-
-[node name="ItemDescBG" type="NinePatchRect" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
-layout_mode = 2
-texture = ExtResource("3_hcgur")
-patch_margin_left = 32
-patch_margin_top = 24
-patch_margin_right = 32
-patch_margin_bottom = 24
-axis_stretch_horizontal = 1
-axis_stretch_vertical = 1
-
-[node name="DescPadding" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 32
-theme_override_constants/margin_top = 24
-theme_override_constants/margin_right = 32
-theme_override_constants/margin_bottom = 35
-
-[node name="FlowContainer" type="FlowContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding"]
-layout_mode = 2
-
-[node name="ItemDesc" type="RichTextLabel" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer"]
-clip_contents = false
-custom_minimum_size = Vector2(320, 0)
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_styles/normal = SubResource("StyleBoxEmpty_2npap")
-text = "adfasfhskdfsdfsld aas oflsdjf dsklfas jdlkad fjdslkfasd fklasdjkfds dskfdlj dskalf jldkak  "
-fit_content = true
-
-[node name="RequirementsList" type="FlowContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer"]
-visible = false
-layout_mode = 2
-
-[node name="ReqItem1" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("9_cc8w0")]
-layout_mode = 2
-
-[node name="ReqItem2" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("9_cc8w0")]
-layout_mode = 2
-
-[node name="ReqItem3" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/RequirementsList" instance=ExtResource("9_cc8w0")]
-layout_mode = 2
-
-[node name="TitleMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 0
-theme_override_constants/margin_top = -43
-
-[node name="ItemName" type="Label" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/TitleMargin"]
-layout_mode = 2
-size_flags_horizontal = 4
-theme = ExtResource("5_mmvp1")
-text = "ITEM NAME"
-
-[node name="FooterMargin" type="MarginContainer" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer"]
-layout_mode = 2
-size_flags_vertical = 8
-theme_override_constants/margin_left = -20
-theme_override_constants/margin_right = -20
-theme_override_constants/margin_bottom = -20
-
-[node name="ButtonMid" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 4
-theme = ExtResource("6_326w2")
-theme_type_variation = &"Button_Alt2"
-text = "toss"
-
-[node name="ButtonRight" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
-layout_mode = 2
-size_flags_horizontal = 8
-theme = ExtResource("6_326w2")
-text = "sell"
-
-[node name="Popup" parent="." instance=ExtResource("10_3haeo")]
+[node name="ClosePopup" parent="." index="2" instance=ExtResource("4_s2wfi")]
 visible = false
 layout_mode = 1
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-"": SubResource("AnimationLibrary_wmmwv")
-}
-
-[connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_pressed" flags=18]
-[connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack/ArrowBtn" to="." method="_on_prev_pressed" flags=18]
-[connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext/ArrowBtn" to="." method="_on_next_pressed" flags=18]
+[connection signal="pressed" from="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight" to="." method="_on_buy"]

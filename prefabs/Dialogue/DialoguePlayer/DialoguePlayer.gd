@@ -59,7 +59,6 @@ func next_dialogue():
 	if current < dialogue_keys.size():
 		_set_dialogue()
 	elif current >= dialogue_keys.size():
-		print("get in here?")
 		_check_post_action()
 
 func _set_dialogue():
@@ -89,7 +88,6 @@ func _check_action(action):
 			if action_type in [ActionType.BG, ActionType.SHOW_FOCUS, ActionType.SOUND]:
 				if FileAccess.file_exists(action[1]):
 					asset = load(action[1])
-					print(asset)
 			elif action_type == ActionType.ANIMATION:
 				asset = action[1]
 
@@ -100,7 +98,6 @@ func _check_post_action():
 	var asset = null
 	var amount = 1
 	
-	print(postaction[0] in PostActionType, postaction[0])
 	if postaction and postaction[0] in PostActionType:
 		postaction_type = PostActionType[postaction[0]]
 		if len(postaction) == 2 \

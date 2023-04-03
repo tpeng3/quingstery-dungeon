@@ -3,6 +3,8 @@ extends Node2D
 const FRIEND_STATUS = 20
 const BESTIE_STATUS = 40
 @onready var dialogue_tracker = $DialoguePlayer.dialogue_file.data
+@export var shop_json:JSON
+@export var shop_items = []
 
 func _ready():
 	var welcome_key = _weighted_rand("welcome")
@@ -15,6 +17,7 @@ func _ready():
 
 	Global.FP.noah += 1
 	$WeatherFilter.show_weather()
+	_init_shop_items()
 	
 func _on_dialogue_end():
 	$NavButtons/NavList/Button3.grab_focus()
@@ -28,7 +31,7 @@ func _on_menu_closed():
 func _on_buy_pressed():
 	$ShopBox.hide()
 	$NavButtons.hide()
-	$BuyMenu.show()
+	$BuyMenu.show_menu()
 
 func _on_leave_pressed():
 	SceneManager.change_scene("Map")
@@ -64,3 +67,7 @@ func _weighted_rand(filter):
 	else:
 		Global.dialogue_popularity.noah[sortedDialogue[randInd].key] = 1
 	return sortedDialogue[randInd].key;
+
+func _init_shop_items():
+	shop_items = shop_json.data
+	$BuyMenu.init_shop()

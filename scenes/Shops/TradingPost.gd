@@ -4,52 +4,60 @@ const FRIEND_STATUS = 20
 const BESTIE_STATUS = 40
 const SELL_MARK = 100
 var sellTotal = 0
-var last_menu_button
 @onready var dialogue_tracker = $DialoguePlayer.dialogue_file.data
+@export var shop_json:JSON
+@export var shop_items = []
 
 func _ready():
 	var welcome_key = _weighted_rand("welcome")
 	$ShopBox.show_dialogue($DialoguePlayer, welcome_key)
 	$ShopBox.no_selected.connect(_on_dialogue_end)
-	$BuyMenu.menu_closed.connect(_on_menu_closed)
-	$SellMenu.menu_closed.connect(_on_menu_closed)
+	$BuyMenu.menu_closed.connect(_on_buy_closed)
+	$SellMenu.menu_closed.connect(_on_sell_closed)
+	$SellMenu.on_sell.connect(_on_sell)
 	
 	$NavButtons.show()
-	last_menu_button = $NavButtons/NavList/Button1
-	last_menu_button.grab_focus()
+	$NavButtons/NavList/Button1.grab_focus()
 
 	Global.FP.bullfrog += 1
+	_init_shop_items()
 	
 func _on_dialogue_end():
-	last_menu_button.grab_focus()
+	$NavButtons/NavList/Button3.grab_focus()
 	
-func _on_menu_closed():
+func _on_buy_closed():
 	var buy_key = _weighted_rand("buy")
 	$ShopBox.show_dialogue($DialoguePlayer, buy_key)
 	$NavButtons.show()
-	last_menu_button.grab_focus()
+	$NavButtons/NavList/Button1.grab_focus()
+
+func _on_sell_closed():
+	var sell_key = _weighted_rand("sell")
+	$ShopBox.show_dialogue($DialoguePlayer, sell_key)
+	$NavButtons.show()
+	$NavButtons/NavList/Button2.grab_focus()
 
 func _on_buy_pressed():
 	$ShopBox.hide()
 	$NavButtons.hide()
 	$BuyMenu.show_menu()
-	last_menu_button = $NavButtons/NavList/Button1
 
 func _on_sell_pressed():
+	sellTotal = 0
 	$ShopBox.hide()
 	$NavButtons.hide()
 	$SellMenu.show_menu()
-	last_menu_button = $NavButtons/NavList/Button2
 
 func _on_talk_pressed():
 	var talk_key = _weighted_rand("talk")
 	$ShopBox.show_dialogue($DialoguePlayer, talk_key)
-	$AnimationPlayer.play("bump")
-	last_menu_button = $NavButtons/NavList/Button3
 
 func _on_leave_pressed():
 	SceneManager.change_scene("Map")
-
+	
+func _on_sell(amount):
+	sellTotal += amount
+	
 func _weighted_rand(filter):
 	var sortedDialogue = dialogue_tracker.values().filter(
 		func filter(i):
@@ -86,3 +94,11 @@ func _weighted_rand(filter):
 	else:
 		Global.dialogue_popularity.bullfrog[sortedDialogue[randInd].key] = 1
 	return sortedDialogue[randInd].key;
+
+func _init_shop_items():
+	for i in shop_json.data:
+		if i.condition == "Friendship with Bullfrog" and Global.FP.bullfrog < FRIEND_STATUS:
+			continue
+		else:
+			shop_items.push_back(i)
+	$BuyMenu.init_shop()

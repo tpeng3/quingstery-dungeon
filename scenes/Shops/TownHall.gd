@@ -8,6 +8,7 @@ func _ready():
 	$ShopBox.show_dialogue($DialoguePlayer, welcome_key)
 	$ShopBox.no_selected.connect(_on_dialogue_end)
 	$StorageMenu.menu_closed.connect(_on_menu_closed)
+	$TakeMenu.menu_closed.connect(_on_take_menu_closed)
 	
 	$Menu/NavButtons.show()
 	$Menu/SaveLoadButtons.hide()
@@ -22,20 +23,17 @@ func _on_dialogue_end():
 	$Menu.show()
 	$Menu/NavButtons/NavList/Button3.grab_focus()
 	
-func _on_menu_closed(bought=false):
-	var buy_key = _weighted_rand("buy")
-	$ShopBox.show_dialogue($DialoguePlayer, buy_key)
-	$Menu/NavButtons.show()
+func _on_menu_closed():
+	var dialogue_key = _weighted_rand("store")
+	$ShopBox.show_dialogue($DialoguePlayer, dialogue_key)
+	$Menu/StorageButtons.show()
+	$Menu/StorageButtons/NavList/Button1.grab_focus()
 
-func _on_buy_pressed():
-	$ShopBox.hide()
-	$Menu/NavButtons.hide()
-	$StorageMenu.show()
-
-func _on_sell_pressed():
-	$Menu/NavButtons.hide()
-	$ShopBox.hide()
-	$StorageMenu.show()
+func _on_take_menu_closed():
+	var dialogue_key = _weighted_rand("store")
+	$ShopBox.show_dialogue($DialoguePlayer, dialogue_key)
+	$Menu/StorageButtons.show()
+	$Menu/StorageButtons/NavList/Button2.grab_focus()
 
 # NavButtons
 func _on_room_pressed():
@@ -46,8 +44,8 @@ func _on_room_pressed():
 
 func _on_storage_pressed():
 	$Menu/NavButtons.hide()
-	$Menu/SaveLoadButtons.show()
-	$Menu/SaveLoadButtons/NavList/Button1.grab_focus()
+	$Menu/StorageButtons.show()
+	$Menu/StorageButtons/NavList/Button1.grab_focus()
 
 func _on_talk_pressed():
 	var talk_key = _weighted_rand("talk")
@@ -97,13 +95,19 @@ func _on_back_pressed():
 	$Menu/NavButtons.show()
 	$Menu/SaveLoadButtons.hide()
 	$Menu/StorageButtons.hide()
+	var dialogue_key = _weighted_rand("leave")
+	$ShopBox.show_dialogue($DialoguePlayer, dialogue_key)
 	$Menu/NavButtons/NavList/Button1.grab_focus()
 	
 func _on_store_pressed():
-	pass # Replace with function body.
+	$ShopBox.hide()
+	$Menu/StorageButtons.hide()
+	$StorageMenu.show_menu()
 
 func _on_take_pressed():
-	pass # Replace with function body.
+	$ShopBox.hide()
+	$Menu/StorageButtons.hide()
+	$TakeMenu.show_menu()
 
 func _weighted_rand(filter):
 	var sortedDialogue = dialogue_tracker.values().filter(

@@ -1,74 +1,156 @@
 [
-    {
-        "item": "Goggles",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Glasses",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Dark Hat",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Party Hat",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Cowboy Hat",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Scarf",
-        "type": "Trade",
-        "trade1": "Silk x5",
-        "condition": "None"
-    },
-    {
-        "item": "Bowtie",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Handkerchief",
-        "type": "Trade",
-        "trade1": "Silk x5",
-        "condition": "None"
-    },
-    {
-        "item": "Night Cap",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Flower Hat",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Rain Hat",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Blindfold",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Frog Hat",
-        "type": "Trade",
-        "condition": "None"
-    },
-    {
-        "item": "Winter Hat",
-        "type": "Trade",
-        "condition": "None"
-    }
+	{
+		"item": "Goggles",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Glasses",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Dark Hat",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Party Hat",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Cowboy Hat",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Scarf",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Bowtie",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Handkerchief",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Night Cap",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Flower Hat",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Rain Hat",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Blindfold",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Frog Hat",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Winter Hat",
+		"type": "Equip",
+		"condition": "None",
+		"trade": [
+			{
+				"item": "Silk",
+				"amount": 5
+			}
+		]
+	}
 ]

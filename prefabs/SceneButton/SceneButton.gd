@@ -12,6 +12,7 @@ func _ready() -> void:
 
 func _on_pressed():
 	if scene:
+		Global.last_town_menu_button = self.get_path()
 		SceneManager.change_scene(scene)
 	elif npc:
 		on_dialogue.emit(self)

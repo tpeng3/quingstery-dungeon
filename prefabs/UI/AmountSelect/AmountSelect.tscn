@@ -5,42 +5,42 @@
 [ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="3_ugvsp"]
 [ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="4_5nu17"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dt3xb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ceag7"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tgxpu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_amtgj"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6csba"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ciin"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_kyywi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_688m0"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r60sr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_sno25"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_11ucy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_s254e"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bxo83"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_764b7"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j3jyi"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_n1uy5"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(27, 0, 9, 9)
@@ -75,10 +75,10 @@ offset_top = 30.0
 offset_right = 20.0
 offset_bottom = 39.0
 pivot_offset = Vector2(8, 8)
-texture_normal = SubResource("AtlasTexture_dt3xb")
-texture_pressed = SubResource("AtlasTexture_tgxpu")
-texture_disabled = SubResource("AtlasTexture_6csba")
-texture_focused = SubResource("AtlasTexture_kyywi")
+texture_normal = SubResource("AtlasTexture_ceag7")
+texture_pressed = SubResource("AtlasTexture_amtgj")
+texture_disabled = SubResource("AtlasTexture_0ciin")
+texture_focused = SubResource("AtlasTexture_688m0")
 direction = 1
 
 [node name="Right" parent="SplitContainer/MiddleRow" instance=ExtResource("3_ugvsp")]
@@ -88,10 +88,10 @@ offset_top = 30.0
 offset_right = 165.0
 offset_bottom = 39.0
 pivot_offset = Vector2(8, 8)
-texture_normal = SubResource("AtlasTexture_r60sr")
-texture_pressed = SubResource("AtlasTexture_11ucy")
-texture_disabled = SubResource("AtlasTexture_bxo83")
-texture_focused = SubResource("AtlasTexture_j3jyi")
+texture_normal = SubResource("AtlasTexture_sno25")
+texture_pressed = SubResource("AtlasTexture_s254e")
+texture_disabled = SubResource("AtlasTexture_764b7")
+texture_focused = SubResource("AtlasTexture_n1uy5")
 direction = 0
 
 [connection signal="pressed" from="SplitContainer/MiddleRow/Left" to="." method="_on_left_pressed"]

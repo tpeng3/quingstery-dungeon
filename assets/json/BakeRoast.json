@@ -1,0 +1,294 @@
+[
+	{
+		"item": "Coffee",
+		"type": "Upgrade",
+		"cost": 25,
+		"condition": "Random Drink",
+		"trade": []
+	},
+	{
+		"item": "Bran Muffin",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Snack",
+		"trade": [
+			{
+				"item": "Crop",
+				"amount": 2
+			},
+			{
+				"item": "Herb Bundle",
+				"amount": 2
+			},
+			{
+				"item": "Egg",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"item": "Blueberry Muffin",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Snack",
+		"trade": [
+			{
+				"item": "Crop",
+				"amount": 2
+			},
+			{
+				"item": "Fruit",
+				"amount": 2
+			},
+			{
+				"item": "Egg",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"item": "Cinnamon Muffin",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Windy",
+		"trade": [
+			{
+				"item": "Crop",
+				"amount": 1
+			},
+			{
+				"item": "Herb Bundle",
+				"amount": 1
+			}
+		]
+	},
+	{
+		"item": "M. Glory Muffin",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Cloudy",
+		"trade": [
+			{
+				"item": "Tree Sap",
+				"amount": 1
+			},
+			{
+				"item": "Seed Packet",
+				"amount": 1
+			},
+			{
+				"item": "Crop",
+				"amount": 1
+			}
+		]
+	},
+	{
+		"item": "Chocolate Muffin",
+		"type": "Upgrade",
+		"cost": 250,
+		"condition": "Rainy",
+		"trade": []
+	},
+	{
+		"item": "Croissant",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Bread",
+		"trade": [
+			{
+				"item": "Crop",
+				"amount": 5
+			},
+			{
+				"item": "Milk",
+				"amount": 3
+			},
+			{
+				"item": "Egg",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"item": "Bagel",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Bread",
+		"trade": [
+			{
+				"item": "Crop",
+				"amount": 5
+			},
+			{
+				"item": "Milk",
+				"amount": 3
+			},
+			{
+				"item": "Egg",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"item": "Spaghetti",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Meal",
+		"trade": [
+			{
+				"item": "Crop",
+				"amount": 5
+			},
+			{
+				"item": "Produce",
+				"amount": 3
+			}
+		]
+	},
+	{
+		"item": "Omelette",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Meal",
+		"trade": [
+			{
+				"item": "Egg",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Potato Soup",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Meal",
+		"trade": [
+			{
+				"item": "Fish",
+				"amount": 1
+			},
+			{
+				"item": "Produce",
+				"amount": 3
+			}
+		]
+	},
+	{
+		"item": "Wheat Bread",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Bread",
+		"trade": [
+			{
+				"item": "Crop",
+				"amount": 5
+			},
+			{
+				"item": "Milk",
+				"amount": 3
+			},
+			{
+				"item": "Egg",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"item": "Sourdough Bread",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Bread",
+		"trade": [
+			{
+				"item": "Crop",
+				"amount": 5
+			},
+			{
+				"item": "Milk",
+				"amount": 3
+			},
+			{
+				"item": "Egg",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"item": "PumperNickel Bread",
+		"type": "Upgrade",
+		"cost": 500,
+		"condition": "Random Bread",
+		"trade": []
+	},
+	{
+		"item": "Carrot Cake",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Snack",
+		"trade": [
+			{
+				"item": "Produce",
+				"amount": 2
+			},
+			{
+				"item": "Crop",
+				"amount": 5
+			}
+		]
+	},
+	{
+		"item": "Strawberry Shortcake",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Snack",
+		"trade": [
+			{
+				"item": "Fruit",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"item": "Coffee Cake",
+		"type": "Upgrade",
+		"cost": 500,
+		"condition": "Random Snack",
+		"trade": []
+	},
+	{
+		"item": "Apple Juice",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Drink",
+		"trade": [
+			{
+				"item": "Fruit",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"item": "Orange Juice",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Drink",
+		"trade": [
+			{
+				"item": "Fruit",
+				"amount": 2
+			}
+		]
+	},
+	{
+		"item": "Cranberry Juice",
+		"type": "Upgrade",
+		"cost": -1,
+		"condition": "Random Drink",
+		"trade": [
+			{
+				"item": "Fruit",
+				"amount": 2
+			}
+		]
+	}
+]

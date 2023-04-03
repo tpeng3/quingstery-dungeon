@@ -114,7 +114,6 @@ func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
 	if dialogue_node:
 		dialogue_node.dialogue_action.disconnect(_on_dialogue_action)
 		dialogue_node.dialogue_finished.disconnect(_on_dialogue_finished)
-		print("on dialogue finished?", action_type)
 		match action_type:
 			dialogue_node.PostActionType.MORE_TEXT:
 				dialogue_node.dialogue_file = asset
@@ -125,7 +124,6 @@ func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
 				var to_delete = dialogue_node
 				to_delete.get_parent().queue_free()
 			dialogue_node.PostActionType.GIVE:
-				print("give here?", asset, amount)
 				show_new_item(asset, amount)
 				dialogue_node = null
 				return

@@ -6,17 +6,21 @@ const BUY_MARK = 100
 var buyTotal = 0
 var tradedSoil = false
 @onready var dialogue_tracker = $DialoguePlayer.dialogue_file.data
+@export var shop_json:JSON
+@export var shop_items = []
 
 func _ready():
 	var welcome_key = _weighted_rand("welcome")
 	$ShopBox.show_dialogue($DialoguePlayer, welcome_key)
 	$ShopBox.no_selected.connect(_on_dialogue_end)
 	$BuyMenu.menu_closed.connect(_on_menu_closed)
+	$BuyMenu.on_buy.connect(_on_buy_item)
 	
 	$NavButtons.show()
 	$NavButtons/NavList/Button1.grab_focus()
 
 	Global.FP.panqing += 1
+	_init_shop_items()
 	
 func _on_dialogue_end():
 	$NavButtons/NavList/Button3.grab_focus()
@@ -28,14 +32,11 @@ func _on_menu_closed(bought=false):
 	$NavButtons/NavList/Button1.grab_focus()
 
 func _on_buy_pressed():
+	buyTotal = 0
+	tradedSoil = false
 	$ShopBox.hide()
 	$NavButtons.hide()
-	$BuyMenu.show()
-
-func _on_sell_pressed():
-	$NavButtons.hide()
-	$ShopBox.hide()
-	$BuyMenu.show()
+	$BuyMenu.show_menu()
 
 func _on_talk_pressed():
 	var talk_key = _weighted_rand("talk")
@@ -43,6 +44,12 @@ func _on_talk_pressed():
 
 func _on_leave_pressed():
 	SceneManager.change_scene("Map")
+
+func _on_buy_item(item):
+	print(item.item_name)
+	if item.item_trade and item.item_name in ['Herb Bundle', 'Tree Sap', 'Crop']:
+		tradedSoil = true
+	buyTotal += item.item_cost
 
 func _weighted_rand(filter):
 	var sortedDialogue = dialogue_tracker.values().filter(
@@ -60,12 +67,15 @@ func _weighted_rand(filter):
 							(i.type == "Steps unlocked" and Global.currentCheckpoint >= Global.CheckpointType.STEPS) or \
 							(i.type == "Peak unlocked" and Global.currentCheckpoint >= Global.CheckpointType.PEAK)
 				"buy":
-					return i.type == "buy a lot" if buyTotal >= BUY_MARK else i.type == "buy"
-				"trade":
-					return i.type == "trade soil" if tradedSoil else i.type == "trade"
+					if buyTotal >= BUY_MARK:
+						return i.type == "buy a lot"
+					elif tradedSoil:
+						return i.type == "trade soil"
+					else:
+						return i.type == "buy"
 				"talk":
 					return i.type == "talk" or (i.type == "talk friend" and Global.FP.panqing >= FRIEND_STATUS)
-				# sell / liked gift / disliked gift / neutral gift
+				# liked gift / disliked gift / neutral gift
 				_:
 					return i.type == filter
 	)
@@ -81,3 +91,11 @@ func _weighted_rand(filter):
 	else:
 		Global.dialogue_popularity.panqing[sortedDialogue[randInd].key] = 1
 	return sortedDialogue[randInd].key;
+
+func _init_shop_items():
+	for i in shop_json.data:
+		if i.condition == "Friendship with Zane" and Global.FP.zane < FRIEND_STATUS:
+			continue
+		else:
+			shop_items.push_back(i)
+	$BuyMenu.init_shop()

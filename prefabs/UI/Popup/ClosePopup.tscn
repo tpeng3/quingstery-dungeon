@@ -1,0 +1,98 @@
+[gd_scene load_steps=9 format=3 uid="uid://cl8b7gtcakyrn"]
+
+[ext_resource type="Script" path="res://prefabs/UI/Popup/ClosePopup.gd" id="1_g82qh"]
+[ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_gu563"]
+[ext_resource type="Texture2D" uid="uid://bwpq0b2vhdsje" path="res://assets/UI/menu_nametag.png" id="3_37fas"]
+[ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="4_kdxkj"]
+
+[sub_resource type="Gradient" id="Gradient_wpb06"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0.101961, 0.0745098, 0.133333, 0.498039)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_fmsmn"]
+gradient = SubResource("Gradient_wpb06")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gxfh0"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8hp8"]
+
+[node name="ClosePopup" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_g82qh")
+
+[node name="BGOverlay" type="NinePatchRect" parent="."]
+layout_mode = 2
+offset_right = 960.0
+offset_bottom = 540.0
+texture = SubResource("GradientTexture1D_fmsmn")
+
+[node name="SplitContainer" type="SplitContainer" parent="."]
+layout_mode = 2
+offset_right = 960.0
+offset_bottom = 540.0
+vertical = true
+
+[node name="PopupBox" type="MarginContainer" parent="SplitContainer"]
+custom_minimum_size = Vector2(340, 140)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = ExtResource("2_gu563")
+
+[node name="PopupBG" type="NinePatchRect" parent="SplitContainer/PopupBox"]
+layout_mode = 2
+texture = ExtResource("3_37fas")
+patch_margin_left = 22
+patch_margin_top = 22
+patch_margin_right = 22
+patch_margin_bottom = 22
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="SplitContainer" type="SplitContainer" parent="SplitContainer/PopupBox"]
+layout_mode = 2
+vertical = true
+
+[node name="TextPadding" type="MarginContainer" parent="SplitContainer/PopupBox/SplitContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 22
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 22
+theme_override_constants/margin_bottom = 22
+
+[node name="PopupText" type="RichTextLabel" parent="SplitContainer/PopupBox/SplitContainer/TextPadding"]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gxfh0")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_a8hp8")
+bbcode_enabled = true
+text = "[center]Insert some sort of text here wahooo
+[/center]"
+fit_content = true
+
+[node name="FooterMargin" type="MarginContainer" parent="SplitContainer/PopupBox"]
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/margin_left = -20
+theme_override_constants/margin_right = -20
+theme_override_constants/margin_bottom = -20
+
+[node name="ButtonMid" type="Button" parent="SplitContainer/PopupBox/FooterMargin"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
+focus_next = NodePath(".")
+focus_previous = NodePath(".")
+theme = ExtResource("4_kdxkj")
+theme_type_variation = &"Button_Alt2"
+text = "close"
+
+[connection signal="pressed" from="SplitContainer/PopupBox/FooterMargin/ButtonMid" to="." method="_on_close_pressed"]

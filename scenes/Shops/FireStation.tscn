@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://regd4l41fbt5"]
+[gd_scene load_steps=11 format=3 uid="uid://regd4l41fbt5"]
 
 [ext_resource type="Script" path="res://scenes/Shops/FireStation.gd" id="1_bgdxp"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_famdf"]
+[ext_resource type="JSON" path="res://assets/json/FireStation.json" id="2_jty0j"]
 [ext_resource type="JSON" path="res://dialogue/Shopkeepers/Zane.json" id="3_vomgy"]
 [ext_resource type="Texture2D" uid="uid://dfa2wmooi6l1p" path="res://assets/background/quingsterybgs_firestation.png" id="4_b7any"]
 [ext_resource type="Texture2D" uid="uid://b7scac11tqoup" path="res://assets/character/talksprites/quingesterynpc_zane_flats.png" id="5_gmyxw"]
@@ -12,6 +13,7 @@
 
 [node name="FireStation" type="Node2D"]
 script = ExtResource("1_bgdxp")
+shop_json = ExtResource("2_jty0j")
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("2_famdf")]
 dialogue_file = ExtResource("3_vomgy")
@@ -26,10 +28,11 @@ centered = false
 [node name="Character" parent="ShopBox/Control" index="0"]
 texture = ExtResource("5_gmyxw")
 
-[node name="BuyMenu" parent="." instance=ExtResource("7_4nuli")]
+[node name="BuyMenu" parent="." node_paths=PackedStringArray("shop_node") instance=ExtResource("7_4nuli")]
 visible = false
 offset_right = 960.0
 offset_bottom = 540.0
+shop_node = NodePath("..")
 
 [node name="NavButtons" parent="." instance=ExtResource("8_2u8cq")]
 offset_right = 960.0
@@ -41,7 +44,6 @@ visible = false
 [node name="WeatherHUD" parent="." instance=ExtResource("9_a8l0e")]
 
 [connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
-[connection signal="pressed" from="NavButtons/NavList/Button2" to="." method="_on_sell_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button3" to="." method="_on_talk_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button4" to="." method="_on_leave_pressed"]
 
