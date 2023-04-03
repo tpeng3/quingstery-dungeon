@@ -1,0 +1,7 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://ciru52gd13a32"]
+
+[ext_resource type="Texture2D" uid="uid://knes30jh6u6i" path="res://assets/UI/Mountain.png" id="1_5qgif"]
+
+[resource]
+texture = ExtResource("1_5qgif")
+region_rect = Rect2(240, 0, 240, 48)

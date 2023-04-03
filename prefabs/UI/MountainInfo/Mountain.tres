@@ -1,15 +1,19 @@
-[gd_resource type="Theme" load_steps=11 format=3 uid="uid://dqa8ky6nrewoa"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://dqa8ky6nrewoa"]
 
-[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_0kjtc"]
+[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_0kjtc"]
 [ext_resource type="StyleBox" uid="uid://cd03howywgoqh" path="res://prefabs/UI/MountainInfo/Peak.tres" id="1_g62r2"]
-[ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="2_bcfu2"]
+[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="2_bcfu2"]
 [ext_resource type="StyleBox" uid="uid://c1jaqxotsj07p" path="res://prefabs/UI/MountainInfo/River.tres" id="2_ixyp8"]
 [ext_resource type="StyleBox" uid="uid://c27e54npbxy0g" path="res://prefabs/UI/MountainInfo/PeakSelect.tres" id="2_jfo0h"]
+[ext_resource type="StyleBox" uid="uid://ciru52gd13a32" path="res://prefabs/UI/MountainInfo/PeakFocus.tres" id="3_idpma"]
 [ext_resource type="StyleBox" uid="uid://dugo1e7nx1je3" path="res://prefabs/UI/MountainInfo/Steps.tres" id="3_iuo46"]
 [ext_resource type="StyleBox" uid="uid://cgj173841e5x0" path="res://prefabs/UI/MountainInfo/Throat.tres" id="4_2c5vq"]
 [ext_resource type="StyleBox" uid="uid://djvf5225buj0q" path="res://prefabs/UI/MountainInfo/RiverSelect.tres" id="4_ito4y"]
 [ext_resource type="StyleBox" uid="uid://dcbv0agbf8gso" path="res://prefabs/UI/MountainInfo/ThroatSelect.tres" id="4_vi11b"]
 [ext_resource type="StyleBox" uid="uid://doh6sm746xhqq" path="res://prefabs/UI/MountainInfo/StepsSelect.tres" id="6_eyhhu"]
+[ext_resource type="StyleBox" uid="uid://dhoymsyiu0n28" path="res://prefabs/UI/MountainInfo/RiverFocus.tres" id="6_fbptc"]
+[ext_resource type="StyleBox" uid="uid://jfspqd3pg1ep" path="res://prefabs/UI/MountainInfo/StepsFocus.tres" id="9_aemi7"]
+[ext_resource type="StyleBox" uid="uid://85sb5hy4r01t" path="res://prefabs/UI/MountainInfo/ThroatFocus.tres" id="12_q7rkq"]
 
 [resource]
 Button/colors/font_color = Color(0.458824, 0.337255, 0.533333, 1)
@@ -25,23 +29,23 @@ Label/colors/font_outline_color = Color(0.760784, 0.603922, 0.427451, 1)
 Label/constants/outline_size = 8
 Label/fonts/font = ExtResource("2_bcfu2")
 Peak/base_type = &"Button"
-Peak/styles/focus = ExtResource("2_jfo0h")
-Peak/styles/hover = ExtResource("2_jfo0h")
+Peak/styles/focus = ExtResource("3_idpma")
+Peak/styles/hover = ExtResource("3_idpma")
 Peak/styles/normal = ExtResource("1_g62r2")
 Peak/styles/pressed = ExtResource("2_jfo0h")
 River/base_type = &"Button"
-River/styles/focus = ExtResource("4_ito4y")
-River/styles/hover = ExtResource("4_ito4y")
+River/styles/focus = ExtResource("6_fbptc")
+River/styles/hover = ExtResource("6_fbptc")
 River/styles/normal = ExtResource("2_ixyp8")
 River/styles/pressed = ExtResource("4_ito4y")
 Steps/base_type = &"Button"
 Steps/styles/disabled = null
-Steps/styles/focus = ExtResource("6_eyhhu")
-Steps/styles/hover = ExtResource("6_eyhhu")
+Steps/styles/focus = ExtResource("9_aemi7")
+Steps/styles/hover = ExtResource("9_aemi7")
 Steps/styles/normal = ExtResource("3_iuo46")
 Steps/styles/pressed = ExtResource("6_eyhhu")
 Throat/base_type = &"Button"
-Throat/styles/focus = ExtResource("4_vi11b")
-Throat/styles/hover = ExtResource("4_vi11b")
+Throat/styles/focus = ExtResource("12_q7rkq")
+Throat/styles/hover = ExtResource("12_q7rkq")
 Throat/styles/normal = ExtResource("4_2c5vq")
 Throat/styles/pressed = ExtResource("4_vi11b")
