@@ -1,14 +1,23 @@
 [gd_resource type="Theme" load_steps=14 format=3 uid="uid://dksvrshxgc4ql"]
 
+<<<<<<< HEAD
 [ext_resource type="FontFile" uid="uid://v2513mjdbefn" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_ua05e"]
+=======
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_ua05e"]
+>>>>>>> b8c52b608000a8174ab44bf2a6a4d7ed897bf644
 [ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="2_jnril"]
 [ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="3_m83mw"]
 [ext_resource type="StyleBox" uid="uid://xk12q87v443s" path="res://theme/tex_MenuSign_L.tres" id="4_43txj"]
 [ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="4_bart7"]
 [ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="5_1hbcp"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="5_h24u7"]
+<<<<<<< HEAD
 [ext_resource type="FontFile" uid="uid://fmplqgekwrgk" path="res://assets/UI/Dogica/dogicapixel.ttf" id="5_ipy2b"]
 [ext_resource type="FontFile" uid="uid://cfemksixrcuyc" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="7_g4pud"]
+=======
+[ext_resource type="FontFile" uid="uid://oghqafn812mw" path="res://assets/UI/Dogica/dogicapixel.ttf" id="5_ipy2b"]
+[ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="7_g4pud"]
+>>>>>>> b8c52b608000a8174ab44bf2a6a4d7ed897bf644
 [ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="7_wbjn2"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
