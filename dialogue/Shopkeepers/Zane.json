@@ -482,7 +482,7 @@
 		"lines": [
 			{
 				"name": "Zane",
-				"text": "... (Time for some inner comtemplation, perhaps.)",
+				"text": "... (Time for some inner contemplation, perhaps.)",
 				"action": [
 					"FREEZE"
 				]
@@ -531,9 +531,9 @@
 			}
 		]
 	},
-	"chatter 7, after Quingee becomes a regular, if quingee is wearing any accessory": {
-		"key": "chatter 7, after Quingee becomes a regular, if quingee is wearing any accessory",
-		"type": "accessory friend",
+	"chatter 7, after Quingee becomes a regular": {
+		"key": "chatter 7, after Quingee becomes a regular",
+		"type": "talk friend2",
 		"popularity": 0,
 		"lines": [
 			{

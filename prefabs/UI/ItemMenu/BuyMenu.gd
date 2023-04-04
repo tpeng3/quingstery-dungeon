@@ -51,9 +51,11 @@ func _update_right_panel(node):
 				ReqItem.hide()
 		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.text = "trade"
 		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.disabled = !_can_trade(node)
+	elif Inventory.gald < node.item_cost:
+		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.text = "not enough gald"
+		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.disabled = true
 	else:
 		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.text = "buy"
-		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.disabled = Inventory.gald < node.item_cost
 
 func _on_popup_close():
 	$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.grab_focus()

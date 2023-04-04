@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cdirrc5rr8huy" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_4im6j"]
 [ext_resource type="Script" path="res://prefabs/UI/ItemMenu/BuyMenu.gd" id="2_an4h0"]
 [ext_resource type="PackedScene" uid="uid://cl8b7gtcakyrn" path="res://prefabs/UI/Popup/ClosePopup.tscn" id="4_s2wfi"]
-[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="8_ltlah"]
+[ext_resource type="Texture2D" uid="uid://pyfkt1ol3cwv" path="res://assets/UI/arrows.png" id="8_ltlah"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dgwhc"]
 resource_local_to_scene = true

@@ -3,9 +3,9 @@
 [ext_resource type="Script" path="res://scenes/Shops/TownHall.gd" id="1_7fsli"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_yuh7w"]
 [ext_resource type="JSON" path="res://dialogue/Shopkeepers/Oleander.json" id="3_50mok"]
-[ext_resource type="Texture2D" uid="uid://caxqasrg8eq1a" path="res://assets/background/quingsterybgs_townhall.png" id="4_almsi"]
+[ext_resource type="Texture2D" uid="uid://ds0ui3languua" path="res://assets/background/quingsterybgs_townhall.png" id="4_almsi"]
 [ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="6_y1wdc"]
-[ext_resource type="Texture2D" uid="uid://cosmcncsiogu" path="res://assets/character/talksprites/quingesterynpc_ole_flats.png" id="7_c8cnx"]
+[ext_resource type="Texture2D" uid="uid://ds6e8rnv0w60r" path="res://assets/character/talksprites/quingesterynpc_ole_flats.png" id="7_c8cnx"]
 [ext_resource type="PackedScene" uid="uid://bw7q1cc3tci2i" path="res://prefabs/UI/NavButtons/NavButtons.tscn" id="8_81g58"]
 [ext_resource type="PackedScene" uid="uid://cewxqueqnp0vj" path="res://prefabs/UI/Popup/SystemPopup.tscn" id="9_8sk8i"]
 [ext_resource type="PackedScene" uid="uid://rbmak1sromfn" path="res://prefabs/UI/ItemMenu/StorageMenu.tscn" id="9_cu5ui"]
@@ -38,6 +38,9 @@ text = "Room"
 
 [node name="Button2" parent="Menu/NavButtons/NavList" index="1"]
 text = "Storage"
+
+[node name="Button4" parent="Menu/NavButtons/NavList" index="3"]
+text = "Leave"
 
 [node name="SaveLoadButtons" parent="Menu" instance=ExtResource("8_81g58")]
 visible = false

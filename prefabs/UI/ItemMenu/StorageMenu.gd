@@ -29,10 +29,10 @@ func _on_store_pressed():
 		$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonRight.pressed.connect(_on_store)
 	else:
 		if show_storage and Inventory.get_inv_count() + 1 > Inventory.max:
-			$ClosePopup.show_popup("Inventory is full.")
+			$ClosePopup.show_popup("Sorry, your inventory is full.")
 			return
 		elif Inventory.get_inv_count(true)  + 1 > Inventory.STORAGE_MAX:
-			$ClosePopup.show_popup("Storage is full. (Max: 99)")
+			$ClosePopup.show_popup("Sorry, your storage is full. (Max: 99)")
 			return
 		Inventory.add_item(focused_item.item_name, 1, !show_storage)
 		Inventory.remove_item(focused_item.item_name, 1, show_storage)
@@ -52,7 +52,7 @@ func _on_store():
 	$AmountPopup.hide()
 	var amount = $AmountPopup/SplitContainer/PopupBox/SplitContainer/AmountSelect.amount
 	if show_storage and Inventory.get_inv_count() + amount > Inventory.max:
-		$ClosePopup.show_popup("Sorry, your inventory is full.")
+		$ClosePopup.show_popup("Sorry, you don't have enough space for these.")
 		return
 	elif Inventory.get_inv_count(true) > Inventory.STORAGE_MAX:
 		$ClosePopup.show_popup("Sorry, your storage is full.")
