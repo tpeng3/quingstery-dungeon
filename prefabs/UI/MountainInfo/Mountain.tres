@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=15 format=3 uid="uid://dqa8ky6nrewoa"]
 
-[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_0kjtc"]
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_0kjtc"]
 [ext_resource type="StyleBox" uid="uid://cd03howywgoqh" path="res://prefabs/UI/MountainInfo/Peak.tres" id="1_g62r2"]
-[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="2_bcfu2"]
+[ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="2_bcfu2"]
 [ext_resource type="StyleBox" uid="uid://c1jaqxotsj07p" path="res://prefabs/UI/MountainInfo/River.tres" id="2_ixyp8"]
 [ext_resource type="StyleBox" uid="uid://c27e54npbxy0g" path="res://prefabs/UI/MountainInfo/PeakSelect.tres" id="2_jfo0h"]
 [ext_resource type="StyleBox" uid="uid://ciru52gd13a32" path="res://prefabs/UI/MountainInfo/PeakFocus.tres" id="3_idpma"]
@@ -17,6 +17,7 @@
 
 [resource]
 Button/colors/font_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/colors/font_disabled_color = Color(0.458824, 0.337255, 0.533333, 0.431373)
 Button/colors/font_focus_color = Color(0.211765, 0.00784314, 0.396078, 1)
 Button/colors/font_hover_color = Color(0.211765, 0.00784314, 0.396078, 1)
 Button/colors/font_hover_pressed_color = Color(0.211765, 0.00784314, 0.396078, 1)
@@ -29,22 +30,25 @@ Label/colors/font_outline_color = Color(0.760784, 0.603922, 0.427451, 1)
 Label/constants/outline_size = 8
 Label/fonts/font = ExtResource("2_bcfu2")
 Peak/base_type = &"Button"
+Peak/styles/disabled = ExtResource("1_g62r2")
 Peak/styles/focus = ExtResource("3_idpma")
 Peak/styles/hover = ExtResource("3_idpma")
 Peak/styles/normal = ExtResource("1_g62r2")
 Peak/styles/pressed = ExtResource("2_jfo0h")
 River/base_type = &"Button"
+River/styles/disabled = ExtResource("2_ixyp8")
 River/styles/focus = ExtResource("6_fbptc")
 River/styles/hover = ExtResource("6_fbptc")
 River/styles/normal = ExtResource("2_ixyp8")
 River/styles/pressed = ExtResource("4_ito4y")
 Steps/base_type = &"Button"
-Steps/styles/disabled = null
+Steps/styles/disabled = ExtResource("3_iuo46")
 Steps/styles/focus = ExtResource("9_aemi7")
 Steps/styles/hover = ExtResource("9_aemi7")
 Steps/styles/normal = ExtResource("3_iuo46")
 Steps/styles/pressed = ExtResource("6_eyhhu")
 Throat/base_type = &"Button"
+Throat/styles/disabled = ExtResource("4_2c5vq")
 Throat/styles/focus = ExtResource("12_q7rkq")
 Throat/styles/hover = ExtResource("12_q7rkq")
 Throat/styles/normal = ExtResource("4_2c5vq")
