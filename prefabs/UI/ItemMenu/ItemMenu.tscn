@@ -1,14 +1,14 @@
-[gd_scene load_steps=23 format=3 uid="uid://cdirrc5rr8huy"]
+[gd_scene load_steps=23 format=3]
 
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="1_6b7a8"]
 [ext_resource type="Script" path="res://prefabs/UI/ItemMenu/ItemMenu.gd" id="1_25xo1"]
 [ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="2_1s1md"]
-[ext_resource type="Texture2D" uid="uid://lbb4teo8jls7" path="res://assets/item/i_acorn.png" id="2_p56pw"]
+[ext_resource type="Texture2D" uid="uid://djabbytj2gbyw" path="res://assets/item/i_acorn.png" id="2_p56pw"]
 [ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="4_uwq0p"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="7_1nhbr"]
 [ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_242x1"]
-[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="8_hlc0k"]
+[ext_resource type="Texture2D" uid="uid://dxqanehaak2pj" path="res://assets/UI/arrows.png" id="8_hlc0k"]
 [ext_resource type="PackedScene" uid="uid://u7jf2y80hsiw" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2utro"]
