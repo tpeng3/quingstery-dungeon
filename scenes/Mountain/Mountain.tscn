@@ -75,3 +75,16 @@ dialogue_file = ExtResource("5_c7hty")
 visible = false
 
 [node name="StatusInfo" parent="." instance=ExtResource("5_7r71l")]
+
+[connection signal="body_entered" from="Map/Floor/@Animal@30548" to="Map/Floor/@Animal@30548" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@Animal@30548" to="Map/Floor/@Animal@30548" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@GatherSpot@30551" to="Map/Floor/@GatherSpot@30551" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@GatherSpot@30551" to="Map/Floor/@GatherSpot@30551" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@FishingSpot@30552" to="Map/Floor/@FishingSpot@30552" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@FishingSpot@30552" to="Map/Floor/@FishingSpot@30552" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@Stairs@30554" to="Map/Floor/@Stairs@30554" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@Stairs@30554" to="Map/Floor/@Stairs@30554" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@MiningSpot@30555" to="Map/Floor/@MiningSpot@30555" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@MiningSpot@30555" to="Map/Floor/@MiningSpot@30555" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@MiningSpot@30556" to="Map/Floor/@MiningSpot@30556" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@MiningSpot@30556" to="Map/Floor/@MiningSpot@30556" method="_on_body_exited" flags=18]
