@@ -4,7 +4,7 @@
 [ext_resource type="JSON" path="res://assets/json/TradingPost.json" id="2_dcplh"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_qjs2d"]
 [ext_resource type="JSON" path="res://dialogue/Shopkeepers/Bullfrog.json" id="3_bnxup"]
-[ext_resource type="Texture2D" uid="uid://dgkdf3n70rh2t" path="res://assets/background/quingsterybgs_post.png" id="4_li7ot"]
+[ext_resource type="Texture2D" uid="uid://dclo0ooi3uhon" path="res://assets/background/quingsterybgs_post.png" id="4_li7ot"]
 [ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="6_yxph0"]
 [ext_resource type="PackedScene" uid="uid://cm06xatxch52d" path="res://prefabs/UI/ItemMenu/BuyMenu.tscn" id="7_xuprc"]
 [ext_resource type="PackedScene" uid="uid://c8nppuh66j6pc" path="res://prefabs/UI/ItemMenu/SellMenu.tscn" id="8_2otkx"]
@@ -42,10 +42,10 @@ offset_bottom = 540.0
 
 [node name="WeatherHUD" parent="." instance=ExtResource("8_j0f7l")]
 
-[connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button2" to="." method="_on_sell_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button3" to="." method="_on_talk_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button4" to="." method="_on_leave_pressed"]
+[connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
 
 [editable path="ShopBox"]
 [editable path="NavButtons"]

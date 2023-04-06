@@ -36,6 +36,7 @@ func show_dialogue(dialogue, dictKey=null):
 	freezeBox = false
 	
 	dialogue_node = dialogue
+	print(dialogue)
 	_reset_ui()
 	$DialogueWrapper.show()
 	if !dialogue_node.skipFade:

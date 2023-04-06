@@ -10,7 +10,6 @@ var rng = RandomNumberGenerator.new()
 
 @onready var Idle = preload("res://assets/tile/Forage_Gather_Field_Sprite2.png")
 @onready var Highlight = preload("res://assets/tile/Forage_Gather_Field_Sprite1.png")
-@onready var DialogueBox = get_parent().get_parent().get_parent().get_node("DialogueBox")
 @onready var Inventory = get_node("/root/Inventory")
 
 signal item_get
@@ -51,12 +50,11 @@ func _on_gathering_complete():
 	$Sprite/Sparkle.visible = false
 	$Control.visible = false
 	$Sprite.texture = Idle
-	if DialogueBox:
-		rng.randomize()
-		var key = rng.randi_range(0, rewards.size() - 1)
-		var count = 1
-		DialogueBox.show_new_item(rewards[key].name, count)
-		# TODO: generate random item, with a count range and dependent on location
+	rng.randomize()
+	var key = rng.randi_range(0, rewards.size() - 1)
+	var count = 1
+	item_get.emit(rewards[key].name, count)
+	# TODO: generate random item, with a count range and dependent on location
 
 func _on_body_entered(body):
 	if state != ActionState.COMPLETE:

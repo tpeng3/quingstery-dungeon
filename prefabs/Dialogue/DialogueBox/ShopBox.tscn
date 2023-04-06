@@ -1,8 +1,8 @@
 [gd_scene load_steps=20 format=3 uid="uid://desvgeqvimub7"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/ShopBox.gd" id="1_qwecj"]
-[ext_resource type="Texture2D" uid="uid://cdk72yn1874yn" path="res://assets/character/talksprites/quingesterynpc_bullfrog_flats.png" id="2_322i1"]
-[ext_resource type="Texture2D" uid="uid://v6vy5unwonvd" path="res://assets/character/talksprites/quingee.png" id="2_an6im"]
+[ext_resource type="Texture2D" uid="uid://bvbqmsxgxn5p1" path="res://assets/character/talksprites/quingesterynpc_bullfrog_flats.png" id="2_322i1"]
+[ext_resource type="Texture2D" uid="uid://cd2d37oqbm6xe" path="res://assets/character/talksprites/quingee.png" id="2_an6im"]
 [ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/UI/compass.png" id="2_qxa0a"]
 [ext_resource type="Theme" uid="uid://bnb6osg7rfj47" path="res://theme/smallround.tres" id="3_kvlx5"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="4_gcxjm"]

@@ -1,9 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://daaxp1o7huxb"]
+[gd_scene load_steps=14 format=3 uid="uid://daaxp1o7huxb"]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.gd" id="1_m33fi"]
-[ext_resource type="Texture2D" uid="uid://cmyqsvckerrrf" path="res://assets/tile/Forage_Rock_Sprite1.png" id="3_tnei3"]
-[ext_resource type="Texture2D" uid="uid://d3ibobo7kr5p3" path="res://assets/ui/m_mining.png" id="4_583kt"]
-[ext_resource type="Texture2D" uid="uid://dbwgh2xkcvqiq" path="res://assets/tile/Forage_Rock_Sprite2.png" id="4_x80l5"]
+[ext_resource type="Texture2D" uid="uid://brckdg1gjovvm" path="res://assets/UI/ProgressBar.png" id="4_1ii24"]
+[ext_resource type="Texture2D" uid="uid://d3ibobo7kr5p3" path="res://assets/UI/m_mining.png" id="4_583kt"]
+[ext_resource type="Texture2D" uid="uid://cxsyt8v0cpfr5" path="res://assets/tile/Forage_Rock_Sprite2.png" id="4_x80l5"]
 [ext_resource type="SpriteFrames" uid="uid://cqbc547uw0sqf" path="res://assets/vfx/sparkle.tres" id="5_gs6xe"]
 
 [sub_resource type="Animation" id="Animation_jkf5a"]
@@ -57,6 +57,15 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
+size = Vector2(52.5, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lp43m"]
+atlas = ExtResource("4_1ii24")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wdrqb"]
+atlas = ExtResource("4_1ii24")
+region = Rect2(0, 0, 8, 8)
 
 [sub_resource type="Animation" id="Animation_cpnr8"]
 resource_name = "float"
@@ -83,8 +92,6 @@ _data = {
 z_index = 2
 y_sort_enabled = true
 script = ExtResource("1_m33fi")
-Idle = ExtResource("4_x80l5")
-Highlight = ExtResource("3_tnei3")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -106,28 +113,37 @@ shape = SubResource("RectangleShape2D_msile")
 
 [node name="Control" type="Control" parent="."]
 visible = false
+z_index = 10
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_right = 40.0
-offset_bottom = 40.0
+offset_top = -40.0
+offset_bottom = -40.0
 grow_horizontal = 2
 size_flags_vertical = 0
 
-[node name="ProgressBar" type="ProgressBar" parent="Control"]
+[node name="ProgressBar" type="TextureProgressBar" parent="Control"]
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -74.5
-offset_right = 74.5
-offset_bottom = 27.0
+offset_left = -25.0
+offset_right = 25.0
+offset_bottom = 10.0
 grow_horizontal = 2
-max_value = 20.0
-step = 1.0
-rounded = true
-show_percentage = false
+size_flags_horizontal = 3
+max_value = 10.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = SubResource("AtlasTexture_lp43m")
+texture_over = SubResource("AtlasTexture_wdrqb")
+texture_progress = SubResource("AtlasTexture_lp43m")
+tint_progress = Color(0.458824, 0.337255, 0.533333, 1)
 
 [node name="Icon" type="Sprite2D" parent="."]
 visible = false

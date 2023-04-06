@@ -1,9 +1,9 @@
 [gd_scene load_steps=32 format=3 uid="uid://mfxb1gjncvlk"]
 
 [ext_resource type="Script" path="res://prefabs/Quingee/Quingee.gd" id="1_lwsfa"]
-[ext_resource type="Texture2D" uid="uid://bnev4bfkuhyow" path="res://assets/character/QuingeeWalk.png" id="2_gmpq8"]
+[ext_resource type="Texture2D" uid="uid://d2ryq13efpvtk" path="res://assets/character/QuingeeWalk.png" id="2_gmpq8"]
 [ext_resource type="Script" path="res://prefabs/Quingee/TileDetector.gd" id="3_1u5st"]
-[ext_resource type="SpriteFrames" uid="uid://dbeco0nr52nk0" path="res://assets/ui/speechbubble.tres" id="4_qr2bp"]
+[ext_resource type="SpriteFrames" uid="uid://dbeco0nr52nk0" path="res://assets/UI/speechbubble.tres" id="4_qr2bp"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xn5tp"]
 atlas = ExtResource("2_gmpq8")

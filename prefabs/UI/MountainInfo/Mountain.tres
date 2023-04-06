@@ -1,8 +1,8 @@
 [gd_resource type="Theme" load_steps=15 format=3 uid="uid://dqa8ky6nrewoa"]
 
-[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_0kjtc"]
+[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_0kjtc"]
 [ext_resource type="StyleBox" uid="uid://cd03howywgoqh" path="res://prefabs/UI/MountainInfo/Peak.tres" id="1_g62r2"]
-[ext_resource type="FontFile" uid="uid://co7nd432dff6f" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="2_bcfu2"]
+[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="2_bcfu2"]
 [ext_resource type="StyleBox" uid="uid://c1jaqxotsj07p" path="res://prefabs/UI/MountainInfo/River.tres" id="2_ixyp8"]
 [ext_resource type="StyleBox" uid="uid://c27e54npbxy0g" path="res://prefabs/UI/MountainInfo/PeakSelect.tres" id="2_jfo0h"]
 [ext_resource type="StyleBox" uid="uid://ciru52gd13a32" path="res://prefabs/UI/MountainInfo/PeakFocus.tres" id="3_idpma"]

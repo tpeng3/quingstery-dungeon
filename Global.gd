@@ -14,8 +14,8 @@ var freezeQuingee = false
 
 # global player stats
 var player = "Quingee"
-var currentHunger = 20
-var maxHunger = 20
+var currentHunger = 0
+var maxHunger = 50
 var exploreCount = 0
 var timesFailed = 0
 var currentCheckpoint = CheckpointType.THROAT

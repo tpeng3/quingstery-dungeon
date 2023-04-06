@@ -12,9 +12,6 @@ var chara
 var rng = RandomNumberGenerator.new()
 var rewards = []
 
-@onready var DialogueBox = get_parent().get_parent().get_parent().get_node("DialogueBox")
-@onready var Inventory = get_node("/root/Inventory")
-
 signal item_get
 
 func _ready():
@@ -69,12 +66,11 @@ func _on_fishing_complete():
 	await chara.get_node("Bubble").animation_finished
 	chara.get_node("Bubble").visible = false
 	Global.currentHunger -= 2
-	if DialogueBox:
-		rng.randomize()
-		var key = rng.randi_range(0, rewards.size() - 1)
-		var count = 1
-		DialogueBox.show_new_item(rewards[key].name, count)
-		# TODO: generate random item, with a count range and dependent on location
+	rng.randomize()
+	var key = rng.randi_range(0, rewards.size() - 1)
+	var count = 1
+	item_get.emit(rewards[key].name, count)
+	# TODO: generate random item, with a count range and dependent on location
 
 func _on_body_entered(body):
 	if body.name == "Quingee":

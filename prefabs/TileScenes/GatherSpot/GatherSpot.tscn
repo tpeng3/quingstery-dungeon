@@ -1,36 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1omvl0dm8vl5"]
+[gd_scene load_steps=12 format=3 uid="uid://c1omvl0dm8vl5"]
 
 [ext_resource type="Script" path="res://prefabs/TileScenes/GatherSpot/GatherSpot.gd" id="1_uvuq8"]
-[ext_resource type="Texture2D" uid="uid://b13sg44rrgni3" path="res://assets/ui/m_gathering.png" id="4_24kyl"]
-[ext_resource type="Texture2D" uid="uid://cmna41tcka1ql" path="res://assets/tile/Forage_Gather_Field_Sprite2.png" id="4_ojoja"]
+[ext_resource type="Texture2D" uid="uid://b13sg44rrgni3" path="res://assets/UI/m_gathering.png" id="4_24kyl"]
+[ext_resource type="Texture2D" uid="uid://brckdg1gjovvm" path="res://assets/UI/ProgressBar.png" id="4_d64td"]
+[ext_resource type="Texture2D" uid="uid://csys0bum8bnm2" path="res://assets/tile/Forage_Gather_Field_Sprite2.png" id="4_ojoja"]
 [ext_resource type="SpriteFrames" uid="uid://cqbc547uw0sqf" path="res://assets/vfx/sparkle.tres" id="5_0cie2"]
 
 [sub_resource type="Animation" id="Animation_fvkui"]
 resource_name = "fade"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Control:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Control:position")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 0.210224),
-"update": 0,
-"values": [Vector2(0, 0), Vector2(0, 10)]
-}
 
 [sub_resource type="Animation" id="Animation_icl5u"]
 resource_name = "float"
@@ -56,6 +33,14 @@ _data = {
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gecs"]
+atlas = ExtResource("4_d64td")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hybpx"]
+atlas = ExtResource("4_d64td")
+region = Rect2(0, 0, 8, 8)
+
 [node name="GatherSpot" type="Area2D"]
 z_index = 1
 script = ExtResource("1_uvuq8")
@@ -78,31 +63,37 @@ shape = SubResource("RectangleShape2D_msile")
 
 [node name="Control" type="Control" parent="."]
 visible = false
+z_index = 10
 layout_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_top = -50.0
-offset_right = 20.0
-offset_bottom = -10.0
+offset_top = -40.0
+offset_bottom = -40.0
 grow_horizontal = 2
 size_flags_vertical = 0
 
-[node name="ProgressBar" type="ProgressBar" parent="Control"]
+[node name="ProgressBar" type="TextureProgressBar" parent="Control"]
+custom_minimum_size = Vector2(0, 10)
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -75.0
-offset_top = -15.0
-offset_right = 74.0
-offset_bottom = 12.0
+offset_left = -25.0
+offset_right = 25.0
+offset_bottom = 10.0
 grow_horizontal = 2
-max_value = 20.0
-step = 1.0
-rounded = true
-show_percentage = false
+size_flags_horizontal = 3
+max_value = 10.0
+nine_patch_stretch = true
+stretch_margin_left = 3
+stretch_margin_top = 3
+stretch_margin_right = 3
+stretch_margin_bottom = 3
+texture_under = SubResource("AtlasTexture_4gecs")
+texture_over = SubResource("AtlasTexture_hybpx")
+texture_progress = SubResource("AtlasTexture_4gecs")
+tint_progress = Color(0.458824, 0.337255, 0.533333, 1)
 
 [node name="Icon" type="Sprite2D" parent="."]
 visible = false

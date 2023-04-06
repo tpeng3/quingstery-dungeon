@@ -7,7 +7,7 @@ enum Direction {
 	UP,
 	DOWN
 }
-@export var direction:Direction = 0;
+@export var direction:Direction = Direction.RIGHT;
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

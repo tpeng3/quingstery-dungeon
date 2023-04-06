@@ -1,14 +1,15 @@
-[gd_scene load_steps=31 format=3 uid="uid://crp3kbtoa5d04"]
+[gd_scene load_steps=32 format=3 uid="uid://crp3kbtoa5d04"]
 
-[ext_resource type="PackedScene" uid="uid://cdirrc5rr8huy" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_4em7c"]
+[ext_resource type="PackedScene" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_4em7c"]
 [ext_resource type="PackedScene" uid="uid://d3b21n0iaddhr" path="res://prefabs/UI/BulletinBoard/BulletinBoard.tscn" id="2_d8f0f"]
 [ext_resource type="PackedScene" uid="uid://l6juqk5dids0" path="res://prefabs/UI/SettingsMenu/SettingsMenu.tscn" id="3_fask4"]
 [ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="4_h283h"]
 [ext_resource type="ButtonGroup" uid="uid://cta67ouucwcn" path="res://prefabs/UI/StatusInfo/MenuGroup.tres" id="6_upmp7"]
-[ext_resource type="Texture2D" uid="uid://ch2x4vcvgd7is" path="res://assets/ui/Icon_Menu.png" id="7_cvq0h"]
 [ext_resource type="Script" path="res://prefabs/UI/StatusInfo/StatusButton.gd" id="8_0ey06"]
 [ext_resource type="Script" path="res://prefabs/UI/StatusInfo/HungerBarFill.gd" id="9_inwks"]
-[ext_resource type="Texture2D" uid="uid://bhtk7j2da7dbp" path="res://assets/ui/keycaps.png" id="10_nr5bv"]
+[ext_resource type="Texture2D" uid="uid://dwprjqvl2ny0f" path="res://assets/UI/keycaps.png" id="10_nr5bv"]
+[ext_resource type="Texture2D" uid="uid://c66o36ygrleew" path="res://assets/ui/Icon_Menu.png" id="11_ihyr6"]
+[ext_resource type="Texture2D" uid="uid://c66o36ygrleew" path="res://assets/UI/Icon_Menu.png" id="11_o56xa"]
 [ext_resource type="PackedScene" uid="uid://ob6j0n1secd3" path="res://prefabs/UI/StatusInfo/MenuButton.tscn" id="11_q3k1d"]
 
 [sub_resource type="Gradient" id="Gradient_iimng"]
@@ -20,15 +21,15 @@ colors = PackedColorArray(0.101961, 0.0745098, 0.133333, 0.498039)
 gradient = SubResource("Gradient_iimng")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_15f3t"]
-atlas = ExtResource("7_cvq0h")
+atlas = ExtResource("11_o56xa")
 region = Rect2(0, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5j1f8"]
-atlas = ExtResource("7_cvq0h")
+atlas = ExtResource("11_o56xa")
 region = Rect2(48, 0, 48, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sfdt6"]
-atlas = ExtResource("7_cvq0h")
+atlas = ExtResource("11_o56xa")
 region = Rect2(144, 0, 48, 48)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gex1e"]
@@ -42,40 +43,40 @@ colors = PackedColorArray(0, 0, 0, 1, 0.935484, 0.935484, 0.935484, 1)
 gradient = SubResource("Gradient_gcyuc")
 width = 36
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iatkq"]
-atlas = ExtResource("7_cvq0h")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qujyo"]
+atlas = ExtResource("11_ihyr6")
 region = Rect2(0, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gx0nu"]
-atlas = ExtResource("7_cvq0h")
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5b8c"]
+atlas = ExtResource("11_ihyr6")
 region = Rect2(96, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wrbta"]
-atlas = ExtResource("7_cvq0h")
+[sub_resource type="AtlasTexture" id="AtlasTexture_aph64"]
+atlas = ExtResource("11_ihyr6")
 region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hmn4o"]
-atlas = ExtResource("7_cvq0h")
+[sub_resource type="AtlasTexture" id="AtlasTexture_t1bs0"]
+atlas = ExtResource("11_ihyr6")
 region = Rect2(0, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b2co0"]
-atlas = ExtResource("7_cvq0h")
+[sub_resource type="AtlasTexture" id="AtlasTexture_0og2f"]
+atlas = ExtResource("11_ihyr6")
 region = Rect2(96, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bsyd0"]
-atlas = ExtResource("7_cvq0h")
+[sub_resource type="AtlasTexture" id="AtlasTexture_4j88v"]
+atlas = ExtResource("11_ihyr6")
 region = Rect2(48, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lhhw4"]
-atlas = ExtResource("7_cvq0h")
+[sub_resource type="AtlasTexture" id="AtlasTexture_he15i"]
+atlas = ExtResource("11_ihyr6")
 region = Rect2(0, 144, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_chggl"]
-atlas = ExtResource("7_cvq0h")
+[sub_resource type="AtlasTexture" id="AtlasTexture_cw2r1"]
+atlas = ExtResource("11_ihyr6")
 region = Rect2(96, 144, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ppwvl"]
-atlas = ExtResource("7_cvq0h")
+[sub_resource type="AtlasTexture" id="AtlasTexture_ei333"]
+atlas = ExtResource("11_ihyr6")
 region = Rect2(48, 144, 48, 48)
 
 [sub_resource type="Animation" id="Animation_7fhc1"]
@@ -138,7 +139,6 @@ _data = {
 [node name="StatusInfo" type="CanvasLayer"]
 
 [node name="MenuWindows" type="MarginContainer" parent="."]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -202,7 +202,7 @@ script = ExtResource("8_0ey06")
 [node name="HungerBar" type="Sprite2D" parent="MenuButtons/VBoxContainer/StatusBtn/Status"]
 clip_children = 2
 position = Vector2(24, 24)
-texture = ExtResource("7_cvq0h")
+texture = ExtResource("11_o56xa")
 region_enabled = true
 region_rect = Rect2(96, 0, 48, 48)
 
@@ -237,10 +237,10 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_iatkq")
-texture_pressed = SubResource("AtlasTexture_gx0nu")
-texture_disabled = SubResource("AtlasTexture_iatkq")
-texture_focused = SubResource("AtlasTexture_wrbta")
+texture_normal = SubResource("AtlasTexture_qujyo")
+texture_pressed = SubResource("AtlasTexture_b5b8c")
+texture_disabled = SubResource("AtlasTexture_qujyo")
+texture_focused = SubResource("AtlasTexture_aph64")
 
 [node name="QuestBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
 custom_minimum_size = Vector2(0, 48)
@@ -252,10 +252,10 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_hmn4o")
-texture_pressed = SubResource("AtlasTexture_b2co0")
-texture_disabled = SubResource("AtlasTexture_hmn4o")
-texture_focused = SubResource("AtlasTexture_bsyd0")
+texture_normal = SubResource("AtlasTexture_t1bs0")
+texture_pressed = SubResource("AtlasTexture_0og2f")
+texture_disabled = SubResource("AtlasTexture_t1bs0")
+texture_focused = SubResource("AtlasTexture_4j88v")
 metadata/vertPosition = 2
 
 [node name="SettingsBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
@@ -268,10 +268,10 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_lhhw4")
-texture_pressed = SubResource("AtlasTexture_chggl")
-texture_disabled = SubResource("AtlasTexture_lhhw4")
-texture_focused = SubResource("AtlasTexture_ppwvl")
+texture_normal = SubResource("AtlasTexture_he15i")
+texture_pressed = SubResource("AtlasTexture_cw2r1")
+texture_disabled = SubResource("AtlasTexture_he15i")
+texture_focused = SubResource("AtlasTexture_ei333")
 metadata/vertPosition = 3
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MenuButtons/VBoxContainer"]

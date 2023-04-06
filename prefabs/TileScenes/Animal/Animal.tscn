@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://c2fgb83ww33do"]
+[gd_scene load_steps=12 format=3 uid="uid://c2fgb83ww33do"]
 
-[ext_resource type="Script" path="res://prefabs/TileScenes/MiningSpot/MiningSpot.gd" id="1_khxrd"]
-[ext_resource type="Texture2D" uid="uid://dax31brrcc0jj" path="res://assets/character/animals/cheep.png" id="2_iaowe"]
-[ext_resource type="SpriteFrames" uid="uid://dbeco0nr52nk0" path="res://assets/ui/speechbubble.tres" id="3_l6a0b"]
-[ext_resource type="Texture2D" uid="uid://b06m1cb66bs4h" path="res://assets/character/animals/cheep_hover.png" id="3_v3txj"]
+[ext_resource type="Script" path="res://prefabs/TileScenes/Animal/Animal.gd" id="1_og4mn"]
+[ext_resource type="Texture2D" uid="uid://1w57gmy7i4uf" path="res://assets/character/animals/cheep.png" id="2_iaowe"]
+[ext_resource type="SpriteFrames" uid="uid://dbeco0nr52nk0" path="res://assets/UI/speechbubble.tres" id="3_l6a0b"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_j65q7"]
-[ext_resource type="Texture2D" uid="uid://bjsjf3lpuo774" path="res://assets/ui/speechbubble.png" id="4_whbv0"]
+[ext_resource type="Texture2D" uid="uid://byrcy5o0j142f" path="res://assets/UI/speechbubble.png" id="4_whbv0"]
 [ext_resource type="JSON" path="res://dialogue/Animals/Cheep.json" id="5_cxih8"]
 
 [sub_resource type="Animation" id="Animation_jkf5a"]
@@ -44,12 +43,7 @@ region = Rect2(90, 0, 18, 18)
 [node name="Animal" type="Area2D"]
 z_index = 2
 y_sort_enabled = true
-script = ExtResource("1_khxrd")
-Idle = ExtResource("2_iaowe")
-Highlight = ExtResource("3_v3txj")
-request = "Acorn"
-reward = "Jewel"
-popup_text = "[center]You traded [b]x1 [request][/b] for [b]x[amount] [item][/b]! It's been tucked into your inventory.[/center]"
+script = ExtResource("1_og4mn")
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("4_j65q7")]
 dialogue_file = ExtResource("5_cxih8")
