@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://2agf3u4u4ptn" path="res://assets/tile/Stair_Tile_2.png" id="3_ji7v5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
-size = Vector2(52.5, 51)
+size = Vector2(58.25, 56.5)
 
 [node name="Stairs" type="Area2D"]
 z_index = 1
@@ -18,16 +18,8 @@ position = Vector2(-76, -53)
 texture = ExtResource("3_ji7v5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 5)
+position = Vector2(-2.875, 7.75)
 shape = SubResource("RectangleShape2D_msile")
-
-[node name="PlaceholderText" type="RichTextLabel" parent="."]
-visible = false
-offset_left = -76.0
-offset_top = -53.0
-offset_right = 96.0
-offset_bottom = 6.0
-text = "Press space for stairs"
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

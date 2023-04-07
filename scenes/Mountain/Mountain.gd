@@ -37,9 +37,14 @@ func _process(delta):
 	
 func _connect_tiles():
 	for tile in $Map/Floor.get_children():
+		if tile.has_signal("item_get"):
+			tile.item_get.connect(_on_item_get, CONNECT_ONE_SHOT)
 		match tile.name:
 			"Stairs":
 				tile.on_stairs.connect(_next_floor)
+
+func _on_item_get(item, amount):
+	$DialogueBox.show_new_item(item, amount)
 
 func _next_floor():
 	SceneManager.change_scene(scene)

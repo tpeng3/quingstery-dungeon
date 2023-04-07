@@ -5,7 +5,6 @@ var sprite = AtlasTexture.new()
 var spriteFocus = AtlasTexture.new()
 var spriteFocusActive = AtlasTexture.new()
 
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	var vertPosition = 0

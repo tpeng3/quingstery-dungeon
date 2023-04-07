@@ -1,13 +1,22 @@
 extends CharacterBody2D
 
 const MOTION_SPEED = 160 # Pixels/second.
-var last_direction = "defaultdown"
+var last_direction = "down"
 var hunger_steps = 0
 var hunger_interval = 1
 var last_position = Vector2(0, 0)
+var scraaing = false
 
 func _ready():
 	pass
+	
+func _input(event):
+	if Input.is_action_pressed("scraa"):
+		if not $AudioStreamPlayer2D.playing:
+			$AudioStreamPlayer2D.play()
+		scraaing = true
+	else:
+		$AudioStreamPlayer2D.stop()
 
 func _physics_process(_delta):
 	# ignore input when quingee is frozen
@@ -29,30 +38,34 @@ func _physics_process(_delta):
 	if hunger_steps >= hunger_interval * MOTION_SPEED:
 		hunger_steps = 0
 		Global.currentHunger -= 1
+		
+	var modifier = "scraa" if Input.is_action_pressed("scraa") else ""
+	var modifier2 = "scraa" if Input.is_action_pressed("scraa") else "default"
+	$Camera2D.trauma = 1.0 if Input.is_action_pressed("scraa") else 0
 	
 	if Input.is_action_pressed("move_right") and Input.is_action_pressed("move_up"):
-		$Sprite.play("upright")
-		last_direction = "defaultupright"
+		$Sprite.play(modifier + "upright")
+		last_direction = "upright"
 	elif Input.is_action_pressed("move_left") and Input.is_action_pressed("move_up"):
-		$Sprite.play("upleft")
-		last_direction = "defaultupleft"
+		$Sprite.play(modifier + "upleft")
+		last_direction = "upleft"
 	elif Input.is_action_pressed("move_right") and Input.is_action_pressed("move_down"):
-		$Sprite.play("downright")
-		last_direction = "defaultdownright"
+		$Sprite.play(modifier + "downright")
+		last_direction = "downright"
 	elif Input.is_action_pressed("move_left") and Input.is_action_pressed("move_down"):
-		$Sprite.play("downleft")
-		last_direction = "defaultdownleft"
+		$Sprite.play(modifier + "downleft")
+		last_direction = "downleft"
 	elif Input.is_action_pressed("move_up"):
-		$Sprite.play("up")
-		last_direction = "defaultup"
+		$Sprite.play(modifier + "up")
+		last_direction = "up"
 	elif Input.is_action_pressed("move_down"):
-		$Sprite.play("down")
-		last_direction = "defaultdown"
+		$Sprite.play(modifier + "down")
+		last_direction = "down"
 	elif Input.is_action_pressed("move_left"):
-		$Sprite.play("left")
-		last_direction = "defaultleft"
+		$Sprite.play(modifier + "left")
+		last_direction = "left"
 	elif Input.is_action_pressed("move_right"):
-		$Sprite.play("right")
-		last_direction = "defaultright"
+		$Sprite.play(modifier + "right")
+		last_direction = "right"
 	else:
-		$Sprite.play(last_direction)
+		$Sprite.play(modifier2 + last_direction)

@@ -3,7 +3,9 @@
 		"lines": [
 			{
 				"text": "Cheep cheep? (Looking for food... Do you have acorns?)",
-				"action": "CHOICES"
+				"action": [
+					"CHOICES"
+				]
 			}
 		]
 	},
@@ -11,7 +13,9 @@
 		"lines": [
 			{
 				"text": "Squeak! (Acorns! Trade acorns for sparkly?)",
-				"action": "CHOICES"
+				"action": [
+					"CHOICES"
+				]
 			}
 		]
 	},
@@ -26,7 +30,9 @@
 		"lines": [
 			{
 				"text": "Cheep cheep? (Trade for more sparklies?)",
-				"action": "CHOICES"
+				"action": [
+					"CHOICES"
+				]
 			}
 		]
 	},

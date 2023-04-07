@@ -1,9 +1,11 @@
-[gd_scene load_steps=32 format=3 uid="uid://mfxb1gjncvlk"]
+[gd_scene load_steps=42 format=3 uid="uid://mfxb1gjncvlk"]
 
 [ext_resource type="Script" path="res://prefabs/Quingee/Quingee.gd" id="1_lwsfa"]
 [ext_resource type="Texture2D" uid="uid://d2ryq13efpvtk" path="res://assets/character/QuingeeWalk.png" id="2_gmpq8"]
 [ext_resource type="Script" path="res://prefabs/Quingee/TileDetector.gd" id="3_1u5st"]
+[ext_resource type="Script" path="res://prefabs/Quingee/ShakeCamera2D.gd" id="3_rbevp"]
 [ext_resource type="SpriteFrames" uid="uid://dbeco0nr52nk0" path="res://assets/UI/speechbubble.tres" id="4_qr2bp"]
+[ext_resource type="AudioStream" uid="uid://dnn4iguh0h4ha" path="res://assets/sfx/scraa2.mp3" id="6_j0dku"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xn5tp"]
 atlas = ExtResource("2_gmpq8")
@@ -76,6 +78,38 @@ region = Rect2(90, 18, 18, 18)
 [sub_resource type="AtlasTexture" id="AtlasTexture_xcx6p"]
 atlas = ExtResource("2_gmpq8")
 region = Rect2(90, 36, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wac0"]
+atlas = ExtResource("2_gmpq8")
+region = Rect2(54, 54, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5ykv6"]
+atlas = ExtResource("2_gmpq8")
+region = Rect2(36, 54, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qu3k"]
+atlas = ExtResource("2_gmpq8")
+region = Rect2(72, 54, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4lmo"]
+atlas = ExtResource("2_gmpq8")
+region = Rect2(18, 54, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b21dk"]
+atlas = ExtResource("2_gmpq8")
+region = Rect2(90, 54, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhp8r"]
+atlas = ExtResource("2_gmpq8")
+region = Rect2(126, 54, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drs4u"]
+atlas = ExtResource("2_gmpq8")
+region = Rect2(0, 54, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scu8g"]
+atlas = ExtResource("2_gmpq8")
+region = Rect2(108, 54, 18, 18)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ixd5e"]
 atlas = ExtResource("2_gmpq8")
@@ -224,6 +258,70 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_5wac0")
+}],
+"loop": true,
+"name": &"scraadown",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5ykv6")
+}],
+"loop": true,
+"name": &"scraadownleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qu3k")
+}],
+"loop": true,
+"name": &"scraadownright",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4lmo")
+}],
+"loop": true,
+"name": &"scraaleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b21dk")
+}],
+"loop": true,
+"name": &"scraaright",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhp8r")
+}],
+"loop": true,
+"name": &"scraaup",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drs4u")
+}],
+"loop": true,
+"name": &"scraaupleft",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scu8g")
+}],
+"loop": true,
+"name": &"scraaupright",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ixd5e")
 }, {
 "duration": 1.0,
@@ -268,10 +366,11 @@ script = ExtResource("1_lwsfa")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 z_index = 2
 sprite_frames = SubResource("SpriteFrames_lh2xp")
-animation = &"down"
-frame_progress = 0.0466153
+animation = &"scraaupright"
 
 [node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_rbevp")
+target = NodePath("..")
 
 [node name="TileDetector" type="Area2D" parent="."]
 script = ExtResource("3_1u5st")
@@ -303,5 +402,8 @@ visible = false
 position = Vector2(0, -20)
 sprite_frames = ExtResource("4_qr2bp")
 animation = &"Success"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_j0dku")
 
 [connection signal="body_entered" from="TileDetector" to="TileDetector" method="_on_TileDetector_body_entered"]

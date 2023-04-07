@@ -172,6 +172,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
+size = Vector2(38, 32)
 
 [node name="FishingSpot" type="Area2D"]
 z_index = 1
@@ -188,6 +189,7 @@ animation = &"idle"
 autoplay = "idle"
 
 [node name="Sparkle" type="AnimatedSprite2D" parent="Sprite"]
+z_index = -1
 position = Vector2(0, -5)
 sprite_frames = ExtResource("6_plyx6")
 autoplay = "default"

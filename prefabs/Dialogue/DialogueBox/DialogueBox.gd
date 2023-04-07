@@ -83,6 +83,7 @@ func _update_textbox():
 	DialogueText.text = dialogue_node.dialogue_text
 
 func _on_dialogue_action(action_type, asset):
+	print(action_type)
 	match action_type:
 		dialogue_node.ActionType.BG:
 			change_bg(asset)
