@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Mooooo-oooooo-ooooo... (Niiiiiice flooooower theeere...)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Moo...m? (Bloom?)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Mooooooo... (Bluuuuue... with no bloooooom...)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Moooooo moooooo? (Mooooore bloooom?)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Mooo mooo mooo... (Nooo mooore blooom...)"
+            }
+        ]
+    }
+}

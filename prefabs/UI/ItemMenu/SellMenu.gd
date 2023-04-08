@@ -20,7 +20,7 @@ func _on_sell_pressed():
 		return
 	elif focused_item.item_amount > 1:
 		$AmountPopup.show_popup(focused_item)
-		$AmountPopup/SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow/Left.grab_focus()
+		$AmountPopup/SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow/NumberDisplay.grab_focus()
 		$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonLeft.pressed.connect(_on_back)
 		$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonRight.pressed.connect(_on_sell)
 	else:
@@ -35,7 +35,7 @@ func _on_back():
 	$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonLeft.pressed.disconnect(_on_back)
 	$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonRight.pressed.disconnect(_on_sell)
 	$AmountPopup.hide()
-	$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.grab_focus()
+	focused_item.grab_focus()
 
 func _on_sell():
 	$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonLeft.pressed.disconnect(_on_back)

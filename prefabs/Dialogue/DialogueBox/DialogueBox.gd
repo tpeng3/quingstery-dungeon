@@ -13,21 +13,20 @@ signal no_selected
 
 func _ready():
 	hide()
-	
-	$NewItemPopup.connect("on_confirm", _on_continue)
+	$NewItemPopup.connect("on_confirm", _on_continue, CONNECT_ONE_SHOT)
 	
 func _reset_ui():
 	show()
 	$DialogueWrapper.hide()
 	$NewItemPopup.hide()
 	
-func show_new_item(item, amount):
+func show_new_item(item, amount, text=null):
 	# freeze character while there is dialogue
 	Global.freezeQuingee = true
 	await get_tree().create_timer(.1).timeout
 	
 	_reset_ui()
-	$NewItemPopup.show_item(item, amount)
+	$NewItemPopup.show_item(item, amount, text)
 	Inventory.add_item(item, amount)
 
 func show_dialogue(dialogue, dictKey=null):
@@ -36,7 +35,6 @@ func show_dialogue(dialogue, dictKey=null):
 	freezeBox = false
 	
 	dialogue_node = dialogue
-	print(dialogue)
 	_reset_ui()
 	$DialogueWrapper.show()
 	if !dialogue_node.skipFade:
@@ -51,7 +49,7 @@ func show_dialogue(dialogue, dictKey=null):
 func _input(event):
 	# on enter/space or mouse click
 	if self.visible and not DialogueSelect.visible and dialogue_node != null and not freezeBox:
-		if Input.is_action_pressed("ui_accept"):
+		if event.is_action_released("ui_accept"):
 #			DialogueSelect.ButtonHover.play()
 			dialogue_node.next_dialogue()
 			if dialogue_node:
@@ -66,24 +64,14 @@ func _update_textbox():
 		DialogueName.text = dialogue_node.dialogue_name
 		DialogueName.show()
 		$DialogueWrapper/ClickToContinue.visible = true
-#		if dialogue_node.dialogue_expression:
-#			# TODO: make this more generic later, this is just old code
-#			match dialogue_node.dialogue_name:
-#				"???":
-#					$Talksprites/Sprite2D.show()
-#					$Talksprites/Sprite2D.change(dialogue_node.dialogue_expression)
-#				"Bullfrog":
-#					$Talksprites/Sprite2D.show()
-#					$Talksprites/Sprite2D.change(dialogue_node.dialogue_expression)
-		if freezeBox:
+		if freezeBox or DialogueSelect.visible:
 			$DialogueWrapper/ClickToContinue.visible = false
 	else:
 		DialogueName.hide()
-#		$Talksprites/Sprite2D.hide()
 	DialogueText.text = dialogue_node.dialogue_text
+	DialogueSelect.show_yesno()
 
 func _on_dialogue_action(action_type, asset):
-	print(action_type)
 	match action_type:
 		dialogue_node.ActionType.BG:
 			change_bg(asset)
@@ -94,7 +82,7 @@ func _on_dialogue_action(action_type, asset):
 		dialogue_node.ActionType.HIDE:
 			hide_image()
 		dialogue_node.ActionType.CHOICES:
-			DialogueSelect.show()
+			DialogueSelect.show_yesno()
 		dialogue_node.ActionType.ANIMATION:
 			play_animation(asset)
 		dialogue_node.ActionType.SOUND:
@@ -137,18 +125,8 @@ func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
 	# quingee can move again
 	await get_tree().create_timer(.1).timeout
 	Global.freezeQuingee = false
-
-# TODO: sound check later
-func _on_Button_mouse_entered():
-#	Input.set_custom_mouse_cursor(Utilities.CURSOR_HOVER)
-#	$Sounds/ButtonHover.play()
-	pass
-
-func _on_Button_mouse_exited():
-#	Input.set_custom_mouse_cursor(Utilities.CURSOR_DEFAULT)
-	pass
 	
-func _on_YesButton_button_up():
+func _on_dialogue_yes_pressed():
 #	$ButtonClick.play()
 	DialogueSelect.hide()
 	emit_signal("yes_selected")

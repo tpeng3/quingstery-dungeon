@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Click, click! (Herb sighted!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Click. Click. (Herb. Now.)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Screech! (No herb, no silk!)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Clickclickclickclick. (Moreherbmoreherb.)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Screech? (No more herb? How could you?)"
+            }
+        ]
+    }
+}

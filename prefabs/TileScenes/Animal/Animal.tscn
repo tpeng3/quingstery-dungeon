@@ -49,6 +49,7 @@ Idle = ExtResource("2_iaowe")
 Highlight = ExtResource("3_hpvi7")
 request = "Acorn"
 reward = "Jewel"
+popup_text = "[center]You received [b]x[amount] [item][/b]! It's been tucked into your inventory.[/center]"
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("4_j65q7")]
 dialogue_file = ExtResource("5_cxih8")

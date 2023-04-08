@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Maaaaaa? Maa maaaaaaa? (Maaaaaashroom? For maaaaarimo?)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Maaaaamaa~ Maaaaaaamaa~ (Maaaaashroom~ Oh, maaaaaaashroom~)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Maa... (The momeep almost seems to sigh, realizing you have no mushrooms.)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Maaa maaaaaa? (Mooore maaashrooms?)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Maaaaa maaaaa... (Maaashroom maaashortage...)"
+            }
+        ]
+    }
+}

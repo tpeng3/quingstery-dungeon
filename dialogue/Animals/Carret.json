@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Yip yip! Yip yip! Yip... yip! (Hi, hi! Have I got the offer for you! Your ceramic piece for... trash!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Yip yiiiiiip~ (You know you want this traaash~)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Yip YIP yip YIP... Yip YIP yip YIP... (Guess I'll keep ALL this LOVELY trash to myself... If only SOMEONE had CERAMIC...)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Yip! Yip yip yip yip! Yip yip yip yip! (Yup! This offer's still available! Trade now to win!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Yip. (Well, my trash pile awaits when you collect more ceramic pieces.)"
+            }
+        ]
+    }
+}

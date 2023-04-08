@@ -1,5 +1,6 @@
 {
 	"hello1": {
+		"popularity": 0,
 		"lines": [
 			{
 				"text": "Cheep cheep? (Looking for food... Do you have acorns?)",
@@ -10,6 +11,7 @@
 		]
 	},
 	"hello2": {
+		"popularity": 0,
 		"lines": [
 			{
 				"text": "Squeak! (Acorns! Trade acorns for sparkly?)",
@@ -20,6 +22,7 @@
 		]
 	},
 	"no item": {
+		"popularity": 0,
 		"lines": [
 			{
 				"text": "The Cheep seems to be eyeing you for food, but you don't have any acorns to give..."
@@ -27,6 +30,7 @@
 		]
 	},
 	"trade more": {
+		"popularity": 0,
 		"lines": [
 			{
 				"text": "Cheep cheep? (Trade for more sparklies?)",
@@ -37,6 +41,7 @@
 		]
 	},
 	"no more trading": {
+		"popularity": 0,
 		"lines": [
 			{
 				"text": "Cheep cheep... (Winter soon... Need more food.)"

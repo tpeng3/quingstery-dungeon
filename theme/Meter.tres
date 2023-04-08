@@ -8,6 +8,7 @@
 default_font_size = 0
 Label/colors/font_color = Color(0.215686, 0.00784314, 0.396078, 1)
 Label/fonts/font = ExtResource("1_3xuqk")
+Label/styles/focused = ExtResource("3_2lihp")
 Label/styles/normal = ExtResource("2_sbe78")
-Label_Active/base_type = &"Label"
+Label_Active/base_type = &"L"
 Label_Active/styles/normal = ExtResource("3_2lihp")

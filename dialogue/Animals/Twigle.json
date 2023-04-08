@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "WOOF! WOOF WOOF! (STICK! PLAY FETCH!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "WOOF WOOF WOOF! WOOF WOOF WOOF!) (THROW THE STICK! THROW THE STICK!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Awoo? (No stick?)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "WOOF WOOF WOOF!!! (PLAY MORE FETCH!!!) ",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "AWOOOOOOOOOO... (WHY WON'T YOU PLAY FETCH WITH ME AGAIN...)"
+            }
+        ]
+    }
+}

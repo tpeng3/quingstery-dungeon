@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "SCREEEEEEEEEEEEECH!! (YOUR GUPPY WILL BE MINE!!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "SCAAAAAAAAAAAAAA. (FELLOW QUINGEE. SHARE YOUR GUPPIES.)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "SCRAAAAA! (HUNGRY! WANT GUPPY!)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "SCCCRRREEEEEECH! SCRAAAA!! (GUPPY SUPPLIER! COME HERE!!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "SCRAA? (DID THE YOUNGLING HATCH?)"
+            }
+        ]
+    }
+}

@@ -18,6 +18,11 @@ layout_mode = 2
 size_flags_horizontal = 0
 vertical = true
 
+[node name="Button1" type="Button" parent="NavList"]
+layout_mode = 2
+theme = ExtResource("1_8lgn7")
+text = "Buy"
+
 [node name="Button2" type="Button" parent="NavList"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -38,8 +43,3 @@ theme = ExtResource("1_8lgn7")
 theme_type_variation = &"Button_Alt"
 text = "Leave Store"
 metadata/onHoverText = "We are "
-
-[node name="Button1" type="Button" parent="NavList"]
-layout_mode = 2
-theme = ExtResource("1_8lgn7")
-text = "Buy"

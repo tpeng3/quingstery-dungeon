@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "AAAAHHHH? (PERCHANCE, IS THAT A FLOWER I ESPY?)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "AHHHHH! (FORSOOTH, I HAVE LONG DESIRED A BLOSSOM.)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "BRRRR. (The fluster shakes its head at you for having no flowers.)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "AAAAAHHHHH? (BUT SOFT, IS THAT ANOTHER ROSE... OR ANOTHER FLOWER?)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "BRRRRRRR. (The fluster waggles its head in disappointment that you've run out of flowers.)"
+            }
+        ]
+    }
+}

@@ -81,3 +81,7 @@ visible = false
 
 [node name="StatusMenu" parent="CanvasLayer" instance=ExtResource("8_5adl8")]
 visible = false
+
+[connection signal="pressed" from="DialogueBox/DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="DialogueBox" method="_on_dialogue_yes_pressed"]
+
+[editable path="DialogueBox"]

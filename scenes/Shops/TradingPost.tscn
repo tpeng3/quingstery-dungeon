@@ -25,6 +25,9 @@ centered = false
 
 [node name="ShopBox" parent="." instance=ExtResource("6_yxph0")]
 
+[node name="Sprite2D" parent="ShopBox/Quingee" index="0"]
+position = Vector2(0, 0)
+
 [node name="NavButtons" parent="." instance=ExtResource("8_qwxmw")]
 offset_right = 960.0
 offset_bottom = 540.0
@@ -42,10 +45,10 @@ offset_bottom = 540.0
 
 [node name="WeatherHUD" parent="." instance=ExtResource("8_j0f7l")]
 
+[connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button2" to="." method="_on_sell_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button3" to="." method="_on_talk_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button4" to="." method="_on_leave_pressed"]
-[connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
 
 [editable path="ShopBox"]
 [editable path="NavButtons"]

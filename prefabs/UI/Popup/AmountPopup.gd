@@ -6,17 +6,18 @@ extends Control
 enum PopupType {
 	STORE,
 	TAKE,
-	SELL
+	SELL,
+	TRADE
 }
 @export var popup_type:PopupType = PopupType.SELL
 
 func _ready():
 	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount_update.connect(_on_update)
 
-# Called when the node enters the scene tree for the first time.
 func show_popup(node: ListItem):
 	item_name = node.item_name
-	item_cost = node.item_cost
+	if popup_type != PopupType.TRADE:
+		item_cost = node.item_cost
 	var item_dict = Inventory.find_item(item_name)
 	var item_texture = load(item_dict.path)
 	$SplitContainer/ItemMargin/ItemSprite.texture = item_texture
@@ -29,6 +30,19 @@ func show_popup(node: ListItem):
 		$SplitContainer/PopupBox/FooterMargin/ButtonRight.text = "store"
 	elif popup_type == PopupType.TAKE:
 		$SplitContainer/PopupBox/FooterMargin/ButtonRight.text = "take"
+	show()
+	
+func show_trade_popup(request, request_max, reward, reward_num):
+	item_name = request
+	var item_dict = Inventory.find_item(item_name)
+	var item_texture = load(item_dict.path)
+	$SplitContainer/ItemMargin/ItemSprite.texture = item_texture
+	$SplitContainer/PopupBox/SplitContainer/TextPadding/PopupText.text = \
+		item_desc.replace("[item]", item_name)
+	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount_max = request_max
+	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount = request_max
+	$SplitContainer/PopupBox/SplitContainer/AmountSelect.update_arrows()
+	$SplitContainer/PopupBox/FooterMargin/ButtonRight.text = "trade"
 	show()
 
 func _on_update(amount):

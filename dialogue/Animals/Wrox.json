@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "BAHRUUUUHHHAAA...aaa? (YEAAA....aah? Did I scare you? I just got excited over your soft rock. Take these hard rocks as my apology.)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "BAAAAHRUUUHAAAAA! (SOOOOOFT STOOOOONE! FASCINATING!!! WILL YOU LET ME HAVE A LOOK???)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Toot. (No clay. Okay.)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "BARAAAAAG??? (DID YOU BRING MORE SQUISHY STONE? DID YOU?)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Baraaagh...? (You have no more squishy stone...?)"
+            }
+        ]
+    }
+}

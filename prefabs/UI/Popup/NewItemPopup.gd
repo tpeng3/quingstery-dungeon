@@ -1,6 +1,6 @@
 extends Control
 
-@export var default_text: String = "[center]You received [b]x[amount] [item][/b]! It's been tucked into your inventory.
+@export_multiline var default_text: String = "[center]You received [b]x[amount] [item][/b]! It's been tucked into your inventory.
 [/center]"
 
 @onready var PopupText = $SplitContainer/PopupBox/SplitContainer/TextPadding/PopupText

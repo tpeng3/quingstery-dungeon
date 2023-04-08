@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Me-ow. (Wo-ow. That sure is an inferior fish. Here's what a master can catch.)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Ffffft. Nyaaaa? (Pfffft. Do you want to see what a real fish looks like?)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Meow. Meooow? (Wow... You didn't even manage to catch a plebeian fish this time?)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Nyaaaa... (Here to give tribute to my fine fishing skills again, I presume. :3)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Meowww. (Wowww. That was all the fish you had? I have more munnie than that.)"
+            }
+        ]
+    }
+}

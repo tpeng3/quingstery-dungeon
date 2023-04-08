@@ -1,0 +1,51 @@
+{
+    "hello1": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Hisssssss! (Are you bringing thisss baby to challenge me? Eat my venom!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "hello2": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Hisssss! Hiiiiiisssss! (That isss no ssserpent! Give it here, and I'll show that worm itsss place!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no item": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Hissss... (I sssee you have no inferior ssspecimensss with you currently...)"
+            }
+        ]
+    },
+    "trade more": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Hiss? Hisssssssss! (Another? I mussst have it posssthassste!)",
+                "action": [
+                    "CHOICES"
+                ]
+            }
+        ]
+    },
+    "no more trading": {
+        "popularity": 0,
+        "lines": [
+            {
+                "text": "Hisssss? Hissssssss... (No more wormsss? I have conquered them all, then.)"
+            }
+        ]
+    }
+}

@@ -39,6 +39,7 @@ func refresh_item_list(new_item_list):
 			CostType.SELL:
 				node.set("item_cost", dict_item.sell)
 		node.on_focus.connect(_update_right_panel)
+		node.gui_input.connect(_on_item_gui_input)
 		ItemContainer.add_child(node)
 		
 	max_pages = max(ceil(item_list.size() / 8.0), 1)
@@ -79,6 +80,7 @@ func _update_page():
 func _show_page():
 	_update_page_text()
 	var visible_items = ItemContainer.get_children().slice((current_page - 1) * 8, current_page * 8)
+	visible_items[0].grab_focus()
 	for n in ItemContainer.get_children():
 		n.visible = n in visible_items
 
@@ -102,6 +104,14 @@ func _update_page_text():
 	PaginationLabel.text = "Page " + page_num + "/" + max_page_num
 	ArrowBack.disabled = current_page <= 1
 	ArrowNext.disabled = current_page >= max_pages
+
+func _on_item_gui_input(event):
+	if event.is_action_pressed("ui_left"):
+		_on_prev_pressed()
+	elif event.is_action_pressed("ui_right"):
+		_on_next_pressed()
+	elif event.is_action_pressed("ui_accept"):
+		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.pressed.emit()
 
 func _update_right_panel(node):
 	focused_item = node

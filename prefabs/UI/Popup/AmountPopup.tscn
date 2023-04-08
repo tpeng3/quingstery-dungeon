@@ -20,42 +20,42 @@ gradient = SubResource("Gradient_wpb06")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8hp8"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wsca7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2lma"]
 resource_local_to_scene = true
 atlas = ExtResource("6_5nc5g")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ifrvv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_o8r8d"]
 resource_local_to_scene = true
 atlas = ExtResource("6_5nc5g")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_saykt"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_07fqf"]
 resource_local_to_scene = true
 atlas = ExtResource("6_5nc5g")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_cmsli"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w80si"]
 resource_local_to_scene = true
 atlas = ExtResource("6_5nc5g")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_n84vw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7oym0"]
 resource_local_to_scene = true
 atlas = ExtResource("6_5nc5g")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_yfjuc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jhc70"]
 resource_local_to_scene = true
 atlas = ExtResource("6_5nc5g")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_us2pp"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vbhd"]
 resource_local_to_scene = true
 atlas = ExtResource("6_5nc5g")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lf8iy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkiyu"]
 resource_local_to_scene = true
 atlas = ExtResource("6_5nc5g")
 region = Rect2(27, 0, 9, 9)
@@ -134,29 +134,25 @@ layout_mode = 2
 theme_override_constants/margin_left = 86
 theme_override_constants/margin_top = -19
 
-[node name="Left" parent="SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow" index="1"]
+[node name="NumberDisplay" parent="SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow" index="0"]
 focus_neighbor_left = NodePath(".")
-focus_neighbor_top = NodePath(".")
-focus_neighbor_right = NodePath("../Right")
-focus_neighbor_bottom = NodePath("../../../../../FooterMargin/ButtonLeft")
-focus_next = NodePath("../Right")
-focus_previous = NodePath(".")
-texture_normal = SubResource("AtlasTexture_wsca7")
-texture_pressed = SubResource("AtlasTexture_ifrvv")
-texture_disabled = SubResource("AtlasTexture_saykt")
-texture_focused = SubResource("AtlasTexture_cmsli")
-
-[node name="Right" parent="SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow" index="2"]
-focus_neighbor_left = NodePath("../Left")
 focus_neighbor_top = NodePath(".")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../../../../../FooterMargin/ButtonRight")
-focus_next = NodePath("../../../../../FooterMargin/ButtonLeft")
-focus_previous = NodePath("../Left")
-texture_normal = SubResource("AtlasTexture_n84vw")
-texture_pressed = SubResource("AtlasTexture_yfjuc")
-texture_disabled = SubResource("AtlasTexture_us2pp")
-texture_focused = SubResource("AtlasTexture_lf8iy")
+focus_next = NodePath("../Left")
+focus_previous = NodePath(".")
+
+[node name="Left" parent="SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow/NumberDisplay" index="0"]
+texture_normal = SubResource("AtlasTexture_y2lma")
+texture_pressed = SubResource("AtlasTexture_o8r8d")
+texture_disabled = SubResource("AtlasTexture_07fqf")
+texture_focused = SubResource("AtlasTexture_w80si")
+
+[node name="Right" parent="SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow/NumberDisplay" index="1"]
+texture_normal = SubResource("AtlasTexture_7oym0")
+texture_pressed = SubResource("AtlasTexture_jhc70")
+texture_disabled = SubResource("AtlasTexture_2vbhd")
+texture_focused = SubResource("AtlasTexture_jkiyu")
 
 [node name="FooterMargin" type="MarginContainer" parent="SplitContainer/PopupBox"]
 layout_mode = 2
@@ -169,11 +165,11 @@ theme_override_constants/margin_bottom = -20
 layout_mode = 2
 size_flags_horizontal = 0
 focus_neighbor_left = NodePath(".")
-focus_neighbor_top = NodePath("../../SplitContainer/AmountSelect/SplitContainer/MiddleRow/Left")
+focus_neighbor_top = NodePath("../../SplitContainer/AmountSelect/SplitContainer/MiddleRow/NumberDisplay")
 focus_neighbor_right = NodePath("../ButtonRight")
 focus_neighbor_bottom = NodePath(".")
 focus_next = NodePath("../ButtonRight")
-focus_previous = NodePath("../../SplitContainer/AmountSelect/SplitContainer/MiddleRow/Right")
+focus_previous = NodePath("../../SplitContainer/AmountSelect/SplitContainer/MiddleRow/NumberDisplay")
 theme = ExtResource("7_fj2m7")
 theme_type_variation = &"Button_Alt"
 text = "back"
@@ -182,7 +178,7 @@ text = "back"
 layout_mode = 2
 size_flags_horizontal = 8
 focus_neighbor_left = NodePath("../ButtonLeft")
-focus_neighbor_top = NodePath("../../SplitContainer/AmountSelect/SplitContainer/MiddleRow/Right")
+focus_neighbor_top = NodePath("../../SplitContainer/AmountSelect/SplitContainer/MiddleRow/NumberDisplay")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath(".")
 focus_next = NodePath(".")

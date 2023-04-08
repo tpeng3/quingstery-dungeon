@@ -10,6 +10,8 @@ signal no_selected
 @onready var DialogueName = $DialogueWrapper/NameContainer/Name
 @onready var DialogueText = $DialogueWrapper/DialogueText
 @onready var DialogueSelect = $DialogueWrapper/YesNo
+var QuingeeIdle = load("res://assets/character/talksprites/quingee.png")
+var QuingeeScraa = load("res://assets/character/talksprites/quingscraa.png")
 
 func _ready():
 	hide()
@@ -49,11 +51,19 @@ func show_dialogue(dialogue, dictKey=null):
 func _input(event):
 	# on enter/space or mouse click
 	if self.visible and not DialogueSelect.visible and dialogue_node != null and not freezeBox:
-		if Input.is_action_pressed("ui_accept"):
+		if event.is_action_released("ui_accept"):
 #			DialogueSelect.ButtonHover.play()
 			dialogue_node.next_dialogue()
 			if dialogue_node:
 				_update_textbox()
+	
+	# scraaa
+	if event.is_action_pressed("scraa"):
+		$Quingee/Sprite2D.texture = QuingeeScraa
+		$Quingee/Sprite2D/QuingAnim.play("QuingShake")
+	else:
+		$Quingee/Sprite2D.texture = QuingeeIdle		
+		$Quingee/Sprite2D/QuingAnim.stop()
 
 func _on_continue():
 	# TODO: clean this up later

@@ -5,42 +5,42 @@
 [ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="3_ugvsp"]
 [ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="4_5nu17"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v12se"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yche1"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_77swr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_440v7"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lwbiq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8yxjj"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nnmko"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xlxu4"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_wa4so"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fds7r"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bx7ia"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_70uhv"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w7tpr"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pa2n3"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ol85y"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fvw75"]
 resource_local_to_scene = true
 atlas = ExtResource("4_5nu17")
 region = Rect2(27, 0, 9, 9)
@@ -64,35 +64,39 @@ offset_left = 24.0
 offset_top = 10.0
 offset_right = 139.0
 offset_bottom = 54.0
+focus_mode = 2
 theme = ExtResource("2_va3ko")
 text = "10"
 horizontal_alignment = 2
 
-[node name="Left" parent="SplitContainer/MiddleRow" instance=ExtResource("3_ugvsp")]
+[node name="Left" parent="SplitContainer/MiddleRow/NumberDisplay" instance=ExtResource("3_ugvsp")]
 layout_mode = 0
-offset_left = 11.0
-offset_top = 30.0
-offset_right = 20.0
-offset_bottom = 39.0
+offset_left = -14.0
+offset_top = 19.0
+offset_right = -5.0
+offset_bottom = 28.0
 pivot_offset = Vector2(8, 8)
-texture_normal = SubResource("AtlasTexture_v12se")
-texture_pressed = SubResource("AtlasTexture_77swr")
-texture_disabled = SubResource("AtlasTexture_lwbiq")
-texture_focused = SubResource("AtlasTexture_nnmko")
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_yche1")
+texture_pressed = SubResource("AtlasTexture_440v7")
+texture_disabled = SubResource("AtlasTexture_8yxjj")
+texture_focused = SubResource("AtlasTexture_xlxu4")
 direction = 1
 
-[node name="Right" parent="SplitContainer/MiddleRow" instance=ExtResource("3_ugvsp")]
+[node name="Right" parent="SplitContainer/MiddleRow/NumberDisplay" instance=ExtResource("3_ugvsp")]
 layout_mode = 1
-offset_left = 156.0
-offset_top = 30.0
-offset_right = 165.0
-offset_bottom = 39.0
+offset_left = 126.0
+offset_top = 19.0
+offset_right = 135.0
+offset_bottom = 28.0
 pivot_offset = Vector2(8, 8)
-texture_normal = SubResource("AtlasTexture_wa4so")
-texture_pressed = SubResource("AtlasTexture_bx7ia")
-texture_disabled = SubResource("AtlasTexture_w7tpr")
-texture_focused = SubResource("AtlasTexture_ol85y")
+focus_mode = 0
+texture_normal = SubResource("AtlasTexture_fds7r")
+texture_pressed = SubResource("AtlasTexture_70uhv")
+texture_disabled = SubResource("AtlasTexture_pa2n3")
+texture_focused = SubResource("AtlasTexture_fvw75")
 direction = 0
 
-[connection signal="pressed" from="SplitContainer/MiddleRow/Left" to="." method="_on_left_pressed"]
-[connection signal="pressed" from="SplitContainer/MiddleRow/Right" to="." method="_on_right_pressed"]
+[connection signal="focus_entered" from="SplitContainer/MiddleRow/NumberDisplay" to="." method="_on_number_display_focus_entered"]
+[connection signal="focus_exited" from="SplitContainer/MiddleRow/NumberDisplay" to="." method="_on_number_display_focus_exited"]
+[connection signal="gui_input" from="SplitContainer/MiddleRow/NumberDisplay" to="." method="_on_number_display_gui_input"]

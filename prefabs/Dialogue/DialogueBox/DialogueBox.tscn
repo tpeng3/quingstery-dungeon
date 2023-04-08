@@ -1,6 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://8u6c5x2aksb6"]
+[gd_scene load_steps=12 format=3 uid="uid://8u6c5x2aksb6"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
+[ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/YesNo.gd" id="2_3nr5b"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="2_dpae3"]
 [ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="2_wdke3"]
 [ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/UI/compass.png" id="3_56qxl"]
@@ -34,10 +35,20 @@ theme_override_constants/margin_bottom = 48
 [node name="YesNo" type="MarginContainer" parent="DialogueWrapper"]
 layout_mode = 2
 size_flags_horizontal = 8
+script = ExtResource("2_3nr5b")
 
-[node name="Sprite2D" type="Sprite2D" parent="DialogueWrapper/YesNo"]
+[node name="Compass" type="Sprite2D" parent="DialogueWrapper/YesNo"]
 position = Vector2(-57, -14)
 texture = ExtResource("3_56qxl")
+region_enabled = true
+region_rect = Rect2(0, 0, 72, 72)
+
+[node name="Arrow" type="Sprite2D" parent="DialogueWrapper/YesNo"]
+position = Vector2(-57, -14)
+rotation = 1.5708
+texture = ExtResource("3_56qxl")
+region_enabled = true
+region_rect = Rect2(72, 0, 72, 72)
 
 [node name="DialogueSelect" type="Control" parent="DialogueWrapper/YesNo"]
 layout_mode = 2
@@ -48,7 +59,12 @@ offset_left = -73.0
 offset_top = -67.0
 offset_right = -41.0
 offset_bottom = -42.0
+pivot_offset = Vector2(16, 20)
 size_flags_horizontal = 7
+focus_neighbor_left = NodePath("../DialogueNo")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../DialogueNo")
 theme = ExtResource("4_jvqjy")
 theme_type_variation = &"Button_Alt"
 text = "Yes"
@@ -59,7 +75,12 @@ offset_left = -114.0
 offset_top = -27.0
 offset_right = -87.0
 offset_bottom = -2.0
+pivot_offset = Vector2(22, 12)
 size_flags_horizontal = 7
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../DialogueYes")
+focus_neighbor_right = NodePath("../DialogueYes")
+focus_neighbor_bottom = NodePath(".")
 theme = ExtResource("4_jvqjy")
 theme_type_variation = &"Button_Alt"
 text = "No"
@@ -113,4 +134,6 @@ libraries = {
 [node name="CustomSound" type="AudioStreamPlayer" parent="Sounds"]
 
 [connection signal="button_up" from="DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="." method="_on_YesButton_button_up"]
+[connection signal="focus_entered" from="DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="DialogueWrapper/YesNo" method="_on_dialogue_yes_focus_entered"]
 [connection signal="button_up" from="DialogueWrapper/YesNo/DialogueSelect/DialogueNo" to="." method="_on_dialogue_finished"]
+[connection signal="focus_entered" from="DialogueWrapper/YesNo/DialogueSelect/DialogueNo" to="DialogueWrapper/YesNo" method="_on_dialogue_no_focus_entered"]

@@ -5,6 +5,7 @@
 
 [node name="NewItemPopup" instance=ExtResource("1_kia36")]
 script = ExtResource("1_mdyvp")
+default_text = "[center]You received [b]x[amount] [item][/b]! It's been tucked into your inventory.[/center]"
 
 [node name="PopupText" parent="SplitContainer/PopupBox/SplitContainer/TextPadding" index="0"]
 text = "[center]You received [b]x[amount] [item][/b]! It's been tucked into your inventory.[/center]"
