@@ -17,10 +17,10 @@ func _ready():
 	$SellMenu.on_sell.connect(_on_sell)
 	
 	$NavButtons.show()
-	$NavButtons/NavList/Button1.grab_focus()
 
 	Global.FP.bullfrog += 1
 	_init_shop_items()
+	$NavButtons/NavList/Button1.grab_focus()	
 	
 func _on_dialogue_end():
 	$NavButtons/NavList/Button3.grab_focus()

@@ -26,6 +26,7 @@ region = Rect2(27, 18, 9, 9)
 [node name="ArrowBtn" type="TextureButton"]
 custom_minimum_size = Vector2(9, 9)
 scale = Vector2(2, 2)
+focus_mode = 0
 texture_normal = SubResource("AtlasTexture_bop0m")
 texture_pressed = SubResource("AtlasTexture_1eu27")
 texture_disabled = SubResource("AtlasTexture_khh8l")

@@ -25,6 +25,7 @@ func init_shop():
 			node.set("item_cost", i.cost)
 		
 		node.on_focus.connect(_update_right_panel)
+		node.gui_input.connect(_on_item_gui_input)
 		ItemContainer.add_child(node)
 	
 	max_pages = max(ceil(item_list.size() / 8.0), 1)
@@ -56,6 +57,7 @@ func _update_right_panel(node):
 		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.disabled = true
 	else:
 		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.text = "buy"
+		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.disabled = false		
 
 func _on_popup_close():
 	$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.grab_focus()
