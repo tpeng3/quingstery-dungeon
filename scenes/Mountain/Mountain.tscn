@@ -5,7 +5,7 @@
 [ext_resource type="JSON" path="res://dialogue/Mountain/hungry.json" id="4_5cqts"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_qklru"]
 [ext_resource type="JSON" path="res://dialogue/Mountain/famished.json" id="5_c7hty"]
-[ext_resource type="PackedScene" uid="uid://8u6c5x2aksb6" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.tscn" id="5_yuxs7"]
+[ext_resource type="PackedScene" uid="uid://u0jhoe6k7wto" path="res://prefabs/Dialogue/DialogueBox/DungeonBox.tscn" id="6_cg1gw"]
 [ext_resource type="PackedScene" uid="uid://crp3kbtoa5d04" path="res://prefabs/UI/StatusInfo/StatusInfo.tscn" id="7_8chn1"]
 [ext_resource type="PackedScene" uid="uid://qehathayhhdl" path="res://prefabs/UI/StatusMenu/StatusMenu.tscn" id="8_5adl8"]
 
@@ -72,8 +72,7 @@ dialogue_file = ExtResource("4_5cqts")
 [node name="FamishedDialogue" parent="DialogueNodes" instance=ExtResource("4_qklru")]
 dialogue_file = ExtResource("5_c7hty")
 
-[node name="DialogueBox" parent="." instance=ExtResource("5_yuxs7")]
-visible = false
+[node name="DungeonBox" parent="." instance=ExtResource("6_cg1gw")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -82,6 +81,15 @@ visible = false
 [node name="StatusMenu" parent="CanvasLayer" instance=ExtResource("8_5adl8")]
 visible = false
 
-[connection signal="pressed" from="DialogueBox/DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="DialogueBox" method="_on_dialogue_yes_pressed"]
-
-[editable path="DialogueBox"]
+[connection signal="body_entered" from="Map/Floor/Animal" to="Map/Floor/Animal" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/Animal" to="Map/Floor/Animal" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@MiningSpot@29502" to="Map/Floor/@MiningSpot@29502" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@MiningSpot@29502" to="Map/Floor/@MiningSpot@29502" method="_on_body_exited" flags=18]
