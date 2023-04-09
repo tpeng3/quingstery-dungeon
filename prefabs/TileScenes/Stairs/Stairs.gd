@@ -12,11 +12,10 @@ func _input(event):
 	if Global.freezeQuingee:
 		return
 
-	if (event.is_action_pressed("ui_accept")) and entered_stairs:
-		find_stairs.emit($DialoguePlayer)
+	if (event.is_action_released("ui_accept")) and entered_stairs:
+		find_stairs.emit()
 
 func _on_body_entered(body):
-	print("cross the stairs", body)
 	if body.name == "Quingee":
 		entered_stairs = true
 		$Sprite.texture = Highlight

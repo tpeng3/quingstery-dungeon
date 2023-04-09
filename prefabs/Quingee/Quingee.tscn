@@ -366,7 +366,7 @@ script = ExtResource("1_lwsfa")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 z_index = 2
 sprite_frames = SubResource("SpriteFrames_lh2xp")
-animation = &"scraaupright"
+animation = &"down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("3_rbevp")

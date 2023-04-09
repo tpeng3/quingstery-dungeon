@@ -3,10 +3,11 @@
 extends Node
 
 enum CheckpointType {
-	THROAT,
-	RIVER,
-	STEPS,
-	PEAK
+	THROAT = 0,
+	RIVER = 10,
+	STEPS = 25,
+	PEAK = 45,
+	TOP = 75
 }
 
 # true when a screen pops up and player should focus on the dialogue box
@@ -19,7 +20,10 @@ var maxHunger = 50
 var exploreCount = 0
 var timesFailed = 0
 var currentCheckpoint = CheckpointType.THROAT
+var currentFloor = 1
 var highestFloor = 0
+var ozChance = 0.0
+var wanderChance = 0.0
 
 # global world stats
 var currentDay = 1
@@ -35,7 +39,7 @@ var FP = {
 	"noah": 0,
 	"oleander": 0,
 	"oz": 0,
-	"piper": 0,
+	"piper": -1,
 	"reinhardt": 0,
 	"wander": 0,
 	"zane": 0,
@@ -146,3 +150,56 @@ func _weighted_rand(charas, locations):
 	var randInd = (round(sortedDialogue.size() / (randf_range(0, 1) * sortedDialogue.size() + 1))) - 1;
 	sortedDialogue[randInd].popularity += 1;
 	return sortedDialogue[randInd];
+
+func advanceFloor():
+	currentFloor += 1
+	if currentFloor >= highestFloor:
+		highestFloor = currentFloor
+		currentCheckpoint = CheckpointType[get_checkpoint_name().to_upper()]
+	if currentFloor >= CheckpointType.TOP:
+		# TODO: go to peak cutscene
+		SceneManager.change_scene("Map")
+	elif currentFloor == CheckpointType.PEAK:
+		wanderChance = 0.0
+		# get custom map
+		SceneManager.change_scene("Mountain")
+	elif currentFloor == CheckpointType.STEPS:
+		wanderChance = 0.0
+		# get custom map
+		SceneManager.change_scene("Mountain")
+	elif currentFloor == CheckpointType.RIVER:
+		wanderChance = 0.0
+		# get custom map
+		SceneManager.change_scene("Mountain")
+	elif currentFloor == 15 and FP.piper < 0:
+		# get piper scene
+		SceneManager.change_scene("Mountain")
+	elif currentFloor >= CheckpointType.PEAK and (ozChance >= randf_range(0, 1) or \
+		currentFloor <= CheckpointType.PEAK - 1):
+		ozChance = -1.0
+		# get oz map
+		SceneManager.change_scene("Mountain")
+	elif wanderChance >= randf_range(0, 1):
+		wanderChance = 0.0
+		# get wander map
+		SceneManager.change_scene("Map")
+	else:
+		if currentFloor >= CheckpointType.PEAK:
+			ozChance = pow(currentFloor - CheckpointType.PEAK / CheckpointType.TOP - CheckpointType.PEAK, 5.0)
+			print(ozChance, "ozchance")
+		wanderChance = pow((currentFloor % 10) / 10.0, 3.0)
+		print(wanderChance)
+		if wanderChance <= 0.0:
+			wanderChance = 1.0
+		print(wanderChance, "wanderChance")
+		SceneManager.change_scene("Mountain")
+
+func get_checkpoint_name(floor=currentFloor):
+	if floor <= CheckpointType.RIVER:
+		return "Throat"
+	elif floor <= CheckpointType.STEPS:
+		return "River"
+	elif floor <= CheckpointType.PEAK:
+		return "Steps"
+	else:
+		return "Peak"

@@ -1,17 +1,53 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2sw2fysbdc2x"]
+[gd_scene load_steps=11 format=3 uid="uid://d2sw2fysbdc2x"]
 
 [ext_resource type="Script" path="res://scenes/Mountain/Mountain.gd" id="1_ybsvq"]
 [ext_resource type="TileSet" uid="uid://cwx7nq0li1fi1" path="res://theme/tileset.tres" id="2_ja4ub"]
-[ext_resource type="JSON" path="res://dialogue/Mountain/hungry.json" id="4_5cqts"]
+[ext_resource type="JSON" path="res://dialogue/Mountain/Mountain.json" id="3_7fjww"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_qklru"]
-[ext_resource type="JSON" path="res://dialogue/Mountain/famished.json" id="5_c7hty"]
 [ext_resource type="PackedScene" uid="uid://u0jhoe6k7wto" path="res://prefabs/Dialogue/DialogueBox/DungeonBox.tscn" id="6_cg1gw"]
+[ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="6_d5344"]
 [ext_resource type="PackedScene" uid="uid://crp3kbtoa5d04" path="res://prefabs/UI/StatusInfo/StatusInfo.tscn" id="7_8chn1"]
 [ext_resource type="PackedScene" uid="uid://qehathayhhdl" path="res://prefabs/UI/StatusMenu/StatusMenu.tscn" id="8_5adl8"]
+
+[sub_resource type="Animation" id="Animation_faty3"]
+resource_name = "new_floor"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/FloorInfo:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 0.63728),
+"update": 0,
+"values": [Vector2(-50, 455), Vector2(25, 455)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/FloorInfo:modulate")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 0.732043),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7aoaq"]
+_data = {
+"new_floor": SubResource("Animation_faty3")
+}
 
 [node name="Mountain" type="Node2D"]
 script = ExtResource("1_ybsvq")
 scene = "Map"
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("4_qklru")]
+dialogue_file = ExtResource("3_7fjww")
 
 [node name="Map" type="Node2D" parent="."]
 position = Vector2(-198, -354)
@@ -62,34 +98,26 @@ offset_right = 608.0
 offset_bottom = 419.0
 text = "Press space to continue!"
 
-[node name="DialogueNodes" type="Node2D" parent="."]
-
-[node name="StairsDialogue" parent="DialogueNodes" instance=ExtResource("4_qklru")]
-
-[node name="HungryDialogue" parent="DialogueNodes" instance=ExtResource("4_qklru")]
-dialogue_file = ExtResource("4_5cqts")
-
-[node name="FamishedDialogue" parent="DialogueNodes" instance=ExtResource("4_qklru")]
-dialogue_file = ExtResource("5_c7hty")
-
 [node name="DungeonBox" parent="." instance=ExtResource("6_cg1gw")]
+visible = false
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="FloorInfo" type="Label" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0)
+offset_left = -50.0
+offset_top = 455.0
+offset_right = 118.0
+offset_bottom = 519.0
+theme = ExtResource("6_d5344")
+text = "Throat 10F"
 
 [node name="StatusInfo" parent="CanvasLayer" instance=ExtResource("7_8chn1")]
 
 [node name="StatusMenu" parent="CanvasLayer" instance=ExtResource("8_5adl8")]
 visible = false
 
-[connection signal="body_entered" from="Map/Floor/Animal" to="Map/Floor/Animal" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/Animal" to="Map/Floor/Animal" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/@MiningSpot@29502" to="Map/Floor/@MiningSpot@29502" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/@MiningSpot@29502" to="Map/Floor/@MiningSpot@29502" method="_on_body_exited" flags=18]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_7aoaq")
+}

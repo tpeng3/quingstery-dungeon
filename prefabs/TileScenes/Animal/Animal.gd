@@ -16,7 +16,6 @@ func _ready():
 	rng.randomize()
 	var randomIndex = rng.randi_range(0, 1)
 	startingkey = ["hello1", "hello2"][randomIndex]
-	DialogueBox.yes_selected.connect(_on_yes_selected)
 	DialogueBox.on_trade.connect(_on_traded)
 	
 func _input(event):
@@ -31,6 +30,7 @@ func _input(event):
 		
 		# check if user has request item
 		if request in Inventory.inventory:
+			DialogueBox.yes_selected.connect(_on_yes_selected, CONNECT_ONE_SHOT)
 			if hasTraded:
 				DialogueBox.show_dialogue($DialoguePlayer, "trade more")
 			else:

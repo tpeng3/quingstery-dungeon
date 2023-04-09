@@ -9,6 +9,7 @@ func show_trade_popup(request, request_max, reward, reward_num):
 
 func show_close_popup(text):
 	$ClosePopup.show_popup(text)
+	$ClosePopup/SplitContainer/PopupBox/FooterMargin/ButtonMid.pressed.connect(_on_dialogue_finished, CONNECT_ONE_SHOT)
 
 func _on_back():
 	$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonLeft.pressed.disconnect(_on_back)

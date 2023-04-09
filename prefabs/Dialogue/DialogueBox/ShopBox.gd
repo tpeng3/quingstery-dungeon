@@ -58,7 +58,7 @@ func _input(event):
 				_update_textbox()
 	
 	# scraaa
-	if event.is_action_pressed("scraa"):
+	if event.is_action_released("scraa"):
 		$Quingee/Sprite2D.texture = QuingeeScraa
 		$Quingee/Sprite2D/QuingAnim.play("QuingShake")
 	else:

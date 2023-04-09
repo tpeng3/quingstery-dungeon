@@ -1,6 +1,6 @@
 [gd_scene load_steps=32 format=3 uid="uid://crp3kbtoa5d04"]
 
-[ext_resource type="PackedScene" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_4em7c"]
+[ext_resource type="PackedScene" uid="uid://d3rx3youaqtij" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_4em7c"]
 [ext_resource type="PackedScene" uid="uid://d3b21n0iaddhr" path="res://prefabs/UI/BulletinBoard/BulletinBoard.tscn" id="2_d8f0f"]
 [ext_resource type="PackedScene" uid="uid://l6juqk5dids0" path="res://prefabs/UI/SettingsMenu/SettingsMenu.tscn" id="3_fask4"]
 [ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="4_h283h"]

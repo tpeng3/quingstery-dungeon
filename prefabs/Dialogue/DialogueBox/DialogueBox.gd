@@ -3,7 +3,7 @@ extends CanvasLayer
 var dialogue_node = null
 var freezeBox = false
 
-signal yes_selected
+signal yes_selected(type)
 signal no_selected
 
 @onready var DialogueBox = $DialogueWrapper
@@ -51,7 +51,7 @@ func show_dialogue(dialogue, dictKey=null):
 
 func _on_dialogue_box_input(event):
 	# on enter/space or mouse click
-	if dialogue_node != null and not freezeBox and event.is_action_pressed("ui_accept"):
+	if dialogue_node != null and not freezeBox and event.is_action_released("ui_accept"):
 #			DialogueSelect.ButtonHover.play()
 		dialogue_node.next_dialogue()
 		if dialogue_node:
@@ -98,23 +98,17 @@ func _on_dialogue_action(action_type, asset):
 			freezeBox = true
 
 func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
-#	self.hide_image()
-#	$Talksprites/Sprite2D.hide()
 	DialogueSelect.hide()
 #	$AnimationPlayer.play_backwards("textbox_fade")
 #	await $AnimationPlayer.animation_finished
 	self.hide()
 	
-#	Input.set_custom_mouse_cursor(Utilities.CURSOR_DEFAULT)
 	if dialogue_node:
 		dialogue_node.dialogue_action.disconnect(_on_dialogue_action)
 		dialogue_node.dialogue_finished.disconnect(_on_dialogue_finished)
 		match action_type:
 			dialogue_node.PostActionType.MORE_TEXT:
 				dialogue_node.dialogue_file = asset
-	#		dialogue_node.PostActionType.UNLOCK:
-	#			pass
-	#			# TODO: change this for quingstery later
 			dialogue_node.PostActionType.DELETE:
 				var to_delete = dialogue_node
 				to_delete.get_parent().queue_free()
@@ -127,15 +121,23 @@ func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
 	emit_signal("no_selected")
 	# OLD TODO: dunno if we want the above or to rework the logic hmmmmm
 	
+	# clear existing yes/no signals
+	var signals = get_signal_list();
+	for cur_signal in signals:
+		var conns = get_signal_connection_list(cur_signal.name);
+		for cur_conn in conns:
+			cur_conn['signal'].disconnect(cur_conn['callable'])
+	
 	# quingee can move again
 	await get_tree().create_timer(.1).timeout
 	Global.freezeQuingee = false
+	print("reach here?")
 	
 func _on_dialogue_yes_pressed():
 #	$ButtonClick.play()
 	DialogueBox.hide()
 	DialogueSelect.hide()
-	emit_signal("yes_selected")
+	yes_selected.emit()
 
 func show_image(image):
 #	$Popup/Itemsprite.texture = image
