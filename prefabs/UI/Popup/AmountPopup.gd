@@ -31,6 +31,7 @@ func show_popup(node: ListItem):
 	elif popup_type == PopupType.TAKE:
 		$SplitContainer/PopupBox/FooterMargin/ButtonRight.text = "take"
 	show()
+	$SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow/NumberDisplay.grab_focus()
 	
 func show_trade_popup(request, request_max, reward, reward_num):
 	item_name = request
@@ -38,12 +39,13 @@ func show_trade_popup(request, request_max, reward, reward_num):
 	var item_texture = load(item_dict.path)
 	$SplitContainer/ItemMargin/ItemSprite.texture = item_texture
 	$SplitContainer/PopupBox/SplitContainer/TextPadding/PopupText.text = \
-		item_desc.replace("[item]", item_name)
+		item_desc.replace("[item]", item_name).replace("[max]", str(request_max))
 	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount_max = request_max
 	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount = request_max
 	$SplitContainer/PopupBox/SplitContainer/AmountSelect.update_arrows()
 	$SplitContainer/PopupBox/FooterMargin/ButtonRight.text = "trade"
 	show()
+	$SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow/NumberDisplay.grab_focus()
 
 func _on_update(amount):
 	if popup_type == PopupType.SELL:

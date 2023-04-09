@@ -3,7 +3,6 @@ extends MarginContainer
 func show_yesno():
 	show()
 	$DialogueSelect/DialogueYes.grab_focus()
-	print("hello check?")
 
 func _on_dialogue_yes_focus_entered():
 	$Arrow.rotation_degrees = 0

@@ -35,7 +35,7 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
-size = Vector2(17, 29)
+size = Vector2(70.5, 61.5)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c7qe2"]
 atlas = ExtResource("4_whbv0")
@@ -67,10 +67,9 @@ texture = ExtResource("2_iaowe")
 visible = false
 position = Vector2(0, -25)
 sprite_frames = ExtResource("3_l6a0b")
-animation = &"Talk"
+animation = &"Heart"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, -5.5)
 shape = SubResource("RectangleShape2D_msile")
 
 [node name="Icon" type="Sprite2D" parent="."]

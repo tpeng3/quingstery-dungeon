@@ -13,12 +13,15 @@ signal no_selected
 
 func _ready():
 	hide()
-	$NewItemPopup.connect("on_confirm", _on_continue, CONNECT_ONE_SHOT)
+	$NewItemPopup.connect("on_confirm", _on_continue)
 	
 func _reset_ui():
 	show()
-	$DialogueWrapper.hide()
+	DialogueSelect.hide()
+	DialogueBox.hide()
 	$NewItemPopup.hide()
+	if $AmountPopup:
+		$AmountPopup.hide()
 	
 func show_new_item(item, amount, text=null):
 	# freeze character while there is dialogue
@@ -46,14 +49,13 @@ func show_dialogue(dialogue, dictKey=null):
 	dialogue_node.start_dialogue(dictKey)
 	_update_textbox()
 
-func _input(event):
+func _on_dialogue_box_input(event):
 	# on enter/space or mouse click
-	if self.visible and not DialogueSelect.visible and dialogue_node != null and not freezeBox:
-		if event.is_action_released("ui_accept"):
+	if dialogue_node != null and not freezeBox and event.is_action_pressed("ui_accept"):
 #			DialogueSelect.ButtonHover.play()
-			dialogue_node.next_dialogue()
-			if dialogue_node:
-				_update_textbox()
+		dialogue_node.next_dialogue()
+		if dialogue_node:
+			_update_textbox()
 
 func _on_continue():
 	# TODO: clean this up later
@@ -63,13 +65,15 @@ func _update_textbox():
 	if dialogue_node.dialogue_name and dialogue_node.dialogue_name != "":
 		DialogueName.text = dialogue_node.dialogue_name
 		DialogueName.show()
-		$DialogueWrapper/ClickToContinue.visible = true
-		if freezeBox or DialogueSelect.visible:
-			$DialogueWrapper/ClickToContinue.visible = false
 	else:
 		DialogueName.hide()
 	DialogueText.text = dialogue_node.dialogue_text
-	DialogueSelect.show_yesno()
+	if freezeBox or DialogueSelect.visible:
+		$DialogueWrapper/ClickToContinue.visible = false
+	else:
+		$DialogueWrapper/ClickToContinue.visible = true
+		await get_tree().create_timer(.1).timeout
+		$DialogueWrapper/ClickToContinue/ArrowBtn.grab_focus()
 
 func _on_dialogue_action(action_type, asset):
 	match action_type:
@@ -83,6 +87,7 @@ func _on_dialogue_action(action_type, asset):
 			hide_image()
 		dialogue_node.ActionType.CHOICES:
 			DialogueSelect.show_yesno()
+			$DialogueWrapper/ClickToContinue.visible = false
 		dialogue_node.ActionType.ANIMATION:
 			play_animation(asset)
 		dialogue_node.ActionType.SOUND:
@@ -128,6 +133,7 @@ func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
 	
 func _on_dialogue_yes_pressed():
 #	$ButtonClick.play()
+	DialogueBox.hide()
 	DialogueSelect.hide()
 	emit_signal("yes_selected")
 

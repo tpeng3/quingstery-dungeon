@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://8u6c5x2aksb6"]
+[gd_scene load_steps=17 format=3 uid="uid://8u6c5x2aksb6"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/DialogueBox.gd" id="1_4xtrd"]
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/YesNo.gd" id="2_3nr5b"]
@@ -7,8 +7,29 @@
 [ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/UI/compass.png" id="3_56qxl"]
 [ext_resource type="Theme" uid="uid://bnb6osg7rfj47" path="res://theme/smallround.tres" id="4_jvqjy"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="5_hwskm"]
-[ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="6_ef0cp"]
+[ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="8_7skxq"]
 [ext_resource type="PackedScene" uid="uid://7kb3pvj7jya3" path="res://prefabs/UI/Popup/NewItemPopup.tscn" id="8_elakg"]
+[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="9_yrwyx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wye50"]
+resource_local_to_scene = true
+atlas = ExtResource("9_yrwyx")
+region = Rect2(0, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbsnj"]
+resource_local_to_scene = true
+atlas = ExtResource("9_yrwyx")
+region = Rect2(9, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bt37"]
+resource_local_to_scene = true
+atlas = ExtResource("9_yrwyx")
+region = Rect2(18, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a83dh"]
+resource_local_to_scene = true
+atlas = ExtResource("9_yrwyx")
+region = Rect2(27, 0, 9, 9)
 
 [sub_resource type="Animation" id="Animation_q44kr"]
 resource_name = "textbox_fade"
@@ -106,11 +127,21 @@ size_flags_horizontal = 0
 theme = ExtResource("5_hwskm")
 text = "Name Here"
 
-[node name="ClickToContinue" type="AnimatedSprite2D" parent="DialogueWrapper"]
-position = Vector2(821, 100)
-scale = Vector2(2, 2)
-sprite_frames = ExtResource("6_ef0cp")
-animation = &"Flash_R"
+[node name="ClickToContinue" type="Control" parent="DialogueWrapper"]
+layout_mode = 2
+
+[node name="ArrowBtn" parent="DialogueWrapper/ClickToContinue" instance=ExtResource("8_7skxq")]
+layout_mode = 2
+offset_left = 764.0
+offset_top = 91.0
+offset_right = 773.0
+offset_bottom = 100.0
+focus_mode = 2
+texture_normal = SubResource("AtlasTexture_wye50")
+texture_pressed = SubResource("AtlasTexture_dbsnj")
+texture_disabled = SubResource("AtlasTexture_6bt37")
+texture_focused = SubResource("AtlasTexture_a83dh")
+direction = 0
 
 [node name="TopBar" parent="." instance=ExtResource("2_wdke3")]
 anchors_preset = 0
@@ -133,7 +164,8 @@ libraries = {
 
 [node name="CustomSound" type="AudioStreamPlayer" parent="Sounds"]
 
-[connection signal="button_up" from="DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="." method="_on_YesButton_button_up"]
+[connection signal="button_up" from="DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="." method="_on_dialogue_yes_pressed"]
 [connection signal="focus_entered" from="DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="DialogueWrapper/YesNo" method="_on_dialogue_yes_focus_entered"]
 [connection signal="button_up" from="DialogueWrapper/YesNo/DialogueSelect/DialogueNo" to="." method="_on_dialogue_finished"]
 [connection signal="focus_entered" from="DialogueWrapper/YesNo/DialogueSelect/DialogueNo" to="DialogueWrapper/YesNo" method="_on_dialogue_no_focus_entered"]
+[connection signal="gui_input" from="DialogueWrapper/ClickToContinue/ArrowBtn" to="." method="_on_dialogue_box_input"]

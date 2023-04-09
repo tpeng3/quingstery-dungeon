@@ -14,7 +14,7 @@ var storage = {
 var inventory = {
 	"Acorn": {
 		"name": "Acorn",
-		"count": 2
+		"count": 5
 	},
 	"Stick of Hay": {
 		"name": "Stick of Hay",

@@ -22,8 +22,8 @@ func _ready():
 	self.texture_disabled = sprite
 	
 
-func _on_toggled(button_pressed):
-	if button_pressed:
+func _on_toggled(value):
+	if value:
 		self.texture_focused = spriteFocus
 	else:
 		self.texture_focused = spriteFocusActive

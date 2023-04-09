@@ -16,6 +16,8 @@ func _ready():
 	rng.randomize()
 	var randomIndex = rng.randi_range(0, 1)
 	startingkey = ["hello1", "hello2"][randomIndex]
+	DialogueBox.yes_selected.connect(_on_yes_selected)
+	DialogueBox.on_trade.connect(_on_traded)
 	
 func _input(event):
 	# ignore input when quingee is frozen
@@ -29,7 +31,6 @@ func _input(event):
 		
 		# check if user has request item
 		if request in Inventory.inventory:
-			DialogueBox.yes_selected.connect(_on_yes_selected, CONNECT_ONE_SHOT)
 			if hasTraded:
 				DialogueBox.show_dialogue($DialoguePlayer, "trade more")
 			else:
@@ -41,15 +42,14 @@ func _input(event):
 				DialogueBox.show_dialogue($DialoguePlayer, "no item")
 
 func _on_yes_selected():
-	Inventory.remove_item(request)
-	DialogueBox.show_amount()
 	if request in Inventory.inventory and (Inventory.get_inv_count() -1 + reward_num) >= Inventory.max:
 		DialogueBox.show_close_popup("You don't have enough space in your inventory to trade.")
 	else:
-		var request_max = min(Inventory.max - (Inventory.get_inv_count() * reward_num), Inventory.inventory[request].count)
+		var request_max = min(Inventory.max - (reward_num - 1), Inventory.inventory[request].count)
 		DialogueBox.show_trade_popup(request, request_max, reward, reward_num)
 	
 func _on_traded(amount):
+	Inventory.remove_item(request, amount)
 	DialogueBox.show_new_item(reward, reward_num * amount, popup_text.replace("[request]", request))
 	hasTraded = true
 

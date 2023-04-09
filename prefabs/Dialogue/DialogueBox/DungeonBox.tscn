@@ -1,14 +1,37 @@
-[gd_scene load_steps=20 format=3 uid="uid://u0jhoe6k7wto"]
+[gd_scene load_steps=27 format=3 uid="uid://u0jhoe6k7wto"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/TradeBox.gd" id="1_0nhe7"]
+[ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/YesNo.gd" id="2_udq2m"]
 [ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/UI/compass.png" id="2_xkf1y"]
 [ext_resource type="Theme" uid="uid://bnb6osg7rfj47" path="res://theme/smallround.tres" id="3_esroe"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="4_0ewts"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="5_gwmoo"]
-[ext_resource type="SpriteFrames" uid="uid://cjoid6ojefedy" path="res://theme/Arrows.tres" id="6_nv3ul"]
 [ext_resource type="PackedScene" uid="uid://dnfv6q8hkcav3" path="res://prefabs/UI/Popup/AmountPopup.tscn" id="7_5lfei"]
+[ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_d5lbw"]
+[ext_resource type="PackedScene" uid="uid://7kb3pvj7jya3" path="res://prefabs/UI/Popup/NewItemPopup.tscn" id="7_jncfb"]
 [ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="8_c3yda"]
 [ext_resource type="PackedScene" uid="uid://cl8b7gtcakyrn" path="res://prefabs/UI/Popup/ClosePopup.tscn" id="9_acty5"]
+[ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="12_alw2p"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bachd"]
+resource_local_to_scene = true
+atlas = ExtResource("8_c3yda")
+region = Rect2(0, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bx0oi"]
+resource_local_to_scene = true
+atlas = ExtResource("8_c3yda")
+region = Rect2(9, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n42pd"]
+resource_local_to_scene = true
+atlas = ExtResource("8_c3yda")
+region = Rect2(18, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a76b4"]
+resource_local_to_scene = true
+atlas = ExtResource("8_c3yda")
+region = Rect2(27, 0, 9, 9)
 
 [sub_resource type="Animation" id="Animation_q44kr"]
 resource_name = "textbox_fade"
@@ -73,13 +96,22 @@ theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 48
 
 [node name="YesNo" type="MarginContainer" parent="DialogueWrapper"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 8
+script = ExtResource("2_udq2m")
 
-[node name="Sprite2D" type="Sprite2D" parent="DialogueWrapper/YesNo"]
+[node name="Compass" type="Sprite2D" parent="DialogueWrapper/YesNo"]
 position = Vector2(-57, -14)
 texture = ExtResource("2_xkf1y")
+region_enabled = true
+region_rect = Rect2(0, 0, 72, 72)
+
+[node name="Arrow" type="Sprite2D" parent="DialogueWrapper/YesNo"]
+position = Vector2(-57, -14)
+rotation = 1.5708
+texture = ExtResource("2_xkf1y")
+region_enabled = true
+region_rect = Rect2(72, 0, 72, 72)
 
 [node name="DialogueSelect" type="Control" parent="DialogueWrapper/YesNo"]
 layout_mode = 2
@@ -90,7 +122,12 @@ offset_left = -73.0
 offset_top = -67.0
 offset_right = -41.0
 offset_bottom = -42.0
+pivot_offset = Vector2(16, 20)
 size_flags_horizontal = 7
+focus_neighbor_left = NodePath("../DialogueNo")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../DialogueNo")
 theme = ExtResource("3_esroe")
 theme_type_variation = &"Button_Alt"
 text = "Yes"
@@ -101,7 +138,12 @@ offset_left = -114.0
 offset_top = -27.0
 offset_right = -87.0
 offset_bottom = -2.0
+pivot_offset = Vector2(22, 12)
 size_flags_horizontal = 7
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../DialogueYes")
+focus_neighbor_right = NodePath("../DialogueYes")
+focus_neighbor_bottom = NodePath(".")
 theme = ExtResource("3_esroe")
 theme_type_variation = &"Button_Alt"
 text = "No"
@@ -127,18 +169,32 @@ size_flags_horizontal = 0
 theme = ExtResource("5_gwmoo")
 text = "Name Here"
 
-[node name="ClickToContinue" type="AnimatedSprite2D" parent="DialogueWrapper"]
-position = Vector2(821, 100)
-scale = Vector2(2, 2)
-sprite_frames = ExtResource("6_nv3ul")
-animation = &"Flash_R"
+[node name="ClickToContinue" type="Control" parent="DialogueWrapper"]
+layout_mode = 2
+
+[node name="ArrowBtn" parent="DialogueWrapper/ClickToContinue" instance=ExtResource("7_d5lbw")]
+layout_mode = 2
+offset_left = 764.0
+offset_top = 91.0
+offset_right = 773.0
+offset_bottom = 100.0
+focus_mode = 2
+texture_normal = SubResource("AtlasTexture_bachd")
+texture_pressed = SubResource("AtlasTexture_bx0oi")
+texture_disabled = SubResource("AtlasTexture_n42pd")
+texture_focused = SubResource("AtlasTexture_a76b4")
+direction = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_xuf1v")
 }
 
+[node name="NewItemPopup" parent="." instance=ExtResource("7_jncfb")]
+visible = false
+
 [node name="AmountPopup" parent="." instance=ExtResource("7_5lfei")]
+visible = false
 item_desc = "How many [b][item][/b] do you want to trade?
 (Available: [max])"
 popup_type = 3
@@ -168,13 +224,17 @@ text = "trade"
 [node name="ClosePopup" parent="." instance=ExtResource("9_acty5")]
 visible = false
 
+[node name="TopBar" parent="." instance=ExtResource("12_alw2p")]
+
 [node name="Sounds" type="Node" parent="."]
 
 [node name="CustomSound" type="AudioStreamPlayer" parent="Sounds"]
 
-[connection signal="button_up" from="DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="." method="_on_YesButton_button_up"]
-[connection signal="button_up" from="DialogueWrapper/YesNo/DialogueSelect/DialogueNo" to="." method="_on_dialogue_finished"]
-[connection signal="focus_entered" from="AmountPopup/SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow/NumberDisplay" to="AmountPopup/SplitContainer/PopupBox/SplitContainer/AmountSelect" method="_on_amount_focus_entered"]
+[connection signal="focus_entered" from="DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="DialogueWrapper/YesNo" method="_on_dialogue_yes_focus_entered"]
+[connection signal="pressed" from="DialogueWrapper/YesNo/DialogueSelect/DialogueYes" to="." method="_on_dialogue_yes_pressed"]
+[connection signal="focus_entered" from="DialogueWrapper/YesNo/DialogueSelect/DialogueNo" to="DialogueWrapper/YesNo" method="_on_dialogue_no_focus_entered"]
+[connection signal="pressed" from="DialogueWrapper/YesNo/DialogueSelect/DialogueNo" to="." method="_on_dialogue_finished"]
+[connection signal="gui_input" from="DialogueWrapper/ClickToContinue/ArrowBtn" to="." method="_on_dialogue_box_input"]
 
 [editable path="AmountPopup"]
 [editable path="AmountPopup/SplitContainer/PopupBox/SplitContainer/AmountSelect"]
