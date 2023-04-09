@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://mpbq6qydvfmw"]
+
+[ext_resource type="PackedScene" uid="uid://c2fgb83ww33do" path="res://prefabs/TileScenes/Animal/Animal.tscn" id="1_pj0hs"]
+[ext_resource type="Texture2D" uid="uid://cjeje2qtmgeey" path="res://assets/character/animals/carret.png" id="2_ku4hr"]
+[ext_resource type="Texture2D" uid="uid://cfs77n6wmr6aa" path="res://assets/character/animals/carret_hover.png" id="3_glscq"]
+[ext_resource type="JSON" path="res://dialogue/Animals/Carret.json" id="4_27e0i"]
+
+[node name="Carret" instance=ExtResource("1_pj0hs")]
+Idle = ExtResource("2_ku4hr")
+Highlight = ExtResource("3_glscq")
+request = "Ceramic"
+reward = "Trash"
+reward_num = 5
+
+[node name="DialoguePlayer" parent="." index="0"]
+dialogue_file = ExtResource("4_27e0i")
+
+[node name="Sprite" parent="." index="2"]
+texture = ExtResource("2_ku4hr")

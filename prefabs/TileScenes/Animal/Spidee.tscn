@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgwiaeq3k1mvt"]
+
+[ext_resource type="PackedScene" uid="uid://c2fgb83ww33do" path="res://prefabs/TileScenes/Animal/Animal.tscn" id="1_57wub"]
+[ext_resource type="Texture2D" uid="uid://bcwkub2phwjd2" path="res://assets/character/animals/spidee.png" id="2_i4o4e"]
+[ext_resource type="Texture2D" uid="uid://bwjxs6ptawg4k" path="res://assets/character/animals/spidee_hover.png" id="3_jbobc"]
+[ext_resource type="JSON" path="res://dialogue/Animals/Spidee.json" id="4_60mep"]
+
+[node name="Spidee" instance=ExtResource("1_57wub")]
+Idle = ExtResource("2_i4o4e")
+Highlight = ExtResource("3_jbobc")
+request = "Glowbug"
+reward = "Shortcut"
+
+[node name="DialoguePlayer" parent="." index="0"]
+dialogue_file = ExtResource("4_60mep")
+
+[node name="Sprite" parent="." index="2"]
+texture = ExtResource("2_i4o4e")

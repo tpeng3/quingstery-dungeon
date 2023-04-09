@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://eo0nmk3yfhkt"]
+
+[ext_resource type="PackedScene" uid="uid://c2fgb83ww33do" path="res://prefabs/TileScenes/Animal/Animal.tscn" id="1_3oaxe"]
+[ext_resource type="Texture2D" uid="uid://blo3r1i1fxgdt" path="res://assets/character/animals/pipod.png" id="2_p575r"]
+[ext_resource type="Texture2D" uid="uid://c8jbdxwodowph" path="res://assets/character/animals/pipod_hover.png" id="3_pawj5"]
+[ext_resource type="JSON" path="res://dialogue/Animals/Pipod.json" id="4_4d8pm"]
+
+[node name="Pipod" instance=ExtResource("1_3oaxe")]
+Idle = ExtResource("2_p575r")
+Highlight = ExtResource("3_pawj5")
+request = "Herb Bundle"
+reward = "Silk"
+
+[node name="DialoguePlayer" parent="." index="0"]
+dialogue_file = ExtResource("4_4d8pm")
+
+[node name="Sprite" parent="." index="2"]
+texture = ExtResource("2_p575r")

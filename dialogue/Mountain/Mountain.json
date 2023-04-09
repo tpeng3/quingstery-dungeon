@@ -1,0 +1,26 @@
+{
+	"stairs": {
+		"lines": [
+			{
+				"text": "Keep climbing?",
+				"action": [
+					"CHOICES"
+				]
+			}
+		]
+	},
+	"famished": {
+		"lines": [
+			{
+			  "text": "You're starting to faint... Is there anything you can eat?"
+			}
+		  ]
+	},
+	"hungry": {
+		"lines": [
+			{
+				"text": "Your stomach is growling..."
+			}
+		]
+	}
+}

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://c3kogxnosvitv"]
+
+[ext_resource type="PackedScene" uid="uid://c2fgb83ww33do" path="res://prefabs/TileScenes/Animal/Animal.tscn" id="1_6xsc8"]
+[ext_resource type="Texture2D" uid="uid://bnlbp3sfukhg8" path="res://assets/character/animals/fluster.png" id="2_i1yk3"]
+[ext_resource type="Texture2D" uid="uid://t43ixkfisi6y" path="res://assets/character/animals/fluster_hover.png" id="3_qo7xq"]
+[ext_resource type="JSON" path="res://dialogue/Animals/Fluster.json" id="4_n5neg"]
+
+[node name="Fluster" instance=ExtResource("1_6xsc8")]
+Idle = ExtResource("2_i1yk3")
+Highlight = ExtResource("3_qo7xq")
+request = "Flower"
+reward = "Seed Packet"
+
+[node name="DialoguePlayer" parent="." index="0"]
+dialogue_file = ExtResource("4_n5neg")
+
+[node name="Sprite" parent="." index="2"]
+texture = ExtResource("2_i1yk3")

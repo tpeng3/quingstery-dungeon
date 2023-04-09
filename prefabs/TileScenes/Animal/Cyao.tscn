@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://kjr6lxpxth1g"]
+
+[ext_resource type="PackedScene" uid="uid://c2fgb83ww33do" path="res://prefabs/TileScenes/Animal/Animal.tscn" id="1_62u8a"]
+[ext_resource type="Texture2D" uid="uid://bkxhr0rtug8hf" path="res://assets/character/animals/cyao.png" id="2_2ywo0"]
+[ext_resource type="Texture2D" uid="uid://bf7lmbrv1stna" path="res://assets/character/animals/cyao_hover.png" id="3_fv66p"]
+[ext_resource type="JSON" path="res://dialogue/Animals/Cyao.json" id="4_mmmfu"]
+
+[node name="Cyao" instance=ExtResource("1_62u8a")]
+Idle = ExtResource("2_2ywo0")
+Highlight = ExtResource("3_fv66p")
+request = "Flower"
+reward = "Milk"
+
+[node name="DialoguePlayer" parent="." index="0"]
+dialogue_file = ExtResource("4_mmmfu")
+
+[node name="Sprite" parent="." index="2"]
+texture = ExtResource("2_2ywo0")
