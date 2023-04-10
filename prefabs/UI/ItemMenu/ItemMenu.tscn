@@ -3,52 +3,52 @@
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="1_6b7a8"]
 [ext_resource type="Script" path="res://prefabs/UI/ItemMenu/ItemMenu.gd" id="1_25xo1"]
 [ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
-[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="2_1s1md"]
-[ext_resource type="Texture2D" uid="uid://lbb4teo8jls7" path="res://assets/item/i_acorn.png" id="2_p56pw"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="2_1s1md"]
+[ext_resource type="Texture2D" uid="uid://bb43hfropg5lr" path="res://assets/item/i_acorn.png" id="2_p56pw"]
 [ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="4_uwq0p"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="7_1nhbr"]
 [ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_242x1"]
-[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="8_hlc0k"]
+[ext_resource type="Texture2D" uid="uid://b2jvgs4owo3dw" path="res://assets/ui/arrows.png" id="8_hlc0k"]
 [ext_resource type="PackedScene" uid="uid://u7jf2y80hsiw" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2utro"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ove7t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpr4u"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ykpeo"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ika62"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w8r7a"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_il2jk"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_b3d0f"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7tgas"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lrwvl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvqos"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8sdax"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mt5uf"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_r4jju"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_iappc"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_crkx1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_m1uyf"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(27, 0, 9, 9)
@@ -169,7 +169,7 @@ theme_override_constants/margin_left = -20
 theme_override_constants/margin_right = -20
 theme_override_constants/margin_bottom = -20
 
-[node name="NaviClose" type="Button" parent="OuterPadding/SplitContainer/LeftPanel/FooterMargin"]
+[node name="NaviClose" type="Button" parent="OuterPadding/SplitContainer/LeftPanel/FooterMargin" groups=["LeftButtons"]]
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("1_6b7a8")
@@ -203,10 +203,10 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 9.0
 offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_ove7t")
-texture_pressed = SubResource("AtlasTexture_ykpeo")
-texture_disabled = SubResource("AtlasTexture_w8r7a")
-texture_focused = SubResource("AtlasTexture_b3d0f")
+texture_normal = SubResource("AtlasTexture_dpr4u")
+texture_pressed = SubResource("AtlasTexture_ika62")
+texture_disabled = SubResource("AtlasTexture_il2jk")
+texture_focused = SubResource("AtlasTexture_7tgas")
 direction = 1
 
 [node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
@@ -217,10 +217,10 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 9.0
 offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_lrwvl")
-texture_pressed = SubResource("AtlasTexture_8sdax")
-texture_disabled = SubResource("AtlasTexture_r4jju")
-texture_focused = SubResource("AtlasTexture_crkx1")
+texture_normal = SubResource("AtlasTexture_xvqos")
+texture_pressed = SubResource("AtlasTexture_mt5uf")
+texture_disabled = SubResource("AtlasTexture_iappc")
+texture_focused = SubResource("AtlasTexture_m1uyf")
 direction = 0
 metadata/Direction = "right"
 
@@ -304,16 +304,25 @@ theme_override_constants/margin_left = -20
 theme_override_constants/margin_right = -20
 theme_override_constants/margin_bottom = -20
 
-[node name="ButtonMid" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
+[node name="ButtonMid" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" groups=["RightButtons"]]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath("../ButtonRight")
+focus_neighbor_bottom = NodePath(".")
+focus_mode = 0
 theme = ExtResource("1_6b7a8")
 theme_type_variation = &"Button_Alt2"
 text = "toss"
 
-[node name="ButtonRight" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin"]
+[node name="ButtonRight" type="Button" parent="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin" groups=["RightButtons"]]
 layout_mode = 2
 size_flags_horizontal = 8
+focus_neighbor_left = NodePath("../ButtonMid")
+focus_neighbor_top = NodePath(".")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath(".")
 focus_mode = 0
 theme = ExtResource("1_6b7a8")
 text = "use"

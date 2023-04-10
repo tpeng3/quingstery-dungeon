@@ -18,6 +18,12 @@ func _ready():
 	
 	$NewItemPopup.connect("on_confirm", _on_continue)
 	
+func enter_shop():
+	$Quingee/Sprite2D/QuingAnim.play("QuingIn")
+	await $AnimationPlayer.animation_finished
+	$Control/Character/TalkSpriteAnim.play("CharIn")
+	await $AnimationPlayer.animation_finished
+	
 func _reset_ui():
 	show()
 	$DialogueWrapper.hide()
@@ -33,7 +39,8 @@ func show_new_item(item, amount):
 	Inventory.add_item(item, amount)
 
 func show_dialogue(dialogue, dictKey=null):
-	$AnimationPlayer.play("bump")
+	if dictKey and dictKey != "welcome":
+		$AnimationPlayer.play("bump")
 	# freeze character while there is dialogue
 	Global.freezeQuingee = true
 	freezeBox = false
@@ -60,10 +67,10 @@ func _input(event):
 	# scraaa
 	if event.is_action_released("scraa"):
 		$Quingee/Sprite2D.texture = QuingeeScraa
-		$Quingee/Sprite2D/QuingAnim.play("QuingShake")
+		$AnimationPlayer.play("QuingShake")
 	else:
 		$Quingee/Sprite2D.texture = QuingeeIdle		
-		$Quingee/Sprite2D/QuingAnim.stop()
+		$AnimationPlayer.stop()
 
 func _on_continue():
 	# TODO: clean this up later

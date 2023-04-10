@@ -9,6 +9,7 @@ var sellTotal = 0
 @export var shop_items = []
 
 func _ready():
+	$ShopBox.enter_shop()
 	var welcome_key = _weighted_rand("welcome")
 	$ShopBox.show_dialogue($DialoguePlayer, welcome_key)
 	$ShopBox.no_selected.connect(_on_dialogue_end)
@@ -20,7 +21,7 @@ func _ready():
 
 	Global.FP.bullfrog += 1
 	_init_shop_items()
-	$NavButtons/NavList/Button1.grab_focus()	
+	$NavButtons/NavList/Button1.grab_focus()
 	
 func _on_dialogue_end():
 	$NavButtons/NavList/Button3.grab_focus()

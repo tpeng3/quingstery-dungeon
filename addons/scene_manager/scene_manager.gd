@@ -61,7 +61,6 @@ func _set_current_scene() -> void:
 			continue
 		if Scenes.scenes[key]["value"] == root_key:
 			_current_scene = key
-	print(root_key)
 	assert (_current_scene != "", "Scene Manager Error: loaded scene is not defined in scene manager tool.")
 
 # gets patterns from `addons/scene_manager/shader_patterns`

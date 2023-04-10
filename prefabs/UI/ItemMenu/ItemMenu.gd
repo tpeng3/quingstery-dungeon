@@ -16,6 +16,7 @@ enum CostType {
 @onready var ArrowBack = $OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack/ArrowBtn
 @onready var ArrowNext = $OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext/ArrowBtn
 var item_list = Inventory.print_items()
+var DimColor = Color(0.87, 0.78, 0.83, 0.9)
 
 signal menu_closed
 
@@ -41,13 +42,16 @@ func refresh_item_list(new_item_list):
 		node.on_focus.connect(_update_right_panel)
 		node.gui_input.connect(_on_item_gui_input)
 		ItemContainer.add_child(node)
+		node.add_to_group("LeftButtons")
 		
 	max_pages = max(ceil(item_list.size() / 8.0), 1)
+	
 	
 func show_menu():
 	current_page = 1
 	_show_page()
 	show()
+	_update_panel_focus_color()
 	if item_list.size() < 1:
 		ItemContainer.hide()
 		$OuterPadding/SplitContainer/RightPanel.hide()
@@ -111,7 +115,11 @@ func _on_item_gui_input(event):
 	elif event.is_action_pressed("ui_right"):
 		_on_next_pressed()
 	elif event.is_action_pressed("ui_accept"):
-		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.pressed.emit()
+#		_update_panel_focus_color(true)
+		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.grab_focus()
+#		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.pressed.emit()
+	elif event.is_action_pressed("ui_cancel"):
+		$OuterPadding/SplitContainer/LeftPanel/FooterMargin/NaviClose.grab_focus()
 
 func _update_right_panel(node):
 	focused_item = node
@@ -129,3 +137,15 @@ func _on_button_right_focus_entered():
 
 func _on_button_right_focus_exited():
 	focused_item.find_child("Panel").theme_type_variation = ""
+
+func _update_panel_focus_color(isRight = false):
+	$OuterPadding/SplitContainer/LeftPanel.modulate = DimColor if isRight else Color(1, 1, 1, 1)
+	$OuterPadding/SplitContainer/RightPanel.modulate = DimColor if !isRight else Color(1, 1, 1, 1)
+	for node in get_tree().get_nodes_in_group("LeftButtons"):
+		node.focus_mode = FOCUS_NONE if isRight else FOCUS_ALL
+		print(node.name, node.focus_mode)
+	for node in get_tree().get_nodes_in_group("RightButtons"):
+		node.focus_mode = FOCUS_NONE if !isRight else FOCUS_ALL
+		print(node.name, node.focus_mode)
+		
+	

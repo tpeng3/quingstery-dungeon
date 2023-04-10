@@ -1,9 +1,9 @@
 [gd_scene load_steps=20 format=3 uid="uid://desvgeqvimub7"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/ShopBox.gd" id="1_qwecj"]
-[ext_resource type="Texture2D" uid="uid://bvbqmsxgxn5p1" path="res://assets/character/talksprites/quingesterynpc_bullfrog_flats.png" id="2_322i1"]
-[ext_resource type="Texture2D" uid="uid://cd2d37oqbm6xe" path="res://assets/character/talksprites/quingee.png" id="2_an6im"]
-[ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/UI/compass.png" id="2_qxa0a"]
+[ext_resource type="Texture2D" uid="uid://cvq2oj63c1kue" path="res://assets/character/talksprites/quingesterynpc_bullfrog_flats.png" id="2_322i1"]
+[ext_resource type="Texture2D" uid="uid://cbxn4fyw7mjgb" path="res://assets/character/talksprites/quingee.png" id="2_an6im"]
+[ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/ui/compass.png" id="2_qxa0a"]
 [ext_resource type="Theme" uid="uid://bnb6osg7rfj47" path="res://theme/smallround.tres" id="3_kvlx5"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="4_gcxjm"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="5_b8iwe"]
@@ -13,7 +13,7 @@
 
 [sub_resource type="Animation" id="Animation_mp335"]
 resource_name = "QuingSprite"
-length = 0.5
+length = 1.5
 step = 0.05
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -24,7 +24,7 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "handle_modes": PackedInt32Array(0, 0),
 "points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.5)
+"times": PackedFloat32Array(0.2, 0.7)
 }
 tracks/1/type = "bezier"
 tracks/1/imported = false
@@ -35,7 +35,7 @@ tracks/1/loop_wrap = true
 tracks/1/keys = {
 "handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
 "points": PackedFloat32Array(50, -0.25, 0, 0.1, -44, -9, -0.1, 0, 0.05, 1, 5, -0.05, -1, 0.0482486, -3, -4, -0.0378164, 0, 0.0221682, 0, 0, 0, 0, 0, -1),
-"times": PackedFloat32Array(0, 0.271235, 0.372948, 0.457709, 0.502046)
+"times": PackedFloat32Array(0.2, 0.5, 0.6, 0.65, 0.7)
 }
 
 [sub_resource type="Animation" id="Animation_bmyjl"]
@@ -162,7 +162,7 @@ offset_right = 342.0
 offset_bottom = 410.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Quingee"]
-position = Vector2(0, -0.345411)
+position = Vector2(0, 50)
 texture = ExtResource("2_an6im")
 
 [node name="QuingAnim" type="AnimationPlayer" parent="Quingee/Sprite2D"]
@@ -179,11 +179,13 @@ offset_bottom = 540.0
 size_flags_vertical = 8
 
 [node name="Character" type="TextureRect" parent="Control"]
+self_modulate = Color(0.211765, 0.00784314, 0.396078, 0)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = 0.00112915
+offset_left = 240.0
+offset_right = 240.001
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.1, 1.1)

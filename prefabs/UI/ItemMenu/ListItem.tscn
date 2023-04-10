@@ -1,21 +1,21 @@
 [gd_scene load_steps=21 format=3 uid="uid://cklgq1yqdgf2s"]
 
-[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_qoo2l"]
+[ext_resource type="FontFile" uid="uid://c5jxg6vswppim" path="res://assets/ui/Timetwist/Timetwist-Bold.ttf" id="1_qoo2l"]
 [ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="2_hju7a"]
 [ext_resource type="Script" path="res://prefabs/UI/ItemMenu/ListItem.gd" id="2_m3cx0"]
-[ext_resource type="Texture2D" uid="uid://lbb4teo8jls7" path="res://assets/item/i_acorn.png" id="2_qxj6x"]
+[ext_resource type="Texture2D" uid="uid://bb43hfropg5lr" path="res://assets/item/i_acorn.png" id="2_qxj6x"]
 [ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="3_mtt02"]
-[ext_resource type="Texture2D" uid="uid://om06x8r6olju" path="res://assets/UI/Gald_Symbol.png" id="3_ybu0t"]
+[ext_resource type="Texture2D" uid="uid://br0ne6j6aqo0s" path="res://assets/ui/Gald_Symbol.png" id="3_ybu0t"]
 [ext_resource type="StyleBox" uid="uid://xk12q87v443s" path="res://theme/tex_MenuSign_L.tres" id="4_16dhe"]
 [ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="5_f7ghv"]
 [ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="6_3fdlf"]
 [ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="7_g5ggn"]
-[ext_resource type="FontFile" uid="uid://b0m4hay27djem" path="res://assets/UI/Dogica/dogicapixel.ttf" id="8_0rt6f"]
-[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="9_odpt6"]
-[ext_resource type="StyleBox" uid="uid://druhp57aw2njt" path="res://theme/Signpost_Callout_Alt.tres" id="10_1r3br"]
+[ext_resource type="FontFile" uid="uid://dkcuhhgjtpmny" path="res://assets/ui/Dogica/dogicapixel.ttf" id="8_0rt6f"]
+[ext_resource type="FontFile" uid="uid://bqqo6jyn854kp" path="res://assets/ui/Dogica/dogicapixelbold.ttf" id="9_odpt6"]
+[ext_resource type="StyleBox" path="res://theme/Signpost_Callout_Alt.tres" id="10_1r3br"]
 [ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="10_352iu"]
 [ext_resource type="StyleBox" uid="uid://c2nb40sqt2n80" path="res://theme/Signpost_Callout.tres" id="10_h54xc"]
-[ext_resource type="Texture2D" uid="uid://3t04h8cisbgc" path="res://assets/UI/EquipSprite.png" id="16_gim80"]
+[ext_resource type="Texture2D" uid="uid://bb4pjfvgev101" path="res://assets/ui/EquipSprite.png" id="16_gim80"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
 
@@ -82,7 +82,6 @@ RichTextLabel/styles/normal = ExtResource("10_352iu")
 [node name="ListItem" type="MarginContainer"]
 offset_right = 384.0
 offset_bottom = 37.0
-focus_mode = 2
 theme = SubResource("Theme_vjmah")
 script = ExtResource("2_m3cx0")
 
