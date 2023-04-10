@@ -4,11 +4,11 @@
 [ext_resource type="JSON" path="res://assets/json/BakeRoast.json" id="2_506hr"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="2_qjs2d"]
 [ext_resource type="JSON" path="res://dialogue/Shopkeepers/Reinhardt.json" id="3_lnluh"]
-[ext_resource type="Texture2D" uid="uid://1spst1v6qkgy" path="res://assets/background/quingsterybgs_bakeandroast.png" id="4_2ggbt"]
-[ext_resource type="Texture2D" uid="uid://d0k6nrijw6dtu" path="res://assets/character/talksprites/quingesterynpc_reinhardt_flats.png" id="5_to8pg"]
+[ext_resource type="Texture2D" uid="uid://pppqal6hytlq" path="res://assets/background/quingsterybgs_bakeandroast.png" id="4_2ggbt"]
+[ext_resource type="Texture2D" uid="uid://oo7a6dccrs7c" path="res://assets/character/talksprites/quingesterynpc_reinhardt_flats.png" id="5_to8pg"]
 [ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="6_yxph0"]
 [ext_resource type="PackedScene" uid="uid://cm06xatxch52d" path="res://prefabs/UI/ItemMenu/BuyMenu.tscn" id="7_xuprc"]
-[ext_resource type="Texture2D" uid="uid://1jmqjoigq07a" path="res://assets/character/talksprites/quingesterynpc_nora_colors.png" id="8_048oi"]
+[ext_resource type="Texture2D" uid="uid://b4u34gbth8n8g" path="res://assets/character/talksprites/quingesterynpc_nora_colors.png" id="8_048oi"]
 [ext_resource type="PackedScene" uid="uid://bw7q1cc3tci2i" path="res://prefabs/UI/NavButtons/NavButtons.tscn" id="8_qwxmw"]
 [ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="9_gj2nm"]
 
@@ -136,14 +136,14 @@ shop_node = NodePath("..")
 offset_right = 960.0
 offset_bottom = 540.0
 
-[node name="Button2" parent="NavButtons/NavList" index="0"]
+[node name="Button2" parent="NavButtons/NavList" index="1"]
 visible = false
 
 [node name="WeatherHUD" parent="." instance=ExtResource("9_gj2nm")]
 
+[connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button3" to="." method="_on_talk_pressed"]
 [connection signal="pressed" from="NavButtons/NavList/Button4" to="." method="_on_leave_pressed"]
-[connection signal="pressed" from="NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
 
 [editable path="ShopBox"]
 [editable path="NavButtons"]

@@ -121,3 +121,16 @@ visible = false
 libraries = {
 "": SubResource("AnimationLibrary_7aoaq")
 }
+
+[connection signal="body_entered" from="Map/Floor/Animal" to="Map/Floor/Animal" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/Animal" to="Map/Floor/Animal" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_exited" flags=18]
+[connection signal="body_entered" from="Map/Floor/@MiningSpot@30281" to="Map/Floor/@MiningSpot@30281" method="_on_body_entered" flags=18]
+[connection signal="body_exited" from="Map/Floor/@MiningSpot@30281" to="Map/Floor/@MiningSpot@30281" method="_on_body_exited" flags=18]

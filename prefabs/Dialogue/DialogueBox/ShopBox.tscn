@@ -1,9 +1,9 @@
 [gd_scene load_steps=20 format=3 uid="uid://desvgeqvimub7"]
 
 [ext_resource type="Script" path="res://prefabs/Dialogue/DialogueBox/ShopBox.gd" id="1_qwecj"]
-[ext_resource type="Texture2D" uid="uid://cvq2oj63c1kue" path="res://assets/character/talksprites/quingesterynpc_bullfrog_flats.png" id="2_322i1"]
-[ext_resource type="Texture2D" uid="uid://cbxn4fyw7mjgb" path="res://assets/character/talksprites/quingee.png" id="2_an6im"]
-[ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/ui/compass.png" id="2_qxa0a"]
+[ext_resource type="Texture2D" uid="uid://bvbqmsxgxn5p1" path="res://assets/character/talksprites/quingesterynpc_bullfrog_flats.png" id="2_322i1"]
+[ext_resource type="Texture2D" uid="uid://cd2d37oqbm6xe" path="res://assets/character/talksprites/quingee.png" id="2_an6im"]
+[ext_resource type="Texture2D" uid="uid://bdlm2k5inqmwb" path="res://assets/UI/compass.png" id="2_qxa0a"]
 [ext_resource type="Theme" uid="uid://bnb6osg7rfj47" path="res://theme/smallround.tres" id="3_kvlx5"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="4_gcxjm"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="5_b8iwe"]
@@ -13,7 +13,7 @@
 
 [sub_resource type="Animation" id="Animation_mp335"]
 resource_name = "QuingSprite"
-length = 1.5
+length = 0.7
 step = 0.05
 tracks/0/type = "bezier"
 tracks/0/imported = false
@@ -162,7 +162,6 @@ offset_right = 342.0
 offset_bottom = 410.0
 
 [node name="Sprite2D" type="Sprite2D" parent="Quingee"]
-position = Vector2(0, 50)
 texture = ExtResource("2_an6im")
 
 [node name="QuingAnim" type="AnimationPlayer" parent="Quingee/Sprite2D"]

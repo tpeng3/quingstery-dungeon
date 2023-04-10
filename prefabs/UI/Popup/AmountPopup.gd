@@ -14,17 +14,18 @@ enum PopupType {
 func _ready():
 	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount_update.connect(_on_update)
 
-func show_popup(node: ListItem):
+func show_popup(node: ListItem, max_amount=0):
 	item_name = node.item_name
 	if popup_type != PopupType.TRADE:
 		item_cost = node.item_cost
 	var item_dict = Inventory.find_item(item_name)
 	var item_texture = load(item_dict.path)
+	var item_max = max_amount if max_amount > 0 else node.item_amount
 	$SplitContainer/ItemMargin/ItemSprite.texture = item_texture
 	$SplitContainer/PopupBox/SplitContainer/TextPadding/PopupText.text = \
-		item_desc.replace("[item]", item_name)
-	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount_max = node.item_amount
-	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount = node.item_amount
+		item_desc.replace("[item]", item_name).replace("[max]", str(item_max))
+	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount_max = item_max
+	$SplitContainer/PopupBox/SplitContainer/AmountSelect.amount = item_max
 	$SplitContainer/PopupBox/SplitContainer/AmountSelect.update_arrows()
 	if popup_type == PopupType.STORE:
 		$SplitContainer/PopupBox/FooterMargin/ButtonRight.text = "store"

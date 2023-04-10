@@ -6,6 +6,7 @@ const FRIEND_STATUS = 20
 @export var shop_items = []
 
 func _ready():
+	$ShopBox.enter_shop()
 	var welcome_key = _weighted_rand("welcome")
 	$ShopBox.show_dialogue($DialoguePlayer, welcome_key)
 	$ShopBox.no_selected.connect(_on_dialogue_end)

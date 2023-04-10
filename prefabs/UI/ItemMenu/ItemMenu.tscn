@@ -3,52 +3,52 @@
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="1_6b7a8"]
 [ext_resource type="Script" path="res://prefabs/UI/ItemMenu/ItemMenu.gd" id="1_25xo1"]
 [ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="1_31h2c"]
-[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/ui/menu_board.png" id="2_1s1md"]
-[ext_resource type="Texture2D" uid="uid://bb43hfropg5lr" path="res://assets/item/i_acorn.png" id="2_p56pw"]
+[ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="2_1s1md"]
+[ext_resource type="Texture2D" uid="uid://lbb4teo8jls7" path="res://assets/item/i_acorn.png" id="2_p56pw"]
 [ext_resource type="PackedScene" uid="uid://cklgq1yqdgf2s" path="res://prefabs/UI/ItemMenu/ListItem.tscn" id="4_uwq0p"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="7_1nhbr"]
 [ext_resource type="PackedScene" uid="uid://by7wdo8rfud48" path="res://prefabs/UI/Components/ArrowBtn.tscn" id="7_242x1"]
-[ext_resource type="Texture2D" uid="uid://b2jvgs4owo3dw" path="res://assets/ui/arrows.png" id="8_hlc0k"]
+[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="8_hlc0k"]
 [ext_resource type="PackedScene" uid="uid://u7jf2y80hsiw" path="res://prefabs/UI/ItemMenu/ReqItem.tscn" id="8_k8j6h"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2utro"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dpr4u"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_akckn"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ika62"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_gy1xo"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_il2jk"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ciby7"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_7tgas"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aqrn"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xvqos"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jo0qb"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_mt5uf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7v40a"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iappc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_pna5o"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_m1uyf"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgmen"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(27, 0, 9, 9)
@@ -203,10 +203,10 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 9.0
 offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_dpr4u")
-texture_pressed = SubResource("AtlasTexture_ika62")
-texture_disabled = SubResource("AtlasTexture_il2jk")
-texture_focused = SubResource("AtlasTexture_7tgas")
+texture_normal = SubResource("AtlasTexture_akckn")
+texture_pressed = SubResource("AtlasTexture_gy1xo")
+texture_disabled = SubResource("AtlasTexture_ciby7")
+texture_focused = SubResource("AtlasTexture_5aqrn")
 direction = 1
 
 [node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
@@ -217,10 +217,10 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 9.0
 offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_xvqos")
-texture_pressed = SubResource("AtlasTexture_mt5uf")
-texture_disabled = SubResource("AtlasTexture_iappc")
-texture_focused = SubResource("AtlasTexture_m1uyf")
+texture_normal = SubResource("AtlasTexture_jo0qb")
+texture_pressed = SubResource("AtlasTexture_7v40a")
+texture_disabled = SubResource("AtlasTexture_pna5o")
+texture_focused = SubResource("AtlasTexture_kgmen")
 direction = 0
 metadata/Direction = "right"
 
@@ -336,4 +336,4 @@ libraries = {
 [connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack/ArrowBtn" to="." method="_on_prev_pressed" flags=18]
 [connection signal="pressed" from="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext/ArrowBtn" to="." method="_on_next_pressed" flags=18]
 [connection signal="focus_entered" from="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight" to="." method="_on_button_right_focus_entered"]
-[connection signal="focus_exited" from="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight" to="." method="_on_button_right_focus_exited"]
+[connection signal="gui_input" from="OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight" to="." method="_on_button_right_gui_input"]

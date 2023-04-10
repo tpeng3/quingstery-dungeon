@@ -27,6 +27,7 @@ func init_shop():
 		node.on_focus.connect(_update_right_panel)
 		node.gui_input.connect(_on_item_gui_input)
 		ItemContainer.add_child(node)
+		node.add_to_group("LeftButtons")
 	
 	max_pages = max(ceil(item_list.size() / 8.0), 1)
 	_show_page()
@@ -34,9 +35,10 @@ func init_shop():
 
 func _update_right_panel(node):
 	super(node)
-	if node.item_name in Inventory.inventory:
-		$OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/ItemDesc.text += \
-			" (Owned: " + str(Inventory.inventory[node.item_name].count) + ")"
+	var inv_count = Inventory.inventory[node.item_name].count if node.item_name in Inventory.inventory else 0
+	var storage_count = Inventory.storage[node.item_name].count if node.item_name in Inventory.storage else 0
+	$OuterPadding/SplitContainer/RightPanel/MarginContainer/DescPadding/FlowContainer/ItemDesc.text += \
+		" (Owned: " + str(inv_count + storage_count) + ")"
 	
 	ReqList.hide()
 	if (node.item_type == "Equip" or node.item_type == "Upgrade") and node.item_name in Inventory.inventory:
@@ -63,24 +65,29 @@ func _on_popup_close():
 	$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.grab_focus()
 
 func _on_buy():
+	var overflow = false
 	if focused_item.item_trade:
 		for i in focused_item.item_trade:
 			Inventory.remove_item(i.item, i.amount)
 		Inventory.add_item(focused_item.item_name)
 	else:
-		if Inventory.get_inv_count() >= Inventory.max:
-			$ClosePopup.show_popup("Your inventory is full! You can store items in [b]Town Hall[/b] or sell them at the [b]Trading Post.[/b]")
+		if Inventory.get_inv_count() >= Inventory.max and Inventory.get_inv_count(true) >= Inventory.STORAGE_MAX:
+			$ClosePopup.show_popup("Both your inventory and storage is full! Please clear it out before purchasing.")
 			return
 		else:
 			Inventory.gald -= focused_item.item_cost
-			Inventory.add_item(focused_item.item_name)
+			overflow = Inventory.add_item(focused_item.item_name)
 	focused_item.update_item()
 	on_buy.emit(focused_item)
 	_update_right_panel(focused_item)
+	if overflow:
+		$ClosePopup.show_popup("Your inventory is full so purchased items have been delivered to your storage at [b]Town Hall[/b].")
 
 func _can_trade(node):
 	var can_trade = true
 	for i in node.item_trade:
-		if !i.item in Inventory.inventory or Inventory.inventory[i.item].count < i.amount:
+		var inv_count = Inventory.inventory[i.item].count if i.item in Inventory.inventory else 0
+		var storage_count = Inventory.storage[i.item].count if i.item in Inventory.storage else 0
+		if (inv_count + storage_count < i.amount):
 			return false
 	return true

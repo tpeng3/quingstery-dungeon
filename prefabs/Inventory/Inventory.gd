@@ -50,13 +50,28 @@ func add_item(key, count=1, addToStorage=false):
 	var item = find_item(key)
 	assert(item, "Key Error: This item does not exist: " + key)
 	var box = storage if addToStorage else inventory
+	
+	# town items that can't be added to inventory go straight to storage
+	var store = count
+	var remainder = 0
+	if !addToStorage and Global.currentFloor <= 0:
+		store = min(count, max - get_inv_count())
+		remainder = count - store
+		if key in storage:
+			storage[key].count += remainder
+		else:
+			storage[key] = {
+				"name": item.name,
+				"count": remainder
+			}
 	if key in box:
-		box[key].count += count
+		box[key].count += store
 	else:
 		box[key] = {
 			"name": item.name,
-			"count": count
+			"count": store
 		}
+	return remainder > 0
 		
 func remove_item(key, count=1, takeFromStorage=false):
 	var item = find_item(key)
@@ -103,7 +118,6 @@ func get_inv_count(getStorage=false):
 		if item.type == "Upgrade":
 			continue
 		count += box[key].count
-#		count += ceil(box[key].count / item.maxcount)
 	return count
 
 func find_item(key):

@@ -16,7 +16,7 @@ enum CostType {
 @onready var ArrowBack = $OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack/ArrowBtn
 @onready var ArrowNext = $OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext/ArrowBtn
 var item_list = Inventory.print_items()
-var DimColor = Color(0.87, 0.78, 0.83, 0.9)
+var DimColor = Color(0.87, 0.78, 0.83, 1)
 
 signal menu_closed
 
@@ -70,7 +70,7 @@ func _update_page():
 		current_page -= 1
 		max_pages = new_max_page
 	_show_page()
-	if item_list.size() < 1:
+	if ItemContainer.get_children().size() < 1:
 		ItemContainer.hide()
 		$OuterPadding/SplitContainer/RightPanel.hide()
 		$OuterPadding/SplitContainer/LeftPanel/PanelPadding/NoItemsText.show()
@@ -84,7 +84,8 @@ func _update_page():
 func _show_page():
 	_update_page_text()
 	var visible_items = ItemContainer.get_children().slice((current_page - 1) * 8, current_page * 8)
-	visible_items[0].grab_focus()
+	if visible_items.size() > 0:
+		visible_items[0].grab_focus()
 	for n in ItemContainer.get_children():
 		n.visible = n in visible_items
 
@@ -115,9 +116,8 @@ func _on_item_gui_input(event):
 	elif event.is_action_pressed("ui_right"):
 		_on_next_pressed()
 	elif event.is_action_pressed("ui_accept"):
-#		_update_panel_focus_color(true)
+		_update_panel_focus_color(true)
 		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.grab_focus()
-#		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.pressed.emit()
 	elif event.is_action_pressed("ui_cancel"):
 		$OuterPadding/SplitContainer/LeftPanel/FooterMargin/NaviClose.grab_focus()
 
@@ -135,17 +135,16 @@ func _on_button_right_focus_entered():
 	var path = $OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.get_path_to(focused_item)
 	$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.focus_neighbor_left = path
 
-func _on_button_right_focus_exited():
-	focused_item.find_child("Panel").theme_type_variation = ""
-
 func _update_panel_focus_color(isRight = false):
 	$OuterPadding/SplitContainer/LeftPanel.modulate = DimColor if isRight else Color(1, 1, 1, 1)
 	$OuterPadding/SplitContainer/RightPanel.modulate = DimColor if !isRight else Color(1, 1, 1, 1)
 	for node in get_tree().get_nodes_in_group("LeftButtons"):
 		node.focus_mode = FOCUS_NONE if isRight else FOCUS_ALL
-		print(node.name, node.focus_mode)
 	for node in get_tree().get_nodes_in_group("RightButtons"):
 		node.focus_mode = FOCUS_NONE if !isRight else FOCUS_ALL
-		print(node.name, node.focus_mode)
-		
 	
+func _on_button_right_gui_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		focused_item.find_child("Panel").theme_type_variation = ""
+		_update_panel_focus_color()
+		focused_item.grab_focus()

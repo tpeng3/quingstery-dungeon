@@ -10,34 +10,37 @@ func _ready():
 		$OuterPadding/SplitContainer/LeftPanel/TitleMargin/LeftTitle.text = "Take Items"
 		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.text = "take"
 		$AmountPopup.popup_type = $AmountPopup.PopupType.TAKE
-		$AmountPopup.item_desc = "How many [b][item][/b] do you want to take from storage?"
+		$AmountPopup.item_desc = "How many [b][item][/b] do you want to take from storage? (Available: [max])"
 	else:
 		$OuterPadding/SplitContainer/LeftPanel/TitleMargin/LeftTitle.text = "Store Items"
 		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.text = "store"
 		$AmountPopup.popup_type = $AmountPopup.PopupType.STORE
-		$AmountPopup.item_desc = "How many [b][item][/b] do you want to move to storage?"
+		$AmountPopup.item_desc = "How many [b][item][/b] do you want to move to storage? (Available: [max])"
 
 func show_menu():
 	refresh_item_list(Inventory.print_items(show_storage))
 	super()
 
 func _on_store_pressed():
-	if focused_item.item_amount > 1:
-		$AmountPopup.show_popup(focused_item)
-		$AmountPopup/SplitContainer/PopupBox/SplitContainer/AmountSelect/SplitContainer/MiddleRow/Left.grab_focus()
+	if show_storage and Inventory.get_inv_count() + 1 > Inventory.max:
+		$ClosePopup.show_popup("Sorry, your inventory is full.")
+		return
+	elif Inventory.get_inv_count(true) + 1 > Inventory.STORAGE_MAX:
+		$ClosePopup.show_popup("Sorry, your storage is full. (Max: 99)")
+		return
+	elif focused_item.item_amount > 1:
+		if show_storage:
+			$AmountPopup.show_popup(focused_item, min(focused_item.item_amount, Inventory.max - Inventory.get_inv_count()))
+		else:
+			$AmountPopup.show_popup(focused_item)
 		$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonLeft.pressed.connect(_on_back)
 		$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonRight.pressed.connect(_on_store)
 	else:
-		if show_storage and Inventory.get_inv_count() + 1 > Inventory.max:
-			$ClosePopup.show_popup("Sorry, your inventory is full.")
-			return
-		elif Inventory.get_inv_count(true)  + 1 > Inventory.STORAGE_MAX:
-			$ClosePopup.show_popup("Sorry, your storage is full. (Max: 99)")
-			return
 		Inventory.add_item(focused_item.item_name, 1, !show_storage)
 		Inventory.remove_item(focused_item.item_name, 1, show_storage)
 		focused_item.get_parent().remove_child(focused_item)
 		focused_item.queue_free()
+		_update_panel_focus_color()
 		_update_page()
 
 func _on_back():
@@ -64,9 +67,10 @@ func _on_store():
 	if (focused_item.item_amount <= 0):
 		focused_item.get_parent().remove_child(focused_item)
 		focused_item.queue_free()
+		_update_panel_focus_color()
 		_update_page()
 	else:
-		focused_item.grab_focus()
+		_on_close_popup()
 
 func _on_close_popup():
 	$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.grab_focus()

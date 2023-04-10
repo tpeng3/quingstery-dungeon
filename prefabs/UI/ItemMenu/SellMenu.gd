@@ -35,7 +35,7 @@ func _on_back():
 	$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonLeft.pressed.disconnect(_on_back)
 	$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonRight.pressed.disconnect(_on_sell)
 	$AmountPopup.hide()
-	focused_item.grab_focus()
+	$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.grab_focus()
 
 func _on_sell():
 	$AmountPopup/SplitContainer/PopupBox/FooterMargin/ButtonLeft.pressed.disconnect(_on_back)
@@ -50,6 +50,7 @@ func _on_sell():
 	if (focused_item.item_amount <= 0):
 		focused_item.get_parent().remove_child(focused_item)
 		focused_item.queue_free()
+		_update_panel_focus_color()
 		_update_page()
 	else:
-		focused_item.grab_focus()
+		$OuterPadding/SplitContainer/RightPanel/MarginContainer/FooterMargin/ButtonRight.grab_focus()

@@ -20,7 +20,7 @@ var maxHunger = 50
 var exploreCount = 0
 var timesFailed = 0
 var currentCheckpoint = CheckpointType.THROAT
-var currentFloor = 1
+var currentFloor = -1
 var highestFloor = 0
 var ozChance = 0.0
 var wanderChance = 0.0
@@ -160,15 +160,12 @@ func advanceFloor():
 		# TODO: go to peak cutscene
 		SceneManager.change_scene("Map")
 	elif currentFloor == CheckpointType.PEAK:
-		wanderChance = 0.0
 		# get custom map
 		SceneManager.change_scene("Mountain")
 	elif currentFloor == CheckpointType.STEPS:
-		wanderChance = 0.0
 		# get custom map
 		SceneManager.change_scene("Mountain")
 	elif currentFloor == CheckpointType.RIVER:
-		wanderChance = 0.0
 		# get custom map
 		SceneManager.change_scene("Mountain")
 	elif currentFloor == 15 and FP.piper < 0:
@@ -188,7 +185,6 @@ func advanceFloor():
 			ozChance = pow(currentFloor - CheckpointType.PEAK / CheckpointType.TOP - CheckpointType.PEAK, 5.0)
 			print(ozChance, "ozchance")
 		wanderChance = pow((currentFloor % 10) / 10.0, 3.0)
-		print(wanderChance)
 		if wanderChance <= 0.0:
 			wanderChance = 1.0
 		print(wanderChance, "wanderChance")

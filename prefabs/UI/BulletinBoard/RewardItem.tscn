@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://ctx2ur07v7kgs"]
 
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="1_cjkdh"]
-[ext_resource type="Texture2D" path="res://assets/ui/Gald_Symbol.png" id="3_rqdwq"]
+[ext_resource type="Texture2D" uid="uid://om06x8r6olju" path="res://assets/UI/Gald_Symbol.png" id="3_rqdwq"]
 
 [node name="TaskItem" type="MarginContainer"]
 

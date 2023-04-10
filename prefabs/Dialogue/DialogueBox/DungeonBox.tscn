@@ -13,22 +13,22 @@
 [ext_resource type="PackedScene" uid="uid://cl8b7gtcakyrn" path="res://prefabs/UI/Popup/ClosePopup.tscn" id="9_acty5"]
 [ext_resource type="PackedScene" uid="uid://ucyl10fxy8rh" path="res://prefabs/UI/TopBar/TopBar.tscn" id="12_alw2p"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_btdhq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_w1kgm"]
 resource_local_to_scene = true
 atlas = ExtResource("8_c3yda")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4t83x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohlyq"]
 resource_local_to_scene = true
 atlas = ExtResource("8_c3yda")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_okqh5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_efdwo"]
 resource_local_to_scene = true
 atlas = ExtResource("8_c3yda")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6he0x"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fwvb"]
 resource_local_to_scene = true
 atlas = ExtResource("8_c3yda")
 region = Rect2(27, 0, 9, 9)
@@ -179,10 +179,10 @@ offset_top = 91.0
 offset_right = 773.0
 offset_bottom = 100.0
 focus_mode = 2
-texture_normal = SubResource("AtlasTexture_btdhq")
-texture_pressed = SubResource("AtlasTexture_4t83x")
-texture_disabled = SubResource("AtlasTexture_okqh5")
-texture_focused = SubResource("AtlasTexture_6he0x")
+texture_normal = SubResource("AtlasTexture_w1kgm")
+texture_pressed = SubResource("AtlasTexture_ohlyq")
+texture_disabled = SubResource("AtlasTexture_efdwo")
+texture_focused = SubResource("AtlasTexture_0fwvb")
 direction = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

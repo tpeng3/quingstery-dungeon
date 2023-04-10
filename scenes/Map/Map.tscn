@@ -125,6 +125,7 @@ offset_right = 960.0
 offset_bottom = 540.0
 
 [node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+transparent_bg = true
 handle_input_locally = false
 size = Vector2i(960, 540)
 render_target_update_mode = 4
@@ -677,8 +678,8 @@ visible = false
 [connection signal="pressed" from="Control/VBoxContainer/Explore Town" to="." method="_on_explore_town_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/Climb Peak" to="." method="_on_climb_peak_pressed"]
 [connection signal="focus_entered" from="TownPanel/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_focus_entered"]
-[connection signal="pressed" from="TownPanel/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_pressed"]
-[connection signal="pressed" from="MountainInfo/OuterPadding/FooterMargin/BackButton" to="." method="_on_navi_close_pressed"]
+[connection signal="pressed" from="TownPanel/SplitContainer/LeftPanel/FooterMargin/NaviClose" to="." method="_on_navi_close_pressed" binds= ["Explore Town"]]
+[connection signal="pressed" from="MountainInfo/OuterPadding/FooterMargin/BackButton" to="." method="_on_navi_close_pressed" binds= ["Climb Peak"]]
 [connection signal="pressed" from="MountainInfo/OuterPadding/FooterMargin/GoButton" to="." method="_on_go_button_pressed"]
 
 [editable path="Control/VBoxContainer/Explore Town"]

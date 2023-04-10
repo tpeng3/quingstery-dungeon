@@ -131,7 +131,6 @@ func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
 	# quingee can move again
 	await get_tree().create_timer(.1).timeout
 	Global.freezeQuingee = false
-	print("reach here?")
 	
 func _on_dialogue_yes_pressed():
 #	$ButtonClick.play()

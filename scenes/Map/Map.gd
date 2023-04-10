@@ -57,7 +57,7 @@ func update_panel(node):
 		var bip = $SubViewportContainer/SubViewport/MapButtons.get_node(str(node.text))
 		bip.enter_focus()
 		if node.disabled:
-			$RightPanel/MarginContainer/DescPadding/FlowContainer/MapDesc.text = "No one seems to be around here anymore."
+			$RightPanel/MarginContainer/DescPadding/FlowContainer/MapDesc.text = "You've already visited here today."
 		else:
 			$RightPanel/MarginContainer/DescPadding/FlowContainer/MapDesc.text = bip.mapDesc
 		$SubViewportContainer/SubViewport/WeatherFilter.update_rect(bip.position)
@@ -78,11 +78,11 @@ func _on_explore_town_pressed():
 	$"TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer/Trading Post".grab_focus()
 	last_focused = $"Control/VBoxContainer/Explore Town"
 
-func _on_navi_close_pressed():
+func _on_navi_close_pressed(node_name):
 	$MountainInfo.hide()
 	$TownPanel.hide()
 	$Control.show()
-	last_focused.grab_focus()
+	$Control/VBoxContainer.get_node(node_name).grab_focus()
 
 func _on_npc_finished():
 	$TownPanel.show()
@@ -100,5 +100,5 @@ func _on_climb_peak_pressed():
 
 func _on_go_button_pressed():
 	# TODO: TEMPORARY WHILE MOUNTAIN IS STILL IN THE WORKS
-	Global.newDay()
+	Global.last_town_menu_button = $"Control/VBoxContainer/Town Hall".get_path()
 	SceneManager.change_scene("Map")

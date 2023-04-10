@@ -20,9 +20,8 @@ func _ready():
 	
 func enter_shop():
 	$Quingee/Sprite2D/QuingAnim.play("QuingIn")
-	await $AnimationPlayer.animation_finished
+	await get_tree().create_timer(.5).timeout
 	$Control/Character/TalkSpriteAnim.play("CharIn")
-	await $AnimationPlayer.animation_finished
 	
 func _reset_ui():
 	show()
