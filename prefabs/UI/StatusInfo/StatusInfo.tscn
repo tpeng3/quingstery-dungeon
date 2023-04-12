@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="4_h283h"]
 [ext_resource type="ButtonGroup" uid="uid://cta67ouucwcn" path="res://prefabs/UI/StatusInfo/MenuGroup.tres" id="6_upmp7"]
 [ext_resource type="Script" path="res://prefabs/UI/StatusInfo/HungerBarFill.gd" id="9_inwks"]
-[ext_resource type="Texture2D" uid="uid://bhtk7j2da7dbp" path="res://assets/ui/keycaps.png" id="10_nr5bv"]
-[ext_resource type="Texture2D" uid="uid://ch2x4vcvgd7is" path="res://assets/ui/Icon_Menu.png" id="11_o56xa"]
+[ext_resource type="Texture2D" uid="uid://dwprjqvl2ny0f" path="res://assets/UI/keycaps.png" id="10_nr5bv"]
+[ext_resource type="Texture2D" uid="uid://c66o36ygrleew" path="res://assets/UI/Icon_Menu.png" id="11_o56xa"]
 [ext_resource type="PackedScene" uid="uid://ob6j0n1secd3" path="res://prefabs/UI/StatusInfo/MenuButton.tscn" id="11_q3k1d"]
 
 [sub_resource type="Gradient" id="Gradient_iimng"]
@@ -19,44 +19,8 @@ colors = PackedColorArray(0.101961, 0.0745098, 0.133333, 0.498039)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_wcjdd"]
 gradient = SubResource("Gradient_iimng")
 
-[sub_resource type="Animation" id="Animation_7fhc1"]
-resource_name = "EaseIn"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("..:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0001, 0.5),
-"transitions": PackedFloat32Array(0.3, 0.3, 1),
-"update": 0,
-"values": [Vector2(983, 0), Vector2(983, 0), Vector2(888, 0)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("..:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(0.3, 1),
-"update": 0,
-"values": [Color(0.211765, 0.00784314, 0.396078, 0), Color(1, 1, 1, 1)]
-}
-
-[sub_resource type="Animation" id="Animation_ju13r"]
-length = 0.001
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_gslcl"]
-_data = {
-"EaseIn": SubResource("Animation_7fhc1"),
-"RESET": SubResource("Animation_ju13r")
-}
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_15f3t"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubc30"]
+resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(0, 0, 48, 48)
 
@@ -125,39 +89,30 @@ region = Rect2(48, 144, 48, 48)
 
 [sub_resource type="Animation" id="Animation_7fhc1"]
 resource_name = "EaseIn"
-length = 0.3
-tracks/0/type = "bezier"
+length = 0.5
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("QuestBtn:theme_override_constants/margin_left")
+tracks/0/path = NodePath("..:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(72, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.3)
+"times": PackedFloat32Array(0, 0.0001, 0.5),
+"transitions": PackedFloat32Array(0.3, 0.3, 1),
+"update": 0,
+"values": [Vector2(983, 0), Vector2(983, 0), Vector2(888, 0)]
 }
-tracks/1/type = "bezier"
+tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("ExitBtn:theme_override_constants/margin_left")
+tracks/1/path = NodePath("..:modulate")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(72, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.3)
-}
-tracks/2/type = "bezier"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("InventoryBtn:theme_override_constants/margin_left")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"handle_modes": PackedInt32Array(0, 0),
-"points": PackedFloat32Array(72, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0, 0.3)
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(0.3, 1),
+"update": 0,
+"values": [Color(0.211765, 0.00784314, 0.396078, 0), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_ju13r"]
@@ -284,6 +239,7 @@ texture_pressed = SubResource("AtlasTexture_6laps")
 texture_disabled = SubResource("AtlasTexture_2sw1a")
 texture_focused = SubResource("AtlasTexture_qoh62")
 vertPosition = 1
+metadata/vertPosition = 2
 
 [node name="QuestBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
 layout_mode = 2
