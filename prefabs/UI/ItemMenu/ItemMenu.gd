@@ -7,7 +7,8 @@ var ListItem = load("res://prefabs/UI/ItemMenu/ListItem.tscn")
 enum CostType {
 	NONE,
 	BUY,
-	SELL
+	SELL,
+	ITEM
 }
 @export var cost_type:CostType = CostType.NONE
 
@@ -39,6 +40,8 @@ func refresh_item_list(new_item_list):
 		match cost_type:
 			CostType.SELL:
 				node.set("item_cost", dict_item.sell)
+			CostType.ITEM:
+				node.set("item_cost", -99)
 		node.on_focus.connect(_update_right_panel)
 		node.gui_input.connect(_on_item_gui_input)
 		ItemContainer.add_child(node)

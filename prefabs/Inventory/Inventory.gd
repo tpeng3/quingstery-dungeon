@@ -34,7 +34,7 @@ var inventory = {
 	}
 }
 var max = 20
-var equipped = []
+var equipped = ["Stick of Hay"]
 const STORAGE_MAX = 99
 
 func get_items_json():

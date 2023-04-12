@@ -1,11 +1,11 @@
 [gd_scene load_steps=31 format=3 uid="uid://crp3kbtoa5d04"]
 
 [ext_resource type="PackedScene" uid="uid://d3rx3youaqtij" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_4em7c"]
+[ext_resource type="Script" path="res://prefabs/UI/StatusInfo/StatusInfo.gd" id="1_6lr6q"]
+[ext_resource type="PackedScene" uid="uid://qehathayhhdl" path="res://prefabs/UI/StatusMenu/StatusMenu.tscn" id="2_1p6nf"]
 [ext_resource type="PackedScene" uid="uid://d3b21n0iaddhr" path="res://prefabs/UI/BulletinBoard/BulletinBoard.tscn" id="2_d8f0f"]
-[ext_resource type="PackedScene" uid="uid://l6juqk5dids0" path="res://prefabs/UI/SettingsMenu/SettingsMenu.tscn" id="3_fask4"]
 [ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="4_h283h"]
 [ext_resource type="ButtonGroup" uid="uid://cta67ouucwcn" path="res://prefabs/UI/StatusInfo/MenuGroup.tres" id="6_upmp7"]
-[ext_resource type="Script" path="res://prefabs/UI/StatusInfo/StatusButton.gd" id="8_0ey06"]
 [ext_resource type="Script" path="res://prefabs/UI/StatusInfo/HungerBarFill.gd" id="9_inwks"]
 [ext_resource type="Texture2D" uid="uid://bhtk7j2da7dbp" path="res://assets/ui/keycaps.png" id="10_nr5bv"]
 [ext_resource type="Texture2D" uid="uid://ch2x4vcvgd7is" path="res://assets/ui/Icon_Menu.png" id="11_o56xa"]
@@ -60,13 +60,15 @@ _data = {
 atlas = ExtResource("11_o56xa")
 region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5j1f8"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_uyuy5"]
+resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
-region = Rect2(48, 0, 48, 48)
+region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_sfdt6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ern4"]
+resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
-region = Rect2(144, 0, 48, 48)
+region = Rect2(96, 48, 48, 48)
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gex1e"]
 blend_mode = 1
@@ -79,43 +81,96 @@ colors = PackedColorArray(0, 0, 0, 1, 0.935484, 0.935484, 0.935484, 1)
 gradient = SubResource("Gradient_gcyuc")
 width = 36
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vwnoa"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2sw1a"]
+resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(0, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ceou7"]
-atlas = ExtResource("11_o56xa")
-region = Rect2(96, 48, 48, 48)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d8d6w"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6laps"]
+resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8okrq"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qoh62"]
+resource_local_to_scene = true
+atlas = ExtResource("11_o56xa")
+region = Rect2(96, 48, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uiven"]
+resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(0, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_c1841"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ncpy"]
+resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
-region = Rect2(96, 96, 48, 48)
+region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_decp2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_213hd"]
+resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
-region = Rect2(48, 96, 48, 48)
+region = Rect2(96, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rgicv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7a6ea"]
 atlas = ExtResource("11_o56xa")
 region = Rect2(0, 144, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_atn0i"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7syl"]
 atlas = ExtResource("11_o56xa")
 region = Rect2(96, 144, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lr5bx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke3yb"]
 atlas = ExtResource("11_o56xa")
 region = Rect2(48, 144, 48, 48)
 
+[sub_resource type="Animation" id="Animation_7fhc1"]
+resource_name = "EaseIn"
+length = 0.3
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("QuestBtn:theme_override_constants/margin_left")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(72, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ExitBtn:theme_override_constants/margin_left")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(72, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("InventoryBtn:theme_override_constants/margin_left")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(72, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 0.3)
+}
+
+[sub_resource type="Animation" id="Animation_ju13r"]
+length = 0.001
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gslcl"]
+_data = {
+"EaseIn": SubResource("Animation_7fhc1"),
+"RESET": SubResource("Animation_ju13r")
+}
+
 [node name="StatusInfo" type="CanvasLayer"]
+script = ExtResource("1_6lr6q")
 
 [node name="MenuWindows" type="MarginContainer" parent="."]
 visible = false
@@ -129,15 +184,14 @@ grow_vertical = 2
 layout_mode = 2
 texture = SubResource("GradientTexture1D_wcjdd")
 
+[node name="StatusMenu" parent="MenuWindows" instance=ExtResource("2_1p6nf")]
+layout_mode = 2
+
 [node name="Inventory" parent="MenuWindows" instance=ExtResource("1_4em7c")]
 visible = false
 layout_mode = 2
 
 [node name="QuestsMenu" parent="MenuWindows" instance=ExtResource("2_d8f0f")]
-visible = false
-layout_mode = 2
-
-[node name="SettingsMenu" parent="MenuWindows" instance=ExtResource("3_fask4")]
 visible = false
 layout_mode = 2
 
@@ -151,6 +205,8 @@ offset_bottom = 148.0
 grow_horizontal = 0
 theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
+metadata/_edit_group_ = true
+metadata/_edit_lock_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="MenuButtons"]
 root_node = NodePath("../VBoxContainer")
@@ -177,14 +233,14 @@ layout_mode = 2
 theme_override_constants/margin_left = 0
 theme_override_constants/margin_right = -100
 
-[node name="Status" type="TextureButton" parent="MenuButtons/VBoxContainer/StatusBtn"]
+[node name="Status" parent="MenuButtons/VBoxContainer/StatusBtn" instance=ExtResource("11_q3k1d")]
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_15f3t")
-texture_pressed = SubResource("AtlasTexture_5j1f8")
-texture_focused = SubResource("AtlasTexture_sfdt6")
-script = ExtResource("8_0ey06")
+texture_normal = SubResource("AtlasTexture_ubc30")
+texture_pressed = SubResource("AtlasTexture_uyuy5")
+texture_disabled = SubResource("AtlasTexture_ubc30")
+texture_focused = SubResource("AtlasTexture_4ern4")
 
 [node name="HungerBar" type="Sprite2D" parent="MenuButtons/VBoxContainer/StatusBtn/Status"]
 clip_children = 2
@@ -215,8 +271,6 @@ region_enabled = true
 region_rect = Rect2(0, 30, 17, 15)
 
 [node name="InventoryBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_constants/margin_left = 72
 theme_override_constants/margin_right = -72
@@ -225,31 +279,28 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_vwnoa")
-texture_pressed = SubResource("AtlasTexture_ceou7")
-texture_disabled = SubResource("AtlasTexture_vwnoa")
-texture_focused = SubResource("AtlasTexture_d8d6w")
+texture_normal = SubResource("AtlasTexture_2sw1a")
+texture_pressed = SubResource("AtlasTexture_6laps")
+texture_disabled = SubResource("AtlasTexture_2sw1a")
+texture_focused = SubResource("AtlasTexture_qoh62")
+vertPosition = 1
 
 [node name="QuestBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_constants/margin_left = 72
 theme_override_constants/margin_right = -72
 
-[node name="Quest" parent="MenuButtons/VBoxContainer/QuestBtn" instance=ExtResource("11_q3k1d")]
+[node name="MenuButton" parent="MenuButtons/VBoxContainer/QuestBtn" instance=ExtResource("11_q3k1d")]
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_8okrq")
-texture_pressed = SubResource("AtlasTexture_c1841")
-texture_disabled = SubResource("AtlasTexture_8okrq")
-texture_focused = SubResource("AtlasTexture_decp2")
-metadata/vertPosition = 2
+texture_normal = SubResource("AtlasTexture_uiven")
+texture_pressed = SubResource("AtlasTexture_6ncpy")
+texture_disabled = SubResource("AtlasTexture_uiven")
+texture_focused = SubResource("AtlasTexture_213hd")
+vertPosition = 2
 
 [node name="ExitBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]
-visible = false
-custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_constants/margin_left = 72
 theme_override_constants/margin_right = -72
@@ -258,11 +309,18 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_rgicv")
-texture_pressed = SubResource("AtlasTexture_atn0i")
-texture_disabled = SubResource("AtlasTexture_rgicv")
-texture_focused = SubResource("AtlasTexture_lr5bx")
+texture_normal = SubResource("AtlasTexture_7a6ea")
+texture_pressed = SubResource("AtlasTexture_t7syl")
+texture_disabled = SubResource("AtlasTexture_7a6ea")
+texture_focused = SubResource("AtlasTexture_ke3yb")
+vertPosition = 3
 metadata/vertPosition = 3
 
-[connection signal="toggled" from="MenuButtons/VBoxContainer/StatusBtn/Status" to="MenuButtons/VBoxContainer/StatusBtn/Status" method="_on_toggled"]
-[connection signal="pressed" from="MenuButtons/VBoxContainer/InventoryBtn/Inventory" to="MenuButtons/VBoxContainer/InventoryBtn/Inventory" method="_on_pressed"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuButtons/VBoxContainer"]
+libraries = {
+"": SubResource("AnimationLibrary_gslcl")
+}
+
+[connection signal="pressed" from="MenuButtons/VBoxContainer/StatusBtn/Status" to="." method="_on_status_pressed"]
+[connection signal="pressed" from="MenuButtons/VBoxContainer/InventoryBtn/Inventory" to="." method="_on_inventory_pressed"]
+[connection signal="pressed" from="MenuButtons/VBoxContainer/ExitBtn/Exit" to="." method="_on_exit_pressed"]

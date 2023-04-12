@@ -1,13 +1,13 @@
 [gd_scene load_steps=17 format=3 uid="uid://qehathayhhdl"]
 
 [ext_resource type="Texture2D" uid="uid://dlbnunof712fc" path="res://assets/UI/menu_board.png" id="1_f2lqs"]
-[ext_resource type="PackedScene" uid="uid://dom8vrn6qhhpc" path="res://prefabs/UI/StatusInfo/WeatherHUD.tscn" id="1_ksqmd"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="2_b412g"]
 [ext_resource type="Texture2D" uid="uid://b1i8gea80vire" path="res://assets/UI/mountainprogress.png" id="2_tgc2h"]
+[ext_resource type="Script" path="res://prefabs/UI/StatusMenu/ClimbDisplay.gd" id="2_wfgv0"]
 [ext_resource type="Theme" uid="uid://dksvrshxgc4ql" path="res://theme/Signpost.tres" id="3_eaifl"]
 [ext_resource type="SpriteFrames" uid="uid://daamhnd6ueq87" path="res://assets/UI/quingprogress.tres" id="4_kqlwo"]
 [ext_resource type="Texture2D" uid="uid://oq47khgn70ys" path="res://assets/character/statusmenu/QuingBase.png" id="5_gp7ii"]
-[ext_resource type="Texture2D" uid="uid://b4nwdy8dov845" path="res://assets/character/statusmenu/FrogHat.png" id="7_pgn8e"]
+[ext_resource type="Texture2D" uid="uid://dtpymfjwskjj0" path="res://assets/character/statusmenu/PartyHat.png" id="7_17y5q"]
 [ext_resource type="Texture2D" uid="uid://brckdg1gjovvm" path="res://assets/UI/ProgressBar.png" id="7_sdk5g"]
 [ext_resource type="StyleBox" uid="uid://c2nb40sqt2n80" path="res://theme/Signpost_Callout.tres" id="8_3uuko"]
 [ext_resource type="Texture2D" uid="uid://ewis3lhpb0xh" path="res://assets/item/i_clothing.png" id="9_aku4q"]
@@ -38,13 +38,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="StatusInfo" parent="." instance=ExtResource("1_ksqmd")]
-layout_mode = 0
-offset_left = 0.0
-offset_right = 160.0
-
 [node name="OuterPadding" type="MarginContainer" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -81,13 +75,16 @@ layout_mode = 2
 theme_override_constants/margin_left = 32
 theme_override_constants/margin_top = 16
 theme_override_constants/margin_right = 32
+script = ExtResource("2_wfgv0")
 
 [node name="ClimbProgress" type="ProgressBar" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay"]
 custom_minimum_size = Vector2(6, 360)
 layout_mode = 2
 theme_override_styles/background = SubResource("StyleBoxTexture_75snv")
 theme_override_styles/fill = SubResource("StyleBoxFlat_bfmxa")
-value = 10.0
+max_value = 75.0
+step = 1.0
+value = 30.0
 fill_mode = 3
 show_percentage = false
 
@@ -192,7 +189,7 @@ horizontal_alignment = 2
 vertical_alignment = 2
 
 [node name="QuingProgress" type="AnimatedSprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/ClimbDisplay/ClimbProgress"]
-position = Vector2(26, 325)
+position = Vector2(26, 219)
 sprite_frames = ExtResource("4_kqlwo")
 frame_progress = 0.288246
 
@@ -217,7 +214,7 @@ texture = ExtResource("5_gp7ii")
 centered = false
 
 [node name="Equip" type="Sprite2D" parent="OuterPadding/MainContentPadding/BoxContainer/Dressup/Quingee"]
-texture = ExtResource("7_pgn8e")
+texture = ExtResource("7_17y5q")
 centered = false
 
 [node name="StatDisplay" type="BoxContainer" parent="OuterPadding/MainContentPadding/BoxContainer"]

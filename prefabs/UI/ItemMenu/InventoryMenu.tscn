@@ -1,0 +1,63 @@
+[gd_scene load_steps=12 format=3 uid="uid://d3gnd44yjx1tl"]
+
+[ext_resource type="PackedScene" uid="uid://d3rx3youaqtij" path="res://prefabs/UI/ItemMenu/ItemMenu.tscn" id="1_g38tp"]
+[ext_resource type="Texture2D" uid="uid://d37gys83y0mgo" path="res://assets/UI/arrows.png" id="2_61pal"]
+[ext_resource type="Script" path="res://prefabs/UI/ItemMenu/InventoryMenu.gd" id="2_r25om"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jwk7n"]
+resource_local_to_scene = true
+atlas = ExtResource("2_61pal")
+region = Rect2(0, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lgcc"]
+resource_local_to_scene = true
+atlas = ExtResource("2_61pal")
+region = Rect2(9, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3k4w"]
+resource_local_to_scene = true
+atlas = ExtResource("2_61pal")
+region = Rect2(18, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_npsef"]
+resource_local_to_scene = true
+atlas = ExtResource("2_61pal")
+region = Rect2(27, 9, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ek3an"]
+resource_local_to_scene = true
+atlas = ExtResource("2_61pal")
+region = Rect2(0, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7r18"]
+resource_local_to_scene = true
+atlas = ExtResource("2_61pal")
+region = Rect2(9, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q8eh6"]
+resource_local_to_scene = true
+atlas = ExtResource("2_61pal")
+region = Rect2(18, 0, 9, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2a4r"]
+resource_local_to_scene = true
+atlas = ExtResource("2_61pal")
+region = Rect2(27, 0, 9, 9)
+
+[node name="ItemMenu" instance=ExtResource("1_g38tp")]
+script = ExtResource("2_r25om")
+
+[node name="FooterMargin" parent="OuterPadding/SplitContainer/LeftPanel" index="3"]
+visible = false
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowBack" index="0"]
+texture_normal = SubResource("AtlasTexture_jwk7n")
+texture_pressed = SubResource("AtlasTexture_1lgcc")
+texture_disabled = SubResource("AtlasTexture_d3k4w")
+texture_focused = SubResource("AtlasTexture_npsef")
+
+[node name="ArrowBtn" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer/ArrowNext" index="0"]
+texture_normal = SubResource("AtlasTexture_ek3an")
+texture_pressed = SubResource("AtlasTexture_a7r18")
+texture_disabled = SubResource("AtlasTexture_q8eh6")
+texture_focused = SubResource("AtlasTexture_b2a4r")

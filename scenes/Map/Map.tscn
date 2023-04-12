@@ -130,15 +130,15 @@ handle_input_locally = false
 size = Vector2i(960, 540)
 render_target_update_mode = 4
 
-[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport"]
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_g1eyc")
-centered = false
-
 [node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport"]
 anchor_mode = 0
 position_smoothing_enabled = true
 script = ExtResource("2_vecvs")
+
+[node name="Sprite2D" type="Sprite2D" parent="SubViewportContainer/SubViewport"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_g1eyc")
+centered = false
 
 [node name="MapButtons" type="Control" parent="SubViewportContainer/SubViewport"]
 layout_mode = 3
@@ -149,10 +149,10 @@ size_flags_vertical = 8
 metadata/_edit_use_anchors_ = true
 
 [node name="Climb Peak" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
-offset_left = 136.0
-offset_top = 176.0
-offset_right = 176.0
-offset_bottom = 176.0
+offset_left = 206.0
+offset_top = 194.0
+offset_right = 246.0
+offset_bottom = 194.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Bulletin Board")
 preview = ExtResource("5_4c7dp")
@@ -194,10 +194,10 @@ mapDesc = "Serves as a hub for town notices and requests. Accepting quests can l
 
 [node name="Trading Post" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1086.0
-offset_top = 576.0
-offset_right = 1126.0
-offset_bottom = 576.0
+offset_left = 1183.0
+offset_top = 594.0
+offset_right = 1223.0
+offset_bottom = 594.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Tian\'s Corner")
 focus_previous = NodePath("../Bulletin Board")
@@ -207,10 +207,10 @@ mapDesc = "The main spot in town, it serves as a place to buy or sell general go
 
 [node name="Tian\'s Corner" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 908.0
-offset_top = 626.0
-offset_right = 948.0
-offset_bottom = 626.0
+offset_left = 1047.0
+offset_top = 662.0
+offset_right = 1087.0
+offset_bottom = 662.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Textile Services")
 focus_previous = NodePath("../Trading Post")
@@ -219,20 +219,20 @@ mapDesc = "Fresh from the owner's garden plot in Peanut Home, this store sells p
 
 [node name="Bake & Roast" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1298.0
-offset_top = 712.0
-offset_right = 1338.0
-offset_bottom = 712.0
+offset_left = 1408.0
+offset_top = 743.0
+offset_right = 1448.0
+offset_bottom = 743.0
 scale = Vector2(1, 1)
 preview = ExtResource("10_nbn57")
 mapDesc = "A cafe for baked goods and coffee with a charming homey-plant rustic atmosphere. The selection changes daily."
 
 [node name="Textile Services" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1330.0
-offset_top = 736.0
-offset_right = 1370.0
-offset_bottom = 736.0
+offset_left = 1418.0
+offset_top = 781.0
+offset_right = 1458.0
+offset_bottom = 781.0
 scale = Vector2(1, 1)
 focus_next = NodePath("../Fire Station")
 focus_previous = NodePath("../Tian\'s Corner")
@@ -241,127 +241,127 @@ mapDesc = "A small textile store that produces and sells fabrics, knit goods, an
 
 [node name="Fire Station" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1250.0
-offset_top = 466.0
-offset_right = 1290.0
-offset_bottom = 466.0
+offset_left = 1340.0
+offset_top = 491.0
+offset_right = 1380.0
+offset_bottom = 491.0
 scale = Vector2(1, 1)
 preview = ExtResource("12_122ll")
 mapDesc = "In addition to fire prevention, the Fire Station performs search and rescue operations for those lost on the Peak and provides upgrades to safety equipment."
 
 [node name="Meteorological Institute" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 584.0
-offset_top = 438.0
-offset_right = 624.0
-offset_bottom = 438.0
+offset_left = 716.0
+offset_top = 472.0
+offset_right = 756.0
+offset_bottom = 472.0
 scale = Vector2(1, 1)
 preview = ExtResource("13_qm57g")
 mapDesc = "Dedicated to collecting meteorological observations for the areas within Galinn's Peak, and open for enquiries about the weather."
 
 [node name="Almond Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 585.0
-offset_top = 579.0
-offset_right = 625.0
-offset_bottom = 579.0
+offset_left = 637.0
+offset_top = 595.0
+offset_right = 677.0
+offset_bottom = 595.0
 scale = Vector2(1, 1)
 preview = ExtResource("12_mrm7y")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Attith Cave" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 320.0
-offset_top = 502.0
-offset_right = 360.0
-offset_bottom = 502.0
+offset_left = 378.0
+offset_top = 515.0
+offset_right = 418.0
+offset_bottom = 515.0
 scale = Vector2(1, 1)
 preview = ExtResource("13_rxcjq")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Briar\'s Pond" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1033.0
-offset_top = 718.0
-offset_right = 1073.0
-offset_bottom = 718.0
+offset_left = 1130.0
+offset_top = 738.0
+offset_right = 1170.0
+offset_bottom = 738.0
 scale = Vector2(1, 1)
 preview = ExtResource("14_3e0pf")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Butternut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1000.0
-offset_top = 422.0
-offset_right = 1040.0
-offset_bottom = 422.0
+offset_left = 1065.0
+offset_top = 433.0
+offset_right = 1105.0
+offset_bottom = 433.0
 scale = Vector2(1, 1)
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Cashew Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1308.0
-offset_top = 376.0
-offset_right = 1348.0
-offset_bottom = 376.0
+offset_left = 1362.0
+offset_top = 401.0
+offset_right = 1402.0
+offset_bottom = 401.0
 scale = Vector2(1, 1)
 preview = ExtResource("15_r0no2")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Hazelnut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 618.0
-offset_top = 452.0
-offset_right = 658.0
-offset_bottom = 452.0
+offset_left = 640.0
+offset_top = 454.0
+offset_right = 680.0
+offset_bottom = 454.0
 scale = Vector2(1, 1)
 preview = ExtResource("10_satxt")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Lake Galinn" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1246.0
-offset_top = 844.0
-offset_right = 1286.0
-offset_bottom = 844.0
+offset_left = 1304.0
+offset_top = 862.0
+offset_right = 1344.0
+offset_bottom = 862.0
 scale = Vector2(1, 1)
 preview = ExtResource("16_wltem")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Lookout Point" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 818.0
-offset_top = 470.0
-offset_right = 858.0
-offset_bottom = 470.0
+offset_left = 890.0
+offset_top = 486.0
+offset_right = 930.0
+offset_bottom = 486.0
 scale = Vector2(1, 1)
 preview = ExtResource("17_vsxwn")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Peanut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 934.0
-offset_top = 652.0
-offset_right = 974.0
-offset_bottom = 652.0
+offset_left = 990.0
+offset_top = 661.0
+offset_right = 1030.0
+offset_bottom = 661.0
 scale = Vector2(1, 1)
 preview = ExtResource("7_0i0u8")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Pecan Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1056.0
-offset_top = 592.0
-offset_right = 1096.0
-offset_bottom = 592.0
+offset_left = 1148.0
+offset_top = 583.0
+offset_right = 1188.0
+offset_bottom = 583.0
 scale = Vector2(1, 1)
 preview = ExtResource("6_62i57")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Pistachio Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
-offset_left = 106.0
+offset_left = 122.0
 offset_top = 352.0
-offset_right = 146.0
+offset_right = 162.0
 offset_bottom = 352.0
 scale = Vector2(1, 1)
 preview = ExtResource("18_y7wcs")
@@ -369,70 +369,70 @@ mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Scrap Yard" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 903.0
-offset_top = 510.0
-offset_right = 943.0
-offset_bottom = 510.0
+offset_left = 997.0
+offset_top = 519.0
+offset_right = 1037.0
+offset_bottom = 519.0
 scale = Vector2(1, 1)
 preview = ExtResource("19_ynvys")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="The Forgotten Woman" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1528.0
-offset_top = 930.0
-offset_right = 1568.0
-offset_bottom = 930.0
+offset_left = 1589.0
+offset_top = 941.0
+offset_right = 1629.0
+offset_bottom = 941.0
 scale = Vector2(1, 1)
 preview = ExtResource("20_kypp1")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="The Mines" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 821.0
-offset_top = 563.0
-offset_right = 861.0
-offset_bottom = 563.0
+offset_left = 868.0
+offset_top = 581.0
+offset_right = 908.0
+offset_bottom = 581.0
 scale = Vector2(1, 1)
 preview = ExtResource("21_gk4hp")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Town Square" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1210.0
-offset_top = 546.0
-offset_right = 1250.0
-offset_bottom = 546.0
+offset_left = 1219.0
+offset_top = 553.0
+offset_right = 1259.0
+offset_bottom = 553.0
 scale = Vector2(1, 1)
 preview = ExtResource("6_el66v")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Walnut Home" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1360.0
-offset_top = 974.0
-offset_right = 1400.0
-offset_bottom = 974.0
+offset_left = 1427.0
+offset_top = 985.0
+offset_right = 1467.0
+offset_bottom = 985.0
 scale = Vector2(1, 1)
 preview = ExtResource("22_c0kj6")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Waste Disposal" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1386.0
-offset_top = 452.0
-offset_right = 1426.0
-offset_bottom = 452.0
+offset_left = 1453.0
+offset_top = 463.0
+offset_right = 1493.0
+offset_bottom = 463.0
 scale = Vector2(1, 1)
 preview = ExtResource("23_0j1ud")
 mapDesc = "There seems to be someone here today. Talk to the resident?"
 
 [node name="Water Tower" parent="SubViewportContainer/SubViewport/MapButtons" instance=ExtResource("4_618ha")]
 layout_mode = 2
-offset_left = 1224.0
-offset_top = 410.0
-offset_right = 1264.0
-offset_bottom = 410.0
+offset_left = 1282.0
+offset_top = 406.0
+offset_right = 1322.0
+offset_bottom = 406.0
 scale = Vector2(1, 1)
 preview = ExtResource("24_5ef4j")
 mapDesc = "There seems to be someone here today. Talk to the resident?"

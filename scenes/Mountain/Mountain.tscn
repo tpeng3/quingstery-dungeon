@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2sw2fysbdc2x"]
+[gd_scene load_steps=9 format=3 uid="uid://d2sw2fysbdc2x"]
 
 [ext_resource type="Script" path="res://scenes/Mountain/Mountain.gd" id="1_ybsvq"]
 [ext_resource type="TileSet" uid="uid://cwx7nq0li1fi1" path="res://theme/tileset.tres" id="2_ja4ub"]
@@ -6,8 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_qklru"]
 [ext_resource type="PackedScene" uid="uid://u0jhoe6k7wto" path="res://prefabs/Dialogue/DialogueBox/DungeonBox.tscn" id="6_cg1gw"]
 [ext_resource type="Theme" uid="uid://c044efnplgfdt" path="res://theme/Scroll.tres" id="6_d5344"]
-[ext_resource type="PackedScene" uid="uid://crp3kbtoa5d04" path="res://prefabs/UI/StatusInfo/StatusInfo.tscn" id="7_8chn1"]
-[ext_resource type="PackedScene" uid="uid://qehathayhhdl" path="res://prefabs/UI/StatusMenu/StatusMenu.tscn" id="8_5adl8"]
 
 [sub_resource type="Animation" id="Animation_faty3"]
 resource_name = "new_floor"
@@ -112,25 +110,7 @@ offset_bottom = 519.0
 theme = ExtResource("6_d5344")
 text = "Throat 10F"
 
-[node name="StatusInfo" parent="CanvasLayer" instance=ExtResource("7_8chn1")]
-
-[node name="StatusMenu" parent="CanvasLayer" instance=ExtResource("8_5adl8")]
-visible = false
-
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_7aoaq")
 }
-
-[connection signal="body_entered" from="Map/Floor/Animal" to="Map/Floor/Animal" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/Animal" to="Map/Floor/Animal" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/GatherSpot" to="Map/Floor/GatherSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/FishingSpot" to="Map/Floor/FishingSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/Stairs" to="Map/Floor/Stairs" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/MiningSpot" to="Map/Floor/MiningSpot" method="_on_body_exited" flags=18]
-[connection signal="body_entered" from="Map/Floor/@MiningSpot@30281" to="Map/Floor/@MiningSpot@30281" method="_on_body_entered" flags=18]
-[connection signal="body_exited" from="Map/Floor/@MiningSpot@30281" to="Map/Floor/@MiningSpot@30281" method="_on_body_exited" flags=18]

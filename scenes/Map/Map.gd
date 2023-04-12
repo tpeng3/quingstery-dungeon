@@ -27,6 +27,21 @@ func _ready():
 		if Global.last_town_menu_button and Global.last_town_menu_button == i.get_path():
 			_on_explore_town_pressed()
 			i.grab_focus()
+			
+	# check if fire station and meteorological institute are locked
+	if Global.FP.piper <= 0:
+		$"TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer/Meteorological Institute".text = "???"
+		$"TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer/Meteorological Institute".disabled = true
+	else:
+		$"TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer/Meteorological Institute".text = "Meteorological Institute"
+		$"TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer/Meteorological Institute".disabled = false
+		
+	if Global.timesFailed <= 0:
+		$"TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer/Fire Station".text = "???"
+		$"TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer/Fire Station".disabled = true
+	else:
+		$"TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer/Fire Station".text = "Meteorological Institute"
+		$"TownPanel/SplitContainer/LeftPanel/PanelPadding/VBoxContainer/Fire Station".disabled = false
 		
 	$DialogueBox.no_selected.connect(_on_npc_finished)
 	$DialogueBox/NewItemPopup.on_confirm.connect(_on_npc_finished)
@@ -64,7 +79,7 @@ func update_panel(node):
 	else:
 		$RightPanel.hide()
 		$SubViewportContainer/SubViewport/Camera2D.focused_location = null
-		$SubViewportContainer/SubViewport/Camera2D.position = Vector2(0, 0)
+		$SubViewportContainer/SubViewport/Camera2D.position = Vector2(200, 100)
 		$SubViewportContainer/SubViewport/WeatherFilter.update_rect(Vector2(0, 0))
 
 func exit_panel(node):
@@ -101,4 +116,4 @@ func _on_climb_peak_pressed():
 func _on_go_button_pressed():
 	# TODO: TEMPORARY WHILE MOUNTAIN IS STILL IN THE WORKS
 	Global.last_town_menu_button = $"Control/VBoxContainer/Town Hall".get_path()
-	SceneManager.change_scene("Map")
+	SceneManager.change_scene("Mountain")

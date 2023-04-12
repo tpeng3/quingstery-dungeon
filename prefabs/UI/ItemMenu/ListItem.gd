@@ -19,7 +19,15 @@ func _ready():
 func update_item():
 	var amount_str = " x" + str(item_amount) if item_amount > 1 else ""
 	$FlowContainer/ItemName.text = "[b]" + item_name + "[/b]" + amount_str
-	if (item_type == "Equip" or item_type == "Upgrade") and item_name in Inventory.inventory:
+	if item_cost <= -99:
+		$FlowContainer/RightAlign/ItemInfo.text = ""
+		$FlowContainer/RightAlign/GaldSymbol.hide()
+		$FlowContainer/RightAlign/EquipSymbol.hide()
+		var equip_index = Inventory.equipped.find(item_name, 0)
+		if item_type == "Equip" and equip_index > 0:
+			$FlowContainer/RightAlign/EquipSymbol.show() 
+			$FlowContainer/RightAlign/EquipSymbol/Sprite2D.region.x = equip_index * 10
+	elif (item_type == "Equip" or item_type == "Upgrade") and item_name in Inventory.inventory:
 		$FlowContainer/RightAlign/ItemInfo.text = "SOLD"
 		$FlowContainer/RightAlign/GaldSymbol.hide()
 	elif item_trade:
