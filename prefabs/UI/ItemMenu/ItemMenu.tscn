@@ -13,42 +13,42 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2utro"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e82y6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_41xm5"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(0, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_u7wpx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kesu2"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(9, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k0x77"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qql1f"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(18, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rojqj"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bjkrc"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(27, 9, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_4jcwc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rhpe"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(0, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_y7lu2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqfkg"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(9, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3d3vc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bvxwt"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(18, 0, 9, 9)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lxcgu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_xyu3u"]
 resource_local_to_scene = true
 atlas = ExtResource("8_hlc0k")
 region = Rect2(27, 0, 9, 9)
@@ -203,10 +203,10 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 9.0
 offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_e82y6")
-texture_pressed = SubResource("AtlasTexture_u7wpx")
-texture_disabled = SubResource("AtlasTexture_k0x77")
-texture_focused = SubResource("AtlasTexture_rojqj")
+texture_normal = SubResource("AtlasTexture_41xm5")
+texture_pressed = SubResource("AtlasTexture_kesu2")
+texture_disabled = SubResource("AtlasTexture_qql1f")
+texture_focused = SubResource("AtlasTexture_bjkrc")
 direction = 1
 
 [node name="ArrowNext" type="Control" parent="OuterPadding/SplitContainer/LeftPanel/Pagination/BoxContainer"]
@@ -217,10 +217,10 @@ layout_mode = 2
 layout_mode = 0
 offset_right = 9.0
 offset_bottom = 9.0
-texture_normal = SubResource("AtlasTexture_4jcwc")
-texture_pressed = SubResource("AtlasTexture_y7lu2")
-texture_disabled = SubResource("AtlasTexture_3d3vc")
-texture_focused = SubResource("AtlasTexture_lxcgu")
+texture_normal = SubResource("AtlasTexture_3rhpe")
+texture_pressed = SubResource("AtlasTexture_jqfkg")
+texture_disabled = SubResource("AtlasTexture_bvxwt")
+texture_focused = SubResource("AtlasTexture_xyu3u")
 direction = 0
 metadata/Direction = "right"
 

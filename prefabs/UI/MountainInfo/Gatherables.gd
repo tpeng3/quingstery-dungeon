@@ -16,8 +16,14 @@ func _ready():
 	peak = getSection(items, 'Steps')
 	
 	$"../../../../../LeftSide/Mountain/Sections/River".disabled = Global.currentCheckpoint < Global.CheckpointType.RIVER
+	$"../../../../../LeftSide/Mountain/Sections/River/Floor".text = \
+		str(Global.CheckpointType.RIVER) + "F" if Global.currentCheckpoint >= Global.CheckpointType.RIVER else "??F"
 	$"../../../../../LeftSide/Mountain/Sections/Steps".disabled = Global.currentCheckpoint < Global.CheckpointType.STEPS
+	$"../../../../../LeftSide/Mountain/Sections/Steps/Floor".text = \
+		str(Global.CheckpointType.STEPS) + "F" if Global.currentCheckpoint >= Global.CheckpointType.STEPS else "??F"
 	$"../../../../../LeftSide/Mountain/Sections/Peak".disabled = Global.currentCheckpoint < Global.CheckpointType.PEAK
+	$"../../../../../LeftSide/Mountain/Sections/Peak/Floor".text = \
+		str(Global.CheckpointType.PEAK) + "F" if Global.currentCheckpoint >= Global.CheckpointType.PEAK else "??F"
 
 func getSection(items, section):
 	return items.filter(func(val): return (section in val.source || "Mountain (global)" in val.source))

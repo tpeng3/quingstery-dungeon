@@ -15,18 +15,27 @@ func _input(event):
 
 func _on_status_pressed():
 	$MenuButtons/VBoxContainer/StatusBtn/Status.grab_focus()
-	pass # Replace with function body.
+	$MenuWindows/StatusMenu.show_screen()
+	$MenuWindows/InventoryMenu.hide()
+	$MenuWindows/QuestsMenu.hide()
 
 func _on_inventory_pressed():
-	pass # Replace with function body.
+	$MenuWindows/StatusMenu.hide()
+	$MenuWindows/InventoryMenu.show_menu()
+	$MenuWindows/QuestsMenu.hide()
 
 func _on_quest_pressed():
-	pass # Replace with function body.
+	$MenuWindows/StatusMenu.hide()
+	$MenuWindows/InventoryMenu.hide()
+	$MenuWindows/QuestsMenu.show()
 
 func _on_exit_pressed():
+	$MenuWindows/StatusMenu.hide()
+	$MenuWindows/InventoryMenu.hide()
+	$MenuWindows/QuestsMenu.hide()
 	$MenuButtons/VBoxContainer/AnimationPlayer.play_backwards("EaseIn")
-	await $MenuButtons/VBoxContainer/AnimationPlayer.animation_finished
 	$MenuWindows.visible = false
+	await $MenuButtons/VBoxContainer/AnimationPlayer.animation_finished
 	Global.freezeQuingee = false
 	if $MenuButtons/VBoxContainer/StatusBtn/Status.has_focus():
 		$MenuButtons/VBoxContainer/StatusBtn/Status.release_focus()
