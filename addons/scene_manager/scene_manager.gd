@@ -346,6 +346,8 @@ func change_scene(scene, fade_out_options: Options = default_fade_out_options, f
 		if _change_scene(scene, general_options.add_to_back):
 			if !(scene is Node):
 				await get_tree().node_added
+		if "music" in get_tree().get_current_scene():
+			crossfade_to(get_tree().get_current_scene().music)
 		if _timeout(general_options.timeout):
 			await get_tree().create_timer(general_options.timeout).timeout
 		_animation_player.play(NO_COLOR, -1, 1, false)
@@ -419,3 +421,19 @@ func set_recorded_scene(key: String) -> void:
 # returns recorded scene
 func get_recorded_scene() -> String:
 	return _recorded_scene
+
+# crossfades to a new audio stream
+func crossfade_to(audio_stream:AudioStream) -> void:
+	# If both tracks are playing, we're calling the function in the middle of a fade.
+	# We return early to avoid jumps in the sound.
+	if $BackgroundMusic/Track1.playing and $BackgroundMusic/Track2.playing:
+		return
+
+	if $BackgroundMusic/Track2.playing:
+		$BackgroundMusic/Track1.stream = audio_stream
+		$BackgroundMusic/Track1.play()
+		$BackgroundMusic/AnimationPlayer.play("FadeToTrack1")
+	else:
+		$BackgroundMusic/Track2.stream = audio_stream
+		$BackgroundMusic/Track2.play()
+		$BackgroundMusic/AnimationPlayer.play("FadeToTrack2")

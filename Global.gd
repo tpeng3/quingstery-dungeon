@@ -54,9 +54,11 @@ var dialogue_popularity = {
 	"reinhardt": {},
 	"wander": {},
 	"zane": {},
-	"panqing": {}
+	"panqing": {},
+	"cashew": {}
 }
 var daily_bakeroast_items = []
+var lost_items = ["Goggles"]
 var last_town_menu_button
 
 func _ready():
@@ -188,7 +190,7 @@ func advanceFloor():
 		if wanderChance <= 0.0:
 			wanderChance = 1.0
 		print(wanderChance, "wanderChance")
-		SceneManager.change_scene("Mountain")
+		SceneManager.change_scene("MapVendor")
 
 func get_checkpoint_name(floor=currentFloor):
 	if floor <= CheckpointType.RIVER:

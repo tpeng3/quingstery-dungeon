@@ -1,0 +1,118 @@
+[gd_scene load_steps=19 format=3 uid="uid://heh1oyutkjq1"]
+
+[ext_resource type="Script" path="res://prefabs/TileScenes/Animal/Wander.gd" id="1_o14pv"]
+[ext_resource type="Texture2D" uid="uid://cscvgf8sswc6a" path="res://assets/character/beans/wander_idle.png" id="2_31ysh"]
+[ext_resource type="Texture2D" uid="uid://bnb4u5hbhavfh" path="res://assets/character/beans/Wander.png" id="3_trg32"]
+[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_lm1x3"]
+[ext_resource type="JSON" path="res://assets/json/MapVendor.json" id="4_tobdx"]
+[ext_resource type="JSON" path="res://dialogue/Shopkeepers/Wander.json" id="6_44rg1"]
+[ext_resource type="SpriteFrames" uid="uid://dbeco0nr52nk0" path="res://assets/UI/speechbubble.tres" id="6_r3m2e"]
+[ext_resource type="Texture2D" uid="uid://byrcy5o0j142f" path="res://assets/UI/speechbubble.png" id="7_84ig5"]
+[ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="8_ulnjn"]
+[ext_resource type="Texture2D" uid="uid://b61wnnsyfdc6n" path="res://assets/character/talksprites/quingesterynpc_wander_flats.png" id="9_umymc"]
+[ext_resource type="PackedScene" uid="uid://bw7q1cc3tci2i" path="res://prefabs/UI/NavButtons/NavButtons.tscn" id="10_iowwf"]
+[ext_resource type="PackedScene" uid="uid://cm06xatxch52d" path="res://prefabs/UI/ItemMenu/BuyMenu.tscn" id="11_trhi3"]
+[ext_resource type="PackedScene" uid="uid://c8nppuh66j6pc" path="res://prefabs/UI/ItemMenu/SellMenu.tscn" id="12_15fh1"]
+
+[sub_resource type="Animation" id="Animation_jkf5a"]
+resource_name = "fade"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_icl5u"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ccjp3"]
+_data = {
+"fade": SubResource("Animation_jkf5a"),
+"float": SubResource("Animation_icl5u")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
+size = Vector2(70.5, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7qe2"]
+atlas = ExtResource("7_84ig5")
+region = Rect2(90, 0, 18, 18)
+
+[node name="Wander" type="Area2D"]
+z_index = 2
+y_sort_enabled = true
+script = ExtResource("1_o14pv")
+Idle = ExtResource("2_31ysh")
+Highlight = ExtResource("3_trg32")
+shop_json = ExtResource("4_tobdx")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("4_lm1x3")]
+dialogue_file = ExtResource("6_44rg1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "float"
+libraries = {
+"": SubResource("AnimationLibrary_ccjp3")
+}
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_31ysh")
+
+[node name="Bubble" type="AnimatedSprite2D" parent="Sprite"]
+visible = false
+position = Vector2(0, -25)
+sprite_frames = ExtResource("6_r3m2e")
+animation = &"Heart"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_msile")
+debug_color = Color(0, 0.6, 0.7, 0.42)
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -25)
+texture = SubResource("AtlasTexture_c7qe2")
+
+[node name="ShopBox" parent="." instance=ExtResource("8_ulnjn")]
+visible = false
+
+[node name="Character" parent="ShopBox/Control" index="0"]
+texture = ExtResource("9_umymc")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="NavButtons" parent="CanvasLayer" instance=ExtResource("10_iowwf")]
+visible = false
+offset_right = 960.0
+offset_bottom = 540.0
+
+[node name="Button4" parent="CanvasLayer/NavButtons/NavList" index="3"]
+text = "Leave"
+
+[node name="BuyMenu" parent="CanvasLayer" node_paths=PackedStringArray("shop_node") instance=ExtResource("11_trhi3")]
+visible = false
+shop_node = NodePath("../..")
+cost_type = 1
+
+[node name="SellMenu" parent="CanvasLayer" instance=ExtResource("12_15fh1")]
+visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="pressed" from="CanvasLayer/NavButtons/NavList/Button1" to="." method="_on_buy_pressed"]
+[connection signal="pressed" from="CanvasLayer/NavButtons/NavList/Button2" to="." method="_on_sell_pressed"]
+[connection signal="pressed" from="CanvasLayer/NavButtons/NavList/Button3" to="." method="_on_talk_pressed"]
+[connection signal="pressed" from="CanvasLayer/NavButtons/NavList/Button4" to="." method="_on_leave_pressed"]
+
+[editable path="ShopBox"]
+[editable path="CanvasLayer/NavButtons"]

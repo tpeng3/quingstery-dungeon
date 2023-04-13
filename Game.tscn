@@ -1,18 +1,49 @@
-[gd_scene load_steps=3 format=3 uid="uid://drf7ta7jt4kpd"]
+[gd_scene load_steps=6 format=3 uid="uid://drf7ta7jt4kpd"]
 
-[ext_resource type="Texture2D" uid="uid://70fi0w4tqs34" path="res://assets/background/placeholder.png" id="1_2htcq"]
+[ext_resource type="Texture2D" uid="uid://dm0x2f1i5fs44" path="res://assets/UI/startscreen.png" id="1_f1gim"]
+[ext_resource type="Script" path="res://scenes/Game.gd" id="1_hvyv8"]
 [ext_resource type="PackedScene" uid="uid://dnpqq4mosh4n7" path="res://prefabs/SceneButton/SceneButton.tscn" id="2_78o1k"]
+[ext_resource type="Texture2D" uid="uid://d1r321v1nttyg" path="res://assets/UI/logo.png" id="2_tq2bc"]
+[ext_resource type="Theme" uid="uid://b7odbq3gkm1j0" path="res://theme/SceneButton.tres" id="5_lhi1a"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_hvyv8")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(492, 738)
+texture = ExtResource("1_f1gim")
+
+[node name="Logo" type="Sprite2D" parent="."]
 position = Vector2(471, 204)
-scale = Vector2(0.239286, 0.239286)
-texture = ExtResource("1_2htcq")
+texture = ExtResource("2_tq2bc")
 
-[node name="Button" parent="." instance=ExtResource("2_78o1k")]
-offset_left = 377.0
-offset_top = 375.0
-offset_right = 571.0
-offset_bottom = 424.0
-scene = "Map"
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 352.0
+offset_top = 321.0
+offset_right = 580.0
+offset_bottom = 586.0
+grow_horizontal = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Start Game" parent="VBoxContainer" instance=ExtResource("2_78o1k")]
+layout_mode = 2
+scene = "Intro"
+
+[node name="Load Game" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_lhi1a")
+theme_type_variation = &"Button_Alt"
+text = "Load Game"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("5_lhi1a")
+theme_type_variation = &"Button_Alt"
+text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Load Game" to="." method="_on_load_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

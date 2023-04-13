@@ -6,6 +6,7 @@ enum ActionState {
 }
 var state = ActionState.IDLE
 var rewards = []
+var chara = null
 var rng = RandomNumberGenerator.new()
 
 @onready var Idle = preload("res://assets/tile/Forage_Gather_Field_Sprite2.png")

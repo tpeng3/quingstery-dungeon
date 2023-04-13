@@ -71,6 +71,9 @@ func _on_buy():
 			Inventory.remove_item(i.item, i.amount)
 		Inventory.add_item(focused_item.item_name)
 	else:
+		if Inventory.get_inv_count() >= Inventory.max and Global.currentFloor > 0:
+			$ClosePopup.show_popup("Sorry, you can't buy because your inventory is full.")
+			return
 		if Inventory.get_inv_count() >= Inventory.max and Inventory.get_inv_count(true) >= Inventory.STORAGE_MAX:
 			$ClosePopup.show_popup("Both your inventory and storage is full! Please clear it out before purchasing.")
 			return

@@ -1,6 +1,7 @@
 extends Node2D
 
 @export var scene: String
+@export var music:AudioStream
 
 enum MapLayer { 
 	FLOOR,

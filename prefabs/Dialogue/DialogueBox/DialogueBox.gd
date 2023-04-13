@@ -118,8 +118,7 @@ func _on_dialogue_finished(action_type = 0, asset = null, amount = 1):
 				return
 		dialogue_node = null
 				
-	emit_signal("no_selected")
-	# OLD TODO: dunno if we want the above or to rework the logic hmmmmm
+	no_selected.emit()
 	
 	# clear existing yes/no signals
 	var signals = get_signal_list();

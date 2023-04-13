@@ -1,0 +1,74 @@
+[gd_resource type="Theme" load_steps=14 format=3 uid="uid://b7odbq3gkm1j0"]
+
+[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_0ik77"]
+[ext_resource type="StyleBox" uid="uid://ch1i3cupufr4s" path="res://theme/tex_MenuSign_R.tres" id="2_tw85n"]
+[ext_resource type="StyleBox" uid="uid://y56arqh4a8by" path="res://theme/tex_MenuSign_RH.tres" id="3_sjp30"]
+[ext_resource type="StyleBox" uid="uid://xk12q87v443s" path="res://theme/tex_MenuSign_L.tres" id="4_issbx"]
+[ext_resource type="StyleBox" uid="uid://cnetvw8bws51k" path="res://theme/tex_MenuSign_LH.tres" id="5_oitf3"]
+[ext_resource type="StyleBox" uid="uid://crgwucran5mvh" path="res://theme/tex_MenuSign_M.tres" id="6_476vv"]
+[ext_resource type="StyleBox" uid="uid://byqreqq76aj27" path="res://theme/tex_MenuSign_MH.tres" id="7_3x73q"]
+[ext_resource type="FontFile" uid="uid://b0m4hay27djem" path="res://assets/UI/Dogica/dogicapixel.ttf" id="8_jxnrh"]
+[ext_resource type="FontFile" uid="uid://dkqnnj75t7aqf" path="res://assets/UI/Dogica/dogicapixelbold.ttf" id="9_4cgfr"]
+[ext_resource type="StyleBox" uid="uid://csmu3qd8xapye" path="res://theme/tex_menu_board.tres" id="10_68v2x"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_shvys"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1ql0t"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4o7b6"]
+bg_color = Color(0.729412, 0.384314, 0.294118, 1)
+
+[resource]
+Button/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
+Button/colors/font_disabled_color = Color(0.211765, 0.00784314, 0.396078, 0.25098)
+Button/colors/font_focus_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/colors/font_hover_color = Color(0.458824, 0.337255, 0.533333, 1)
+Button/colors/font_hover_pressed_color = Color(0.729412, 0.384314, 0.294118, 1)
+Button/colors/font_pressed_color = Color(0.729412, 0.384314, 0.294118, 1)
+Button/font_sizes/font_size = 16
+Button/fonts/font = ExtResource("1_0ik77")
+Button/styles/disabled = ExtResource("2_tw85n")
+Button/styles/focus = ExtResource("3_sjp30")
+Button/styles/hover = ExtResource("3_sjp30")
+Button/styles/normal = ExtResource("2_tw85n")
+Button/styles/pressed = ExtResource("3_sjp30")
+Button_Alt/base_type = &"Button"
+Button_Alt/styles/disabled = ExtResource("4_issbx")
+Button_Alt/styles/focus = ExtResource("5_oitf3")
+Button_Alt/styles/hover = ExtResource("5_oitf3")
+Button_Alt/styles/normal = ExtResource("4_issbx")
+Button_Alt/styles/pressed = ExtResource("5_oitf3")
+Button_Alt2/base_type = &"Button"
+Button_Alt2/styles/disabled = ExtResource("6_476vv")
+Button_Alt2/styles/focus = ExtResource("7_3x73q")
+Button_Alt2/styles/hover = ExtResource("7_3x73q")
+Button_Alt2/styles/normal = ExtResource("6_476vv")
+Button_Alt2/styles/pressed = ExtResource("7_3x73q")
+Label/colors/font_color = Color(0.211765, 0.00784314, 0.396078, 1)
+Label/fonts/font = ExtResource("8_jxnrh")
+Label_Bold/base_type = &"Label"
+Label_Bold/fonts/font = ExtResource("9_4cgfr")
+Label_Bold/styles/normal = SubResource("StyleBoxTexture_shvys")
+Label_Fancy/base_type = &"Label"
+Label_Fancy/fonts/font = ExtResource("1_0ik77")
+Label_Grn/base_type = &"Label"
+Label_Grn/colors/font_color = Color(0.258824, 0.290196, 0.0705882, 1)
+Label_Light/base_type = &"Label"
+Label_Light/colors/font_color = Color(0.729412, 0.384314, 0.294118, 1)
+Label_Light_Bold/base_type = &"Label"
+Label_Light_Bold/colors/font_color = Color(0.729412, 0.384314, 0.294118, 1)
+Label_Light_Bold/fonts/font = ExtResource("9_4cgfr")
+Label_Red/base_type = &"Label"
+Label_Red/colors/font_color = Color(0.505882, 0.0235294, 0.0666667, 1)
+Label_Sign/base_type = &"Label"
+Label_Sign/fonts/font = ExtResource("1_0ik77")
+Label_Sign/styles/normal = ExtResource("6_476vv")
+Panel/styles/panel = SubResource("StyleBoxEmpty_1ql0t")
+Panel_Highlight/base_type = &"Panel"
+Panel_Highlight/styles/panel = SubResource("StyleBoxFlat_4o7b6")
+RichTextLabel/colors/default_color = Color(0.215686, 0.00784314, 0.396078, 1)
+RichTextLabel/constants/line_separation = 3
+RichTextLabel/font_sizes/normal_font_size = 16
+RichTextLabel/fonts/bold_font = ExtResource("9_4cgfr")
+RichTextLabel/fonts/normal_font = ExtResource("8_jxnrh")
+RichTextLabel/styles/normal = ExtResource("10_68v2x")

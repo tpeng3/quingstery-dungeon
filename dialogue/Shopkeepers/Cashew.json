@@ -1,92 +1,155 @@
 {
 	"Cashew sprite random dialogue 1": {
 		"key": "Cashew sprite random dialogue 1",
+		"type": "cashew",
 		"popularity": 0,
 		"lines": [
 			{
 				"name": "Cashew",
-				"text": "Cashew: Chirp? (Where are you from? I'm from the big tree in Cashew Homes!)",
-				"action": [
-					"FREEZE"
-				]
+				"text": "Chirp? (Where are you from? I'm from the big tree in Cashew Homes!)"
 			}
 		]
 	},
 	"Cashew sprite random dialogue 2": {
 		"key": "Cashew sprite random dialogue 2",
+		"type": "cashew",
 		"popularity": 0,
 		"lines": [
 			{
 				"name": "Cashew",
-				"text": "Cashew: Cheep... cheep? (You'll come by again, won't you?)",
-				"action": [
-					"FREEZE"
-				]
+				"text": "Cheep... cheep? (You'll come by again, won't you?)"
 			}
 		]
 	},
 	"Cashew sprite random dialogue 3": {
 		"key": "Cashew sprite random dialogue 3",
+		"type": "cashew",
 		"popularity": 0,
 		"lines": [
 			{
 				"name": "Cashew",
-				"text": "(Cashew is hopping up and down. She looks happy to see you!)",
-				"action": [
-					"FREEZE"
-				]
+				"text": "(Cashew is hopping up and down. She looks happy to see you!)"
 			}
 		]
 	},
 	"Cashew sprite random dialogue 4": {
 		"key": "Cashew sprite random dialogue 4",
+		"type": "cashew",
 		"popularity": 0,
 		"lines": [
 			{
 				"name": "Cashew",
-				"text": "(Cashew makes a trilling noise. She's inviting you to sing a song with her!)",
-				"action": [
-					"FREEZE"
-				]
+				"text": "(Cashew makes a trilling noise. She's inviting you to sing a song with her!)"
 			}
 		]
 	},
 	"Cashew sprite random dialogue 5, when Quingee has a clothing item attached": {
 		"key": "Cashew sprite random dialogue 5, when Quingee has a clothing item attached",
+		"type": "cashew outfit",
 		"popularity": 0,
 		"lines": [
 			{
 				"name": "Cashew",
-				"text": "Cashew: Chirp chirp!! (I like your outfit!!)",
-				"action": [
-					"FREEZE"
-				]
+				"text": "Chirp chirp!! (I like your outfit!!)"
 			}
 		]
 	},
 	"Cashew sprite random dialogue 6": {
 		"key": "Cashew sprite random dialogue 6",
+		"type": "cashew gift",
 		"popularity": 0,
 		"lines": [
 			{
 				"name": "Cashew",
-				"text": "Cashew: Che-cheep! (I'm learning how to deliver mail!) (Gift: Random item?)",
-				"action": [
-					"FREEZE"
-				]
+				"text": "Che-cheep! (I'm learning how to deliver mail!)"
 			}
 		]
 	},
 	"Cashew sprite random dialogue 7": {
 		"key": "Cashew sprite random dialogue 7",
+		"type": "cashew delivery",
 		"popularity": 0,
 		"lines": [
 			{
 				"name": "Cashew",
-				"text": "Cashew: Chireep? (How did I do? I hope you liked your delivery!)",
-				"action": [
-					"FREEZE"
-				]
+				"text": "Chireep? (How did I do? I hope you liked your delivery!)"
+			}
+		]
+	},
+	"Cashew sprite random dialogue 8": {
+		"key": "Cashew sprite random dialogue 8",
+		"type": "cashew",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "Scree... (I wanna explore, too...)"
+			}
+		]
+	},
+	"Cashew sprite random dialogue 9": {
+		"key": "Cashew sprite random dialogue 9",
+		"type": "cashew",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "(Cashew is singing a small song. It's relaxing...)"
+			}
+		]
+	},
+	"Cashew sprite random dialogue 10": {
+		"key": "Cashew sprite random dialogue 10",
+		"type": "cashew",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "(Cashew is attentively watching Wander draw...)"
+			}
+		]
+	},
+	"Cashew sprite random dialogue 11": {
+		"key": "Cashew sprite random dialogue 11",
+		"type": "cashew",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "(Can you draw? I've been trying, but it's very difficult...)"
+			}
+		]
+	},
+	"Cashew sprite random dialogue 12, friendship with Wander": {
+		"key": "Cashew sprite random dialogue 12, friendship with Wander",
+		"type": "cashew",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "Chirp? Scree-ree... (Will you visit again? I think Wander likes seeing you around.)"
+			}
+		]
+	},
+	"Cashew sprite random dialogue 13": {
+		"key": "Cashew sprite random dialogue 13",
+		"type": "cashew",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "(Cashew looks cozy, nestled in Wander's backpack.)"
+			}
+		]
+	},
+	"Cashew sprite random dialogue 14": {
+		"key": "Cashew sprite random dialogue 14",
+		"type": "cashew",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "(Oh... Cashew seems to be taking a nap.)"
 			}
 		]
 	}
