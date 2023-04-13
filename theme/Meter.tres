@@ -1,8 +1,8 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c1tcpban3jq26"]
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://cbg58supgj5jb"]
 
-[ext_resource type="FontFile" uid="uid://rvsrh05flvrk" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_3xuqk"]
-[ext_resource type="StyleBox" uid="uid://bppx8c5fitsul" path="res://theme/tex_meter.tres" id="2_sbe78"]
-[ext_resource type="StyleBox" uid="uid://ymtf320l6lw6" path="res://theme/tex_meter_focus.tres" id="3_2lihp"]
+[ext_resource type="FontFile" uid="uid://cck3dy67r2j7s" path="res://assets/UI/Timetwist/Timetwist-Bold.ttf" id="1_3xuqk"]
+[ext_resource type="StyleBox" uid="uid://coii0fvw3v2jm" path="res://theme/tex_meter.tres" id="2_sbe78"]
+[ext_resource type="StyleBox" uid="uid://b3l3nsl5qsmrj" path="res://theme/tex_meter_focus.tres" id="3_2lihp"]
 
 [resource]
 default_font_size = 0

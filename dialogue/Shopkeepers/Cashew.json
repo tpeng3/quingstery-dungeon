@@ -1,93 +1,93 @@
 {
-    "Cashew sprite random dialogue 1": {
-        "key": "Cashew sprite random dialogue 1",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Cashew",
-                "text": "Cashew: Chirp? (Where are you from? I'm from the big tree in Cashew Homes!)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Cashew sprite random dialogue 2": {
-        "key": "Cashew sprite random dialogue 2",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Cashew",
-                "text": "Cashew: Cheep... cheep? (You'll come by again, won't you?)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Cashew sprite random dialogue 3": {
-        "key": "Cashew sprite random dialogue 3",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Cashew",
-                "text": "(Cashew is hopping up and down. She looks happy to see you!)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Cashew sprite random dialogue 4": {
-        "key": "Cashew sprite random dialogue 4",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Cashew",
-                "text": "(Cashew makes a trilling noise. She's inviting you to sing a song with her!)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Cashew sprite random dialogue 5, when Quingee has a clothing item attached": {
-        "key": "Cashew sprite random dialogue 5, when Quingee has a clothing item attached",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Cashew",
-                "text": "Cashew: Chirp chirp!! (I like your outfit!!)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Cashew sprite random dialogue 6": {
-        "key": "Cashew sprite random dialogue 6",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Cashew",
-                "text": "Cashew: Che-cheep! (I'm learning how to deliver mail!) (Gift: Random item?)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    },
-    "Cashew sprite random dialogue 7": {
-        "key": "Cashew sprite random dialogue 7",
-        "popularity": 0,
-        "lines": [
-            {
-                "name": "Cashew",
-                "text": "Cashew: Chireep? (How did I do? I hope you liked your delivery!)",
-                "action": [
-                    "FREEZE"
-                ]
-            }
-        ]
-    }
+	"Cashew sprite random dialogue 1": {
+		"key": "Cashew sprite random dialogue 1",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "Cashew: Chirp? (Where are you from? I'm from the big tree in Cashew Homes!)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Cashew sprite random dialogue 2": {
+		"key": "Cashew sprite random dialogue 2",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "Cashew: Cheep... cheep? (You'll come by again, won't you?)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Cashew sprite random dialogue 3": {
+		"key": "Cashew sprite random dialogue 3",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "(Cashew is hopping up and down. She looks happy to see you!)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Cashew sprite random dialogue 4": {
+		"key": "Cashew sprite random dialogue 4",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "(Cashew makes a trilling noise. She's inviting you to sing a song with her!)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Cashew sprite random dialogue 5, when Quingee has a clothing item attached": {
+		"key": "Cashew sprite random dialogue 5, when Quingee has a clothing item attached",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "Cashew: Chirp chirp!! (I like your outfit!!)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Cashew sprite random dialogue 6": {
+		"key": "Cashew sprite random dialogue 6",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "Cashew: Che-cheep! (I'm learning how to deliver mail!) (Gift: Random item?)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	},
+	"Cashew sprite random dialogue 7": {
+		"key": "Cashew sprite random dialogue 7",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Cashew",
+				"text": "Cashew: Chireep? (How did I do? I hope you liked your delivery!)",
+				"action": [
+					"FREEZE"
+				]
+			}
+		]
+	}
 }
