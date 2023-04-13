@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2sw2fysbdc2x"]
+[gd_scene load_steps=10 format=3 uid="uid://d2sw2fysbdc2x"]
 
 [ext_resource type="Script" path="res://scenes/Mountain/Mountain.gd" id="1_ybsvq"]
 [ext_resource type="TileSet" uid="uid://cwx7nq0li1fi1" path="res://theme/tileset.tres" id="2_ja4ub"]
+[ext_resource type="AudioStream" uid="uid://b2uw1kq2ecawr" path="res://assets/bgm/moguranooyako.ogg" id="2_nmmrc"]
 [ext_resource type="JSON" path="res://dialogue/Mountain/Mountain.json" id="3_7fjww"]
 [ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="4_qklru"]
 [ext_resource type="PackedScene" uid="uid://u0jhoe6k7wto" path="res://prefabs/Dialogue/DialogueBox/DungeonBox.tscn" id="6_cg1gw"]
@@ -43,6 +44,7 @@ _data = {
 [node name="Mountain" type="Node2D"]
 script = ExtResource("1_ybsvq")
 scene = "Map"
+music = ExtResource("2_nmmrc")
 
 [node name="DialoguePlayer" parent="." instance=ExtResource("4_qklru")]
 dialogue_file = ExtResource("3_7fjww")
@@ -87,14 +89,6 @@ layer_4/y_sort_enabled = true
 layer_4/y_sort_origin = 0
 layer_4/z_index = 0
 layer_4/tile_data = PackedInt32Array(2097157, 4, 1, 1900547, 196612, 1, 1966083, 196612, 1, 2097155, 196612, 1, 2031619, 196612, 2, 1966085, 131076, 2, 1966086, 196612, 1, 1966087, 196612, 1, 2031623, 196612, 2, 2097160, 196612, 2, 1900552, 4, 1, 1835016, 196612, 2, 1769480, 196612, 2, 1703945, 196612, 2, 1835017, 65540, 1, 1966089, 196612, 1, 2031622, 196612, 2, 1835013, 4, 1, 2097154, 4, 2, 2031617, 196612, 2, 1966081, 196612, 1, 1835009, 196612, 1, 1703938, 196612, 2, 1769474, 196612, 2, 1835011, 196612, 1, 1769475, 65540, 0, 1703940, 65540, 1, 1638403, 196612, 2, 1572868, 196612, 1, 1441796, 196612, 1, 1376260, 196612, 1, 1310724, 196612, 2, 1245187, 196612, 2, 1179652, 196612, 2, 1114115, 131076, 0, 1048579, 196612, 2, 1179650, 196612, 1, 1245186, 196612, 1, 1310722, 65540, 2, 1376257, 65540, 0, 1441794, 131076, 2, 1507330, 196612, 2, 1572866, 196612, 1, 1638401, 196612, 1, 1769472, 196612, 2, 1900544, 4, 1, 1900546, 196612, 1, 2031618, 196612, 1, 1900548, 131076, 1, 1900549, 196612, 1, 1835014, 196612, 1, 1703942, 196612, 1, 1638406, 65540, 2, 1572870, 4, 2, 1507334, 196612, 1, 1441798, 196612, 1, 1376262, 196612, 2)
-
-[node name="PlaceholderText" type="RichTextLabel" parent="."]
-visible = false
-offset_left = 409.0
-offset_top = 379.0
-offset_right = 608.0
-offset_bottom = 419.0
-text = "Press space to continue!"
 
 [node name="DungeonBox" parent="." instance=ExtResource("6_cg1gw")]
 visible = false

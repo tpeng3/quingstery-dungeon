@@ -110,6 +110,7 @@ frame_progress = 0.929379
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_msile")
+debug_color = Color(0, 0.6, 0.7, 0.42)
 
 [node name="Control" type="Control" parent="."]
 visible = false

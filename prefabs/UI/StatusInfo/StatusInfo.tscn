@@ -56,17 +56,17 @@ _data = {
 "RESET": SubResource("Animation_ju13r")
 }
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_nc668"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ncc7d"]
 resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(0, 0, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_w57kx"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_n8sx7"]
 resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tcnn2"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqv66"]
 resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(96, 48, 48, 48)
@@ -82,32 +82,32 @@ colors = PackedColorArray(0, 0, 0, 1, 0.935484, 0.935484, 0.935484, 1)
 gradient = SubResource("Gradient_gcyuc")
 width = 36
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_s6y81"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7jxom"]
 resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(0, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xa1ye"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6atll"]
 resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j002q"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ea6fi"]
 resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(96, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ntr83"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipomi"]
 resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(0, 96, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_68gfu"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8wb37"]
 resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(48, 48, 48, 48)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bcsr0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_msugf"]
 resource_local_to_scene = true
 atlas = ExtResource("11_o56xa")
 region = Rect2(96, 48, 48, 48)
@@ -192,10 +192,10 @@ theme_override_constants/margin_right = -100
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_nc668")
-texture_pressed = SubResource("AtlasTexture_w57kx")
-texture_disabled = SubResource("AtlasTexture_nc668")
-texture_focused = SubResource("AtlasTexture_tcnn2")
+texture_normal = SubResource("AtlasTexture_ncc7d")
+texture_pressed = SubResource("AtlasTexture_n8sx7")
+texture_disabled = SubResource("AtlasTexture_ncc7d")
+texture_focused = SubResource("AtlasTexture_bqv66")
 
 [node name="HungerBar" type="Sprite2D" parent="MenuButtons/VBoxContainer/StatusBtn/Status"]
 clip_children = 2
@@ -234,10 +234,10 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_s6y81")
-texture_pressed = SubResource("AtlasTexture_xa1ye")
-texture_disabled = SubResource("AtlasTexture_s6y81")
-texture_focused = SubResource("AtlasTexture_j002q")
+texture_normal = SubResource("AtlasTexture_7jxom")
+texture_pressed = SubResource("AtlasTexture_6atll")
+texture_disabled = SubResource("AtlasTexture_7jxom")
+texture_focused = SubResource("AtlasTexture_ea6fi")
 vertPosition = 1
 metadata/vertPosition = 2
 
@@ -250,10 +250,10 @@ theme_override_constants/margin_right = -72
 layout_mode = 2
 toggle_mode = true
 button_group = ExtResource("6_upmp7")
-texture_normal = SubResource("AtlasTexture_ntr83")
-texture_pressed = SubResource("AtlasTexture_68gfu")
-texture_disabled = SubResource("AtlasTexture_ntr83")
-texture_focused = SubResource("AtlasTexture_bcsr0")
+texture_normal = SubResource("AtlasTexture_ipomi")
+texture_pressed = SubResource("AtlasTexture_8wb37")
+texture_disabled = SubResource("AtlasTexture_ipomi")
+texture_focused = SubResource("AtlasTexture_msugf")
 vertPosition = 2
 
 [node name="ExitBtn" type="MarginContainer" parent="MenuButtons/VBoxContainer"]

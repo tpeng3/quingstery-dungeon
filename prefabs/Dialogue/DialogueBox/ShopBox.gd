@@ -65,10 +65,10 @@ func _input(event):
 	# scraaa
 	if event.is_action_released("scraa"):
 		$Quingee/Sprite2D.texture = QuingeeScraa
-		$AnimationPlayer.play("QuingShake")
+		$Quingee/Sprite2D/QuingAnim.play("QuingShake")
 	else:
-		$Quingee/Sprite2D.texture = QuingeeIdle		
-		$AnimationPlayer.stop()
+		$Quingee/Sprite2D.texture = QuingeeIdle
+		$Quingee/Sprite2D/QuingAnim.stop()
 
 func _on_continue():
 	# TODO: clean this up later

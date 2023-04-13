@@ -1,6 +1,7 @@
-[gd_scene load_steps=57 format=3 uid="uid://dx0kws7hwpumu"]
+[gd_scene load_steps=58 format=3 uid="uid://dx0kws7hwpumu"]
 
 [ext_resource type="Script" path="res://scenes/Map/Map.gd" id="1_3k0c8"]
+[ext_resource type="AudioStream" uid="uid://ckt7htbhsyy8c" path="res://assets/bgm/Horizon_Blue.ogg" id="2_364r3"]
 [ext_resource type="Texture2D" uid="uid://cixiy4vsaghrb" path="res://assets/background/map.png" id="2_g1eyc"]
 [ext_resource type="Script" path="res://scenes/Map/Camera2D.gd" id="2_vecvs"]
 [ext_resource type="PackedScene" uid="uid://dnpqq4mosh4n7" path="res://prefabs/SceneButton/SceneButton.tscn" id="3_kren2"]
@@ -119,6 +120,7 @@ RichTextLabel/styles/normal = ExtResource("38_1lj55")
 
 [node name="Map" type="Node2D"]
 script = ExtResource("1_3k0c8")
+music = ExtResource("2_364r3")
 
 [node name="SubViewportContainer" type="SubViewportContainer" parent="."]
 offset_right = 960.0

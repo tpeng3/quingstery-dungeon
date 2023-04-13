@@ -1,5 +1,7 @@
 extends Node2D
 
+@export var music:AudioStream
+
 var last_focused = null
 
 # Called when the node enters the scene tree for the first time.
