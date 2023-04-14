@@ -177,11 +177,11 @@ func advanceFloor():
 		currentFloor <= CheckpointType.PEAK - 1):
 		ozChance = -1.0
 		# get oz map
-		SceneManager.change_scene("Mountain")
+		SceneManager.change_scene("OzHouse")
 	elif wanderChance >= randf_range(0, 1):
 		wanderChance = 0.0
 		# get wander map
-		SceneManager.change_scene("Map")
+		SceneManager.change_scene("MapVendor")
 	else:
 		if currentFloor >= CheckpointType.PEAK:
 			ozChance = pow(currentFloor - CheckpointType.PEAK / CheckpointType.TOP - CheckpointType.PEAK, 5.0)
@@ -190,7 +190,7 @@ func advanceFloor():
 		if wanderChance <= 0.0:
 			wanderChance = 1.0
 		print(wanderChance, "wanderChance")
-		SceneManager.change_scene("MapVendor")
+		SceneManager.change_scene("Mountain")
 
 func get_checkpoint_name(floor=currentFloor):
 	if floor <= CheckpointType.RIVER:

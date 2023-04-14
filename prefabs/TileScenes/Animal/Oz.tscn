@@ -1,0 +1,91 @@
+[gd_scene load_steps=15 format=3 uid="uid://b6n2tpguo8wdf"]
+
+[ext_resource type="Script" path="res://prefabs/TileScenes/Animal/Oz.gd" id="1_v6fjd"]
+[ext_resource type="Texture2D" uid="uid://14hf57rpjy08" path="res://assets/character/beans/oz_idle.png" id="2_tpyca"]
+[ext_resource type="Texture2D" uid="uid://2cj0wwfayo1h" path="res://assets/character/beans/Oz.png" id="3_p1gur"]
+[ext_resource type="JSON" path="res://dialogue/Shopkeepers/Oz.json" id="5_1xm5u"]
+[ext_resource type="PackedScene" uid="uid://ck17xbn21yrd0" path="res://prefabs/Dialogue/DialoguePlayer/DialoguePlayer.tscn" id="5_maju8"]
+[ext_resource type="SpriteFrames" uid="uid://dbeco0nr52nk0" path="res://assets/UI/speechbubble.tres" id="7_8cq2m"]
+[ext_resource type="Texture2D" uid="uid://byrcy5o0j142f" path="res://assets/UI/speechbubble.png" id="8_57pno"]
+[ext_resource type="Texture2D" uid="uid://bw0hpjk0l55ev" path="res://assets/character/talksprites/quingesterynpc_oz_flats.png" id="9_8vse4"]
+[ext_resource type="PackedScene" uid="uid://desvgeqvimub7" path="res://prefabs/Dialogue/DialogueBox/ShopBox.tscn" id="9_yts3c"]
+
+[sub_resource type="Animation" id="Animation_jkf5a"]
+resource_name = "fade"
+length = 0.5
+
+[sub_resource type="Animation" id="Animation_icl5u"]
+resource_name = "float"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Icon:offset")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -3), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ccjp3"]
+_data = {
+"fade": SubResource("Animation_jkf5a"),
+"float": SubResource("Animation_icl5u")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_msile"]
+size = Vector2(70.5, 76)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c7qe2"]
+atlas = ExtResource("8_57pno")
+region = Rect2(90, 0, 18, 18)
+
+[node name="Oz" type="Area2D"]
+z_index = 2
+y_sort_enabled = true
+script = ExtResource("1_v6fjd")
+Idle = ExtResource("2_tpyca")
+Highlight = ExtResource("3_p1gur")
+
+[node name="DialoguePlayer" parent="." instance=ExtResource("5_maju8")]
+dialogue_file = ExtResource("5_1xm5u")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "float"
+libraries = {
+"": SubResource("AnimationLibrary_ccjp3")
+}
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("3_p1gur")
+
+[node name="Bubble" type="AnimatedSprite2D" parent="Sprite"]
+visible = false
+position = Vector2(0, -25)
+sprite_frames = ExtResource("7_8cq2m")
+animation = &"Heart"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_msile")
+debug_color = Color(0, 0.6, 0.7, 0.42)
+
+[node name="Icon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(0, -25)
+texture = SubResource("AtlasTexture_c7qe2")
+
+[node name="ShopBox" parent="." instance=ExtResource("9_yts3c")]
+
+[node name="Character" parent="ShopBox/Control" index="0"]
+texture = ExtResource("9_8vse4")
+
+[node name="TopBar" parent="ShopBox" index="6"]
+visible = false
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+
+[editable path="ShopBox"]

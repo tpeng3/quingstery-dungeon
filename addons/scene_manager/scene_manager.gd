@@ -341,7 +341,7 @@ func change_scene(scene, fade_out_options: Options = default_fade_out_options, f
 		_set_in_transition()
 		_set_clickable(general_options.clickable)
 		_set_pattern(fade_out_options, general_options)
-		if _fade_out(fade_out_options.fade_speed):
+		if _fade_out(fade_out_options.fade_speed) and $canvas/fade.material["shader_parameter/cutoff"] >= 1:
 			await _animation_player.animation_finished
 		if _change_scene(scene, general_options.add_to_back):
 			if !(scene is Node):
@@ -437,3 +437,14 @@ func crossfade_to(audio_stream:AudioStream) -> void:
 		$BackgroundMusic/Track2.stream = audio_stream
 		$BackgroundMusic/Track2.play()
 		$BackgroundMusic/AnimationPlayer.play("FadeToTrack2")
+
+func fade_with_text(text:String, timeout:float = 4.0):
+	if $canvas/fade.material["shader_parameter/cutoff"] >= 1:
+		_fade_out(default_fade_out_options.fade_speed)
+		await _animation_player.animation_finished
+	$canvas/FadeText.modulate = Color(1, 1, 1, 0)
+	$canvas/FadeText.text = text
+	$animation_player.play("fade_text")
+	await get_tree().create_timer(timeout).timeout
+	$animation_player.play_backwards("fade_text")
+	await $animation_player.animation_finished

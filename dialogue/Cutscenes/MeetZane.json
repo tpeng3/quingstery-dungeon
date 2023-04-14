@@ -1,0 +1,60 @@
+{
+    "lines": [
+        {
+            "name": "Zane",
+            "text": "Hey."
+        },
+        {
+            "name": "Zane",
+            "text": "Glad you're comin' 'round. Found ya collapsed on the Peak so I brought ya back to the Fire Station here."
+        },
+        {
+            "text": "Right... you failed... You burrow a bit more deeply into the blanket he's holding you in."
+        },
+        {
+            "name": "Zane",
+            "text": "S'all right. Ain't nothin' t'fear. I gotcha..."
+        },
+        {
+            "text": "He cradles you a little closer. You simply sit together for a while."
+        },
+        {
+            "text": "Eventually, you stir, trying to pop yourself slightly out of the blanket."
+        },
+        {
+            "name": "Zane",
+            "text": "Feelin' ready t'stand on your own two feet again?"
+        },
+        {
+            "name": "Zane",
+            "text": "Go on an' try, then. I'm here t'catch ya if ya fall."
+        },
+        {
+            "text": "He sets you down very gently. Your legs hold steady this time."
+        },
+        {
+            "name": "Zane",
+            "text": "Doin' fine? Glad t'see it. I'm Zane, the Fire Chief, by the way."
+        },
+        {
+            "name": "Zane",
+            "text": "Part o' my work is patrollin' the Peak t'help anyone in need."
+        },
+        {
+            "name": "Zane",
+            "text": "Nice t'meet ya, [[name]]."
+        },
+        {
+            "name": "Zane",
+            "text": "Though I'd rather it was under different circumstances."
+        },
+        {
+            "name": "Zane",
+            "text": "Be more careful from now on, y'hear me?"
+        },
+        {
+            "name": "Zane",
+            "text": "Good. Anythin' else I can do for ya?"
+        }
+    ]
+}

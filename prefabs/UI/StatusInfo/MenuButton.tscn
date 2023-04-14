@@ -29,4 +29,3 @@ script = ExtResource("1_itiu6")
 
 [connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
 [connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
-[connection signal="toggled" from="." to="." method="_on_toggled"]

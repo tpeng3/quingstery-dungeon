@@ -1,0 +1,24 @@
+{
+    "lines": [
+        {
+            "name": "Piper",
+            "text": "AH!?"
+        },
+        {
+            "name": "Piper",
+            "text": "Forgive me, it's not often I run into other living things on this hike, let alone a Quingee."
+        },
+        {
+            "name": "Piper",
+            "text": "What, uh, what brings you up the mountain? Or, are you lost?"
+        },
+        {
+            "name": "Piper",
+            "text": "Well, if you plan on doing this again you should come visit me at the Meteorological Institute, can give you a forecast for your future climbs."
+        },
+        {
+            "name": "Piper",
+            "text": "Speaking of, I have to get back to my trip down, got to get back to work after all."
+        }
+    ]
+}

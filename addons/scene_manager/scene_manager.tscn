@@ -1,8 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://2iy8wfgenjka"]
+[gd_scene load_steps=15 format=3 uid="uid://2iy8wfgenjka"]
 
 [ext_resource type="Script" path="res://addons/scene_manager/scene_manager.gd" id="1"]
 [ext_resource type="Material" uid="uid://0q7ifty8us3v" path="res://addons/scene_manager/scene_manager.tres" id="2"]
 [ext_resource type="AudioStream" uid="uid://co5fx0q01b766" path="res://assets/bgm/quingeetheme.ogg" id="3_iyrgn"]
+[ext_resource type="Theme" uid="uid://b7odbq3gkm1j0" path="res://theme/SceneButton.tres" id="3_vtprw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rsgxk"]
 
 [sub_resource type="Animation" id="8"]
 length = 0.001
@@ -49,6 +52,22 @@ tracks/0/keys = {
 "values": [0.0, 1.0]
 }
 
+[sub_resource type="Animation" id="Animation_oaca6"]
+resource_name = "fade_text"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("canvas/FadeText:modulate")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 2.14355),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="10"]
 resource_name = "no_color"
 tracks/0/type = "value"
@@ -69,6 +88,7 @@ _data = {
 "RESET": SubResource("8"),
 "color": SubResource("9"),
 "fade": SubResource("7"),
+"fade_text": SubResource("Animation_oaca6"),
 "no_color": SubResource("10")
 }
 
@@ -161,7 +181,7 @@ _data = {
 script = ExtResource("1")
 
 [node name="canvas" type="CanvasLayer" parent="."]
-layer = 2
+layer = 5
 
 [node name="fade" type="ColorRect" parent="canvas"]
 material = ExtResource("2")
@@ -172,6 +192,30 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 0)
+
+[node name="FadeText" type="Label" parent="canvas"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -100.0
+offset_right = 250.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme = ExtResource("3_vtprw")
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_constants/line_spacing = 6
+theme_override_font_sizes/font_size = 22
+theme_override_styles/normal = SubResource("StyleBoxEmpty_rsgxk")
+text = "If there are two guys on the moon and one killed the other with a rock would that be fucked up or what?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
 [node name="animation_player" type="AnimationPlayer" parent="."]
 libraries = {

@@ -1,0 +1,283 @@
+{
+	"oz1": {
+		"key": "oz1",
+		"name": "Oz",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oz",
+				"text": "Oh, hello there."
+			},
+			{
+				"name": "Oz",
+				"text": "How did you get here, small friend?"
+			},
+			{
+				"name": "Oz",
+				"text": "That must have been a difficult journey. "
+			},
+			{
+				"name": "Oz",
+				"text": "You must be so tired."
+			},
+			{
+				"name": "Oz",
+				"text": "Please, come sit with me a while. "
+			},
+			{
+				"name": "Oz",
+				"text": "..."
+			},
+			{
+				"name": "Oz",
+				"text": "It must have taken so much effort to get here."
+			},
+			{
+				"name": "Oz",
+				"text": "Take some rest with me."
+			},
+			{
+				"name": "Oz",
+				"text": "I would appreciate the company, in this lonely place."
+			},
+			{
+				"name": "Oz",
+				"text": "The view up here is so beautiful, would you not agree?"
+			},
+			{
+				"name": "Oz",
+				"text": "You can see every path that you have crossed in order to get here."
+			},
+			{
+				"name": "Oz",
+				"text": "What feelings does it inspire, now that you have made it?"
+			},
+			{
+				"name": "Oz",
+				"text": "Whatever that feeling, I hope that it can bring you peace."
+			},
+			{
+				"name": "Oz",
+				"text": "..."
+			},
+			{
+				"name": "Oz",
+				"text": "I think, my friend, that you should head toward the crest of the peak."
+			},
+			{
+				"name": "Oz",
+				"text": "I am not sure why, but it seems as though that is your goal."
+			},
+			{
+				"name": "Oz",
+				"text": "But, good luck to you."
+			}
+		]
+	},
+	"oz2": {
+		"key": "oz2",
+		"name": "Oz",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oz",
+				"text": "Why, it is my small friend again."
+			},
+			{
+				"name": "Oz",
+				"text": "I see you have made it to visit me again."
+			},
+			{
+				"name": "Oz",
+				"text": "I am so fortunate, this day."
+			},
+			{
+				"name": "Oz",
+				"text": "It was so rare to receive company, up here in this place."
+			},
+			{
+				"name": "Oz",
+				"text": "It makes me feel better to have a companion to speak with."
+			},
+			{
+				"name": "Oz",
+				"text": "I always decide myself so lucky to have more of them."
+			},
+			{
+				"name": "Oz",
+				"text": "Have you made many friends, in your travels to get here?"
+			},
+			{
+				"name": "Oz",
+				"text": "Even if you cannot speak back, I am relieved."
+			},
+			{
+				"name": "Oz",
+				"text": "..."
+			},
+			{
+				"name": "Oz",
+				"text": "Head to the crest, my friend."
+			},
+			{
+				"name": "Oz",
+				"text": "You have done so well."
+			}
+		]
+	},
+	"oz3": {
+		"key": "oz3",
+		"name": "Oz",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oz",
+				"text": "We meet again. "
+			},
+			{
+				"name": "Oz",
+				"text": "It seems the Stars are in my favor again today."
+			},
+			{
+				"name": "Oz",
+				"text": "And yours, that you have made it all the way here."
+			},
+			{
+				"name": "Oz",
+				"text": "You know, Quingee make me very wary, but..."
+			},
+			{
+				"name": "Oz",
+				"text": "There is something about you, that does not put me at unease."
+			},
+			{
+				"name": "Oz",
+				"text": "I am not sure why, but I am grateful."
+			},
+			{
+				"name": "Oz",
+				"text": "You have done well again today, my small friend. "
+			},
+			{
+				"name": "Oz",
+				"text": "I hope that you know that you have done well, too."
+			},
+			{
+				"name": "Oz",
+				"text": "..."
+			},
+			{
+				"name": "Oz",
+				"text": "Thank you for visiting me, each time we cross paths."
+			}
+		]
+	},
+	"oz4": {
+		"key": "oz4",
+		"name": "Oz",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oz",
+				"text": "It is a long way up here."
+			},
+			{
+				"name": "Oz",
+				"text": "Would you agree?"
+			},
+			{
+				"name": "Oz",
+				"text": "I wonder what it is, that you thought about coming here."
+			},
+			{
+				"name": "Oz",
+				"text": "What you held onto, while you made the journey."
+			},
+			{
+				"name": "Oz",
+				"text": "The feelings, or the people, that you kept in your mind."
+			},
+			{
+				"name": "Oz",
+				"text": "..."
+			},
+			{
+				"name": "Oz",
+				"text": "In my climb today, I thought of my father."
+			},
+			{
+				"name": "Oz",
+				"text": "I miss him."
+			},
+			{
+				"name": "Oz",
+				"text": "Do you have your family, my small friend?"
+			},
+			{
+				"name": "Oz",
+				"text": "..."
+			},
+			{
+				"name": "Oz",
+				"text": "Thank you for seeing me, once again."
+			}
+		]
+	},
+	"oz5": {
+		"key": "oz5",
+		"name": "Oz",
+		"popularity": 0,
+		"lines": [
+			{
+				"name": "Oz",
+				"text": "My small friend, will you sit with me?"
+			},
+			{
+				"name": "Oz",
+				"text": "Today, I feel sad."
+			},
+			{
+				"name": "Oz",
+				"text": "Did you know, that this peak is a graveyard?"
+			},
+			{
+				"name": "Oz",
+				"text": "But, my memory has failed with time, and..."
+			},
+			{
+				"name": "Oz",
+				"text": "I am unsure of which grave belongs to which person."
+			},
+			{
+				"name": "Oz",
+				"text": "It brings me pain, that I cannot visit each grave, as it is deserved."
+			},
+			{
+				"name": "Oz",
+				"text": "So, please, wish them each well for me."
+			},
+			{
+				"name": "Oz",
+				"text": "Even if you do not know them, either."
+			},
+			{
+				"name": "Oz",
+				"text": "..."
+			},
+			{
+				"name": "Oz",
+				"text": "Be brave, and have good fortune, my small friend."
+			}
+		]
+	},
+	"oz6": {
+		"key": "oz6",
+		"name": "Oz",
+		"popularity": 0,
+		"lines": [
+			{
+				"text": "You pay a visit to Oz and spend some time together before you head back on your journey."
+			}
+		]
+	}
+}

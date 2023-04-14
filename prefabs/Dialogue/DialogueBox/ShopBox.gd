@@ -63,12 +63,11 @@ func _input(event):
 				_update_textbox()
 	
 	# scraaa
-	if event.is_action_released("scraa"):
+	if event.is_action_pressed("scraa"):
 		$Quingee/Sprite2D.texture = QuingeeScraa
 		$Quingee/Sprite2D/QuingAnim.play("QuingShake")
-	else:
+		await $Quingee/Sprite2D/QuingAnim.animation_finished
 		$Quingee/Sprite2D.texture = QuingeeIdle
-		$Quingee/Sprite2D/QuingAnim.stop()
 
 func _on_continue():
 	# TODO: clean this up later
